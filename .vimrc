@@ -182,6 +182,7 @@ let g:syntastic_enable_signs = 0
 
 """ Python-mode
 " don't use linter, we use syntastic for that
+let g:pymode = 1
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
 " don't fold python code on open

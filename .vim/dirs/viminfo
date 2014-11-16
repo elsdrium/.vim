@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/pylint
+~MSle0~/leader
 
 # Last Substitute Search Pattern:
 ~MSle0&Bundle
@@ -17,59 +17,69 @@
 $
 
 # Command Line History (newest to oldest):
-:q
-:wq
-:ConqueTermVSplit ipython
-:ConqueTermVSplit python
-:w
-:Pylint
-:PluginClean
-:source %
-:ConqueTermSplit 1
-:ConqueTermSplit
-:helptags
-:PluginUpdate
-:PluginInstall
 :qall
-:h easymotion
-:echo $VIM
-:echo $VIMFILES
-:70
-:q!
-:echo g:mapleader
-:'<,'>10j
-:13
-:'<,'>13k
-:'<,'>13
-:121
-:221
-:o ~/.vimrc
-:sp
-:ConqueTerm python
-:help pymode
-:h ConqueTerm python
-:h ConqueTerm python3
-:h python-mode
-:226
-:161
-:100
-:%s/Bundle/Plugin/g
-:h Pylint
-:n
-:new
-:sph
-:hsp
-:vsp
-:v
+:w
+:test
+:source %
 :o .vimrc
-:helptags ~/.vim/doc
-:help easymotion
-:%s/geasymotion.txt/easymotion.txt/g
-:%s/gsupertab.txt/supertab.txt/g
-:%s/doc\//g
+:vsp
+:cd
+:q
+:version
+:b15
+:bunload
+:bf
+:b13
+:sp
+:bw
+:buffers
+:\15
+:spellgood doox
+:spellgood
+:GitCommit
+:GitAdd --all .
+:GitAdd -all .
+:cd /
+:pwd
+:ls
+:NERDTree
+:GitAdd
+:b1
+:h git-vim
+:bn
+::bn
+:h easymotion
+:PluginInstall
+:Gadd
+:vertical res -50
+:vertical res -5
+:vertical resize
+:vertical retab
+:vertical recover
+:resize
+:vertical resize 80
+:vertical 80
+:resize 200
+:resize 80
+:resize 60
+:bufferlist
+:buffer
+:bp
+:NE
+:NerdTree
 
 # Search String History (newest to oldest):
+?/go
+?/leader
+?/command
 ? \s\+$
+?/airline
+?/buffer
+?/syntastic
+?/ommenter
+?/ommeter
+?/tagbar
+?/tab
 ?/pylint
 ?/Pylint
 ?/fugi
@@ -117,302 +127,940 @@ $
 
 # Registers:
 "0	LINE	0
-	set nocompatible              " be iMproved, required
-	filetype off                  " required
-	
-	" set the runtime path to include Vundle and initialize
-	set rtp+=~/.vim/bundle/Vundle.vim
-	call vundle#begin()
-	" alternatively, pass a path where Vundle should install plugins
-	"call vundle#begin('~/some/path/here')
-	
-	" let Vundle manage Vundle, required
-	Plugin 'gmarik/Vundle.vim'
-	
-	" The following are examples of different formats supported.
-	" Keep Plugin commands between vundle#begin/end.
-	" plugin on GitHub repo
-	Plugin 'tpope/vim-fugitive'
-	" plugin from http://vim-scripts.org/vim/scripts.html
-	Plugin 'L9'
-	" Git plugin not hosted on GitHub
-	Plugin 'git://git.wincent.com/command-t.git'
-	" git repos on your local machine (i.e. when working on your own plugin)
-	Plugin 'file:///home/gmarik/path/to/plugin'
-	" The sparkup vim script is in a subdirectory of this repo called vim.
-	" Pass the path to set the runtimepath properly.
-	Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-	" Avoid a name conflict with L9
-	Plugin 'user/L9', {'name': 'newL9'}
-	
-	" All of your Plugins must be added before the following line
-	call vundle#end()            " required
-	filetype plugin indent on    " required
-	" To ignore plugin indent changes, instead use:
-	"filetype plugin on
-	"
-	" Brief help
-	" :PluginList       - lists configured plugins
-	" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-	" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-	" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-	"
-	" see :h vundle for more details or wiki for FAQ
-	" Put your non-Plugin stuff after this line
-	
-	
-	
-	filetype plugin indent on
-	autocmd FileType python compiler pylint
-	
-	au FileType python set foldmethod=manual
-	
+	#          :::::::: ::::::::::: :::::::::  :::             :::::::::          #
 ""1	LINE	0
-	autocmd FileType python compiler pylint
+	map <silent> <A-+> :vertical res +10
 "2	LINE	0
-	" Python
-	Plugin 'klen/python-mode'
+	au FileType python set foldmethod=manual
 "3	LINE	0
+	Python 3.4.2 (default, Oct 19 2014, 17:55:38) 
+	Type "copyright", "credits" or "license" for more information.
+	 
+	IPython 2.3.1 -- An enhanced Interactive Python.
+	?         -> Introduction and overview of IPython's features.
+	%quickref -> Quick reference.
+	help      -> Python's own help system.
+	object?   -> Details about 'object', use 'object??' for extra details.
+	 
+	In [1]: pwd 
+	Out[1]: '/Users/elsdrm'
+	
+	In [2]: py.py 
+	---------------------------------------------------------------------------
+	NameError                                 Traceback (most recent call last)
+	<ipython-input-2-74b753299131> in <module>()
+	----> 1 py.py
+	 
+	NameError: name 'py' is not defined
+	 
+	In [3]: run 
+	WARNING: you must provide at least a filename.
+	 
+	%run:
+	 Run the named file inside IPython as a program.
+	 
+	Usage::
+	
+	  %run [-n -i -e -G]
+	       [( -t [-N<N>] | -d [-b<N>] | -p [profile options] )]
+	       ( -m mod | file ) [args]
+	
+	Parameters after the filename are passed as command-line arguments to
+	the program (put in sys.argv). Then, control returns to IPython's
+	prompt.
+	
+	This is similar to running at a system prompt ``python file args``,
+	but with the advantage of giving you IPython's tracebacks, and of
+	loading all variables into your interactive namespace for further use
+	(unless -p is used, see below).
+	
+	The file is executed in a namespace initially consisting only of
+	``__name__=='__main__'`` and sys.argv constructed as indicated. It thus
+	sees its environment as if it were being run as a stand-alone program
+	(except for sharing global objects such as previously imported
+	modules). But after execution, the IPython interactive namespace gets
+	updated with all variables defined in the program (except for __name__
+	and sys.argv). This allows for very convenient loading of code for
+	interactive work, while giving each program a 'clean sheet' to run in.
 	
 "4	LINE	0
-	
+	    print( 'Hello world.' )
 "5	LINE	0
-	
+	Python 3.4.2 (default, Oct 19 2014, 17:55:38) 
 "6	LINE	0
-	
+	Type "copyright", "credits" or "license" for more information.
 "7	LINE	0
-	command R !python %
+	 
 "8	LINE	0
-	autocmd FileType python compiler pylint
-	au FileType python set foldmethod=manual
+	IPython 2.3.1 -- An enhanced Interactive Python.
 "9	LINE	0
-	set smartindent
-	set tabstop=4
-	set shiftwidth=4
-	set expandtab
+	?         -> Introduction and overview of IPython's features.
 "k	CHAR	0
 	jjk
+"l	CHAR	0
+	ljkkkkjkjjhhhkkhhhhhi:h sur	rou	.€kbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 "-	CHAR	0
-	 
+	A
 
 # File marks:
-'0  1  0  ~/.vimrc
-'1  2  23  ~/sandbox/py.py
-'2  257  0  ~/.vimrc
-'3  1  0  ~/sandbox/py.py
-'4  1  0  ~/Dropbox/.unix_settings/.git/config
-'5  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'6  2  0  ~/Dropbox/.unix_settings/.vim/[Vundle] clean
-'7  251  0  ~/.vimrc
-'8  11  0  ~/test.cpp
-'9  43  0  ~/.vimrc
+'0  258  0  ~/.vimrc
+'1  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+'2  44  0  ~/ipython3 - 1
+'7  1  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
 
 # Jumplist (newest first):
+-'  258  0  ~/.vimrc
+-'  259  4  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  2  23  ~/sandbox/py.py
--'  1  0  ~/sandbox/py.py
--'  257  0  ~/.vimrc
--'  1  0  ~/Dropbox/.unix_settings/.git/config
--'  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  2  0  ~/Dropbox/.unix_settings/.vim/[Vundle] clean
--'  251  0  ~/.vimrc
--'  10  0  ~/.vimrc
--'  3  0  ~/.vimrc
--'  11  0  ~/test.cpp
--'  1  0  ~/test.cpp
--'  43  0  ~/.vimrc
--'  5  0  ~/.vimrc
--'  188  15  ~/.vimrc
--'  189  6  ~/.vimrc
--'  1  0  ~/python - 1
--'  31  0  ~/.vimrc
--'  3  16  ~/test.cpp
--'  25  35  ~/.vimrc
--'  24  13  ~/.vimrc
--'  13  0  ~/.vimrc
--'  12  0  ~/.vimrc
--'  150  0  ~/.vimrc
--'  14  0  ~/.vimrc
--'  230  77  ~/.vimrc
--'  109  4  ~/.vimrc
--'  255  0  ~/.vimrc
--'  245  16  ~/.vimrc
--'  114  0  ~/.vimrc
--'  4  12  ~/.vimrc
--'  74  7  ~/.vimrc
--'  52  0  ~/.vimrc
--'  63  13  ~/.vimrc
--'  247  0  ~/.vimrc
--'  66  0  ~/.vimrc
--'  95  15  ~/.vimrc
--'  32  0  ~/.vimrc
--'  23  27  ~/.vimrc
--'  46  22  ~/.vimrc
--'  44  16  ~/.vimrc
--'  22  25  ~/.vimrc
--'  1  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  227  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  5  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  49  7  ~/.vimrc
--'  1  0  ~/main.m
--'  8  36  ~/.vimrc
--'  1  0  ~/vimrc
--'  16  31  ~/.vimrc
--'  21  0  ~/Dropbox/.vim/doc/tags
--'  1  0  ~/Dropbox/.vim/doc/tags
--'  54  0  ~/Dropbox/.vim/doc/tags
--'  41  0  ~/Dropbox/.vim/doc/tags
--'  42  0  ~/Dropbox/.vim/doc/tags
--'  2  0  ~/Dropbox/.vim/doc/tags
--'  38  0  ~/Dropbox/.vim/doc/tags
--'  54  0  ~/Dropbox/.vim/tags
--'  1  0  ~/Dropbox/.vim/tags
--'  33  0  ~/Dropbox/.vim/doc/tags
--'  2  0  ~/Dropbox/.vim/doc/easymotion.txt
--'  1  0  ~/Dropbox/.vim/doc/easymotion.txt
--'  34  0  ~/Dropbox/.vim/doc/tags
--'  315  0  ~/Dropbox/.vim/doc/easymotion.txt
--'  4  0  ~/Dropbox/.vim/doc/tags
--'  92  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
--'  573  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
--'  5  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
--'  1  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
--'  30  13  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  10  19  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  11  19  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  26  4  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  9  11  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  12  14  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  40  2  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  46  2  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  27  64  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  16  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  13  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  14  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  3  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  4  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  44  11  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  1  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  45  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  40  2  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  33  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  49  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  4  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  52  28  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  3  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  14  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  9  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
--'  223  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  31  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
--'  1  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
--'  13  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  42  4  ~/NERD_tree_5
+-'  47  2  ~/NERD_tree_5
+-'  1  11  ~/NERD_tree_5
+-'  6  0  ~/onset-test/ComplexFlux.py
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
+-'  95  1  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
+-'  10  0  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
+-'  774  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  348  2  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  156  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  66  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  58  35  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  1  1  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  1126  41  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  891  38  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  888  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  662  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  618  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  599  11  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  583  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  571  47  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  570  53  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  561  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  549  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  548  23  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  547  66  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  1142  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  602  11  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  550  66  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  50  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+-'  14  3  ~/onset-test/SuperFlux.py
+-'  62  20  ~/onset-test/SuperFlux.py
+-'  59  30  ~/onset-test/SuperFlux.py
+-'  16  0  ~/onset-test/SuperFlux.py
+-'  4  0  ~/onset-test/README.md
+-'  1  0  ~/py.py
+-'  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  112  45  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  57  18  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  112  45  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  57  18  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  228  0  ~/ipython3 - 2
+-'  227  0  ~/ipython3 - 2
+-'  226  0  ~/ipython3 - 2
+-'  225  19  ~/ipython3 - 2
+-'  224  0  ~/ipython3 - 2
+-'  223  0  ~/ipython3 - 2
+-'  222  0  ~/ipython3 - 2
+-'  221  0  ~/ipython3 - 2
+-'  220  0  ~/ipython3 - 2
+-'  219  0  ~/ipython3 - 2
+-'  1  0  ~/ipython3 - 2
+-'  71  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
-> ~/.vimrc
-	"	1	0
-	^	39	0
-	.	257	0
-	+	49	0
-	+	16	0
-	+	33	0
-	+	16	33
-	+	16	6
-	+	18	0
-	+	17	25
-	+	69	50
-	+	21	28
-	+	22	25
-	+	18	0
-	+	16	0
-	+	44	13
-	+	44	13
-	+	45	16
-	+	45	21
-	+	46	23
-	+	46	22
-	+	47	19
-	+	22	24
-	+	23	28
-	+	22	0
-	+	41	0
-	+	40	4
-	+	42	24
-	+	32	11
-	+	23	0
-	+	42	23
-	+	43	0
-	+	42	23
-	+	27	26
-	+	26	25
-	+	24	21
-	+	49	24
-	+	28	31
+> ~/py.py
+	"	12	0
+	^	13	26
+	+	13	0
+	+	13	0
+	+	12	0
+	+	10	0
+	+	1	52
+	+	1	71
+	+	1	61
+	+	1	68
+	+	1	91
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	1	53
+	+	1	119
+	+	1	147
+	+	1	89
+	+	12	17
+	+	1	29
+	+	11	15
+	+	1	32
+	+	1	52
+	+	1	53
+	+	1	68
+	+	1	92
+	+	1	93
+	+	1	115
+	+	12	0
+	+	2	21
+	+	12	15
+	+	13	25
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	14	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	14	0
+
+> ~/NERD_tree_1
+	"	56	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	127	0
+	+	127	0
+	+	127	0
+	+	127	0
+	+	127	0
+	+	127	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/onset-test/README.md
+	"	4	0
+	^	24	0
+	.	24	0
+	+	25	0
+	+	24	0
+
+> ~/onset-test/SuperFlux.py
+	"	34	0
+	^	31	0
+	.	30	0
+	+	38	0
+	+	38	0
 	+	30	0
-	+	31	11
+	+	31	0
+	+	30	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
+	"	774	0
+	^	62	0
+	.	62	0
+	+	56	0
+	+	54	0
+	+	56	0
+	+	68	0
+	+	62	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
+	"	95	1
+	^	10	0
+	.	10	0
+	+	25	0
+	+	24	0
+	+	25	0
+	+	25	0
+	+	24	0
+	+	25	0
+	+	24	0
+	+	16	0
+	+	10	0
+	+	16	0
+	+	16	0
+	+	10	0
+	+	16	0
+	+	10	0
+	+	16	0
+	+	10	0
+
+> ~/NERD_tree_3
+	"	1	0
+	+	1	0
+	+	9	0
+
+> ~/NERD_tree_4
+	"	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	8	0
+
+> ~/onset-test/ComplexFlux.py
+	"	6	0
+	^	10	1
+	.	10	1
+	+	15	0
+	+	10	1
+
+> ~/NERD_tree_5
+	"	42	6
+	.	25	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+
+> ~/lasso_armadillo/source/C++/Lasso.cpp
+	"	2	0
+	^	19	0
+	.	19	0
+	+	92	5
+	+	25	0
+	+	19	0
+
+> ~/lasso_armadillo/__Tagbar__
+	"	4	4
+	+	6	0
+	+	6	0
+
+> ~/sandbox/.vimrc
+	"	1	0
+
+> ~/.vimrc
+	"	258	0
+	.	259	0
+	+	257	0
+	+	207	0
+	+	206	17
+	+	211	0
+	+	253	17
+	+	63	18
+	+	63	0
+	+	259	0
+	+	63	0
+	+	63	0
+	+	212	42
+	+	215	73
+	+	251	12
+	+	216	0
+	+	251	12
+	+	73	47
+	+	65	33
+	+	67	10
+	+	64	13
+	+	99	33
+	+	96	12
+	+	203	0
+	+	137	62
+	+	124	1
+	+	126	0
+	+	108	25
+	+	75	15
+	+	94	46
+	+	75	16
+	+	188	0
+	+	187	14
+	+	201	31
+	+	204	52
+	+	174	13
+	+	185	44
+	+	179	70
+	+	180	0
+	+	182	0
+	+	181	79
+	+	139	9
+	+	172	12
+	+	122	41
+	+	114	26
+	+	220	61
+	+	246	16
+	+	154	0
+	+	166	0
+	+	232	0
+	+	26	36
+	+	189	15
 	+	33	0
-	+	29	26
-	+	48	21
-	+	256	0
-	+	206	0
-	+	205	17
-	+	210	0
-	+	252	17
-	+	62	18
-	+	62	0
-	+	257	0
-	+	62	0
-	+	62	0
-	+	211	42
-	+	214	73
-	+	250	12
-	+	215	0
-	+	250	12
-	+	72	47
-	+	64	33
-	+	66	10
-	+	63	13
-	+	98	33
-	+	95	12
-	+	202	0
-	+	136	62
-	+	123	1
-	+	125	0
-	+	107	25
-	+	74	15
-	+	93	46
-	+	74	16
-	+	187	0
-	+	186	14
-	+	200	31
-	+	203	52
-	+	173	13
-	+	184	44
-	+	178	70
-	+	179	0
-	+	181	0
-	+	180	79
-	+	138	9
-	+	171	12
-	+	121	41
-	+	113	26
-	+	219	61
-	+	245	16
-	+	153	0
-	+	165	0
-	+	231	0
-	+	25	36
-	+	188	15
-	+	32	0
-	+	41	0
-	+	34	7
-	+	35	8
-	+	41	4
-	+	49	0
-	+	37	0
-	+	38	25
+	+	42	0
+	+	35	7
+	+	36	8
+	+	42	4
 	+	50	0
-	+	257	0
+	+	38	0
+	+	39	25
+	+	51	0
+	+	259	0
+	+	252	0
+	+	253	20
+	+	253	19
+	+	253	0
+	+	14	0
+	+	182	0
+	+	183	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	73	0
+	+	57	0
+	+	70	11
+	+	57	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	259	0
+	+	16	26
+	+	17	28
+	+	258	24
+	+	259	0
+	+	258	22
+	+	259	11
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	234	0
+	+	259	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+	"	425	0
+	^	6	1
+	.	16	0
+	+	12	0
+	+	6	1
+	+	16	0
+
+> ~/ls - 1
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/ipython3 - 2
+	"	228	0
+	^	228	9
+	.	217	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	218	0
+	+	219	0
+	+	225	0
+	+	228	0
+	+	218	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+	+	217	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+	"	117	73
+	^	50	1
+	.	126	0
+	+	54	0
+	+	50	1
+	+	54	0
+	+	111	0
+	+	111	0
+	+	111	0
+	+	111	0
+	+	123	0
+	+	123	0
+	+	123	0
+	+	127	0
+	+	127	0
+	+	127	0
+	+	126	0
+
+> ~/[Vundle] Installer
+	"	31	0
+	.	1	0
+	+	223	0
+	+	214	0
+	+	204	0
+	+	182	0
+	+	152	0
+	+	121	0
+	+	91	0
+	+	61	0
+	+	31	0
+	+	1	0
+
+> ~/__Tagbar__
+	"	6	3
+	.	10	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/tagbar/doc/tagbar.txt
+	"	241	69
+	^	237	1
+	.	237	1
+	+	335	0
+	+	329	1
+	+	335	0
+	+	320	0
+	+	243	0
+	+	237	1
+
+> ~/test.cpp
+	"	9	0
+	^	9	0
+	.	9	0
+	+	3	16
+	+	12	0
+	+	6	1
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	9	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/tlib_vim/doc/tlib.txt
+	"	3	0
+	^	6	0
+	.	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+	+	12	0
+	+	6	0
+
+> ~/ipython3 - 1
+	"	44	0
+	^	46	0
+	.	45	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	10	0
+	+	11	0
+	+	18	0
+	+	19	0
+	+	21	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	21	0
+	+	22	0
+	+	36	0
+	+	37	0
+	+	44	0
+	+	45	0
+
+> ~/bash - 2
+	"	2116	0
+	^	2116	0
+	.	2115	2
+	+	18	0
+	+	19	0
+	+	23	0
+	+	24	0
+	+	28	0
+	+	29	0
+	+	76	0
+	+	98	0
+	+	99	0
+	+	119	0
+	+	120	0
+	+	124	0
+	+	125	0
+	+	145	0
+	+	146	0
+	+	151	0
+	+	152	0
+	+	156	0
+	+	157	0
+	+	158	0
+	+	159	0
+	+	162	0
+	+	168	0
+	+	176	0
+	+	188	0
+	+	206	0
+	+	226	0
+	+	234	0
+	+	270	0
+	+	292	0
+	+	310	0
+	+	334	0
+	+	354	0
+	+	378	0
+	+	398	0
+	+	402	0
+	+	442	0
+	+	470	0
+	+	490	0
+	+	521	0
+	+	538	0
+	+	546	0
+	+	591	0
+	+	597	0
+	+	646	0
+	+	652	0
+	+	700	0
+	+	710	0
+	+	762	0
+	+	770	0
+	+	782	0
+	+	824	0
+	+	842	0
+	+	890	0
+	+	910	0
+	+	960	0
+	+	976	0
+	+	1032	0
+	+	1037	0
+	+	1038	0
+	+	1040	0
+	+	1041	0
+	+	1044	0
+	+	1045	0
+	+	1046	0
+	+	1049	0
+	+	1055	0
+	+	1063	0
+	+	1077	0
+	+	1095	0
+	+	1097	0
+	+	1125	0
+	+	1143	0
+	+	1161	0
+	+	1165	0
+	+	1205	0
+	+	1213	0
+	+	1267	0
+	+	1279	0
+	+	1316	0
+	+	1359	0
+	+	1402	0
+	+	1451	0
+	+	1498	0
+	+	1555	0
+	+	1609	0
+	+	1675	0
+	+	1733	0
+	+	1809	0
+	+	1849	0
+	+	1944	0
+	+	2007	0
+	+	2103	0
+	+	2107	0
+	+	2108	0
+	+	2110	0
+	+	2111	0
+	+	2112	0
+	+	2114	0
+	+	2115	2
+
+> ~/ls - 3
+	"	7	0
+	^	7	1
+	.	7	0
+	+	3	0
+	+	7	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-choosewin/doc/choosewin.txt
+	"	55	0
+	^	41	0
+	.	41	0
+	+	47	0
+	+	41	0
+	+	47	0
+	+	47	0
+	+	41	0
+	+	47	0
+	+	41	0
+	+	47	0
+	+	41	0
+	+	47	0
+	+	41	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/ctrlp.vim/doc/ctrlp.txt
+	"	1	0
+	^	10	1
+	.	10	1
+	+	16	0
+	+	10	1
+
+> ~/Dropbox/.unix_settings/.vim/bundle/YankRing.vim/doc/yankring.txt
+	"	540	0
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/syntax.txt
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+	"	247	0
+
+> ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-surround/doc/surround.txt
+	"	52	45
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	33
+	^	1	34
+	.	1	33
+	+	1	33
 
 > ~/sandbox/py.py
 	"	2	23
@@ -447,12 +1095,6 @@ $
 > ~/Dropbox/.unix_settings/.git/config
 	"	1	0
 
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	0
-	^	1	21
-	.	1	20
-	+	1	20
-
 > ~/Dropbox/.unix_settings/.vim/[Vundle] Installer
 	"	30	0
 	.	1	0
@@ -465,30 +1107,11 @@ $
 	+	2	0
 	+	1	0
 
-> ~/test.cpp
-	"	11	0
-	^	3	17
-	.	3	16
-	+	3	16
-
 > ~/[Vundle] clean
 	"	3	0
 	.	1	0
 	+	4	0
 	+	3	0
-	+	1	0
-
-> ~/[Vundle] Installer
-	"	28	0
-	.	1	0
-	+	193	0
-	+	184	0
-	+	174	0
-	+	152	0
-	+	122	0
-	+	91	0
-	+	61	0
-	+	31	0
 	+	1	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
@@ -611,9 +1234,6 @@ $
 	"	2	0
 	.	1	0
 	+	1	0
-
-> ~/Dropbox/sms-tools/workspace/A4/submitA4.py
-	"	1	0
 
 > ~/Dropbox/sms-tools/workspace/A4/python - 1
 	"	6	0

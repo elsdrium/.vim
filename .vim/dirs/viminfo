@@ -8,23 +8,25 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Pylint
+~MSle0~/pylint
 
 # Last Substitute Search Pattern:
 ~MSle0&Bundle
 
 # Last Substitute String:
-$Plugin
+$
 
 # Command Line History (newest to oldest):
 :q
-:Pylint
+:wq
+:ConqueTermVSplit ipython
+:ConqueTermVSplit python
 :w
+:Pylint
 :PluginClean
 :source %
 :ConqueTermSplit 1
 :ConqueTermSplit
-:wq
 :helptags
 :PluginUpdate
 :PluginInstall
@@ -65,16 +67,15 @@ $Plugin
 :%s/geasymotion.txt/easymotion.txt/g
 :%s/gsupertab.txt/supertab.txt/g
 :%s/doc\//g
-:s/doc\//g
-:o tags
 
 # Search String History (newest to oldest):
+? \s\+$
+?/pylint
 ?/Pylint
 ?/fugi
 ?/fug
 ?/hl_group_shade
 ?/hl_group
-? \s\+$
 ?/CtrlP
 ?/ctrlp
 ?/inner
@@ -167,10 +168,10 @@ $Plugin
 	au FileType python set foldmethod=manual
 	
 ""1	LINE	0
+	autocmd FileType python compiler pylint
+"2	LINE	0
 	" Python
 	Plugin 'klen/python-mode'
-"2	LINE	0
-	
 "3	LINE	0
 	
 "4	LINE	0
@@ -178,39 +179,45 @@ $Plugin
 "5	LINE	0
 	
 "6	LINE	0
-	command R !python %
+	
 "7	LINE	0
+	command R !python %
+"8	LINE	0
 	autocmd FileType python compiler pylint
 	au FileType python set foldmethod=manual
-"8	LINE	0
+"9	LINE	0
 	set smartindent
 	set tabstop=4
 	set shiftwidth=4
 	set expandtab
-"9	LINE	0
-	
 "k	CHAR	0
 	jjk
 "-	CHAR	0
 	 
 
 # File marks:
-'0  251  0  ~/.vimrc
-'1  11  0  ~/test.cpp
-'2  43  0  ~/.vimrc
-'3  1  0  ~/.vimrc
-'4  188  15  ~/.vimrc
-'5  1  0  ~/python - 1
-'6  3  16  ~/test.cpp
-'7  25  35  ~/.vimrc
-'8  1  0  ~/test.cpp
-'9  109  4  ~/.vimrc
+'0  1  0  ~/.vimrc
+'1  2  23  ~/sandbox/py.py
+'2  257  0  ~/.vimrc
+'3  1  0  ~/sandbox/py.py
+'4  1  0  ~/Dropbox/.unix_settings/.git/config
+'5  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'6  2  0  ~/Dropbox/.unix_settings/.vim/[Vundle] clean
+'7  251  0  ~/.vimrc
+'8  11  0  ~/test.cpp
+'9  43  0  ~/.vimrc
 
 # Jumplist (newest first):
+-'  1  0  ~/.vimrc
+-'  2  23  ~/sandbox/py.py
+-'  1  0  ~/sandbox/py.py
+-'  257  0  ~/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.git/config
+-'  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  2  0  ~/Dropbox/.unix_settings/.vim/[Vundle] clean
 -'  251  0  ~/.vimrc
 -'  10  0  ~/.vimrc
 -'  3  0  ~/.vimrc
--'  1  0  ~/.vimrc
 -'  11  0  ~/test.cpp
 -'  1  0  ~/test.cpp
 -'  43  0  ~/.vimrc
@@ -299,19 +306,13 @@ $Plugin
 -'  31  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
 -'  1  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
 -'  13  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
--'  14  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
--'  6  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
--'  7  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
--'  8  0  ~/.vim
--'  1  0  ~/.vim
 
 # History of marks within files (newest to oldest):
 
 > ~/.vimrc
-	"	251	0
+	"	1	0
 	^	39	0
-	.	50	0
-	+	33	7
+	.	257	0
 	+	49	0
 	+	16	0
 	+	33	0
@@ -411,6 +412,58 @@ $Plugin
 	+	37	0
 	+	38	25
 	+	50	0
+	+	257	0
+
+> ~/sandbox/py.py
+	"	2	23
+	^	2	24
+	.	2	26
+	+	1	26
+	+	2	26
+
+> ~/sandbox/python - 1
+	"	9	1
+	^	9	2
+	.	9	1
+	+	4	0
+	+	5	0
+	+	9	1
+
+> ~/sandbox/ipython - 2
+	"	20	1
+	^	20	2
+	.	20	1
+	+	1	0
+	+	10	0
+	+	11	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	18	0
+	+	19	0
+	+	20	1
+
+> ~/Dropbox/.unix_settings/.git/config
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	0
+	^	1	21
+	.	1	20
+	+	1	20
+
+> ~/Dropbox/.unix_settings/.vim/[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	30	0
+	+	1	0
+
+> ~/Dropbox/.unix_settings/.vim/[Vundle] clean
+	"	2	0
+	.	1	0
+	+	2	0
+	+	1	0
 
 > ~/test.cpp
 	"	11	0
@@ -424,12 +477,6 @@ $Plugin
 	+	4	0
 	+	3	0
 	+	1	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	14
-	^	1	15
-	.	1	14
-	+	1	14
 
 > ~/[Vundle] Installer
 	"	28	0
@@ -551,16 +598,6 @@ $Plugin
 	+	10	0
 	+	160	156
 	+	160	0
-
-> ~/Dropbox/.unix_settings/.vim/[Vundle] Installer
-	"	32	0
-	.	1	0
-	+	1	0
-
-> ~/Dropbox/.unix_settings/.vim/[Vundle] clean
-	"	2	0
-	.	1	0
-	+	1	0
 
 > ~/Dropbox/.unix_settings/.vim/.vimr
 	"	1	0

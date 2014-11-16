@@ -1,5 +1,6 @@
-http://ninjiatext.blogspot.tw/2014/11/blog-post_16.html,v
+autocmd FileType python compiler pylint,V
 " PythonPlugin 'klen/python-mode',V
+http://ninjiatext.blogspot.tw/2014/11/blog-post_16.html,v
  ,v
 LaTeX-Box-Team/LaTeX-Box,v
 ",v

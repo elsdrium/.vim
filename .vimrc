@@ -3,11 +3,11 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin()        " required
 
 Plugin 'gmarik/Vundle.vim' " required
 
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
@@ -29,7 +29,13 @@ Plugin 'Shougo/neocomplcache.vim'
 Plugin 't9md/vim-choosewin'
 
 " Javascript
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
+
+" Latex
+"Plugin 'LaTeX-Box-Team/LaTeX-Box'
+
+" Python
+Plugin 'klen/python-mode'
 
 " SVN
 Plugin 'mhinz/vim-signify'
@@ -40,9 +46,6 @@ Plugin 'Conque-Shell'
 Plugin 'IndexedSearch'
 Plugin 'matchit.zip'
 Plugin 'YankRing.vim'
-
-" Python
-Plugin 'klen/python-mode'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -251,5 +254,4 @@ syntax on
 colo elflord
 set nu
 
-autocmd FileType python compiler pylint
 au FileType python set foldmethod=manual

@@ -8,23 +8,27 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/hl_group_shade
+~MSle0~/Pylint
 
 # Last Substitute Search Pattern:
 ~MSle0&Bundle
 
 # Last Substitute String:
-$
+$Plugin
 
 # Command Line History (newest to oldest):
 :q
+:Pylint
+:w
+:PluginClean
+:source %
+:ConqueTermSplit 1
+:ConqueTermSplit
+:wq
 :helptags
 :PluginUpdate
 :PluginInstall
-:PluginClean
 :qall
-:source %
-:w
 :h easymotion
 :echo $VIM
 :echo $VIMFILES
@@ -39,7 +43,6 @@ $
 :221
 :o ~/.vimrc
 :sp
-:wq
 :ConqueTerm python
 :help pymode
 :h ConqueTerm python
@@ -49,7 +52,6 @@ $
 :161
 :100
 :%s/Bundle/Plugin/g
-:Pylint
 :h Pylint
 :n
 :new
@@ -65,10 +67,11 @@ $
 :%s/doc\//g
 :s/doc\//g
 :o tags
-:help EasyMotion.txt
-:help EasyMotion_do_mapping
 
 # Search String History (newest to oldest):
+?/Pylint
+?/fugi
+?/fug
 ?/hl_group_shade
 ?/hl_group
 ? \s\+$
@@ -113,153 +116,320 @@ $
 
 # Registers:
 "0	LINE	0
+	set nocompatible              " be iMproved, required
+	filetype off                  " required
 	
-"1	LINE	0
+	" set the runtime path to include Vundle and initialize
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+	" alternatively, pass a path where Vundle should install plugins
+	"call vundle#begin('~/some/path/here')
 	
+	" let Vundle manage Vundle, required
+	Plugin 'gmarik/Vundle.vim'
+	
+	" The following are examples of different formats supported.
+	" Keep Plugin commands between vundle#begin/end.
+	" plugin on GitHub repo
+	Plugin 'tpope/vim-fugitive'
+	" plugin from http://vim-scripts.org/vim/scripts.html
+	Plugin 'L9'
+	" Git plugin not hosted on GitHub
+	Plugin 'git://git.wincent.com/command-t.git'
+	" git repos on your local machine (i.e. when working on your own plugin)
+	Plugin 'file:///home/gmarik/path/to/plugin'
+	" The sparkup vim script is in a subdirectory of this repo called vim.
+	" Pass the path to set the runtimepath properly.
+	Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+	" Avoid a name conflict with L9
+	Plugin 'user/L9', {'name': 'newL9'}
+	
+	" All of your Plugins must be added before the following line
+	call vundle#end()            " required
+	filetype plugin indent on    " required
+	" To ignore plugin indent changes, instead use:
+	"filetype plugin on
+	"
+	" Brief help
+	" :PluginList       - lists configured plugins
+	" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+	" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+	" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+	"
+	" see :h vundle for more details or wiki for FAQ
+	" Put your non-Plugin stuff after this line
+	
+	
+	
+	filetype plugin indent on
+	autocmd FileType python compiler pylint
+	
+	au FileType python set foldmethod=manual
+	
+""1	LINE	0
+	" Python
+	Plugin 'klen/python-mode'
 "2	LINE	0
-	    //$( alist[i].parentNode ).append( alist[i] );
+	
 "3	LINE	0
-	    //$( alist[i].parentNode ).append( '<br></br>' );
+	
 "4	LINE	0
 	
 "5	LINE	0
 	
 "6	LINE	0
-	
-"7	LINE	0
-	
-"8	LINE	0
 	command R !python %
-"9	LINE	0
+"7	LINE	0
 	autocmd FileType python compiler pylint
 	au FileType python set foldmethod=manual
+"8	LINE	0
+	set smartindent
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
+"9	LINE	0
+	
 "k	CHAR	0
 	jjk
-""-	CHAR	0
-	"
+"-	CHAR	0
+	 
 
 # File marks:
-'0  1  0  ~/test.cpp
-'1  14  10  ~/test.cpp
-'2  91  0  ~/[Vundle] Installer
-'3  5  29  ~/.vimrc
-'4  12  0  ~/.vimrc
-'5  3  1  ~/test.cpp
-'6  128  50  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
-'7  1538  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
-'8  316  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
-'9  6  18  ~/.vimrc
+'0  251  0  ~/.vimrc
+'1  11  0  ~/test.cpp
+'2  43  0  ~/.vimrc
+'3  1  0  ~/.vimrc
+'4  188  15  ~/.vimrc
+'5  1  0  ~/python - 1
+'6  3  16  ~/test.cpp
+'7  25  35  ~/.vimrc
+'8  1  0  ~/test.cpp
+'9  109  4  ~/.vimrc
 
 # Jumplist (newest first):
--'  1  0  ~/test.cpp
--'  14  10  ~/test.cpp
--'  91  0  ~/[Vundle] Installer
--'  12  0  ~/.vimrc
+-'  251  0  ~/.vimrc
+-'  10  0  ~/.vimrc
+-'  3  0  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  5  29  ~/.vimrc
--'  4  26  ~/.vimrc
--'  3  1  ~/test.cpp
--'  128  50  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  44  18  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  43  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  153  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  47  4  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1538  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1064  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1001  23  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  997  60  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  991  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  990  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1330  44  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  316  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  264  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  260  26  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  262  54  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  261  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  1  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  2  9  ~/.vimrc
--'  6  18  ~/.vimrc
--'  62  0  ~/.vimrc
--'  40  21  ~/.vimrc
--'  11  0  ~/.vimrc
--'  27  0  ~/.vimrc
+-'  11  0  ~/test.cpp
+-'  1  0  ~/test.cpp
+-'  43  0  ~/.vimrc
+-'  5  0  ~/.vimrc
+-'  188  15  ~/.vimrc
+-'  189  6  ~/.vimrc
+-'  1  0  ~/python - 1
+-'  31  0  ~/.vimrc
+-'  3  16  ~/test.cpp
+-'  25  35  ~/.vimrc
 -'  24  13  ~/.vimrc
--'  22  11  ~/.vimrc
--'  180  0  ~/.vimrc
--'  820  34  ~/Downloads/ConferenceProgram.html
--'  822  75  ~/Downloads/ConferenceProgram.html
--'  18  13  ~/Downloads/ConferenceProgram.html
--'  7  0  ~/Downloads/ConferenceProgram.html
--'  1  0  ~/Downloads/ConferenceProgram.html
--'  128  50  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  44  18  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  43  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  153  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  47  4  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1538  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1064  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1001  23  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  997  60  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  991  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  990  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1330  44  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  316  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  264  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  260  26  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  262  54  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  261  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  1  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  820  34  ~/Downloads/ConferenceProgram.html
--'  822  75  ~/Downloads/ConferenceProgram.html
--'  18  13  ~/Downloads/ConferenceProgram.html
--'  7  0  ~/Downloads/ConferenceProgram.html
--'  1  0  ~/Downloads/ConferenceProgram.html
--'  128  50  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  44  18  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  43  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  153  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  47  4  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1538  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1064  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1001  23  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  997  60  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  991  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  990  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1330  44  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  316  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  264  20  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  260  26  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  262  54  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  261  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  1  0  ~/Dropbox/.unix_settings/.vim/doc/easymotion.txt
--'  128  50  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  44  18  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  43  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  153  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  47  4  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
--'  1538  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
--'  1064  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
+-'  13  0  ~/.vimrc
+-'  12  0  ~/.vimrc
+-'  150  0  ~/.vimrc
+-'  14  0  ~/.vimrc
+-'  230  77  ~/.vimrc
+-'  109  4  ~/.vimrc
+-'  255  0  ~/.vimrc
+-'  245  16  ~/.vimrc
+-'  114  0  ~/.vimrc
+-'  4  12  ~/.vimrc
+-'  74  7  ~/.vimrc
+-'  52  0  ~/.vimrc
+-'  63  13  ~/.vimrc
+-'  247  0  ~/.vimrc
+-'  66  0  ~/.vimrc
+-'  95  15  ~/.vimrc
+-'  32  0  ~/.vimrc
+-'  23  27  ~/.vimrc
+-'  46  22  ~/.vimrc
+-'  44  16  ~/.vimrc
+-'  22  25  ~/.vimrc
+-'  1  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  227  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  5  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  49  7  ~/.vimrc
+-'  1  0  ~/main.m
+-'  8  36  ~/.vimrc
+-'  1  0  ~/vimrc
+-'  16  31  ~/.vimrc
+-'  21  0  ~/Dropbox/.vim/doc/tags
+-'  1  0  ~/Dropbox/.vim/doc/tags
+-'  54  0  ~/Dropbox/.vim/doc/tags
+-'  41  0  ~/Dropbox/.vim/doc/tags
+-'  42  0  ~/Dropbox/.vim/doc/tags
+-'  2  0  ~/Dropbox/.vim/doc/tags
+-'  38  0  ~/Dropbox/.vim/doc/tags
+-'  54  0  ~/Dropbox/.vim/tags
+-'  1  0  ~/Dropbox/.vim/tags
+-'  33  0  ~/Dropbox/.vim/doc/tags
+-'  2  0  ~/Dropbox/.vim/doc/easymotion.txt
+-'  1  0  ~/Dropbox/.vim/doc/easymotion.txt
+-'  34  0  ~/Dropbox/.vim/doc/tags
+-'  315  0  ~/Dropbox/.vim/doc/easymotion.txt
+-'  4  0  ~/Dropbox/.vim/doc/tags
+-'  92  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
+-'  573  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
+-'  5  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
+-'  1  0  ~/Dropbox/.vim/autoload/EasyMotion.vim
+-'  30  13  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  10  19  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  11  19  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  26  4  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  9  11  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  12  14  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  40  2  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  46  2  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  27  64  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  16  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  13  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  14  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  3  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  4  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  44  11  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  1  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  45  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  40  2  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  33  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  49  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  4  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  52  28  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  3  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  14  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  9  0  ~/sandbox/Lokaltog-vim-easymotion-14906c3/README.md
+-'  223  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  31  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+-'  1  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  13  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  14  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  6  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  7  0  ~/Dropbox/sms-tools/workspace/A4/A4Part4.py
+-'  8  0  ~/.vim
+-'  1  0  ~/.vim
 
 # History of marks within files (newest to oldest):
 
+> ~/.vimrc
+	"	251	0
+	^	39	0
+	.	50	0
+	+	33	7
+	+	49	0
+	+	16	0
+	+	33	0
+	+	16	33
+	+	16	6
+	+	18	0
+	+	17	25
+	+	69	50
+	+	21	28
+	+	22	25
+	+	18	0
+	+	16	0
+	+	44	13
+	+	44	13
+	+	45	16
+	+	45	21
+	+	46	23
+	+	46	22
+	+	47	19
+	+	22	24
+	+	23	28
+	+	22	0
+	+	41	0
+	+	40	4
+	+	42	24
+	+	32	11
+	+	23	0
+	+	42	23
+	+	43	0
+	+	42	23
+	+	27	26
+	+	26	25
+	+	24	21
+	+	49	24
+	+	28	31
+	+	30	0
+	+	31	11
+	+	33	0
+	+	29	26
+	+	48	21
+	+	256	0
+	+	206	0
+	+	205	17
+	+	210	0
+	+	252	17
+	+	62	18
+	+	62	0
+	+	257	0
+	+	62	0
+	+	62	0
+	+	211	42
+	+	214	73
+	+	250	12
+	+	215	0
+	+	250	12
+	+	72	47
+	+	64	33
+	+	66	10
+	+	63	13
+	+	98	33
+	+	95	12
+	+	202	0
+	+	136	62
+	+	123	1
+	+	125	0
+	+	107	25
+	+	74	15
+	+	93	46
+	+	74	16
+	+	187	0
+	+	186	14
+	+	200	31
+	+	203	52
+	+	173	13
+	+	184	44
+	+	178	70
+	+	179	0
+	+	181	0
+	+	180	79
+	+	138	9
+	+	171	12
+	+	121	41
+	+	113	26
+	+	219	61
+	+	245	16
+	+	153	0
+	+	165	0
+	+	231	0
+	+	25	36
+	+	188	15
+	+	32	0
+	+	41	0
+	+	34	7
+	+	35	8
+	+	41	4
+	+	49	0
+	+	37	0
+	+	38	25
+	+	50	0
+
 > ~/test.cpp
-	"	1	0
+	"	11	0
 	^	3	17
 	.	3	16
 	+	3	16
 
 > ~/[Vundle] clean
-	"	2	0
+	"	3	0
 	.	1	0
-	+	2	0
+	+	4	0
+	+	3	0
 	+	1	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	14
+	^	1	15
+	.	1	14
+	+	1	14
 
 > ~/[Vundle] Installer
 	"	28	0
@@ -273,111 +443,6 @@ $
 	+	61	0
 	+	31	0
 	+	1	0
-
-> ~/.vimrc
-	"	12	0
-	^	12	1
-	.	12	0
-	+	33	7
-	+	46	0
-	+	11	152
-	+	33	0
-	+	11	185
-	+	11	158
-	+	11	206
-	+	11	204
-	+	66	50
-	+	11	325
-	+	22	25
-	+	11	206
-	+	11	152
-	+	38	13
-	+	38	13
-	+	39	16
-	+	39	21
-	+	40	23
-	+	40	22
-	+	41	19
-	+	22	24
-	+	23	28
-	+	22	0
-	+	35	0
-	+	34	4
-	+	36	24
-	+	32	11
-	+	23	0
-	+	36	23
-	+	37	0
-	+	36	23
-	+	27	26
-	+	26	25
-	+	24	21
-	+	45	24
-	+	28	31
-	+	30	0
-	+	31	11
-	+	33	0
-	+	29	26
-	+	42	21
-	+	253	0
-	+	203	0
-	+	202	17
-	+	207	0
-	+	249	17
-	+	59	18
-	+	59	0
-	+	254	0
-	+	59	0
-	+	59	0
-	+	208	42
-	+	211	73
-	+	247	12
-	+	212	0
-	+	247	12
-	+	69	47
-	+	61	33
-	+	63	10
-	+	60	13
-	+	95	33
-	+	92	12
-	+	199	0
-	+	133	62
-	+	120	1
-	+	122	0
-	+	104	25
-	+	71	15
-	+	90	46
-	+	71	16
-	+	184	0
-	+	183	14
-	+	197	31
-	+	200	52
-	+	170	13
-	+	181	44
-	+	175	70
-	+	176	0
-	+	178	0
-	+	177	79
-	+	135	9
-	+	168	12
-	+	118	41
-	+	110	26
-	+	216	61
-	+	242	16
-	+	150	0
-	+	162	0
-	+	228	0
-	+	25	36
-	+	185	15
-	+	11	0
-	+	11	26
-	+	6	24
-	+	6	36
-	+	62	0
-	+	6	0
-	+	12	0
-	+	13	0
-	+	12	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim
 	"	128	50
@@ -478,12 +543,6 @@ $
 	^	1	23
 	.	1	22
 	+	1	22
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	13
-	^	1	14
-	.	1	14
-	+	1	14
 
 > ~/Dropbox/.unix_settings/.vimrc
 	"	1	0

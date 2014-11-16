@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/leader
+~MSle0~/neo
 
 # Last Substitute Search Pattern:
 ~MSle0&Bundle
@@ -17,58 +17,63 @@
 $
 
 # Command Line History (newest to oldest):
-:qall
-:w
-:test
+:q
 :source %
+:w
 :o .vimrc
+:o test.cpp
+:q!
+:b2
+:b
+:b1
+:h snippet
+:qall
+:help map-alt-keys
+:bp
+:bnext
+:bprevious
+:nmap
+:ConqueTerm bash
+:Con
+:GitPush
+:pwd
+:wq
+:GitCommit
+:GitAdd --all .
+:res -10
+:res +10
+:sp
+:vertical res -10 
+:vertical res +10
+:test
 :vsp
 :cd
-:q
 :version
 :b15
 :bunload
 :bf
 :b13
-:sp
 :bw
 :buffers
 :\15
 :spellgood doox
 :spellgood
-:GitCommit
-:GitAdd --all .
 :GitAdd -all .
 :cd /
-:pwd
 :ls
 :NERDTree
 :GitAdd
-:b1
 :h git-vim
 :bn
 ::bn
 :h easymotion
-:PluginInstall
-:Gadd
-:vertical res -50
-:vertical res -5
-:vertical resize
-:vertical retab
-:vertical recover
-:resize
-:vertical resize 80
-:vertical 80
-:resize 200
-:resize 80
-:resize 60
-:bufferlist
-:buffer
-:bp
-:NE
-:NerdTree
 
 # Search String History (newest to oldest):
+??neo
+?/neocom
+? ^#\|^\s*$
+?/Drop
+?/NERD
 ?/go
 ?/leader
 ?/command
@@ -114,9 +119,6 @@ $
 ?/--
 ?/ 
 ?/clang
-?/clnag
-?/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
-?/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include
 
 # Expression History (newest to oldest):
 
@@ -128,90 +130,78 @@ $
 # Registers:
 "0	LINE	0
 	#          :::::::: ::::::::::: :::::::::  :::             :::::::::          #
-""1	LINE	0
-	map <silent> <A-+> :vertical res +10
+"1	LINE	0
+	set convert-meta on
 "2	LINE	0
-	au FileType python set foldmethod=manual
+	#
 "3	LINE	0
-	Python 3.4.2 (default, Oct 19 2014, 17:55:38) 
-	Type "copyright", "credits" or "license" for more information.
-	 
-	IPython 2.3.1 -- An enhanced Interactive Python.
-	?         -> Introduction and overview of IPython's features.
-	%quickref -> Quick reference.
-	help      -> Python's own help system.
-	object?   -> Details about 'object', use 'object??' for extra details.
-	 
-	In [1]: pwd 
-	Out[1]: '/Users/elsdrm'
-	
-	In [2]: py.py 
-	---------------------------------------------------------------------------
-	NameError                                 Traceback (most recent call last)
-	<ipython-input-2-74b753299131> in <module>()
-	----> 1 py.py
-	 
-	NameError: name 'py' is not defined
-	 
-	In [3]: run 
-	WARNING: you must provide at least a filename.
-	 
-	%run:
-	 Run the named file inside IPython as a program.
-	 
-	Usage::
-	
-	  %run [-n -i -e -G]
-	       [( -t [-N<N>] | -d [-b<N>] | -p [profile options] )]
-	       ( -m mod | file ) [args]
-	
-	Parameters after the filename are passed as command-line arguments to
-	the program (put in sys.argv). Then, control returns to IPython's
-	prompt.
-	
-	This is similar to running at a system prompt ``python file args``,
-	but with the advantage of giving you IPython's tracebacks, and of
-	loading all variables into your interactive namespace for further use
-	(unless -p is used, see below).
-	
-	The file is executed in a namespace initially consisting only of
-	``__name__=='__main__'`` and sys.argv constructed as indicated. It thus
-	sees its environment as if it were being run as a stand-alone program
-	(except for sharing global objects such as previously imported
-	modules). But after execution, the IPython interactive namespace gets
-	updated with all variables defined in the program (except for __name__
-	and sys.argv). This allows for very convenient loading of code for
-	interactive work, while giving each program a 'clean sheet' to run in.
-	
+	#	modified:   .vim/bundle/vim-choosewin (untracked content)
 "4	LINE	0
-	    print( 'Hello world.' )
+	#	modified:   .vim/bundle/matchit.zip (untracked content)
 "5	LINE	0
-	Python 3.4.2 (default, Oct 19 2014, 17:55:38) 
+	#	modified:   .vim/bundle/YankRing.vim (untracked content)
 "6	LINE	0
-	Type "copyright", "credits" or "license" for more information.
+	#
 "7	LINE	0
-	 
+	#   (commit or discard the untracked or modified content in submodules)
 "8	LINE	0
-	IPython 2.3.1 -- An enhanced Interactive Python.
+	#   (use "git checkout -- <file>..." to discard changes in working directory)
 "9	LINE	0
-	?         -> Introduction and overview of IPython's features.
+	#   (use "git add <file>..." to update what will be committed)
 "k	CHAR	0
 	jjk
 "l	CHAR	0
 	ljkkkkjkjjhhhkkhhhhhi:h sur	rou	.€kbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-"-	CHAR	0
-	A
+""-	CHAR	0
+	b
 
 # File marks:
-'0  258  0  ~/.vimrc
-'1  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
-'2  44  0  ~/ipython3 - 1
-'7  1  0  ~/Dropbox/sms-tools/workspace/A4/submitA4.py
+'0  264  0  ~/.vimrc
+'1  2  0  ~/py.py
+'2  1  0  ~/test.cpp
+'3  33  0  ~/.vimrc
+'4  26  0  ~/Dropbox/.unix_settings/bash - 1
+'5  259  0  ~/.vimrc
+'6  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+'7  44  0  ~/ipython3 - 1
 
 # Jumplist (newest first):
--'  258  0  ~/.vimrc
--'  259  4  ~/.vimrc
+-'  264  0  ~/.vimrc
+-'  1  0  ~/test.cpp
+-'  1  0  ~/py.py
 -'  1  0  ~/.vimrc
+-'  2  0  ~/py.py
+-'  33  0  ~/.vimrc
+-'  29  15  ~/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-snipmate/doc/SnipMate.txt
+-'  265  7  ~/.vimrc
+-'  26  0  ~/Dropbox/.unix_settings/bash - 1
+-'  1  0  ~/Dropbox/.unix_settings/bash - 1
+-'  7  42  ~/Dropbox/.unix_settings/bash - 1
+-'  21  0  ~/Dropbox/.unix_settings/bash - 1
+-'  20  0  ~/Dropbox/.unix_settings/bash - 1
+-'  19  0  ~/Dropbox/.unix_settings/bash - 1
+-'  18  0  ~/Dropbox/.unix_settings/bash - 1
+-'  14  0  ~/Dropbox/.unix_settings/bash - 1
+-'  13  0  ~/Dropbox/.unix_settings/bash - 1
+-'  12  0  ~/Dropbox/.unix_settings/bash - 1
+-'  11  0  ~/Dropbox/.unix_settings/bash - 1
+-'  10  0  ~/Dropbox/.unix_settings/bash - 1
+-'  9  0  ~/Dropbox/.unix_settings/bash - 1
+-'  8  0  ~/Dropbox/.unix_settings/bash - 1
+-'  6  0  ~/Dropbox/.unix_settings/bash - 1
+-'  5  0  ~/Dropbox/.unix_settings/bash - 1
+-'  4  0  ~/Dropbox/.unix_settings/bash - 1
+-'  3  0  ~/Dropbox/.unix_settings/bash - 1
+-'  263  20  ~/.vimrc
+-'  256  11  ~/.vimrc
+-'  205  0  ~/.vimrc
+-'  126  10  ~/.vimrc
+-'  119  10  ~/.vimrc
+-'  69  17  ~/.vimrc
+-'  65  17  ~/.vimrc
+-'  259  0  ~/.vimrc
+-'  266  4  ~/.vimrc
 -'  42  4  ~/NERD_tree_5
 -'  47  2  ~/NERD_tree_5
 -'  1  11  ~/NERD_tree_5
@@ -247,55 +237,39 @@ $
 -'  59  30  ~/onset-test/SuperFlux.py
 -'  16  0  ~/onset-test/SuperFlux.py
 -'  4  0  ~/onset-test/README.md
--'  1  0  ~/py.py
 -'  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
 -'  112  45  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
 -'  57  18  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  112  45  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  57  18  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  228  0  ~/ipython3 - 2
--'  227  0  ~/ipython3 - 2
--'  226  0  ~/ipython3 - 2
--'  225  19  ~/ipython3 - 2
--'  224  0  ~/ipython3 - 2
--'  223  0  ~/ipython3 - 2
--'  222  0  ~/ipython3 - 2
--'  221  0  ~/ipython3 - 2
--'  220  0  ~/ipython3 - 2
--'  219  0  ~/ipython3 - 2
--'  1  0  ~/ipython3 - 2
--'  71  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
 > ~/py.py
-	"	12	0
-	^	13	26
+	"	1	0
+	^	2	0
+	.	2	0
+	+	14	0
+	+	14	0
 	+	13	0
-	+	13	0
-	+	12	0
-	+	10	0
+	+	11	0
 	+	1	52
 	+	1	71
 	+	1	61
 	+	1	68
 	+	1	91
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
 	+	1	53
 	+	1	119
 	+	1	147
 	+	1	89
-	+	12	17
+	+	13	17
 	+	1	29
-	+	11	15
+	+	12	15
 	+	1	32
 	+	1	52
 	+	1	53
@@ -303,40 +277,168 @@ $
 	+	1	92
 	+	1	93
 	+	1	115
+	+	13	0
+	+	3	21
+	+	13	15
+	+	14	25
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	15	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	15	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	15	0
+	+	2	0
+
+> ~/test.cpp
+	"	1	0
+	^	9	0
+	.	9	0
+	+	3	16
 	+	12	0
-	+	2	21
-	+	12	15
-	+	13	25
+	+	6	1
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	9	0
+
+> ~/.vimrc
+	"	264	0
+	^	265	8
+	.	264	6
+	+	175	13
+	+	186	44
+	+	180	70
+	+	181	0
+	+	183	0
+	+	182	79
+	+	140	9
+	+	173	12
+	+	123	41
+	+	115	26
+	+	221	61
+	+	247	16
+	+	155	0
+	+	167	0
+	+	233	0
+	+	26	36
+	+	190	15
+	+	33	0
+	+	42	0
+	+	35	7
+	+	36	8
+	+	42	4
+	+	50	0
+	+	38	0
+	+	39	25
+	+	51	0
+	+	266	0
+	+	253	0
+	+	254	20
+	+	254	19
+	+	254	0
 	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	14	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	14	0
+	+	183	0
+	+	184	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	73	0
+	+	57	0
+	+	70	11
+	+	57	0
+	+	80	0
+	+	80	0
+	+	80	0
+	+	80	0
+	+	80	0
+	+	80	0
+	+	80	0
+	+	266	0
+	+	16	26
+	+	17	28
+	+	259	24
+	+	266	0
+	+	259	22
+	+	266	11
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	235	0
+	+	266	0
+	+	260	24
+	+	263	5
+	+	260	5
+	+	263	5
+	+	260	6
+	+	263	0
+	+	260	29
+	+	263	30
+	+	260	21
+	+	261	20
+	+	248	0
+	+	264	21
+	+	265	24
+	+	264	10
+	+	265	10
+	+	257	5
+	+	79	55
+	+	257	0
+	+	82	0
+	+	82	0
+	+	258	18
+	+	258	0
+	+	258	0
+	+	264	6
+	+	265	6
+	+	79	41
+	+	79	41
+	+	257	0
+	+	84	46
+	+	257	0
+	+	264	7
+	+	265	6
+	+	264	6
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-snipmate/doc/SnipMate.txt
+	"	3	47
 
 > ~/NERD_tree_1
-	"	56	0
-	.	1	0
+	"	81	8
+	.	56	0
 	+	1	0
 	+	1	0
 	+	1	0
@@ -363,15 +465,15 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
-	+	127	0
-	+	127	0
-	+	127	0
-	+	127	0
-	+	127	0
-	+	127	0
-	+	163	0
-	+	163	0
-	+	163	0
+	+	200	0
+	+	200	0
+	+	200	0
+	+	200	0
+	+	200	0
+	+	200	0
+	+	236	0
+	+	236	0
+	+	236	0
 	+	1	0
 	+	1	0
 	+	1	0
@@ -395,6 +497,40 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	56	0
+	+	56	0
+	+	56	0
+
+> ~/Dropbox/.unix_settings/bash - 1
+	"	26	0
+	^	25	50
+	.	19	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	17	0
+	+	18	0
+	+	21	0
+	+	23	0
+	+	25	0
+	+	16	0
+	+	19	0
+	+	19	0
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/map.txt
+	"	789	0
+	^	787	2
+	.	788	0
+	+	788	0
+	+	787	2
+	+	788	0
 
 > ~/onset-test/README.md
 	"	4	0
@@ -520,110 +656,6 @@ $
 
 > ~/sandbox/.vimrc
 	"	1	0
-
-> ~/.vimrc
-	"	258	0
-	.	259	0
-	+	257	0
-	+	207	0
-	+	206	17
-	+	211	0
-	+	253	17
-	+	63	18
-	+	63	0
-	+	259	0
-	+	63	0
-	+	63	0
-	+	212	42
-	+	215	73
-	+	251	12
-	+	216	0
-	+	251	12
-	+	73	47
-	+	65	33
-	+	67	10
-	+	64	13
-	+	99	33
-	+	96	12
-	+	203	0
-	+	137	62
-	+	124	1
-	+	126	0
-	+	108	25
-	+	75	15
-	+	94	46
-	+	75	16
-	+	188	0
-	+	187	14
-	+	201	31
-	+	204	52
-	+	174	13
-	+	185	44
-	+	179	70
-	+	180	0
-	+	182	0
-	+	181	79
-	+	139	9
-	+	172	12
-	+	122	41
-	+	114	26
-	+	220	61
-	+	246	16
-	+	154	0
-	+	166	0
-	+	232	0
-	+	26	36
-	+	189	15
-	+	33	0
-	+	42	0
-	+	35	7
-	+	36	8
-	+	42	4
-	+	50	0
-	+	38	0
-	+	39	25
-	+	51	0
-	+	259	0
-	+	252	0
-	+	253	20
-	+	253	19
-	+	253	0
-	+	14	0
-	+	182	0
-	+	183	0
-	+	70	0
-	+	70	0
-	+	70	0
-	+	70	0
-	+	73	0
-	+	57	0
-	+	70	11
-	+	57	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	259	0
-	+	16	26
-	+	17	28
-	+	258	24
-	+	259	0
-	+	258	22
-	+	259	11
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	234	0
-	+	259	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
 	"	425	0
@@ -828,25 +860,6 @@ $
 	+	320	0
 	+	243	0
 	+	237	1
-
-> ~/test.cpp
-	"	9	0
-	^	9	0
-	.	9	0
-	+	3	16
-	+	12	0
-	+	6	1
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	9	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/tlib_vim/doc/tlib.txt
 	"	3	0

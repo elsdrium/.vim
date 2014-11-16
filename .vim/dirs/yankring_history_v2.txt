@@ -1,8 +1,24 @@
+b,v
+>,v
+h,v
 -,v
+A,v
+<,v
+l,v
+##Paper<br />####1. Sparse Representation for Music Information Retrieval using a Large Scale Dictionary (PK's paper)<br /> * The efficiency bottleneck may caused by MATLAB's slow loop iterations.<br /> ####2. AWtoolbox: Characterizing Audio Information Using Audio Words (Mike's paper)<br /> * GUI using C# is Windows-only and not advantageous for distributing.<br /> ####3. A Compositional Hierarchical Model for Music Information Retrieval (ISMIR 2014)<br /> * It proposes a multi-layer model which is similar to deep learning but more transparent and interpretable.<br />,v
+s,v
+E,v
+set convert-meta on,V
+n,v
+M,v
+f,v
+i,v
+g,v
+R,v
+#,V
 =,v
 map <silent> <A-+> :vertical res +10,V
 C:\Program Files\Vim\vim73\tutor\tutor,v
-A,v
 Plugin 'Plugin 'bling/vim-bufferline',v
 Plugin 'bling/vim-bufferline',v
 au FileType python set foldmethod=manual,V
@@ -25,7 +41,6 @@ W,v
 ',v
 #          :::::::: ::::::::::: :::::::::  :::             :::::::::          #,V
 H,v
-h,v
 " remap Mac Cmd-keysnmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,V
 nmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,v
 Hello world.,v

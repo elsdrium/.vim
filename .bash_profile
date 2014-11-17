@@ -12,6 +12,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias ..='cd ..'
 alias ....='cd ../..'
 alias ls='ls -pG'
+alias la='ls -pGA'
 alias reload='source ~/.bash_profile && source ~/.bashrc'
 alias reloadvim='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 function pdf() { mupdf-x11 "$1" & }

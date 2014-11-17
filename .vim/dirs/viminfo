@@ -8,6 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:wq
 :q
 
 # Search String History (newest to oldest):
@@ -21,13 +22,33 @@
 # Registers:
 
 # File marks:
-'0  265  0  ~/Dropbox/.unix_settings/.vimrc
+'0  1  0  ~/Dropbox/.unix_settings/.git/MERGE_MSG
+'1  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'2  265  0  ~/Dropbox/.unix_settings/.vimrc
 
 # Jumplist (newest first):
+-'  1  0  ~/Dropbox/.unix_settings/.git/MERGE_MSG
+-'  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  265  0  ~/Dropbox/.unix_settings/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
+-'  265  0  ~/Dropbox/.unix_settings/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
+-'  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  265  0  ~/Dropbox/.unix_settings/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
 -'  265  0  ~/Dropbox/.unix_settings/.vimrc
 -'  1  0  ~/Dropbox/.unix_settings/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/Dropbox/.unix_settings/.git/MERGE_MSG
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	13
+	^	1	14
+	.	1	13
+	+	1	13
 
 > ~/Dropbox/.unix_settings/.vimrc
 	"	265	0

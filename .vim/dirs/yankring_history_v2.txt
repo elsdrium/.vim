@@ -1,3 +1,4 @@
+https://github.com/elsdrm/.unix_settings.git,v
 https://elsdrm@bitbucket.org/elsdrm/.unix_settings.git,v
 <<<<<<< HEAD
 alias ls='ls -pG',V
@@ -97,4 +98,3 @@ Undefined variable: g:EasyMotion_hl_group_shade,v
     //$( alist[i].parentNode ).append( '<br></br>' );,V
 DF,v
 ervandew/supertab,v
-~/.vim/dirs/tmp/.vimrc.swp,v

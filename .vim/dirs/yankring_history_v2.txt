@@ -1,5 +1,8 @@
-let g:airline#extensions#branch#empty_message = '',v
+Plugin 'Conque-Shell',V
+Conque-Shell,v
 j,v
+欠缺自身努力,v
+let g:airline#extensions#branch#empty_message = '',v
 k,v
 ',v
 <CR>,v
@@ -95,6 +98,3 @@ H,v
 " remap Mac Cmd-keysnmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,V
 nmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,v
 Hello world.,v
-https://github.com/gmarik/Vundle.vim.git,v
-autocmd FileType python compiler pylint,V
-" PythonPlugin 'klen/python-mode',V

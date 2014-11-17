@@ -29,6 +29,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'Townk/vim-autoclose'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 't9md/vim-choosewin'
+Plugin 'elsdrm/Conque-Shell'
 
 " Javascript
 "Plugin 'pangloss/vim-javascript'
@@ -45,7 +46,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-fugitive'
 
 " vim-scripts
-Plugin 'Conque-Shell'
 Plugin 'IndexedSearch'
 Plugin 'matchit.zip'
 Plugin 'YankRing.vim'

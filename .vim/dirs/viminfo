@@ -12,19 +12,25 @@
 
 # Command Line History (newest to oldest):
 :q
+:qall
+:ConqueTerm bash
+:Git push
+:Git commit
+:wq
+:q!
+:Git add --all .
+:h fugitive
+:Gadd
 :PluginClean
 :source %
 :w
 :help signify
-:h fugitive
 :h airline
 :PluginInstall
 :h nerdcomment
 :h easymotion
 :h airlin
-:q!
 :80
-:wq
 
 # Search String History (newest to oldest):
 ?/airline
@@ -54,22 +60,30 @@
 	j
 
 # File marks:
-'0  44  6  ~/Dropbox/.unix_settings/.vimrc
-'1  265  19  ~/Dropbox/.unix_settings/.vimrc
-'2  73  6  ~/Dropbox/.unix_settings/.vimrc
-'3  17  1  ~/Dropbox/.unix_settings/.vimrc
-'4  270  0  ~/Dropbox/.unix_settings/.vimrc
-'5  268  6  ~/Dropbox/.unix_settings/.vimrc
-'6  1  0  ~/Dropbox/.unix_settings/.git/MERGE_MSG
-'7  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'8  269  0  ~/Dropbox/.unix_settings/.vimrc
+'0  1  0  ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/.git/MERGE_MSG
+'1  5  49  ~/Dropbox/.unix_settings/bash - 1
+'2  1  0  ~/Dropbox/.unix_settings/.vimrc
+'3  44  6  ~/Dropbox/.unix_settings/.vimrc
+'4  265  19  ~/Dropbox/.unix_settings/.vimrc
+'5  73  6  ~/Dropbox/.unix_settings/.vimrc
+'6  17  1  ~/Dropbox/.unix_settings/.vimrc
+'7  270  0  ~/Dropbox/.unix_settings/.vimrc
+'8  268  6  ~/Dropbox/.unix_settings/.vimrc
+'9  1  0  ~/Dropbox/.unix_settings/.git/MERGE_MSG
 
 # Jumplist (newest first):
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/.git/MERGE_MSG
+-'  5  49  ~/Dropbox/.unix_settings/bash - 1
+-'  4  0  ~/Dropbox/.unix_settings/bash - 1
+-'  3  53  ~/Dropbox/.unix_settings/bash - 1
+-'  1  0  ~/Dropbox/.unix_settings/bash - 1
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
 -'  44  6  ~/Dropbox/.unix_settings/.vimrc
+-'  270  0  ~/Dropbox/.unix_settings/.vimrc
+-'  4  0  ~/Dropbox/.unix_settings/.vimrc
 -'  70  6  ~/Dropbox/.unix_settings/.vimrc
 -'  18  0  ~/Dropbox/.unix_settings/.vimrc
 -'  17  18  ~/Dropbox/.unix_settings/.vimrc
--'  1  0  ~/Dropbox/.unix_settings/.vimrc
 -'  265  19  ~/Dropbox/.unix_settings/.vimrc
 -'  266  0  ~/Dropbox/.unix_settings/.vimrc
 -'  263  20  ~/Dropbox/.unix_settings/.vimrc
@@ -77,7 +91,6 @@
 -'  267  0  ~/Dropbox/.unix_settings/.vimrc
 -'  268  0  ~/Dropbox/.unix_settings/.vimrc
 -'  269  0  ~/Dropbox/.unix_settings/.vimrc
--'  270  13  ~/Dropbox/.unix_settings/.vimrc
 -'  261  0  ~/Dropbox/.unix_settings/.vimrc
 -'  14  0  ~/Dropbox/.unix_settings/.vimrc
 -'  262  0  ~/Dropbox/.unix_settings/.vimrc
@@ -127,11 +140,55 @@
 -'  1  0  ~/Dropbox/.unix_settings/.git/MERGE_MSG
 -'  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  13  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  30  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
+-'  44  6  ~/Dropbox/.unix_settings/.vimrc
+-'  270  0  ~/Dropbox/.unix_settings/.vimrc
+-'  4  0  ~/Dropbox/.unix_settings/.vimrc
+-'  70  6  ~/Dropbox/.unix_settings/.vimrc
+-'  18  0  ~/Dropbox/.unix_settings/.vimrc
+-'  17  18  ~/Dropbox/.unix_settings/.vimrc
+-'  265  19  ~/Dropbox/.unix_settings/.vimrc
+-'  266  0  ~/Dropbox/.unix_settings/.vimrc
+-'  263  20  ~/Dropbox/.unix_settings/.vimrc
+-'  264  0  ~/Dropbox/.unix_settings/.vimrc
+-'  267  0  ~/Dropbox/.unix_settings/.vimrc
+-'  268  0  ~/Dropbox/.unix_settings/.vimrc
+-'  269  0  ~/Dropbox/.unix_settings/.vimrc
+-'  261  0  ~/Dropbox/.unix_settings/.vimrc
+-'  14  0  ~/Dropbox/.unix_settings/.vimrc
+-'  262  0  ~/Dropbox/.unix_settings/.vimrc
+-'  74  0  ~/Dropbox/.unix_settings/.vimrc
+-'  76  6  ~/Dropbox/.unix_settings/.vimrc
+-'  75  6  ~/Dropbox/.unix_settings/.vimrc
+-'  73  6  ~/Dropbox/.unix_settings/.vimrc
+-'  72  6  ~/Dropbox/.unix_settings/.vimrc
+-'  71  6  ~/Dropbox/.unix_settings/.vimrc
+-'  45  25  ~/Dropbox/.unix_settings/.vimrc
+-'  31  0  ~/Dropbox/.unix_settings/.vimrc
+-'  55  0  ~/Dropbox/.unix_settings/.vimrc
+-'  43  0  ~/Dropbox/.unix_settings/.vimrc
+-'  78  39  ~/Dropbox/.unix_settings/.vimrc
+-'  29  0  ~/Dropbox/.unix_settings/.vimrc
+-'  83  40  ~/Dropbox/.unix_settings/.vimrc
 
 # History of marks within files (newest to oldest):
 
+> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/.git/MERGE_MSG
+	"	1	0
+
+> ~/Dropbox/.unix_settings/bash - 1
+	"	5	49
+	^	5	50
+	.	5	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	5	0
+
 > ~/Dropbox/.unix_settings/.vimrc
-	"	44	6
+	"	1	0
+	^	270	2
 	.	44	0
 	+	268	6
 	+	270	9
@@ -175,9 +232,21 @@
 	+	266	0
 	+	266	0
 	+	44	0
+	+	16	0
+	+	44	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	30
+	^	1	31
+	.	1	30
+	+	1	30
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-fugitive/doc/fugitive.txt
-	"	1	0
+	"	8	48
+	^	14	0
+	.	14	0
+	+	19	0
+	+	14	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-signify/doc/signify.txt
 	"	329	4
@@ -215,9 +284,3 @@
 
 > ~/Dropbox/.unix_settings/.git/MERGE_MSG
 	"	1	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	13
-	^	1	14
-	.	1	13
-	+	1	13

@@ -1,3 +1,18 @@
+let g:airline#extensions#branch#empty_message = '',v
+j,v
+k,v
+',v
+<CR>,v
+-,v
+S,v
+"plugin 'bling/vim-airline'"Plugin 'bling/vim-bufferline',V
+let g:airline#extensions#branch#enabled = 1,v
+Lokaltog/powerline,v
+t,v
+n,v
+E,v
+b,v
+nmap <S-Enter> O<Esc>j,v
 https://github.com/elsdrm/.unix_settings.git,v
 https://elsdrm@bitbucket.org/elsdrm/.unix_settings.git,v
 <<<<<<< HEAD
@@ -36,23 +51,18 @@ emory_usage/enable = True,V
 animated_docks = True,V
 1 [main]  2 lightwindow/size = (650, 400)  3 tear_off_menus = False  4 lightwindow/is_fullscreen = False  5 window/prefs_dialog_size = (745, 580)  6 memory_usage/timeout = 2000  7 custom_margin = 0  8 animated_docks = True  9 lightwindow/prefs_dialog_size = (745, 411) 10 cpu_usage/enable = True 11 use_custom_margin = True 12 vertical_tabs = False 13 vertical_dockwidget_titlebars = False 14 single_instance = True 15 open_files_port = 21128 16 window/position = (10, 23) 17 show_internal_console_if_traceback = True 18 window/size = (1918, 1031) 19 lightwindow/is_maximized = False 20 lightwindow/position = (30, 30) 21 memory_usage/enable = True 22 window/is_maximized = True 23 cpu_usage/timeout = 2000 24 window/is_fullscreen = False,v
 pythonstartup = /Applications/Spyder.app/Contents/Resources/lib/python2.7/spyderlib/scientific_startup.py,V
-',v
 http://zh.wikipedia.org/wiki/%E8%94%A1%E4%BB%81%E5%A0%85,v
 \author{Hsueh-Min Chen},V
 http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=3532190&lg=zh_TW&sign=43380a103e41893548a216ca105cd804&viral_id=100000033743851_1416187582084&fish_msg_type=feed,v
-b,v
 http://www.paulgraham.com/startupideas.html,v
 >,v
 h,v
--,v
 A,v
 <,v
 l,v
 ##Paper<br />####1. Sparse Representation for Music Information Retrieval using a Large Scale Dictionary (PK's paper)<br /> * The efficiency bottleneck may caused by MATLAB's slow loop iterations.<br /> ####2. AWtoolbox: Characterizing Audio Information Using Audio Words (Mike's paper)<br /> * GUI using C# is Windows-only and not advantageous for distributing.<br /> ####3. A Compositional Hierarchical Model for Music Information Retrieval (ISMIR 2014)<br /> * It proposes a multi-layer model which is similar to deep learning but more transparent and interpretable.<br />,v
 s,v
-E,v
 set convert-meta on,V
-n,v
 M,v
 f,v
 i,v
@@ -88,13 +98,3 @@ Hello world.,v
 https://github.com/gmarik/Vundle.vim.git,v
 autocmd FileType python compiler pylint,V
 " PythonPlugin 'klen/python-mode',V
-http://ninjiatext.blogspot.tw/2014/11/blog-post_16.html,v
-LaTeX-Box-Team/LaTeX-Box,v
-",v
-,V
-EasyMotion_hl_group_shade,v
-Undefined variable: g:EasyMotion_hl_group_shade,v
-    //$( alist[i].parentNode ).append( alist[i] );,V
-    //$( alist[i].parentNode ).append( '<br></br>' );,V
-DF,v
-ervandew/supertab,v

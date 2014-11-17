@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim' " required
 "Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
 Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'Lokaltog/powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -40,7 +41,8 @@ Plugin 'klen/python-mode'
 
 " SVN
 Plugin 'mhinz/vim-signify'
-Plugin 'motemen/git-vim'
+"Plugin 'motemen/git-vim'
+Plugin 'tpope/vim-fugitive'
 
 " vim-scripts
 Plugin 'Conque-Shell'
@@ -71,6 +73,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#empty_message = ''
 
 """ Neocomplcache
 " most of them not documented because I'm not sure how they work
@@ -263,3 +267,4 @@ nmap ,vl :vertical res +10<CR>
 nmap ,vs :vertical res -10 <CR>
 nmap ,, :bnext<CR>
 nmap ,. :bprevious<CR>
+nmap <CR><CR> o<Esc>

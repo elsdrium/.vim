@@ -13,6 +13,7 @@ alias ..='cd ..'
 alias ....='cd ../..'
 alias ls='ls -pG'
 alias reload='source ~/.bash_profile && source ~/.bashrc'
+alias reloadvim='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 function pdf() { mupdf-x11 "$1" & }
 
 source ~/.bashrc

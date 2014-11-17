@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/neo
+~MSle0~/window/state
 
 # Last Substitute Search Pattern:
 ~MSle0&Bundle
@@ -17,17 +17,24 @@
 $
 
 # Command Line History (newest to oldest):
-:q
-:source %
+:qall
+:!spyder
 :w
+:o spyder.ini.old
+:sp
+:q
+:24
+:wq
+:15
+:q!
+:w!
+:source %
 :o .vimrc
 :o test.cpp
-:q!
 :b2
 :b
 :b1
 :h snippet
-:qall
 :help map-alt-keys
 :bp
 :bnext
@@ -37,12 +44,10 @@ $
 :Con
 :GitPush
 :pwd
-:wq
 :GitCommit
 :GitAdd --all .
 :res -10
 :res +10
-:sp
 :vertical res -10 
 :vertical res +10
 :test
@@ -62,13 +67,19 @@ $
 :cd /
 :ls
 :NERDTree
-:GitAdd
-:h git-vim
-:bn
-::bn
-:h easymotion
 
 # Search String History (newest to oldest):
+??window/state
+?/layout
+?/color
+?/console
+?/ipython
+?/IPython
+?/py2.7
+?/.spyder2
+?/template
+?/tplx
+?/article.
 ??neo
 ?/neocom
 ? ^#\|^\s*$
@@ -108,17 +119,6 @@ $
 ?/vim-debug
 ?/compl
 ? Bundle
-? geasymotion.txt
-? gsupertab.txt
-? doc\/
-? SuperTabLongestEnhanced
-?/help
-? \<au\>
-? ^\s*$
-? \<alias\>
-?/--
-?/ 
-?/clang
 
 # Expression History (newest to oldest):
 
@@ -129,119 +129,261 @@ $
 
 # Registers:
 "0	LINE	0
-	#          :::::::: ::::::::::: :::::::::  :::             :::::::::          #
-"1	LINE	0
-	set convert-meta on
+	2800
+<window/state = 000000ff00000000fd000000010000000000000780000003c7fc0200000001fc0000002c000003c70000016100fffffffc0100000005fc0000000000000157000000da00fffffffc0200000002fb00000016004500780070006c006f007200650072005f00640077010000002c000002260000008300fffffffc00000253000001a0000000bc01000014fa000000000100000002fb00000024004f0062006a0065006300740049006e00730070006500630074006f0072005f006400770100000000ffffffff000000a100fffffffb0000001200500079006c0069006e0074005f00640077010000000000000157000000da00fffffffb000000120045006400690074006f0072005f0064007701000001580000044d0000009d00fffffffb0000002400500072006f006a006500630074004500780070006c006f007200650072005f0064007700000004bd0000012e0000004e00fffffffb00000024004f00750074006c0069006e0065004500780070006c006f007200650072005f006400770000000000ffffffff0000006400fffffffc000005a6000001da000000d200fffffffc0200000003fc0000002c000002be000000c501000014fa000000010100000002fb00000026005600610072006900610062006c0065004500780070006c006f007200650072005f006400770100000000ffffffff0000006b00fffffffb0000001600500072006f00660069006c00650072005f0064007701000004750000030b000000d200fffffffc00000273000000a40000000000fffffffaffffffff0200000003fb0000001a004f006e006c0069006e006500480065006c0070005f006400770000000000ffffffff0000003c00fffffffb0000001c00460069006e00640049006e00460069006c00650073005f006400770000000000ffffffff000000d600fffffffb0000001c0042007200650061006b0070006f0069006e00740073005f006400770000000000ffffffff0000006400fffffffc000002eb000001080000009b01000014fa000000020200000004fb0000002400450078007400650072006e0061006c0043006f006e0073006f006c0065005f006400770000000000ffffffff0000003300fffffffb000000140043006f006e0073006f006c0065005f006400770000000000ffffffff0000006400fffffffb0000002200490050007900740068006f006e0043006f006e0073006f006c0065005f006400770100000000ffffffff0000003800fffffffb0000001a0048006900730074006f00720079004c006f0067005f006400770100000000ffffffff0000008600ffffff00000000000003c700000004000000040000000800000008fc00000001000000020000000800000018006d00610069006e005f0074006f006f006c0062006100720100000000ffffffff00000000000000000000001800660069006c0065005f0074006f006f006c00620061007201000000abffffffff0000000000000000000000180065006400690074005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c007300650061007200630068005f0074006f006f006c006200610072010000014cffffffff00000000000000000000001c0073006f0075007200630065005f0074006f006f006c006200610072010000021dffffffff00000000000000000000001600720075006e005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001a00640065006200750067005f0074006f006f006c0062006100720100000352ffffffff0000000000000000000000300047006c006f00620061006c00200077006f0072006b0069006e00670020006400690072006500630074006f00720079010000043fffffffff0000000000000000
+""1	LINE	0
+	2648
+<window/state = '000000ff00000000fd000000010000000000000780000003c7fc0200000001fc0000002c000003c70000016100fffffffc0100000004fb0000002400500072006f006a006500630074004500780070006c006f007200650072005f006400770000000000ffffffff0000004e00fffffffb000000120045006400690074006f0072005f006400770100000000000005a50000009d00fffffffb00000024004f00750074006c0069006e0065004500780070006c006f007200650072005f006400770000000000ffffffff0000006400fffffffc000005a6000001da000000f400fffffffc0200000002fc0000002c000001d2000000c501000014fa000000000200000008fb00000024004f0062006a0065006300740049006e00730070006500630074006f0072005f006400770100000000ffffffff0000008a00fffffffb00000026005600610072006900610062006c0065004500780070006c006f007200650072005f006400770100000000ffffffff000000b000fffffffb0000001a004f006e006c0069006e006500480065006c0070005f006400770000000000ffffffff0000003c00fffffffb00000016004500780070006c006f007200650072005f006400770100000000ffffffff0000008300fffffffb0000001c00460069006e00640049006e00460069006c00650073005f006400770000000000ffffffff000000d600fffffffb0000001c0042007200650061006b0070006f0069006e00740073005f006400770000000000ffffffff0000006400fffffffb0000001600500072006f00660069006c00650072005f006400770000000000ffffffff000000a700fffffffb0000001200500079006c0069006e0074005f006400770000000000ffffffff000000a700fffffffc000001ff000001f40000009b01000014fa000000030200000004fb000000140043006f006e0073006f006c0065005f006400770000000000ffffffff0000006400fffffffb0000002400450078007400650072006e0061006c0043006f006e0073006f006c0065005f006400770100000000ffffffff0000008600fffffffb0000001a0048006900730074006f00720079004c006f0067005f006400770100000000ffffffff0000008600fffffffb0000002200490050007900740068006f006e0043006f006e0073006f006c0065005f006400770100000000ffffffff0000008600ffffff00000000000003c700000004000000040000000800000008fc0000000100000002000000080000001800660069006c0065005f0074006f006f006c0062006100720100000000ffffffff0000000000000000000000180065006400690074005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c007300650061007200630068005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c0073006f0075007200630065005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001600720075006e005f0074006f006f006c00620061007201000000a1ffffffff00000000000000000000001a00640065006200750067005f0074006f006f006c0062006100720100000168ffffffff000000000000000000000018006d00610069006e005f0074006f006f006c0062006100720100000255ffffffff0000000000000000000000300047006c006f00620061006c00200077006f0072006b0069006e00670020006400690072006500630074006f007200790100000300ffffffff0000000000000000'
 "2	LINE	0
-	#
+	memory_usage/enable = True
 "3	LINE	0
-	#	modified:   .vim/bundle/vim-choosewin (untracked content)
-"4	LINE	0
-	#	modified:   .vim/bundle/matchit.zip (untracked content)
+	pu_usage/enable = False
+"4	CHAR	0
+	[main]
+	window/prefs_dialog_size = (1145, 613)
+	show_internal_console_if_traceback = True
+	lightwindow/size = (650, 400)
+	window/is_fullscreen = False
+	cpu_usage/timeout = 2000
+	memory_usage/timeout = 2000
+	window/is_maximized = True
+	single_instance = True
+	window/size = (1260, 740)
+	window/position = (10, 10)
+	vertical_dockwidget_titlebars = False
+	lightwindow/is_maximized = False
+	animated_docks = True
+	lightwindow/prefs_dialog_size = (745, 411)
+	c
 "5	LINE	0
-	#	modified:   .vim/bundle/YankRing.vim (untracked content)
-"6	LINE	0
-	#
+	emory_usage/enable = True
+"6	CHAR	0
+	[main]
+	window/prefs_dialog_size = (1145, 613)
+	show_internal_console_if_traceback = True
+	lightwindow/size = (650, 400)
+	window/is_fullscreen = False
+	cpu_usage/timeout = 2000
+	memory_usage/timeout = 2000
+	window/is_maximized = True
+	single_instance = True
+	window/size = (1260, 740)
+	window/position = (10, 10)
+	vertical_dockwidget_titlebars = False
+	lightwindow/is_maximized = False
+	animated_docks = True
+	lightwindow/prefs_dialog_size = (745, 411)
+	cpu_usage/enable = False
+	m
 "7	LINE	0
-	#   (commit or discard the untracked or modified content in submodules)
+	animated_docks = True
 "8	LINE	0
-	#   (use "git checkout -- <file>..." to discard changes in working directory)
+	pythonstartup = /Applications/Spyder.app/Contents/Resources/lib/python2.7/spyderlib/scientific_startup.py
 "9	LINE	0
-	#   (use "git add <file>..." to update what will be committed)
+	\author{Hsueh-Min Chen}
 "k	CHAR	0
 	jjk
 "l	CHAR	0
 	ljkkkkjkjjhhhkkhhhhhi:h sur	rou	.€kbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-""-	CHAR	0
-	b
+"-	CHAR	0
+	24 
 
 # File marks:
-'0  264  0  ~/.vimrc
-'1  2  0  ~/py.py
-'2  1  0  ~/test.cpp
-'3  33  0  ~/.vimrc
-'4  26  0  ~/Dropbox/.unix_settings/bash - 1
-'5  259  0  ~/.vimrc
-'6  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
-'7  44  0  ~/ipython3 - 1
+'0  30  0  ~/.spyder2-py3/spyder.ini
+'1  25  0  ~/.spyder2-py3/spyder.ini
+'2  262  0  ~/.spyder2-py3/spyder.ini
+'3  576  0  ~/.spyder2-py3/spyder.ini
+'4  31  0  ~/[Vundle] Installer
+'5  16  67  ~/.bash_profile
+'6  12  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+'7  7  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+'8  8  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+'9  560  46  ~/.ipython/profile_default/ipython_nbconvert_config.py
 
 # Jumplist (newest first):
--'  264  0  ~/.vimrc
--'  1  0  ~/test.cpp
--'  1  0  ~/py.py
--'  1  0  ~/.vimrc
--'  2  0  ~/py.py
--'  33  0  ~/.vimrc
--'  29  15  ~/.vimrc
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-snipmate/doc/SnipMate.txt
--'  265  7  ~/.vimrc
--'  26  0  ~/Dropbox/.unix_settings/bash - 1
--'  1  0  ~/Dropbox/.unix_settings/bash - 1
--'  7  42  ~/Dropbox/.unix_settings/bash - 1
--'  21  0  ~/Dropbox/.unix_settings/bash - 1
--'  20  0  ~/Dropbox/.unix_settings/bash - 1
--'  19  0  ~/Dropbox/.unix_settings/bash - 1
--'  18  0  ~/Dropbox/.unix_settings/bash - 1
--'  14  0  ~/Dropbox/.unix_settings/bash - 1
--'  13  0  ~/Dropbox/.unix_settings/bash - 1
--'  12  0  ~/Dropbox/.unix_settings/bash - 1
--'  11  0  ~/Dropbox/.unix_settings/bash - 1
--'  10  0  ~/Dropbox/.unix_settings/bash - 1
--'  9  0  ~/Dropbox/.unix_settings/bash - 1
--'  8  0  ~/Dropbox/.unix_settings/bash - 1
--'  6  0  ~/Dropbox/.unix_settings/bash - 1
--'  5  0  ~/Dropbox/.unix_settings/bash - 1
--'  4  0  ~/Dropbox/.unix_settings/bash - 1
--'  3  0  ~/Dropbox/.unix_settings/bash - 1
--'  263  20  ~/.vimrc
--'  256  11  ~/.vimrc
--'  205  0  ~/.vimrc
--'  126  10  ~/.vimrc
--'  119  10  ~/.vimrc
--'  69  17  ~/.vimrc
--'  65  17  ~/.vimrc
--'  259  0  ~/.vimrc
--'  266  4  ~/.vimrc
--'  42  4  ~/NERD_tree_5
--'  47  2  ~/NERD_tree_5
--'  1  11  ~/NERD_tree_5
--'  6  0  ~/onset-test/ComplexFlux.py
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
--'  95  1  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
--'  10  0  ~/Dropbox/.unix_settings/.vim/bundle/git-vim/doc/git-vim.txt
--'  774  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  348  2  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  156  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  66  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  58  35  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  1  1  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  1126  41  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  891  38  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  888  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  662  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  618  10  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  599  11  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  583  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  571  47  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  570  53  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  561  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  549  55  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  548  23  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  547  66  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  1142  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  602  11  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  550  66  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  50  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
--'  14  3  ~/onset-test/SuperFlux.py
--'  62  20  ~/onset-test/SuperFlux.py
--'  59  30  ~/onset-test/SuperFlux.py
--'  16  0  ~/onset-test/SuperFlux.py
--'  4  0  ~/onset-test/README.md
--'  117  73  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  112  45  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
--'  57  18  ~/Dropbox/.unix_settings/.vim/bundle/nerdtree/doc/NERD_tree.txt
+-'  30  0  ~/.spyder2-py3/spyder.ini
+-'  31  0  ~/.spyder2-py3/spyder.ini
+-'  563  0  ~/.spyder2-py3/spyder.ini
+-'  1  0  ~/.spyder2-py3/spyder.ini
+-'  25  0  ~/.spyder2-py3/spyder.ini
+-'  24  0  ~/.spyder2-py3/spyder.ini
+-'  262  0  ~/.spyder2-py3/spyder.ini
+-'  51  10  ~/.spyder2-py3/spyder.ini
+-'  387  12  ~/.spyder2-py3/spyder.ini
+-'  376  20  ~/.spyder2-py3/spyder.ini
+-'  359  0  ~/.spyder2-py3/spyder.ini
+-'  357  0  ~/.spyder2-py3/spyder.ini
+-'  350  0  ~/.spyder2-py3/spyder.ini
+-'  234  15  ~/.spyder2-py3/spyder.ini
+-'  225  16  ~/.spyder2-py3/spyder.ini
+-'  106  9  ~/.spyder2-py3/spyder.ini
+-'  69  1  ~/.spyder2-py3/spyder.ini
+-'  187  16  ~/.spyder2-py3/spyder.ini
+-'  576  0  ~/.spyder2-py3/spyder.ini
+-'  226  8  ~/.spyder2-py3/spyder.ini
+-'  105  1  ~/.spyder2-py3/spyder.ini
+-'  368  12  ~/.spyder2-py3/spyder.ini
+-'  131  0  ~/.spyder2-py3/spyder.ini
+-'  36  38  ~/.spyder2-py3/spyder.ini
+-'  201  260  ~/.spyder2-py3/spyder.ini
+-'  202  0  ~/.spyder2-py3/spyder.ini
+-'  560  0  ~/.spyder2-py3/spyder.ini
+-'  31  0  ~/[Vundle] Installer
+-'  16  67  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  12  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  1  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  7  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  8  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  560  46  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  493  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  472  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  465  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  255  0  ~/.spyder2-py3/spyder.ini
+-'  9  0  ~/.spyder2-py3/spyder.ini
+-'  44  10  ~/.spyder2-py3/spyder.ini
+-'  17  14  ~/.spyder2-py3/spyder.ini
+-'  380  12  ~/.spyder2-py3/spyder.ini
+-'  369  20  ~/.spyder2-py3/spyder.ini
+-'  352  0  ~/.spyder2-py3/spyder.ini
+-'  343  0  ~/.spyder2-py3/spyder.ini
+-'  227  15  ~/.spyder2-py3/spyder.ini
+-'  218  16  ~/.spyder2-py3/spyder.ini
+-'  99  9  ~/.spyder2-py3/spyder.ini
+-'  62  1  ~/.spyder2-py3/spyder.ini
+-'  180  16  ~/.spyder2-py3/spyder.ini
+-'  569  0  ~/.spyder2-py3/spyder.ini
+-'  219  8  ~/.spyder2-py3/spyder.ini
+-'  98  1  ~/.spyder2-py3/spyder.ini
+-'  361  12  ~/.spyder2-py3/spyder.ini
+-'  124  0  ~/.spyder2-py3/spyder.ini
+-'  29  38  ~/.spyder2-py3/spyder.ini
+-'  194  260  ~/.spyder2-py3/spyder.ini
+-'  195  0  ~/.spyder2-py3/spyder.ini
+-'  553  0  ~/.spyder2-py3/spyder.ini
+-'  31  0  ~/[Vundle] Installer
+-'  16  67  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  12  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  1  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  7  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  8  0  /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+-'  560  46  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  493  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  472  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  465  21  ~/.ipython/profile_default/ipython_nbconvert_config.py
+-'  31  0  ~/[Vundle] Installer
+-'  16  67  ~/.bash_profile
+-'  1  0  ~/.bash_profile
 
 # History of marks within files (newest to oldest):
+
+> ~/.spyder2-py3/spyder.ini
+	"	30	0
+	^	10	1
+	.	30	0
+	+	36	49
+	+	102	0
+	+	25	0
+	+	1	8
+	+	2	33
+	+	5	47
+	+	9	60
+	+	16	52
+	+	18	54
+	+	20	61
+	+	24	61
+	+	2	0
+	+	17	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	16	0
+	+	10	1
+	+	30	0
+
+> ~/.spyder2-py3/spyder.ini.old
+	"	30	0
+	^	39	0
+	.	39	0
+	+	45	0
+	+	39	0
+
+> ~/[Vundle] clean
+	"	2	0
+	.	1	0
+	+	5	0
+	+	4	0
+	+	2	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	"	31	0
+	.	1	0
+	+	283	0
+	+	274	0
+	+	264	0
+	+	242	0
+	+	212	0
+	+	181	0
+	+	151	0
+	+	121	0
+	+	91	0
+	+	61	0
+	+	31	0
+	+	1	0
+
+> ~/.bash_profile
+	"	16	67
+	^	16	68
+	.	16	68
+	+	16	68
+
+> /usr/local/lib/python3.4/site-packages/IPython/nbconvert/templates/latex/article.tplx
+	"	12	0
+	^	6	0
+	.	12	0
+	+	12	0
+	+	6	0
+	+	8	0
+	+	12	0
+	+	7	0
+	+	12	0
+
+> ~/.ipython/profile_default/ipython_nbconvert_config.py
+	"	560	46
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	12
 
 > ~/py.py
 	"	1	0
@@ -747,20 +889,6 @@ $
 	+	127	0
 	+	126	0
 
-> ~/[Vundle] Installer
-	"	31	0
-	.	1	0
-	+	223	0
-	+	214	0
-	+	204	0
-	+	182	0
-	+	152	0
-	+	121	0
-	+	91	0
-	+	61	0
-	+	31	0
-	+	1	0
-
 > ~/__Tagbar__
 	"	6	3
 	.	10	0
@@ -1069,12 +1197,6 @@ $
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-surround/doc/surround.txt
 	"	52	45
 
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	33
-	^	1	34
-	.	1	33
-	+	1	33
-
 > ~/sandbox/py.py
 	"	2	23
 	^	2	24
@@ -1118,13 +1240,6 @@ $
 	"	2	0
 	.	1	0
 	+	2	0
-	+	1	0
-
-> ~/[Vundle] clean
-	"	3	0
-	.	1	0
-	+	4	0
-	+	3	0
 	+	1	0
 
 > ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/autoload/EasyMotion/highlight.vim

@@ -65,6 +65,7 @@ filetype plugin indent on    " required
 " plugins' settings
 """ EasyMotion
 let g:EasyMotion_leader_key = '\'
+nmap <Leader>v <Plug>(easymotion-bd-w)
 
 """ Airline
 let g:airline#extensions#tabline#enabled = 1

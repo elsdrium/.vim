@@ -1,6 +1,8 @@
+j,v
+https://github.com/CPJKU/SuperFlux.git,v
+>> script_mainWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Warning: matlabpool will be removed in a future release.Use parpool instead.Starting matlabpool using the 'local' profile ... connected to 8 workers.id =     1sc_mode =weighted_vote_firstWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Encoding...Warning: A worker aborted during execution of the parfor loop. The parfor loopwill now run again on the remaining workers.> In parallel_function at 596  In encode at 30  In main at 120  In script_main at 32Error using parallel_function (line 604)All workers aborted during execution of the parfor loop.Error in encode (line 30)parfor i = 1 : size(file, 1)Error in main (line 120)encode(SPAMS_path, path_timbre_D, path_pre_proc_timbre_cal10k,path_codeword_timbre, lambda, screen_lambda, screen_mode, screen_encode_mode,par, screen_weight_mode);Error in script_main (line 32)        [auc(id, 1), map(id, 1), prec10(id, 1), rprec(id, 1)] = main(SVM_flag,        numFile(i), meth{j}, 5, screen_weight_mode, screen_lambda, 'ST3', par);>> The client lost connection to worker 7. This might be due to network problems,or the interactive communicating job might have errored.,v
 Plugin 'Conque-Shell',V
 Conque-Shell,v
-j,v
 欠缺自身努力,v
 let g:airline#extensions#branch#empty_message = '',v
 k,v
@@ -96,5 +98,3 @@ W,v
 #          :::::::: ::::::::::: :::::::::  :::             :::::::::          #,V
 H,v
 " remap Mac Cmd-keysnmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,V
-nmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,v
-Hello world.,v

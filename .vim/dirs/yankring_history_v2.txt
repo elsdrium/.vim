@@ -1,4 +1,96 @@
+<Leader>,v
+nmap <CR><CR> o<Esc>,V
+i,v
+n,v
+Plugin 'joonty/vdebug',V
+http://blog.roodo.com/subing/archives/3375825.html,v
+A NumbaPro Mandelbrot Example,v
+http://code.activestate.com/komodo/remotedebugging/,v
+elsdrm/Conque-Shell',v
+sudo apt-get install python3-setuptools,v
+Plugin 'elsdrm/Conque-Shell',V
+joonty/vdebug,v
+Plugin 'elsdrm/vim-debug',V
+ ,v
+, inst.__class__,v
+from dbgp import dbgp.DBGP,V
+.,v
+p,v
+g,v
+b,v
+d,v
+D,v
+sys.path.append('./vim_debug'),V
+import,v
+"exec g:PythonLoader . " vim_debug/__init__.py",V
+y,v
+",v
+,v
+import ,v
+"exec g:PythonLoader . " vim_debug/,v
+EOF,V
+import commands,V
+c,V
+c,v
+vim.command('python3 import vim'),V
+exec g:PythonLoader . " vim_debug/new_debugger.py",V
+exec g:PythonLoader . " vim_debug/_commands.py",V
+exec g:PythonLoader . " vim_debug/protocol.py",V
+exec g:PythonLoader . " vim_debug/ui.py",V
+exec g:PythonLoader . " vim_debug/subwindows.py",V
+exec g:PythonLoader . " vim_debug/errors.py",V
+exec g:PythonLoader . " vim_debug/window.py",V
+exec g:PythonLoader . " vim_debug/__init__.py",V
+exec g:PythonLoader . " vim_debug/dbgp.py",V
+from .subwindows ,v
+m,v
+o,v
+r,v
+f,v
+ui.py",v
+subwindows.py",v
+stack.py",v
+exec g:PythonLoader . " vim_debug/stack.py",V
+protocol.py",v
+new_debugger.py",v
+errors.py",v
+debugger.py",v
+exec g:PythonLoader . " vim_debug/debugger.py",V
+dbgp.py",v
+_commands.py",v
+commands.py",v
+exec g:PythonLoader . " vim_debug/commands.py",V
+h,v
+exec g:PythonLoader . "__init__.py",V
+endif,V
+    finish,V
+if !has_debug,V
+e,v
+x,v
+python3 << EOF,V
+import vim_debugtry:    from vim_debug.commands import debugger_cmd    vim.command('let has_debug = 1')except ImportError as e:    vim.command('let has_debug = 0')    print('python module vim_debug not found...'),V
+:pwd,V
+   let g:PythonLoader = "pyfile" ,V
+s,v
+3,v
+!,v
+https://www.facebook.com/frankcthsiehfans/posts/10152456366981430,v
+echo,v
+https://github.com/elsdrm/vim-debug.git,v
+ython.framework/Versions/3.4/lib/python34.zip'...Can't list '/usr/local/Cellar/python3/3.4.2_1/Frameworks/P,v
+),v
+,,v
+2to3 --output-dir=python3-version/mycode -W -n,v
+(,v
+compileall.compile_dir("my_project_dir", force=1),v
+https://github.com/jaredly/vim-debug,v
+https://raw.githubusercontent.com/jaredly/vim-debug/master/README.rst,v
+.. |vim-debug-logo| image:: https://raw.github.com/jabapyth/vim-debug/master/logo.png|vim-debug-logo| vim-debug=========================.. Maintainer: Jared Forsyth <jared@jaredforsyth.com>.. Source: http://github.com/jabapyth/vim-phpdebugThis plugin creates an integrated debugging environment in VIM.It supports python and php.Features--------* Integration with xdebug* Step (into/over/out)* Live stack view* Breakpoint set/remove* Watch expressions* Live scope view* Some improvements to make it easier to hack  * It's now in a true python package  * Modularized  * Cleaned up, substantially rewritten for consistencyPlanned:* Conditional breakpointsUsage-----To start your debug session, use the following variants::   Usage: Dbg - (no auto start)          Dbg . (autostart current file -- python)          Dbg url (autostart a URL -- PHP)          Dbg num (autostart a past url -- PHP)Note: for PHP urls, vim-debug keeps track of the last 5 urls you debugged --so you don't have to keep typing them in.Debugger commands::   [usage:] dbg command [options]   - quit    :: exit the debugger   - run     :: continue execution until a breakpoint is reached or the program ends            default shortcut: \r   - stop    :: exit the debugger   - over    :: step over next function call            default shortcut: \o   - watch   :: execute watch functions            default shortcut: \w   - up      :: go up the stack            default shortcut: \u   - here    :: continue execution until the cursor (tmp breakpoint)            default shortcut: \h   - down    :: go down the stack            default shortcut: \d   - exit    :: exit the debugger   - eval    :: eval some code   - break   :: set a breakpoint            default shortcut: \b   - into    :: step into next function call            default shortcut: \i   - out     :: step out of current function call            default shortcut: \tTo disable the default mappings, set the variable ``g:vim_debug_disable_mappings`` to a valuedifferent than 0 in the debugger.vim file.For example::    let g:vim_debug_disable_mappings = 1Installation------------Execute the following commands::    sudo pip install dbgp vim-debug    install-vim-debug.pyNote: the ``install-vim-debug.py`` command installs the ``debugger.vim`` in your ``$VIM/plugins/`` directory.Take a look----------------------Screenshot: `[full size]<http://jaredforsyth.com/media/uploads/images/vim_debug.jpeg>`_.. image:: http://jaredforsyth.com/media/uploads/images/vim_debug.jpeg   :width: 450A screencast tutorial: https://www.youtube.com/watch?v=kairdgZCD1USome links of interest----------------------`Python package installer <http://pypi.python.org/pypi/pip>`_`Xdebug docs <http://www.xdebug.org/docs-dbgp.php>`_Credits-------:Sam Ghods: `(last activity 6/21/07) <http://www.vim.org/scripts/script.php?script_id=1929>`_:Seung Woo Shin: `(last activity 12/7/04) <http://www.vim.org/scripts/script.php?script_id=1152>`_,V
+hhTHcTitle: Beatles180.tar.gzSize: 56 GBCreated: 2014-11-19 11:54:08Modified: 2014-11-19 11:54:08Owner: 陳學民Md5sum: b063a04f3ca10e9320968b1b67e73cd2Shared: FalseParents: 0AFq-B3eaVYt4Uk9PVAMIME Type:Uploaded 'Beatles180.tar.gz' at 30 MB/s, total 56 GB[1]+  Done                    ./gdrive upload --file Beatles180.tar.gz0 ✓ elsdrm@maclinux ~ $ rm Beatles180.tar.gz0 ✓ elsdrm@maclinux ~ $ lscal10k.tar.gz  fig3.10-mxv-omp.c  gdrive               Library/   sandbox/dataset/       FTP197/            html_and_poster.zip  Music/     Templates/Desktop/       FTP198/            lasso_armadillo/     NAS/       test.cppDocuments/     gcc-4.9.2/         Lasso.mexa64         Pictures/  Videos/Downloads/     gcc-4.9.2.tar.gz   LASSO_screening/     Public/    workspace/0 ✓ elsdrm@maclinux ~ $ ls -l *gz,v
+140390763607,v
 j,v
+同時他也語重心長的要臺灣人好自為之，好好落實真正的公平、民主與人權尊重，否則很快的就無法躋身於發達文明的行列。,v
+<Plug>(easymotion-bd-w),v
 https://github.com/CPJKU/SuperFlux.git,v
 >> script_mainWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Warning: matlabpool will be removed in a future release.Use parpool instead.Starting matlabpool using the 'local' profile ... connected to 8 workers.id =     1sc_mode =weighted_vote_firstWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Encoding...Warning: A worker aborted during execution of the parfor loop. The parfor loopwill now run again on the remaining workers.> In parallel_function at 596  In encode at 30  In main at 120  In script_main at 32Error using parallel_function (line 604)All workers aborted during execution of the parfor loop.Error in encode (line 30)parfor i = 1 : size(file, 1)Error in main (line 120)encode(SPAMS_path, path_timbre_D, path_pre_proc_timbre_cal10k,path_codeword_timbre, lambda, screen_lambda, screen_mode, screen_encode_mode,par, screen_weight_mode);Error in script_main (line 32)        [auc(id, 1), map(id, 1), prec10(id, 1), rprec(id, 1)] = main(SVM_flag,        numFile(i), meth{j}, 5, screen_weight_mode, screen_lambda, 'ST3', par);>> The client lost connection to worker 7. This might be due to network problems,or the interactive communicating job might have errored.,v
 Plugin 'Conque-Shell',V
@@ -6,95 +98,3 @@ Conque-Shell,v
 欠缺自身努力,v
 let g:airline#extensions#branch#empty_message = '',v
 k,v
-',v
-<CR>,v
--,v
-S,v
-"plugin 'bling/vim-airline'"Plugin 'bling/vim-bufferline',V
-let g:airline#extensions#branch#enabled = 1,v
-Lokaltog/powerline,v
-t,v
-n,v
-E,v
-b,v
-nmap <S-Enter> O<Esc>j,v
-https://github.com/elsdrm/.unix_settings.git,v
-https://elsdrm@bitbucket.org/elsdrm/.unix_settings.git,v
-<<<<<<< HEAD
-alias ls='ls -pG',V
-=======
->>>>>>> 8642ac059abc637d8cc930250960f9bd4c9afab7
-window/state = '000000ff00000000fd000000010000000000000780000003c7fc0200000001fc0000002c000003c70000016100fffffffc0100000004fb0000002400500072006f006a006500630074004500780070006c006f007200650072005f006400770000000000ffffffff0000004e00fffffffb000000120045006400690074006f0072005f006400770100000000000005a50000009d00fffffffb00000024004f00750074006c0069006e0065004500780070006c006f007200650072005f006400770000000000ffffffff0000006400fffffffc000005a6000001da000000f400fffffffc0200000002fc0000002c000001d2000000c501000014fa000000000200000008fb00000024004f0062006a0065006300740049006e00730070006500630074006f0072005f006400770100000000ffffffff0000008a00fffffffb00000026005600610072006900610062006c0065004500780070006c006f007200650072005f006400770100000000ffffffff000000b000fffffffb0000001a004f006e006c0069006e006500480065006c0070005f006400770000000000ffffffff0000003c00fffffffb00000016004500780070006c006f007200650072005f006400770100000000ffffffff0000008300fffffffb0000001c00460069006e00640049006e00460069006c00650073005f006400770000000000ffffffff000000d600fffffffb0000001c0042007200650061006b0070006f0069006e00740073005f006400770000000000ffffffff0000006400fffffffb0000001600500072006f00660069006c00650072005f006400770000000000ffffffff000000a700fffffffb0000001200500079006c0069006e0074005f006400770000000000ffffffff000000a700fffffffc000001ff000001f40000009b01000014fa000000030200000004fb000000140043006f006e0073006f006c0065005f006400770000000000ffffffff0000006400fffffffb0000002400450078007400650072006e0061006c0043006f006e0073006f006c0065005f006400770100000000ffffffff0000008600fffffffb0000001a0048006900730074006f00720079004c006f0067005f006400770100000000ffffffff0000008600fffffffb0000002200490050007900740068006f006e0043006f006e0073006f006c0065005f006400770100000000ffffffff0000008600ffffff00000000000003c700000004000000040000000800000008fc0000000100000002000000080000001800660069006c0065005f0074006f006f006c0062006100720100000000ffffffff0000000000000000000000180065006400690074005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c007300650061007200630068005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c0073006f0075007200630065005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001600720075006e005f0074006f006f006c00620061007201000000a1ffffffff00000000000000000000001a00640065006200750067005f0074006f006f006c0062006100720100000168ffffffff000000000000000000000018006d00610069006e005f0074006f006f006c0062006100720100000255ffffffff0000000000000000000000300047006c006f00620061006c00200077006f0072006b0069006e00670020006400690072006500630074006f007200790100000300ffffffff0000000000000000',V
-window/state = 000000ff00000000fd000000010000000000000780000003c7fc0200000001fc0000002c000003c70000016100fffffffc0100000005fc0000000000000157000000da00fffffffc0200000002fb00000016004500780070006c006f007200650072005f00640077010000002c000002260000008300fffffffc00000253000001a0000000bc01000014fa000000000100000002fb00000024004f0062006a0065006300740049006e00730070006500630074006f0072005f006400770100000000ffffffff000000a100fffffffb0000001200500079006c0069006e0074005f00640077010000000000000157000000da00fffffffb000000120045006400690074006f0072005f0064007701000001580000044d0000009d00fffffffb0000002400500072006f006a006500630074004500780070006c006f007200650072005f0064007700000004bd0000012e0000004e00fffffffb00000024004f00750074006c0069006e0065004500780070006c006f007200650072005f006400770000000000ffffffff0000006400fffffffc000005a6000001da000000d200fffffffc0200000003fc0000002c000002be000000c501000014fa000000010100000002fb00000026005600610072006900610062006c0065004500780070006c006f007200650072005f006400770100000000ffffffff0000006b00fffffffb0000001600500072006f00660069006c00650072005f0064007701000004750000030b000000d200fffffffc00000273000000a40000000000fffffffaffffffff0200000003fb0000001a004f006e006c0069006e006500480065006c0070005f006400770000000000ffffffff0000003c00fffffffb0000001c00460069006e00640049006e00460069006c00650073005f006400770000000000ffffffff000000d600fffffffb0000001c0042007200650061006b0070006f0069006e00740073005f006400770000000000ffffffff0000006400fffffffc000002eb000001080000009b01000014fa000000020200000004fb0000002400450078007400650072006e0061006c0043006f006e0073006f006c0065005f006400770000000000ffffffff0000003300fffffffb000000140043006f006e0073006f006c0065005f006400770000000000ffffffff0000006400fffffffb0000002200490050007900740068006f006e0043006f006e0073006f006c0065005f006400770100000000ffffffff0000003800fffffffb0000001a0048006900730074006f00720079004c006f0067005f006400770100000000ffffffff0000008600ffffff00000000000003c700000004000000040000000800000008fc00000001000000020000000800000018006d00610069006e005f0074006f006f006c0062006100720100000000ffffffff00000000000000000000001800660069006c0065005f0074006f006f006c00620061007201000000abffffffff0000000000000000000000180065006400690074005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001c007300650061007200630068005f0074006f006f006c006200610072010000014cffffffff00000000000000000000001c0073006f0075007200630065005f0074006f006f006c006200610072010000021dffffffff00000000000000000000001600720075006e005f0074006f006f006c0062006100720000000000ffffffff00000000000000000000001a00640065006200750067005f0074006f006f006c0062006100720100000352ffffffff0000000000000000000000300047006c006f00620061006c00200077006f0072006b0069006e00670020006400690072006500630074006f00720079010000043fffffffff0000000000000000,V
-memory_usage/enable = True,V
-pu_usage/enable = False,V
-[main]window/prefs_dialog_size = (1145, 613)show_internal_console_if_traceback = Truelightwindow/size = (650, 400)window/is_fullscreen = Falsecpu_usage/timeout = 2000memory_usage/timeout = 2000window/is_maximized = Truesingle_instance = Truewindow/size = (1260, 740)window/position = (10, 10)vertical_dockwidget_titlebars = Falselightwindow/is_maximized = Falseanimated_docks = Truelightwindow/prefs_dialog_size = (745, 411)c,v
-emory_usage/enable = True,V
-[main]window/prefs_dialog_size = (1145, 613)show_internal_console_if_traceback = Truelightwindow/size = (650, 400)window/is_fullscreen = Falsecpu_usage/timeout = 2000memory_usage/timeout = 2000window/is_maximized = Truesingle_instance = Truewindow/size = (1260, 740)window/position = (10, 10)vertical_dockwidget_titlebars = Falselightwindow/is_maximized = Falseanimated_docks = Truelightwindow/prefs_dialog_size = (745, 411)cpu_usage/enable = Falsem,v
-24 ,v
-23 ,v
-22 ,v
-21 ,v
-20 ,v
-19 ,v
-18 ,v
-17 ,v
-16 ,v
-15 ,v
-14 ,v
- ,v
-3,v
-1,v
-2,v
-0,v
-9,v
-8,v
-7,v
-6,v
-5,v
-4,v
-animated_docks = True,V
-1 [main]  2 lightwindow/size = (650, 400)  3 tear_off_menus = False  4 lightwindow/is_fullscreen = False  5 window/prefs_dialog_size = (745, 580)  6 memory_usage/timeout = 2000  7 custom_margin = 0  8 animated_docks = True  9 lightwindow/prefs_dialog_size = (745, 411) 10 cpu_usage/enable = True 11 use_custom_margin = True 12 vertical_tabs = False 13 vertical_dockwidget_titlebars = False 14 single_instance = True 15 open_files_port = 21128 16 window/position = (10, 23) 17 show_internal_console_if_traceback = True 18 window/size = (1918, 1031) 19 lightwindow/is_maximized = False 20 lightwindow/position = (30, 30) 21 memory_usage/enable = True 22 window/is_maximized = True 23 cpu_usage/timeout = 2000 24 window/is_fullscreen = False,v
-pythonstartup = /Applications/Spyder.app/Contents/Resources/lib/python2.7/spyderlib/scientific_startup.py,V
-http://zh.wikipedia.org/wiki/%E8%94%A1%E4%BB%81%E5%A0%85,v
-\author{Hsueh-Min Chen},V
-http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=3532190&lg=zh_TW&sign=43380a103e41893548a216ca105cd804&viral_id=100000033743851_1416187582084&fish_msg_type=feed,v
-http://www.paulgraham.com/startupideas.html,v
->,v
-h,v
-A,v
-<,v
-l,v
-##Paper<br />####1. Sparse Representation for Music Information Retrieval using a Large Scale Dictionary (PK's paper)<br /> * The efficiency bottleneck may caused by MATLAB's slow loop iterations.<br /> ####2. AWtoolbox: Characterizing Audio Information Using Audio Words (Mike's paper)<br /> * GUI using C# is Windows-only and not advantageous for distributing.<br /> ####3. A Compositional Hierarchical Model for Music Information Retrieval (ISMIR 2014)<br /> * It proposes a multi-layer model which is similar to deep learning but more transparent and interpretable.<br />,v
-s,v
-set convert-meta on,V
-M,v
-f,v
-i,v
-g,v
-R,v
-#,V
-=,v
-map <silent> <A-+> :vertical res +10,V
-C:\Program Files\Vim\vim73\tutor\tutor,v
-Plugin 'Plugin 'bling/vim-bufferline',v
-Plugin 'bling/vim-bufferline',v
-au FileType python set foldmethod=manual,V
-Python 3.4.2 (default, Oct 19 2014, 17:55:38) Type "copyright", "credits" or "license" for more information. IPython 2.3.1 -- An enhanced Interactive Python.?         -> Introduction and overview of IPython's features.%quickref -> Quick reference.help      -> Python's own help system.object?   -> Details about 'object', use 'object??' for extra details. In [1]: pwd Out[1]: '/Users/elsdrm'In [2]: py.py ---------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-2-74b753299131> in <module>()----> 1 py.py NameError: name 'py' is not defined In [3]: run WARNING: you must provide at least a filename. %run: Run the named file inside IPython as a program. Usage::  %run [-n -i -e -G]       [( -t [-N<N>] | -d [-b<N>] | -p [profile options] )]       ( -m mod | file ) [args]Parameters after the filename are passed as command-line arguments tothe program (put in sys.argv). Then, control returns to IPython'sprompt.This is similar to running at a system prompt ``python file args``,but with the advantage of giving you IPython's tracebacks, and ofloading all variables into your interactive namespace for further use(unless -p is used, see below).The file is executed in a namespace initially consisting only of``__name__=='__main__'`` and sys.argv constructed as indicated. It thussees its environment as if it were being run as a stand-alone program(except for sharing global objects such as previously importedmodules). But after execution, the IPython interactive namespace getsupdated with all variables defined in the program (except for __name__and sys.argv). This allows for very convenient loading of code forinteractive work, while giving each program a 'clean sheet' to run in.Arguments are expanded using shell-like glob match.  Patterns'*', '?', '[seq]' and '[!seq]' can be used.  Additionally,tilde '~' will be expanded into user's home directory.  Unlikereal shells, quotation does not suppress expansions.  Use*two* back slashes (e.g. ``\\*``) to suppress expansions.To completely disable these expansions, you can use -G flag.Options:-n  __name__ is NOT set to '__main__', but to the running file's name  without extension (as python does under import).  This allows running  scripts and reloading the definitions in them without calling code  protected by an ``if __name__ == "__main__"`` clause.-i  run the file in IPython's namespace instead of an empty one. This  is useful if you are experimenting with code written in a text editor  which depends on variables defined interactively.-e  ignore sys.exit() calls or SystemExit exceptions in the script  being run.  This is particularly useful if IPython is being used to  run unittests, which always exit with a sys.exit() call.  In such  cases you are interested in the output of the test results, not in  seeing a traceback of the unittest module.-t  print timing information at the end of the run.  IPython will give  you an estimated CPU time consumption for your script, which under  Unix uses the resource module to avoid the wraparound problems of  time.clock().  Under Unix, an estimate of time spent on system tasks  is also given (for Windows platforms this is reported as 0.0).If -t is given, an additional ``-N<N>`` option can be given, where <N>must be an integer indicating how many times you want the script torun.  The final timing report will include total and per run results.For example (testing the script uniq_stable.py)::    In [1]: run -t uniq_stable    IPython CPU timings (estimated):      User  :    0.19597 s.      System:        0.0 s.    In [2]: run -t -N5 uniq_stable    IPython CPU timings (estimated):    Total runs performed: 5      Times :      Total       Per run      User  :   0.910862 s,  0.1821724 s.      System:        0.0 s,        0.0 s.-d  run your program under the control of pdb, the Python debugger.  This allows you to execute your program step by step, watch variables,  etc.  Internally, what IPython does is similar to calling::      pdb.run('execfile("YOURFILENAME")')  with a breakpoint set on line 1 of your file.  You can change the line  number for this automatic breakpoint to be <N> by using the -bN option  (where N must be an integer). For example::      %run -d -b40 myscript  will set the first breakpoint at line 40 in myscript.py.  Note that  the first breakpoint must be set on a line which actually does  something (not a comment or docstring) for it to stop execution.  Or you can specify a breakpoint in a different file::      %run -d -b myotherfile.py:20 myscript  When the pdb debugger starts, you will see a (Pdb) prompt.  You must  first enter 'c' (without quotes) to start execution up to the first  breakpoint.  Entering 'help' gives information about the use of the debugger.  You  can easily see pdb's full documentation with "import pdb;pdb.help()"  at a prompt.-p  run program under the control of the Python profiler module (which  prints a detailed report of execution times, function calls, etc).  You can pass other options after -p which affect the behavior of the  profiler itself. See the docs for %prun for details.  In this mode, the program's variables do NOT propagate back to the  IPython interactive namespace (because they remain in the namespace  where the profiler executes them).  Internally this triggers a call to %prun, see its documentation for  details on the options available specifically for profiling.There is one special usage for which the text above doesn't apply:if the filename ends with .ipy[nb], the file is run as ipython script,just as if the commands were written on IPython prompt.-m  specify module name to load instead of script path. Similar to  the -m option for the python interpreter. Use this option last if you  want to combine with other %run options. Unlike the python interpreter  only source modules are allowed no .pyc or .pyo files.  For example::      %run -m example  will run the example module.-G  disable shell-like glob expansion of arguments.In [4]: run py.py I'm pig!Hello world.In [5]: run py.py I'm pig!It's not me.In [6]: import scipy im In [7]: import numpy  In [8]: import Cython  In [9]: Cython CythonIn [9]: Cython CythonIn [9]: Cython CythonIn [9]: Cython. Display all 141 possibilities? (y or n)Cython.ArrayType                 Cython.long                      Cython.ppp_Py_UNICODECython.CythonDotParallel         Cython.longdouble                Cython.ppp_Py_ssize_tCython.CythonMetaType            Cython.longdoublecomplex         Cython.ppp_bintCython.CythonType                Cython.longlong                  Cython.ppp_charCython.CythonTypeObject          Cython.name                      Cython.ppp_complexCython.NULL                      Cython.no_gc_clear               Cython.ppp_doubleCython.PointerType               Cython.nogil                     Cython.ppp_doublecomplexCython.Py_UCS4                   Cython.numeric                   Cython.ppp_floatCython.Py_UNICODE                Cython.other_types               Cython.ppp_floatcomplexCython.Py_ssize_t                Cython.p_Py_UCS4                 Cython.ppp_intCython.Shadow                    Cython.p_Py_UNICODE              Cython.ppp_longCython.StructType                Cython.p_Py_ssize_t              Cython.ppp_longdoubleCython.UnionType                 Cython.p_bint                    Cython.ppp_longdoublecomplexCython.address                   Cython.p_char                    Cython.ppp_longlongCython.array                     Cython.p_complex                 Cython.ppp_shortCython.bint                      Cython.p_double                  Cython.ppp_size_tCython.cast                      Cython.p_doublecomplex           Cython.ppp_voidCython.ccall                     Cython.p_float                   Cython.py_complexCython.cclass                    Cython.p_floatcomplex            Cython.py_floatCython.cdiv                      Cython.p_int                     Cython.py_intCython.cfunc                     Cython.p_long                    Cython.py_longCython.char                      Cython.p_longdouble              Cython.reprnameCython.cmod                      Cython.p_longdoublecomplex       Cython.returnsCython.compile                   Cython.p_longlong                Cython.scharCython.compiled                  Cython.p_short                   Cython.shortCython.complex                   Cython.p_size_t                  Cython.sintIn [11]:  ,V
-    print( 'Hello world.' ),V
-Python 3.4.2 (default, Oct 19 2014, 17:55:38) ,V
-Type "copyright", "credits" or "license" for more information.,V
- ,V
-IPython 2.3.1 -- An enhanced Interactive Python.,V
-?         -> Introduction and overview of IPython's features.,V
-In [1]:  ,V
-object?   -> Details about 'object', use 'object??' for extra details.,V
-help      -> Python's own help system.,V
-%quickref -> Quick reference.,V
-r,v
-:,v
-;,v
-W,v
-#          :::::::: ::::::::::: :::::::::  :::             :::::::::          #,V
-H,v
-" remap Mac Cmd-keysnmap <D-Right> <C-w>lnmap <D-Left> <C-w>h,V

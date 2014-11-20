@@ -187,8 +187,8 @@ let g:syntastic_enable_signs = 0
 " custom icons (enable them if you use a patched font, and enable the previous setting)
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-"let g:syntastic_style_error_symbol = '✗'
-"let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
 
 """ Python-mode
 " don't use linter, we use syntastic for that
@@ -262,10 +262,11 @@ colo elflord
 set nu
 
 " personal key mappings
-nmap ,l  :res +10<CR>
-nmap ,s  :res -10<CR>
-nmap ,vl :vertical res +10<CR>
-nmap ,vs :vertical res -10 <CR>
-nmap ,, :bnext<CR>
-nmap ,. :bprevious<CR>
 nmap <CR><CR> o<Esc>
+nmap ;l  :res +10<CR>
+nmap ;s  :res -10<CR>
+nmap ;vl :vertical res +10<CR>
+nmap ;vs :vertical res -10 <CR>
+noremap ,, <Esc>:bnext<CR>
+noremap ,. <Esc>:bprevious<CR>
+inoremap ;; <Esc>

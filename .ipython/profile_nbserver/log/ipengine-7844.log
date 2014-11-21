@@ -1,0 +1,46 @@
+2014-11-20 20:01:24.547 [IPEngineApp] Loading url_file '/home/elsdrm/.ipython/profile_nbserver/security/ipcontroller-engine.json'
+2014-11-20 20:01:24.574 [IPEngineApp] Registering with controller at tcp://127.0.0.1:43691
+2014-11-20 20:01:24.699 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2014-11-20 20:01:24.706 [IPEngineApp] Using existing profile dir: '/home/elsdrm/.ipython/profile_nbserver'
+2014-11-20 20:01:24.708 [IPEngineApp] Completed registration with id 147
+2014-11-20 20:08:41.152 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (1 time(s) in a row).
+2014-11-20 20:08:44.162 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (2 time(s) in a row).
+2014-11-20 20:08:47.171 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (3 time(s) in a row).
+2014-11-20 20:08:50.182 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (4 time(s) in a row).
+2014-11-20 20:08:53.191 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (5 time(s) in a row).
+2014-11-20 20:08:56.202 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (6 time(s) in a row).
+2014-11-20 20:08:59.212 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (7 time(s) in a row).
+2014-11-20 20:09:02.222 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (8 time(s) in a row).
+2014-11-20 20:09:05.230 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (9 time(s) in a row).
+2014-11-20 20:09:08.243 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (10 time(s) in a row).
+2014-11-20 20:09:11.252 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (11 time(s) in a row).
+2014-11-20 20:09:14.262 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (12 time(s) in a row).
+2014-11-20 20:09:17.271 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (13 time(s) in a row).
+2014-11-20 20:09:20.282 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (14 time(s) in a row).
+2014-11-20 20:09:23.291 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (15 time(s) in a row).
+2014-11-20 20:09:26.301 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (16 time(s) in a row).
+2014-11-20 20:09:29.312 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (17 time(s) in a row).
+2014-11-20 20:09:32.321 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (18 time(s) in a row).
+2014-11-20 20:09:35.332 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (19 time(s) in a row).
+2014-11-20 20:09:38.342 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (20 time(s) in a row).
+2014-11-20 20:09:41.352 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (21 time(s) in a row).
+2014-11-20 20:09:44.361 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (22 time(s) in a row).
+2014-11-20 20:09:47.372 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (23 time(s) in a row).
+2014-11-20 20:09:50.380 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (24 time(s) in a row).
+2014-11-20 20:09:53.390 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (25 time(s) in a row).
+2014-11-20 20:09:56.402 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (26 time(s) in a row).
+2014-11-20 20:09:59.412 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (27 time(s) in a row).
+2014-11-20 20:10:02.422 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (28 time(s) in a row).
+2014-11-20 20:10:05.431 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (29 time(s) in a row).
+2014-11-20 20:10:08.441 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (30 time(s) in a row).
+2014-11-20 20:10:11.452 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (31 time(s) in a row).
+2014-11-20 20:10:14.462 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (32 time(s) in a row).
+2014-11-20 20:10:17.471 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (33 time(s) in a row).
+2014-11-20 20:10:20.482 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (34 time(s) in a row).
+2014-11-20 20:10:23.491 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (35 time(s) in a row).
+2014-11-20 20:10:26.502 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (36 time(s) in a row).
+2014-11-20 20:10:29.511 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (37 time(s) in a row).
+2014-11-20 20:10:32.522 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (38 time(s) in a row).
+2014-11-20 20:10:35.532 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (39 time(s) in a row).
+2014-11-20 20:10:37.534 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

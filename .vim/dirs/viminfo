@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Errors
+~MSle0~/run
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -18,175 +18,73 @@ $
 
 # Command Line History (newest to oldest):
 :q
+:q!
+:diffs
 :w
-:80
-:so %
-:source %
-:o test.cpp
-:h easymo
-:vsp
-:sp
-:qall
-:33
-:version
-:ConqueTermVSplit bash
-:h Vdebug
-:PluginInstall
-:32
-:ConqueTermVSplit pudb
-:PluginUpdate
-:PluginClean
-:wq
-:h pymode
-:Dbg .
-:ConqueTermVSplit ipython3
-:55
-:o vim_debug/new_debugger.py
-:Dbg
-:%s/DBGP/dbgp.DBGP/g
-:o /vim_debug/new_debugger.py
-:o new_debugger.py
-:o new_debugger
-:o vim_debug/dbgp.py
-:pwd
-:39
-:py3 import vim_debug
-:py3
-:ConqueTermVSplit ipyton3
-:python3 import vim_debug
-:o subwindows.py
-:bw
-:o stack.py
-:o debugger.py
-:b2
-:o protocol.py
-:o protocol
-:40
-:o _commands.py
-:22
-:o dbgp.py
-:o errors.py
-:o window.py
 
 # Search String History (newest to oldest):
-?/Errors
-?/eader
-?/signify
-?/leader
-?/Leader
-?/Easy
-?/run
-?/EOF
-?/<<
 ? \s\+$
-?/DBGP
-? DBGP
-?/import
-?/\/
-?//
-?/vim-d
-?/load
-?/s:py
-?/PyVersion
-?/load_python
-?/conque_term
-?/import con
-?/python
-?/python <<
-?/ConqueTerm_PyVersion
-?/print
-?/bidire
-??Easy
-?/airline
-?/set nu
-?/fugi
-?/uncomment
-?/hunks
-?/fugitive
-?/git
-?/CR
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
-@Y
 
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	<Leader>
+"0	LINE	0
+	Plugin 'elsdrm/Conque-Shell'
 "1	LINE	0
-	nmap <CR><CR> o<Esc>
-"2	LINE	0
-	nmap <CR><CR> o<Esc>
-"3	LINE	0
 	Plugin 'joonty/vdebug'
-"4	LINE	0
+"2	LINE	0
 	Plugin 'elsdrm/vim-debug'
-"5	LINE	0
+"3	LINE	0
 	from dbgp import dbgp.DBGP
-"6	LINE	0
+"4	LINE	0
 	import _commands
-"7	LINE	0
+"5	LINE	0
 	"exec g:PythonLoader . " vim_debug/__init__.py"
-"8	LINE	0
+"6	LINE	0
 	EOF
-"9	LINE	0
+"7	LINE	0
 	import commands
+"8	LINE	0
+	c
+"9	LINE	0
+	vim.command('python3 import vim')
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "u	CHAR	0
 	i
-"-	CHAR	0
-	<Leader>
+""-	CHAR	0
+	p
 
 # File marks:
-'0  4  0  ~/.vimrc
-'1  230  16  ~/.vimrc
-'2  68  5  ~/.vimrc
-'3  270  25  ~/.vimrc
-'4  67  5  ~/.vimrc
-'5  3  0  ~/[Vundle] clean
-'6  33  0  ~/.vimrc
-'7  14  4  ~/py.py
-'8  32  0  ~/[Vundle] Installer
-'9  1  0  ~/py.py
+'0  1  0  ~/test.cpp
+'1  11  5  ~/test.cpp
+'2  1  0  ~/wa
+'3  17  11  ~/py.py
+'4  33  0  ~/.vimrc
+'5  14  4  ~/py.py
+'6  32  0  ~/[Vundle] Installer
+'7  1  0  ~/py.py
+'8  15  0  ~/py.py
+'9  15  0  ~/.bash_profile
 
 # Jumplist (newest first):
--'  4  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  272  0  ~/.vimrc
--'  28  0  ~/.vimrc
--'  7  0  ~/.vimrc
--'  230  16  ~/.vimrc
--'  182  16  ~/.vimrc
--'  187  7  ~/.vimrc
--'  136  7  ~/.vimrc
--'  135  7  ~/.vimrc
--'  68  7  ~/.vimrc
--'  67  18  ~/.vimrc
--'  185  71  ~/.vimrc
--'  133  6  ~/.vimrc
--'  44  18  ~/.vimrc
--'  39  0  ~/.vimrc
--'  270  25  ~/.vimrc
--'  74  31  ~/.vimrc
 -'  1  0  ~/test.cpp
--'  2  0  ~/test.cpp
--'  269  0  ~/.vimrc
--'  271  0  ~/.vimrc
--'  70  10  ~/.vimrc
--'  66  4  ~/.vimrc
--'  3  0  ~/[Vundle] clean
--'  33  0  ~/.vimrc
--'  14  4  ~/py.py
+-'  11  5  ~/test.cpp
+-'  1  0  ~/wa
+-'  17  11  ~/py.py
 -'  1  0  ~/py.py
+-'  33  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  14  4  ~/py.py
 -'  32  0  ~/[Vundle] Installer
 -'  15  0  ~/py.py
 -'  15  0  ~/.bash_profile
 -'  1  0  ~/.bash_profile
--'  268  0  ~/.vimrc
+-'  267  0  ~/.vimrc
 -'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
 -'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
 -'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
@@ -206,862 +104,94 @@ $
 -'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 -'  109  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 -'  108  16  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  1  0  ~/test.cpp
--'  2  0  ~/test.cpp
--'  3  0  ~/[Vundle] clean
--'  14  4  ~/py.py
--'  1  0  ~/py.py
--'  32  0  ~/[Vundle] Installer
--'  15  0  ~/py.py
--'  15  0  ~/.bash_profile
--'  1  0  ~/.bash_profile
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
--'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/__init__.py
--'  27  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  24  9  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  5  0  ~/py.py
--'  2  0  ~/py.py
--'  117  7  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  62  7  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  116  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  115  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  114  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  113  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  112  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  111  34  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  107  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  106  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  105  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  104  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  103  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  102  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  101  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  100  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  99  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  98  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  97  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  96  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  95  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  94  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  93  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  92  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  91  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  90  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  89  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  88  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  87  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  86  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  85  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  84  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  83  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  82  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  81  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  80  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  79  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  78  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  77  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  76  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  75  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  74  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  73  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  72  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  71  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  70  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  69  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  68  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  67  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  66  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  65  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  64  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  63  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  61  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  60  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  59  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  58  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  57  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  56  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  55  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  54  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  53  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  52  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  51  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  50  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  49  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  48  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  47  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  46  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  45  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  44  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  43  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  42  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  41  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 
 # History of marks within files (newest to oldest):
 
-> ~/.vimrc
-	"	4	0
-	^	68	13
-	.	191	0
-	+	33	0
-	+	33	0
-	+	33	0
-	+	67	31
-	+	266	5
-	+	267	5
-	+	268	5
-	+	269	5
-	+	272	16
-	+	270	12
-	+	271	0
-	+	270	0
-	+	272	0
-	+	271	4
-	+	270	0
-	+	271	0
-	+	272	0
-	+	270	0
-	+	265	0
-	+	68	12
-	+	67	31
-	+	68	5
-	+	190	0
-	+	191	0
-
-> ~/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-easymotion/doc/easymotion.txt
-	"	135	28
-
 > ~/test.cpp
 	"	1	0
-	^	2	0
-	.	8	21
-	+	8	21
+	.	11	5
+	+	11	5
 
-> ~/[Vundle] clean
-	"	3	0
-	.	1	0
-	+	3	0
-	+	1	0
+> ~/wa
+	"	1	0
 
 > ~/py.py
-	"	14	4
-	^	15	1
-	.	15	1
-	+	16	0
-	+	16	0
+	"	17	11
+	^	17	12
+	.	17	11
+	+	18	0
+	+	18	0
 	+	15	1
-	+	16	0
+	+	18	0
 	+	15	1
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vdebug/doc/Vdebug.txt
-	"	257	0
-	^	253	0
-	.	253	0
-	+	254	0
-	+	253	0
-
-> ~/bash - 1
-	"	92	28
-	^	92	29
-	.	92	0
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	18	0
-	+	20	0
-	+	22	0
-	+	24	0
-	+	25	0
-	+	28	0
-	+	31	0
-	+	33	0
-	+	35	0
-	+	39	0
-	+	54	0
-	+	56	0
-	+	59	0
-	+	62	0
-	+	64	0
-	+	66	0
-	+	69	0
-	+	70	0
-	+	72	0
-	+	73	0
-	+	77	0
-	+	61	0
-	+	77	0
-	+	78	0
-	+	82	0
-	+	83	0
-	+	87	0
-	+	88	0
-	+	92	0
-
-> ~/[Vundle] Installer
-	"	32	0
-	.	1	0
-	+	123	0
-	+	92	0
-	+	62	0
-	+	32	0
-	+	56	0
-	+	1	0
-
-> ~/pudb - 1
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
-
-> ~/.bash_profile
-	"	15	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/python-mode/doc/pymode.txt
-	"	235	23
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
-	"	1	0
-	^	31	29
-	.	31	28
-	+	21	0
-	+	35	0
-	+	21	33
-	+	39	0
-	+	35	33
-	+	35	32
-	+	35	32
-	+	35	43
-	+	40	38
-	+	35	23
-	+	35	23
-	+	40	0
-	+	36	0
-	+	39	0
-	+	36	41
-	+	36	46
-	+	37	43
-	+	37	50
-	+	37	45
-	+	37	42
-	+	38	47
-	+	38	39
-	+	38	43
-	+	36	0
-	+	36	0
-	+	27	0
-	+	35	0
-	+	27	0
-	+	38	0
-	+	28	0
-	+	37	0
-	+	29	0
-	+	29	0
-	+	36	0
-	+	38	0
-	+	37	0
-	+	38	0
-	+	36	0
-	+	36	0
-	+	30	0
-	+	37	0
-	+	31	0
-	+	37	0
-	+	32	0
-	+	38	0
-	+	35	0
-	+	37	0
-	+	33	0
-	+	29	0
-	+	22	9
-	+	25	22
-	+	26	11
-	+	26	0
-	+	26	2
-	+	37	0
-	+	24	9
-	+	25	14
-	+	21	0
-	+	21	0
-	+	23	9
-	+	26	0
-	+	38	2
-	+	27	10
-	+	28	0
-	+	29	0
-	+	30	0
-	+	31	0
-	+	32	0
-	+	33	0
-	+	35	0
-	+	35	0
-	+	36	0
-	+	37	6
-	+	37	0
-	+	37	0
-	+	36	6
-	+	35	6
-	+	35	6
-	+	33	6
-	+	32	6
-	+	31	6
-	+	30	6
-	+	29	6
-	+	28	12
-	+	29	12
-	+	30	16
-	+	31	8
-	+	32	14
-	+	33	18
-	+	35	15
-	+	35	14
-	+	36	14
-	+	37	11
-	+	27	0
-	+	34	0
-	+	9	15
-	+	17	6
-	+	22	21
-	+	24	48
-	+	31	28
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/__init__.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/new_debugger.py
-	"	55	76
-	.	55	76
-	+	9	5
-	+	10	0
-	+	9	5
-	+	10	0
-	+	107	16
-	+	108	23
-	+	109	45
-	+	10	0
-	+	55	76
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
-	"	117	7
-	^	117	8
-	.	117	0
-	+	1	0
-	+	127	0
-	+	128	0
-	+	130	0
-	+	201	0
-	+	204	0
-	+	205	0
-	+	211	0
-	+	212	0
-	+	218	0
-	+	219	0
-	+	220	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	15	0
-	+	18	0
-	+	21	0
-	+	105	0
-	+	106	0
-	+	108	0
-	+	111	0
-	+	112	0
-	+	114	0
-	+	117	0
-	+	117	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/dbgp.py
-	"	6	0
-	^	56	110
-	.	56	109
-	+	56	26
-	+	56	109
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/new_debugger
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/new_debugger.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/autoload/conque_term/conque.py
-	"	1150	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/autoload/conque_term.vim
-	"	1	0
-	^	1476	5
-	.	1479	0
-	+	25	0
-	+	28	1
-	+	1479	0
-	+	1473	9
-	+	1479	0
-	+	1479	0
-	+	1479	0
-	+	629	0
-	+	1479	0
-	+	1476	5
-	+	1479	0
-	+	1479	0
-	+	1479	0
-	+	1479	0
-	+	1479	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/autoload/bash - 1
-	"	3	0
-	^	3	61
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	4	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/autoload/NERD_tree_1
-	"	44	2
-	.	37	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	37	0
-	+	37	0
-	+	37	0
-	+	37	0
-	+	37	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/autoload/__Tagbar__
-	"	9	4
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/plugin/conque_term.vim
-	"	1	0
-	^	28	1
-	.	135	0
-	+	25	0
-	+	28	1
-	+	25	0
-	+	132	0
-	+	132	0
-	+	132	0
-	+	132	0
-	+	135	0
-	+	135	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/commands.py
-	"	9	0
-	.	6	5
-	+	6	5
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 2
-	"	50	0
-	^	50	0
-	.	50	0
-	+	1	0
-	+	13	0
-	+	20	0
-	+	21	0
-	+	24	0
-	+	25	0
-	+	28	0
-	+	35	0
-	+	42	0
-	+	49	0
-	+	50	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/ui
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/ui.py
-	"	4	0
-	.	4	5
-	+	4	5
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/subwindows.py
-	"	1	0
-	.	18	0
-	+	1	5
-	+	2	0
-	+	2	0
-	+	18	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/window.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/errors.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/_commands.py
-	"	4	0
-	.	4	5
-	+	4	5
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/debugger.py
-	"	1	0
-	.	108	0
-	+	40	5
-	+	41	5
-	+	108	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/protocol
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/vim_debug/protocol.py
-	"	5	0
-	^	24	13
-	.	24	13
-	+	25	0
-	+	24	13
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/subwindows.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/syntax/conque_term.vim
-	"	113	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/README.rst
-	"	4	0
-	^	4	0
-	.	4	0
-	+	147	24
-	+	159	39
-	+	176	39
-	+	177	61
-	+	178	63
-	+	179	78
-	+	182	82
-	+	186	74
-	+	197	173
-	+	197	188
-	+	210	264
-	+	210	265
-	+	210	294
-	+	210	295
-	+	226	236
-	+	226	237
-	+	226	258
-	+	226	259
-	+	226	282
-	+	226	283
-	+	226	296
-	+	226	297
-	+	226	307
-	+	226	308
-	+	226	322
-	+	226	323
-	+	231	238
-	+	231	239
-	+	231	249
-	+	232	287
-	+	243	0
-	+	243	285
-	+	245	0
-	+	245	276
-	+	251	238
-	+	251	239
-	+	251	261
-	+	251	317
-	+	251	243
-	+	251	244
-	+	251	266
-	+	251	322
-	+	251	227
-	+	251	0
-	+	23	24
-	+	35	39
-	+	52	39
-	+	53	61
-	+	54	63
-	+	55	78
-	+	58	82
-	+	62	74
-	+	73	173
-	+	73	188
-	+	86	264
-	+	86	265
-	+	86	294
-	+	86	295
-	+	102	236
-	+	102	237
-	+	102	258
-	+	102	259
-	+	102	282
-	+	102	283
-	+	102	296
-	+	102	297
-	+	102	307
-	+	102	308
-	+	102	322
-	+	102	323
-	+	107	238
-	+	107	239
-	+	107	249
-	+	108	287
-	+	119	0
-	+	119	285
-	+	121	0
-	+	121	276
-	+	127	238
-	+	127	239
-	+	127	261
-	+	127	317
-	+	128	243
-	+	128	244
-	+	128	266
-	+	128	322
-	+	129	227
-	+	129	228
-	+	35	0
-	+	6	0
-	+	3	0
-	+	1	78
-	+	3	24
-	+	4	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/.git/COMMIT_EDITMSG
-	"	1	9
-	^	1	10
-	.	1	9
-	+	1	9
-
-> ~/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
-
-> ~/__Tagbar__
-	"	3	0
-	.	10	0
-	+	10	0
-
-> ~/SuperFlux/SuperFlux.py
-	"	209	0
-	.	551	0
-	+	1	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	669	0
-	+	669	0
-	+	669	0
-	+	551	0
-
-> ~/SuperFlux/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	1	0
-
-> ~/SuperFlux/__Tagbar__
-	"	28	3
-	.	39	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	88	0
-	+	39	0
+	+	16	26
+	+	17	11
 
 > ~/Dropbox/.unix_settings/.vimrc
-	"	73	25
-	^	68	38
-	.	68	37
-	+	269	6
-	+	271	9
-	+	263	0
-	+	271	6
-	+	272	0
-	+	271	12
-	+	259	0
-	+	79	0
-	+	77	42
-	+	13	26
-	+	271	0
-	+	272	0
-	+	271	0
-	+	19	0
-	+	13	0
-	+	17	0
-	+	18	0
-	+	18	0
-	+	17	0
-	+	45	26
-	+	78	49
-	+	75	0
-	+	271	0
-	+	272	0
-	+	272	0
-	+	271	20
-	+	268	0
-	+	269	0
-	+	270	0
-	+	271	20
-	+	265	0
-	+	265	0
-	+	265	0
-	+	265	0
-	+	271	14
-	+	267	0
-	+	267	0
-	+	271	19
-	+	267	0
-	+	267	0
-	+	267	0
-	+	44	0
-	+	16	0
-	+	44	0
-	+	68	37
-
-> ~/SuperFlux/ipython3 - 1
-	"	12	0
-	^	12	8
-	+	1	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-
-> ~/Downloads/output.txt
-	"	1	0
-	^	49	75
-	.	12	0
-	+	3	77
-	+	5	69
-	+	8	73
-	+	20	0
-	+	22	74
-	+	30	51
-	+	33	36
-	+	34	39
-	+	37	35
-	+	38	73
-	+	40	36
-	+	43	41
-	+	44	89
-	+	45	85
-	+	45	86
-	+	45	92
-	+	49	66
-	+	12	0
-
-> ~/output.txt
-	"	1	0
-
-> ~/Dropbox/.unix_settings/[Vundle] Installer
-	"	31	0
-	.	1	0
-	+	92	0
-	+	62	0
-	+	31	0
-	+	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/Conque-Shell/.git/MERGE_MSG
-	"	1	0
-
-> ~/Dropbox/.unix_settings/bash - 1
-	"	5	49
-	^	5	50
-	.	5	0
-	+	1	0
-	+	2	0
-	+	3	0
-	+	5	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	30
-	^	1	31
-	.	1	30
-	+	1	30
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-fugitive/doc/fugitive.txt
-	"	8	48
-	^	14	0
-	.	14	0
-	+	19	0
-	+	14	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-signify/doc/signify.txt
-	"	329	4
-
-> ~/Dropbox/.unix_settings/[Vundle] clean
-	"	3	0
-	.	1	0
-	+	9	0
-	+	6	0
-	+	5	0
-	+	3	0
-	+	1	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
-	"	288	0
-	^	276	0
-	.	276	0
-	+	297	0
-	+	291	0
-	+	279	0
-	+	276	0
-
-> ~/Dropbox/.unix_settings/.vim/bundle/nerdcommenter/doc/NERD_commenter.txt
-	"	343	30
-
-> ~/Dropbox/.unix_settings/.git/MERGE_MSG
 	"	1	0

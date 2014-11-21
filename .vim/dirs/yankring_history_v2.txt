@@ -1,3 +1,5 @@
+p,v
+http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=3532190&lg=zh_TW&sign=d36f8b5cb090157d468686bcd4e10878&viral_id=100000033743851_1416479581239&fish_msg_type=feed,v
 <Leader>,v
 nmap <CR><CR> o<Esc>,V
 i,v
@@ -15,7 +17,6 @@ Plugin 'elsdrm/vim-debug',V
 , inst.__class__,v
 from dbgp import dbgp.DBGP,V
 .,v
-p,v
 g,v
 b,v
 d,v
@@ -97,4 +98,3 @@ Plugin 'Conque-Shell',V
 Conque-Shell,v
 欠缺自身努力,v
 let g:airline#extensions#branch#empty_message = '',v
-k,v

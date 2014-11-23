@@ -1,9 +1,50 @@
+/,v
+n,v
+i,v
+M,v
+-,v
+h,v
+e,v
+u,v
+s,v
+H,v
+ ,v
+C,v
+x,v
+o,v
+b,v
 p,v
+r,v
+D,v
+B,v
+N,v
+y,v
+P,v
+~,v
+m,v
+d,v
+l,v
+IPythonNotebook,v
+~/Dropbox/Chen Hsueh-Min/ipython_notebook,v
+,V
+https://github.com/elsdrm/shared_note.git,v
+0,v
+1,v
+,V
+,v
+,v
+000000 000000 ,v
+staff,v
+ar00elsdrm,v
+ust,v
+3126642 012515 0,v
+0774 000024 00000000542 1243,v
+000644 00,v
+.,v
+第一，趙老先生是真正的中國人。第二，趙老先生可算是反共義士。第三，趙老先生陸軍官校出身。第四，趙老先生尊敬蔣公，一心反攻大陸。第五，趙老先生長於理財。第六，趙老先生雖有家資，卻生活刻苦。在此呼籲所有的正藍軍，別再撐了，除了二號趙衍慶，其他候選人都是墨綠的。想都別想，二號蓋下去就是。,v
 http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=3532190&lg=zh_TW&sign=d36f8b5cb090157d468686bcd4e10878&viral_id=100000033743851_1416479581239&fish_msg_type=feed,v
 <Leader>,v
 nmap <CR><CR> o<Esc>,V
-i,v
-n,v
 Plugin 'joonty/vdebug',V
 http://blog.roodo.com/subing/archives/3375825.html,v
 A NumbaPro Mandelbrot Example,v
@@ -13,18 +54,12 @@ sudo apt-get install python3-setuptools,v
 Plugin 'elsdrm/Conque-Shell',V
 joonty/vdebug,v
 Plugin 'elsdrm/vim-debug',V
- ,v
 , inst.__class__,v
 from dbgp import dbgp.DBGP,V
-.,v
 g,v
-b,v
-d,v
-D,v
 sys.path.append('./vim_debug'),V
 import,v
 "exec g:PythonLoader . " vim_debug/__init__.py",V
-y,v
 ",v
 ,v
 import ,v
@@ -44,9 +79,6 @@ exec g:PythonLoader . " vim_debug/window.py",V
 exec g:PythonLoader . " vim_debug/__init__.py",V
 exec g:PythonLoader . " vim_debug/dbgp.py",V
 from .subwindows ,v
-m,v
-o,v
-r,v
 f,v
 ui.py",v
 subwindows.py",v
@@ -61,40 +93,8 @@ dbgp.py",v
 _commands.py",v
 commands.py",v
 exec g:PythonLoader . " vim_debug/commands.py",V
-h,v
 exec g:PythonLoader . "__init__.py",V
 endif,V
     finish,V
 if !has_debug,V
-e,v
-x,v
 python3 << EOF,V
-import vim_debugtry:    from vim_debug.commands import debugger_cmd    vim.command('let has_debug = 1')except ImportError as e:    vim.command('let has_debug = 0')    print('python module vim_debug not found...'),V
-:pwd,V
-   let g:PythonLoader = "pyfile" ,V
-s,v
-3,v
-!,v
-https://www.facebook.com/frankcthsiehfans/posts/10152456366981430,v
-echo,v
-https://github.com/elsdrm/vim-debug.git,v
-ython.framework/Versions/3.4/lib/python34.zip'...Can't list '/usr/local/Cellar/python3/3.4.2_1/Frameworks/P,v
-),v
-,,v
-2to3 --output-dir=python3-version/mycode -W -n,v
-(,v
-compileall.compile_dir("my_project_dir", force=1),v
-https://github.com/jaredly/vim-debug,v
-https://raw.githubusercontent.com/jaredly/vim-debug/master/README.rst,v
-.. |vim-debug-logo| image:: https://raw.github.com/jabapyth/vim-debug/master/logo.png|vim-debug-logo| vim-debug=========================.. Maintainer: Jared Forsyth <jared@jaredforsyth.com>.. Source: http://github.com/jabapyth/vim-phpdebugThis plugin creates an integrated debugging environment in VIM.It supports python and php.Features--------* Integration with xdebug* Step (into/over/out)* Live stack view* Breakpoint set/remove* Watch expressions* Live scope view* Some improvements to make it easier to hack  * It's now in a true python package  * Modularized  * Cleaned up, substantially rewritten for consistencyPlanned:* Conditional breakpointsUsage-----To start your debug session, use the following variants::   Usage: Dbg - (no auto start)          Dbg . (autostart current file -- python)          Dbg url (autostart a URL -- PHP)          Dbg num (autostart a past url -- PHP)Note: for PHP urls, vim-debug keeps track of the last 5 urls you debugged --so you don't have to keep typing them in.Debugger commands::   [usage:] dbg command [options]   - quit    :: exit the debugger   - run     :: continue execution until a breakpoint is reached or the program ends            default shortcut: \r   - stop    :: exit the debugger   - over    :: step over next function call            default shortcut: \o   - watch   :: execute watch functions            default shortcut: \w   - up      :: go up the stack            default shortcut: \u   - here    :: continue execution until the cursor (tmp breakpoint)            default shortcut: \h   - down    :: go down the stack            default shortcut: \d   - exit    :: exit the debugger   - eval    :: eval some code   - break   :: set a breakpoint            default shortcut: \b   - into    :: step into next function call            default shortcut: \i   - out     :: step out of current function call            default shortcut: \tTo disable the default mappings, set the variable ``g:vim_debug_disable_mappings`` to a valuedifferent than 0 in the debugger.vim file.For example::    let g:vim_debug_disable_mappings = 1Installation------------Execute the following commands::    sudo pip install dbgp vim-debug    install-vim-debug.pyNote: the ``install-vim-debug.py`` command installs the ``debugger.vim`` in your ``$VIM/plugins/`` directory.Take a look----------------------Screenshot: `[full size]<http://jaredforsyth.com/media/uploads/images/vim_debug.jpeg>`_.. image:: http://jaredforsyth.com/media/uploads/images/vim_debug.jpeg   :width: 450A screencast tutorial: https://www.youtube.com/watch?v=kairdgZCD1USome links of interest----------------------`Python package installer <http://pypi.python.org/pypi/pip>`_`Xdebug docs <http://www.xdebug.org/docs-dbgp.php>`_Credits-------:Sam Ghods: `(last activity 6/21/07) <http://www.vim.org/scripts/script.php?script_id=1929>`_:Seung Woo Shin: `(last activity 12/7/04) <http://www.vim.org/scripts/script.php?script_id=1152>`_,V
-hhTHcTitle: Beatles180.tar.gzSize: 56 GBCreated: 2014-11-19 11:54:08Modified: 2014-11-19 11:54:08Owner: 陳學民Md5sum: b063a04f3ca10e9320968b1b67e73cd2Shared: FalseParents: 0AFq-B3eaVYt4Uk9PVAMIME Type:Uploaded 'Beatles180.tar.gz' at 30 MB/s, total 56 GB[1]+  Done                    ./gdrive upload --file Beatles180.tar.gz0 ✓ elsdrm@maclinux ~ $ rm Beatles180.tar.gz0 ✓ elsdrm@maclinux ~ $ lscal10k.tar.gz  fig3.10-mxv-omp.c  gdrive               Library/   sandbox/dataset/       FTP197/            html_and_poster.zip  Music/     Templates/Desktop/       FTP198/            lasso_armadillo/     NAS/       test.cppDocuments/     gcc-4.9.2/         Lasso.mexa64         Pictures/  Videos/Downloads/     gcc-4.9.2.tar.gz   LASSO_screening/     Public/    workspace/0 ✓ elsdrm@maclinux ~ $ ls -l *gz,v
-140390763607,v
-j,v
-同時他也語重心長的要臺灣人好自為之，好好落實真正的公平、民主與人權尊重，否則很快的就無法躋身於發達文明的行列。,v
-<Plug>(easymotion-bd-w),v
-https://github.com/CPJKU/SuperFlux.git,v
->> script_mainWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Warning: matlabpool will be removed in a future release.Use parpool instead.Starting matlabpool using the 'local' profile ... connected to 8 workers.id =     1sc_mode =weighted_vote_firstWarning: matlabpool will be removed in a future release.To query the size of an already started parallel pool, query the 'NumWorkers'property of the pool.To check if a pool is already started use 'isempty(gcp('nocreate'))'.Encoding...Warning: A worker aborted during execution of the parfor loop. The parfor loopwill now run again on the remaining workers.> In parallel_function at 596  In encode at 30  In main at 120  In script_main at 32Error using parallel_function (line 604)All workers aborted during execution of the parfor loop.Error in encode (line 30)parfor i = 1 : size(file, 1)Error in main (line 120)encode(SPAMS_path, path_timbre_D, path_pre_proc_timbre_cal10k,path_codeword_timbre, lambda, screen_lambda, screen_mode, screen_encode_mode,par, screen_weight_mode);Error in script_main (line 32)        [auc(id, 1), map(id, 1), prec10(id, 1), rprec(id, 1)] = main(SVM_flag,        numFile(i), meth{j}, 5, screen_weight_mode, screen_lambda, 'ST3', par);>> The client lost connection to worker 7. This might be due to network problems,or the interactive communicating job might have errored.,v
-Plugin 'Conque-Shell',V
-Conque-Shell,v
-欠缺自身努力,v
-let g:airline#extensions#branch#empty_message = '',v

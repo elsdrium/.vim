@@ -17,10 +17,12 @@
 $
 
 # Command Line History (newest to oldest):
+:wq
 :q
+:PymodeRun
+:w
 :q!
 :diffs
-:w
 
 # Search String History (newest to oldest):
 ? \s\+$
@@ -35,53 +37,67 @@ $
 "0	LINE	0
 	Plugin 'elsdrm/Conque-Shell'
 "1	LINE	0
-	Plugin 'joonty/vdebug'
+	
 "2	LINE	0
-	Plugin 'elsdrm/vim-debug'
+	
 "3	LINE	0
-	from dbgp import dbgp.DBGP
+	
 "4	LINE	0
-	import _commands
+	
 "5	LINE	0
-	"exec g:PythonLoader . " vim_debug/__init__.py"
+	
 "6	LINE	0
-	EOF
+	
 "7	LINE	0
-	import commands
+	2367
+<nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 "8	LINE	0
-	c
+	Plugin 'joonty/vdebug'
 "9	LINE	0
-	vim.command('python3 import vim')
+	Plugin 'elsdrm/vim-debug'
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "u	CHAR	0
 	i
 ""-	CHAR	0
-	p
+	/
 
 # File marks:
-'0  1  0  ~/test.cpp
-'1  11  5  ~/test.cpp
-'2  1  0  ~/wa
-'3  17  11  ~/py.py
-'4  33  0  ~/.vimrc
-'5  14  4  ~/py.py
-'6  32  0  ~/[Vundle] Installer
-'7  1  0  ~/py.py
-'8  15  0  ~/py.py
-'9  15  0  ~/.bash_profile
+'0  647  68  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
+'1  405  45  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
+'2  1  14  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/COMMIT_EDITMSG
+'3  9  21  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
+'4  1  33  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/.git/COMMIT_EDITMSG
+'5  1  39  ~/Dropbox/Chen Hsueh-Min/ipythonnotebook/.git/COMMIT_EDITMSG
+'6  15  20  ~/py.py
+'7  17  4  ~/py.py
+'8  1  59  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'9  1  0  ~/test.cpp
 
 # Jumplist (newest first):
+-'  647  68  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
+-'  656  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
+-'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
+-'  405  45  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
+-'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
+-'  375  0  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
+-'  1  14  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/COMMIT_EDITMSG
+-'  9  21  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
+-'  1  0  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
+-'  1  33  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/.git/COMMIT_EDITMSG
+-'  1  39  ~/Dropbox/Chen Hsueh-Min/ipythonnotebook/.git/COMMIT_EDITMSG
+-'  15  20  ~/py.py
+-'  1  0  ~/py.py
+-'  17  4  ~/py.py
+-'  1  59  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  304  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  0  ~/test.cpp
 -'  11  5  ~/test.cpp
 -'  1  0  ~/wa
--'  17  11  ~/py.py
--'  1  0  ~/py.py
 -'  33  0  ~/.vimrc
 -'  1  0  ~/.vimrc
 -'  14  4  ~/py.py
 -'  32  0  ~/[Vundle] Installer
--'  15  0  ~/py.py
 -'  15  0  ~/.bash_profile
 -'  1  0  ~/.bash_profile
 -'  267  0  ~/.vimrc
@@ -157,21 +173,77 @@ $
 -'  56  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 -'  55  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 -'  54  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  53  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  52  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  51  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  50  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  49  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  48  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  47  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  46  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  45  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  44  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  43  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  42  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  41  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
 
 # History of marks within files (newest to oldest):
+
+> ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
+	"	647	68
+	^	647	69
+	.	30	0
+	+	647	68
+	+	30	0
+
+> ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
+	"	405	45
+	^	405	46
+	.	405	45
+	+	405	45
+
+> ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/COMMIT_EDITMSG
+	"	1	14
+	^	1	15
+	.	1	14
+	+	1	14
+
+> ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
+	"	9	21
+	^	9	22
+	.	9	21
+	+	9	21
+
+> ~/Dropbox/Chen Hsueh-Min/ipython_notebook/.git/COMMIT_EDITMSG
+	"	1	33
+	^	1	34
+	.	1	33
+	+	1	33
+
+> ~/Dropbox/Chen Hsueh-Min/ipythonnotebook/.git/COMMIT_EDITMSG
+	"	1	39
+	^	1	40
+	.	1	39
+	+	1	39
+
+> ~/py.py
+	"	15	20
+	^	1	0
+	+	18	0
+	+	18	0
+	+	15	1
+	+	18	0
+	+	15	1
+	+	16	26
+	+	17	11
+	+	1	0
+	+	18	0
+	+	9	23
+	+	18	0
+
+> ~/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	12	0
+	+	1	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	59
+	^	1	60
+	.	1	59
+	+	1	59
 
 > ~/test.cpp
 	"	1	0
@@ -180,18 +252,6 @@ $
 
 > ~/wa
 	"	1	0
-
-> ~/py.py
-	"	17	11
-	^	17	12
-	.	17	11
-	+	18	0
-	+	18	0
-	+	15	1
-	+	18	0
-	+	15	1
-	+	16	26
-	+	17	11
 
 > ~/Dropbox/.unix_settings/.vimrc
 	"	1	0

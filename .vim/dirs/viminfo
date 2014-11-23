@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/run
+~MSle0~/list
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,164 +17,475 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
 :q
-:PymodeRun
+:bw
+:vs
+:o test.ast
+:o py.py
+:so %
 :w
+:h MiniBuf
+:MiniBufExplorer
+:o .vimrc
 :q!
+:MBEToggle
+:h airline
+:PluginInstall
+:PluginClean
+:qall
+:source %
+:o .vimr
+:MBEOpen!
+:MBEClose
+:MBEOpen
+:h minibuf
+:test.ast
+:o test.a	
+:33
+:buffers
+:bs
+:bl
+:bls
+:blist
+:b
+:ls
+:o test.cpp
+:32
+:wq
+:PymodeRun
 :diffs
 
 # Search String History (newest to oldest):
+?/list
+?/buffer
+?/top
+?/bufferline
+?/airline
+?/Leader
+?/MBEClose
+?/<Leader>b
 ? \s\+$
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@Y
 
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	Plugin 'elsdrm/Conque-Shell'
+""0	CHAR	0
+	 
 "1	LINE	0
-	
+	    import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "2	LINE	0
-	
+	    import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "3	LINE	0
-	
+	        import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "4	LINE	0
-	
+	import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "5	LINE	0
-	
+	import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "6	LINE	0
-	
+	import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "7	LINE	0
-	2367
-<nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "8	LINE	0
-	Plugin 'joonty/vdebug'
+	
 "9	LINE	0
-	Plugin 'elsdrm/vim-debug'
+	
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "u	CHAR	0
 	i
-""-	CHAR	0
-	/
+"-	CHAR	0
+	 
 
 # File marks:
-'0  647  68  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
-'1  405  45  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
-'2  1  14  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/COMMIT_EDITMSG
-'3  9  21  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
-'4  1  33  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/.git/COMMIT_EDITMSG
-'5  1  39  ~/Dropbox/Chen Hsueh-Min/ipythonnotebook/.git/COMMIT_EDITMSG
-'6  15  20  ~/py.py
-'7  17  4  ~/py.py
-'8  1  59  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'9  1  0  ~/test.cpp
+'0  276  0  ~/.vimrc
+'1  3  0  ~/.vimrc
+'2  84  48  ~/.vimrc
+'3  80  48  ~/.vimrc
+'4  1  0  ~/test.
+'5  33  31  ~/.vimrc
+'6  15  4  ~/py.py
+'8  1  40  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'9  647  68  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
 
 # Jumplist (newest first):
--'  647  68  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
--'  656  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
--'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
--'  405  45  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
--'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
--'  375  0  ~/Dropbox/.unix_settings/.ipython/profile_nbserver/ipython_notebook_config.py
--'  1  14  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/COMMIT_EDITMSG
--'  9  21  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
--'  1  0  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/shared_note/.git/config
--'  1  33  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/.git/COMMIT_EDITMSG
--'  1  39  ~/Dropbox/Chen Hsueh-Min/ipythonnotebook/.git/COMMIT_EDITMSG
--'  15  20  ~/py.py
--'  1  0  ~/py.py
--'  17  4  ~/py.py
--'  1  59  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  304  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  0  ~/test.cpp
--'  11  5  ~/test.cpp
--'  1  0  ~/wa
--'  33  0  ~/.vimrc
+-'  276  0  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  14  4  ~/py.py
--'  32  0  ~/[Vundle] Installer
--'  15  0  ~/.bash_profile
--'  1  0  ~/.bash_profile
--'  267  0  ~/.vimrc
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
--'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/autoload/pymode.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/__init__.py
--'  27  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  24  9  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/debugger.vim
--'  5  0  ~/py.py
--'  2  0  ~/py.py
--'  117  7  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  62  7  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  116  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  115  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  114  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  113  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  112  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  111  34  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  110  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  109  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  108  16  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  107  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  106  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  105  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  104  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  103  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  102  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  101  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  100  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  99  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  98  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  97  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  96  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  95  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  94  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  93  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  92  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  91  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  90  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  89  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  88  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  87  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  86  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  85  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  84  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  83  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  82  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  81  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  80  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  79  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  78  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  77  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  76  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  75  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  74  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  73  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  72  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  71  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  70  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  69  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  68  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  67  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  66  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  65  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  64  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  63  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  61  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  60  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  59  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  58  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  57  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  56  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  55  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
--'  54  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-debug/plugin/ipython3 - 1
+-'  2  0  ~/-MiniBufExplorer-
+-'  3  65  ~/Dropbox/.unix_settings/.vim/bundle/minibufexpl.vim/doc/minibufexpl.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/minibufexpl.vim/doc/minibufexpl.txt
+-'  118  64  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  572  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  259  40  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  253  45  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  122  64  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  454  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  437  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  430  57  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  426  42  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  424  51  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  413  35  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  410  33  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  407  41  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  392  40  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  391  28  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  342  62  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  270  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  269  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  267  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  266  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  202  33  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  76  28  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  2  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  7  0  ~/Dropbox/.unix_settings/.vim/bundle/Vundle.vim/doc/vundle.txt
+-'  4  0  ~/Dropbox/.unix_settings/.vim/bundle/Vundle.vim/doc/vundle.txt
+-'  7  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  3  0  ~/.vimrc
+-'  84  48  ~/.vimrc
+-'  72  6  ~/.vimrc
+-'  17  18  ~/.vimrc
+-'  4  0  ~/.vimrc
+-'  1  0  ~/.vimr
+-'  276  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  2  0  ~/-MiniBufExplorer-
+-'  3  65  ~/Dropbox/.unix_settings/.vim/bundle/minibufexpl.vim/doc/minibufexpl.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/minibufexpl.vim/doc/minibufexpl.txt
+-'  118  64  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  572  12  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  259  40  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  253  45  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  122  64  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  454  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  437  24  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  430  57  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  426  42  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  424  51  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  413  35  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  410  33  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  407  41  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  392  40  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  391  28  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  342  62  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  270  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  269  20  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  267  27  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  266  17  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  202  33  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  76  28  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  2  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  7  0  ~/Dropbox/.unix_settings/.vim/bundle/Vundle.vim/doc/vundle.txt
+-'  4  0  ~/Dropbox/.unix_settings/.vim/bundle/Vundle.vim/doc/vundle.txt
+-'  7  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+-'  3  0  ~/.vimrc
+-'  84  48  ~/.vimrc
+-'  72  6  ~/.vimrc
+-'  17  18  ~/.vimrc
+-'  4  0  ~/.vimrc
+-'  1  0  ~/.vimr
 
 # History of marks within files (newest to oldest):
+
+> ~/[Vundle] Installer
+	"	32	0
+	.	1	0
+	+	94	0
+	+	63	0
+	+	32	0
+	+	1	0
+
+> ~/[Vundle] clean
+	"	2	0
+	.	1	0
+	+	3	0
+	+	2	0
+	+	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/doc/airline.txt
+	"	118	64
+	^	115	1
+	.	120	0
+	+	386	0
+	+	380	1
+	+	16	0
+	+	10	1
+	+	17	0
+	+	11	0
+	+	120	0
+	+	115	1
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+
+> ~/-MiniBufExplorer-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/.vimrc
+	"	276	0
+	^	212	29
+	.	209	0
+	+	33	31
+	+	18	0
+	+	56	0
+	+	56	0
+	+	80	48
+	+	16	0
+	+	16	0
+	+	9	0
+	+	270	0
+	+	270	0
+	+	270	0
+	+	270	0
+	+	25	0
+	+	25	0
+	+	251	0
+	+	250	0
+	+	250	0
+	+	211	14
+	+	212	28
+	+	209	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/Vundle.vim/doc/vundle.txt
+	"	7	0
+	^	11	3
+	.	11	3
+	+	17	0
+	+	11	3
+
+> ~/Dropbox/.unix_settings/.vim/bundle/minibufexpl.vim/doc/minibufexpl.txt
+	"	3	65
+	^	10	8
+	.	16	0
+	+	16	0
+	+	12	5
+	+	25	0
+	+	25	0
+	+	25	0
+	+	49	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	955	0
+	+	955	0
+	+	16	0
+	+	10	8
+	+	16	0
+	+	16	0
+	+	16	0
+	+	16	0
+	+	16	0
+
+> ~/py.py
+	"	4	0
+	^	1	0
+	.	15	0
+	+	20	0
+	+	20	0
+	+	17	1
+	+	20	0
+	+	17	1
+	+	18	26
+	+	19	11
+	+	1	0
+	+	20	0
+	+	10	23
+	+	20	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	6	0
+	+	8	0
+	+	6	0
+	+	5	0
+	+	11	0
+	+	15	0
+
+> ~/test.ast
+	"	18	0
+	^	107732	1
+	.	25	0
+	+	25	0
+	+	107732	1
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	107732	1
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+
+> ~/test.cpp
+	"	1	0
+	^	20	1
+	+	11	5
+	+	16	0
+	+	10	2
+	+	1	0
+	+	21	0
+	+	20	1
+	+	21	0
+	+	21	0
+	+	21	0
+
+> ~/.vimr
+	"	1	0
+
+> ~/test.a
+	"	1	0
+	^	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+
+> ~/NERD_tree_1
+	"	4	0
+	.	25	0
+	+	1	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+
+> ~/test.
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	40
+	^	1	41
+	.	1	40
+	+	1	40
 
 > ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
 	"	647	68
@@ -213,21 +524,6 @@ $
 	.	1	39
 	+	1	39
 
-> ~/py.py
-	"	15	20
-	^	1	0
-	+	18	0
-	+	18	0
-	+	15	1
-	+	18	0
-	+	15	1
-	+	16	26
-	+	17	11
-	+	1	0
-	+	18	0
-	+	9	23
-	+	18	0
-
 > ~/__run__
 	"	1	0
 	.	1	0
@@ -238,17 +534,6 @@ $
 	+	1	0
 	+	12	0
 	+	1	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	59
-	^	1	60
-	.	1	59
-	+	1	59
-
-> ~/test.cpp
-	"	1	0
-	.	11	5
-	+	11	5
 
 > ~/wa
 	"	1	0

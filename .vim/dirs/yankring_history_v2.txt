@@ -1,14 +1,28 @@
+9:.viminfo,v
+4:.vimrc,v
+ ,v
+h,v
+",v
+j,v
+#,v
+6:Vundle Installer,v
+let g:airline#extensions#tabline#show_buffers = 1,v
+4:test.ast,v
+2:test.a	,v
+fholgado/minibufexpl.vim,v
+jeetsukumaran/vim-buffergator,v
+    import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
+        import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
+import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
 /,v
 n,v
 i,v
 M,v
 -,v
-h,v
 e,v
 u,v
 s,v
 H,v
- ,v
 C,v
 x,v
 o,v
@@ -60,7 +74,6 @@ g,v
 sys.path.append('./vim_debug'),V
 import,v
 "exec g:PythonLoader . " vim_debug/__init__.py",V
-",v
 ,v
 import ,v
 "exec g:PythonLoader . " vim_debug/,v
@@ -85,16 +98,3 @@ subwindows.py",v
 stack.py",v
 exec g:PythonLoader . " vim_debug/stack.py",V
 protocol.py",v
-new_debugger.py",v
-errors.py",v
-debugger.py",v
-exec g:PythonLoader . " vim_debug/debugger.py",V
-dbgp.py",v
-_commands.py",v
-commands.py",v
-exec g:PythonLoader . " vim_debug/commands.py",V
-exec g:PythonLoader . "__init__.py",V
-endif,V
-    finish,V
-if !has_debug,V
-python3 << EOF,V

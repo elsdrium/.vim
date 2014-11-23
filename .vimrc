@@ -30,6 +30,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 't9md/vim-choosewin'
 Plugin 'elsdrm/Conque-Shell'
+Plugin 'fholgado/minibufexpl.vim'
 
 " Javascript
 "Plugin 'pangloss/vim-javascript'
@@ -76,6 +77,7 @@ let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
+let g:airline#extensions#tabline#show_buffers = 0
 
 """ Neocomplcache
 " most of them not documented because I'm not sure how they work
@@ -206,6 +208,8 @@ let g:pymode_rope_goto_definition_cmd = 'e'
 nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
 nmap ,o :RopeFindOccurrences<CR>
 
+""" MiniBufExpl
+nnoremap ,l :MBEToggleAll<CR>
 
 " End of plugins' settings --------------------------
 

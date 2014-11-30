@@ -1,6 +1,45 @@
+[<a target="_blank" href="http://www.camdemy.com/media/16476">Video</a>],v
+1:main.cpp,v
+:MBEFocus,v
+5:Lasso.cpp,v
+  let g:miniBufExplorerAutoStart = 0,V
+tagbar_map_openfold,v
+tagbar_map_closefold,v
+Week_Report_2014-11-23,v
+, <a target="_blank" href="http://www.camdemy.com/media/16454">Video2</a>,v
+ [<a target="_blank" href="http://www.camdemy.com/media/16443">Video1</a>, <a target="_blank" href="http://www.camdemy.com/media/16427">Video2</a>] ,v
+-,v
+!,v
+<,v
+ [<a target="_blank" href="http://www.camdemy.com/media/16470">Video</a>],v
+[,v
+ ,v
+-->,V
+Released under the MIT license: http://jsbin.mit-license.org,V
+,V
+Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit),V
+http://jsbin.com,V
+Created using JS Bin,V
+<!--,V
+http://www.stormmediagroup.com/opencms/news/detail/1ad816f9-6ee6-11e4-a4f5-ef2804cba5a1/?uuid=1ad816f9-6ee6-11e4-a4f5-ef2804cba5a1,v
+[<a target="_blank" href="http://www.camdemy.com/media/16440">Video</a>],v
+                            Rhodes College </p>                          (OS3-5) <strong><a href="proceedings/T040_305_Paper.pdf" target="_blank">Systematic Multi-scale Set-class Analysis</a></strong> <br>,V
+[<a target="_blank" href="http://www.camdemy.com/media/16435">Video</a>],v
+a,v
+https://www.facebook.com/YunlinCAA/posts/548062928662765,v
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games,v
+140.109.21.193,v
+Best Software Architecture in App Development,v
+z,v
+s,v
+n,v
+l,v
+d,v
+/,v
+=,v
+http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=288130074&lg=zh_TW&sign=89ebded3c080fc94c6fa82eb8fd5888c&viral_id=100002238242290_1416793822492&fish_msg_type=feed,v
 9:.viminfo,v
 4:.vimrc,v
- ,v
 h,v
 ",v
 j,v
@@ -14,14 +53,10 @@ jeetsukumaran/vim-buffergator,v
     import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
         import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
 import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
-/,v
-n,v
 i,v
 M,v
--,v
 e,v
 u,v
-s,v
 H,v
 C,v
 x,v
@@ -36,11 +71,8 @@ y,v
 P,v
 ~,v
 m,v
-d,v
-l,v
 IPythonNotebook,v
 ~/Dropbox/Chen Hsueh-Min/ipython_notebook,v
-,V
 https://github.com/elsdrm/shared_note.git,v
 0,v
 1,v
@@ -66,35 +98,3 @@ http://code.activestate.com/komodo/remotedebugging/,v
 elsdrm/Conque-Shell',v
 sudo apt-get install python3-setuptools,v
 Plugin 'elsdrm/Conque-Shell',V
-joonty/vdebug,v
-Plugin 'elsdrm/vim-debug',V
-, inst.__class__,v
-from dbgp import dbgp.DBGP,V
-g,v
-sys.path.append('./vim_debug'),V
-import,v
-"exec g:PythonLoader . " vim_debug/__init__.py",V
-,v
-import ,v
-"exec g:PythonLoader . " vim_debug/,v
-EOF,V
-import commands,V
-c,V
-c,v
-vim.command('python3 import vim'),V
-exec g:PythonLoader . " vim_debug/new_debugger.py",V
-exec g:PythonLoader . " vim_debug/_commands.py",V
-exec g:PythonLoader . " vim_debug/protocol.py",V
-exec g:PythonLoader . " vim_debug/ui.py",V
-exec g:PythonLoader . " vim_debug/subwindows.py",V
-exec g:PythonLoader . " vim_debug/errors.py",V
-exec g:PythonLoader . " vim_debug/window.py",V
-exec g:PythonLoader . " vim_debug/__init__.py",V
-exec g:PythonLoader . " vim_debug/dbgp.py",V
-from .subwindows ,v
-f,v
-ui.py",v
-subwindows.py",v
-stack.py",v
-exec g:PythonLoader . " vim_debug/stack.py",V
-protocol.py",v

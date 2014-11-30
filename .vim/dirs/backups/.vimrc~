@@ -211,7 +211,7 @@ nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
 nmap ,o :RopeFindOccurrences<CR>
 
 """ MiniBufExpl
-nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
+nnoremap ,l :MBEToggleAll<CR>
 let g:miniBufExplorerAutoStart = 0
 
 " End of plugins' settings --------------------------

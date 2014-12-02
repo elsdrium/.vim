@@ -1,4 +1,11 @@
+n,v
+let g:syntastic_cpp_compiler = 'clang++',v
+0,v
+,V
+            import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
+    import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
 [<a target="_blank" href="http://www.camdemy.com/media/16476">Video</a>],v
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++',v
 1:main.cpp,v
 :MBEFocus,v
 5:Lasso.cpp,v
@@ -16,7 +23,6 @@ Week_Report_2014-11-23,v
  ,v
 -->,V
 Released under the MIT license: http://jsbin.mit-license.org,V
-,V
 Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit),V
 http://jsbin.com,V
 Created using JS Bin,V
@@ -32,7 +38,6 @@ https://www.facebook.com/YunlinCAA/posts/548062928662765,v
 Best Software Architecture in App Development,v
 z,v
 s,v
-n,v
 l,v
 d,v
 /,v
@@ -50,7 +55,6 @@ let g:airline#extensions#tabline#show_buffers = 1,v
 2:test.a	,v
 fholgado/minibufexpl.vim,v
 jeetsukumaran/vim-buffergator,v
-    import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
         import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
 import pudb; pudb.set_trace()  # XXX BREAKPOINT,V
 i,v
@@ -74,7 +78,6 @@ m,v
 IPythonNotebook,v
 ~/Dropbox/Chen Hsueh-Min/ipython_notebook,v
 https://github.com/elsdrm/shared_note.git,v
-0,v
 1,v
 ,V
 ,v
@@ -95,6 +98,3 @@ Plugin 'joonty/vdebug',V
 http://blog.roodo.com/subing/archives/3375825.html,v
 A NumbaPro Mandelbrot Example,v
 http://code.activestate.com/komodo/remotedebugging/,v
-elsdrm/Conque-Shell',v
-sudo apt-get install python3-setuptools,v
-Plugin 'elsdrm/Conque-Shell',V

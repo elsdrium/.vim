@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/INFINI
+~MSle0~/syn
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,15 +17,18 @@
 $
 
 # Command Line History (newest to oldest):
-:qa
-:qal
 :wq
-:MBEToogleAll :MBEFocus
+:196
+:w
+:h syntastic
 :q
 :o .vimrc
+:PymodeRun
+:qa
+:qal
+:MBEToogleAll :MBEFocus
 :h mbe
 :qall
-:w
 :defa
 :h MBE
 :MBE
@@ -37,19 +40,12 @@ $
 :pwd
 :14
 :help pymode
-:vs
-::
-:h pymode
-:map
-:bw
-:o test.ast
-:o py.py
-:so %
-:h MiniBuf
-:MiniBufExplorer
-:q!
 
 # Search String History (newest to oldest):
+?/syn
+?/syntas
+?/sign
+? \s\+$
 ?/MBE
 ?/Focus
 ?/Auto
@@ -70,31 +66,6 @@ $
 ?/2015
 ?/Keynote
 ?/OS3-3
-?/[
-?/Intro
-?/Introduction
-?/w
-?/8-1
-?/7-1
-?/5-1
-?/OS4-1
-?/(OS3-5)
-?/16426
-??Keynote
-?/Oral
-?/Confer
-?/rope
-?/pymode
-?/debug
-?/list
-?/buffer
-?/top
-?/bufferline
-?/airline
-?/Leader
-?/MBEClose
-?/<Leader>b
-? \s\+$
 
 # Expression History (newest to oldest):
 
@@ -104,26 +75,26 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
+"0	CHAR	0
 	[<a target="_blank" href="http://www.camdemy.com/media/16476">Video</a>]
 "1	LINE	0
-	-->
+	
 "2	LINE	0
-	Released under the MIT license: http://jsbin.mit-license.org
+	            import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "3	LINE	0
-	
-"4	LINE	0
-	Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit)
-"5	LINE	0
-	
-"6	LINE	0
-	http://jsbin.com
-"7	LINE	0
-	Created using JS Bin
-"8	LINE	0
-	<!--
-"9	LINE	0
 	    import pudb; pudb.set_trace()  # XXX BREAKPOINT
+"4	LINE	0
+	-->
+"5	LINE	0
+	Released under the MIT license: http://jsbin.mit-license.org
+"6	LINE	0
+	
+"7	LINE	0
+	Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit)
+"8	LINE	0
+	
+"9	LINE	0
+	http://jsbin.com
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "l	CHAR	0
@@ -132,22 +103,50 @@ $
 	i 
 "u	CHAR	0
 	i
-"-	CHAR	0
-	[<a target="_blank" href="http://www.camdemy.com/media/16476">Video</a>]
+""-	CHAR	0
+	n
 
 # File marks:
-'0  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
-'1  21  1  ~/lasso_armadillo/source/C++/Lasso.cpp
-'2  9  2  ~/lasso_armadillo/source/C++/Lasso.cpp
-'3  6  0  ~/lasso_armadillo/source/C++/__Tagbar__
-'4  756  155  ~/Downloads/ConferenceProgram.html
-'5  468  103  ~/Downloads/ConferenceProgram.html
-'6  32  0  ~/[Vundle] Installer
-'7  15  17  ~/.bash_profile
-'8  64  47  ~/Dropbox/.unix_settings/.vim/bundle/python-mode/doc/pymode.txt
-'9  63  0  ~/[Vundle] Installer
+'0  197  39  ~/.vimrc
+'1  11  11  ~/test.cpp
+'2  190  31  ~/.vimrc
+'3  7  4  ~/test.cpp
+'4  13  3  ~/test.cpp
+'5  196  41  ~/.vimrc
+'6  1  17  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'7  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
+'8  21  1  ~/lasso_armadillo/source/C++/Lasso.cpp
+'9  9  2  ~/lasso_armadillo/source/C++/Lasso.cpp
 
 # Jumplist (newest first):
+-'  197  39  ~/.vimrc
+-'  188  6  ~/.vimrc
+-'  99  24  ~/.vimrc
+-'  16  19  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  11  11  ~/test.cpp
+-'  1  0  ~/test.cpp
+-'  190  31  ~/.vimrc
+-'  5  0  ~/.vimrc
+-'  1  0  ~/py.py
+-'  150  0  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  138  44  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  134  68  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  133  21  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  131  72  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  27  8  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  26  18  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  2  0  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+-'  4  0  ~/py.py
+-'  14  0  ~/py.py
+-'  7  4  ~/test.cpp
+-'  13  3  ~/test.cpp
+-'  196  41  ~/.vimrc
+-'  195  78  ~/.vimrc
+-'  17  0  ~/.vimrc
+-'  1  17  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  55  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
 -'  68  3  ~/lasso_armadillo/source/C++/mexLasso.cpp
 -'  80  4  ~/lasso_armadillo/source/C++/mexLasso.cpp
@@ -198,7 +197,6 @@ $
 -'  142  0  ~/.vimrc
 -'  119  9  ~/.vimrc
 -'  19  19  ~/.vimrc
--'  1  0  ~/.vimrc
 -'  756  155  ~/Downloads/ConferenceProgram.html
 -'  744  49  ~/Downloads/ConferenceProgram.html
 -'  759  143  ~/Downloads/ConferenceProgram.html
@@ -209,47 +207,221 @@ $
 -'  622  173  ~/Downloads/ConferenceProgram.html
 -'  499  371  ~/Downloads/ConferenceProgram.html
 -'  476  28  ~/Downloads/ConferenceProgram.html
--'  333  137  ~/Downloads/ConferenceProgram.html
--'  329  174  ~/Downloads/ConferenceProgram.html
--'  115  26  ~/Downloads/ConferenceProgram.html
--'  113  26  ~/Downloads/ConferenceProgram.html
--'  503  137  ~/Downloads/ConferenceProgram.html
--'  362  155  ~/Downloads/ConferenceProgram.html
--'  717  150  ~/Downloads/ConferenceProgram.html
--'  731  104  ~/Downloads/ConferenceProgram.html
--'  722  93  ~/Downloads/ConferenceProgram.html
--'  713  180  ~/Downloads/ConferenceProgram.html
--'  709  159  ~/Downloads/ConferenceProgram.html
--'  706  157  ~/Downloads/ConferenceProgram.html
--'  702  126  ~/Downloads/ConferenceProgram.html
--'  697  220  ~/Downloads/ConferenceProgram.html
--'  693  174  ~/Downloads/ConferenceProgram.html
--'  690  142  ~/Downloads/ConferenceProgram.html
--'  686  126  ~/Downloads/ConferenceProgram.html
--'  678  104  ~/Downloads/ConferenceProgram.html
--'  756  155  ~/Downloads/ConferenceProgram.html
--'  744  49  ~/Downloads/ConferenceProgram.html
--'  759  143  ~/Downloads/ConferenceProgram.html
--'  746  26  ~/Downloads/ConferenceProgram.html
--'  740  157  ~/Downloads/ConferenceProgram.html
--'  735  193  ~/Downloads/ConferenceProgram.html
--'  734  45  ~/Downloads/ConferenceProgram.html
--'  215  0  ~/.vimrc
--'  214  13  ~/.vimrc
--'  1  0  ~/.vimrc
--'  3  0  ~/lasso_armadillo/source/C++/__Tagbar__
--'  756  155  ~/Downloads/ConferenceProgram.html
--'  744  49  ~/Downloads/ConferenceProgram.html
--'  759  143  ~/Downloads/ConferenceProgram.html
--'  746  26  ~/Downloads/ConferenceProgram.html
--'  740  157  ~/Downloads/ConferenceProgram.html
--'  735  193  ~/Downloads/ConferenceProgram.html
--'  734  45  ~/Downloads/ConferenceProgram.html
--'  622  173  ~/Downloads/ConferenceProgram.html
--'  21  1  ~/lasso_armadillo/source/C++/Lasso.cpp
--'  90  1  ~/lasso_armadillo/source/C++/main.cpp
+-'  1  0  ~/py.py
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	"	197	39
+	^	197	40
+	.	197	39
+	+	33	31
+	+	18	0
+	+	56	0
+	+	56	0
+	+	80	48
+	+	16	0
+	+	16	0
+	+	9	0
+	+	275	0
+	+	275	0
+	+	275	0
+	+	275	0
+	+	25	0
+	+	25	0
+	+	256	0
+	+	255	0
+	+	255	0
+	+	215	14
+	+	216	28
+	+	213	0
+	+	122	0
+	+	125	0
+	+	123	30
+	+	122	0
+	+	122	0
+	+	122	0
+	+	124	29
+	+	217	0
+	+	217	0
+	+	218	0
+	+	9	0
+	+	218	0
+	+	216	41
+	+	198	0
+	+	196	41
+	+	16	0
+	+	190	31
+	+	197	39
+
+> ~/test.cpp
+	"	11	11
+	^	7	12
+	.	7	11
+	+	11	5
+	+	16	0
+	+	10	2
+	+	1	0
+	+	21	0
+	+	20	1
+	+	21	0
+	+	21	0
+	+	21	0
+	+	7	11
+
+> ~/py.py
+	"	1	0
+	.	16	0
+	+	18	0
+	+	18	0
+	+	15	1
+	+	18	0
+	+	15	1
+	+	16	26
+	+	17	11
+	+	1	0
+	+	18	0
+	+	9	23
+	+	18	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	5	0
+	+	7	0
+	+	5	0
+	+	5	0
+	+	10	0
+	+	13	0
+	+	5	0
+	+	10	0
+	+	14	0
+	+	16	0
+
+> ~/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	18	0
+	+	1	0
+	+	1	0
+
+> ~/-MiniBufExplorer-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
+	"	131	11
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	17
+	^	1	18
+	.	1	17
+	+	1	17
 
 > ~/lasso_armadillo/source/MATLAB/testbench.m
 	"	28	0
@@ -366,44 +538,6 @@ $
 	+	290	0
 	+	289	1
 
-> ~/.vimrc
-	"	214	41
-	^	214	42
-	.	214	41
-	+	33	31
-	+	18	0
-	+	56	0
-	+	56	0
-	+	80	48
-	+	16	0
-	+	16	0
-	+	9	0
-	+	273	0
-	+	273	0
-	+	273	0
-	+	273	0
-	+	25	0
-	+	25	0
-	+	254	0
-	+	253	0
-	+	253	0
-	+	213	14
-	+	214	28
-	+	211	0
-	+	122	0
-	+	125	0
-	+	123	30
-	+	122	0
-	+	122	0
-	+	122	0
-	+	124	29
-	+	215	0
-	+	215	0
-	+	216	0
-	+	9	0
-	+	216	0
-	+	214	41
-
 > ~/lasso_armadillo/source/C++/__Tagbar__
 	"	5	4
 	.	6	0
@@ -428,110 +562,6 @@ $
 	+	6	0
 	+	6	0
 	+	6	0
-
-> ~/-MiniBufExplorer-
-	"	1	26
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
 
 > /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/windows.txt
 	"	544	48
@@ -720,32 +750,6 @@ $
 	+	17	0
 	+	11	3
 
-> ~/py.py
-	"	4	0
-	^	1	0
-	.	15	0
-	+	20	0
-	+	20	0
-	+	17	1
-	+	20	0
-	+	17	1
-	+	18	26
-	+	19	11
-	+	1	0
-	+	20	0
-	+	10	23
-	+	20	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	6	0
-	+	8	0
-	+	6	0
-	+	5	0
-	+	11	0
-	+	15	0
-
 > ~/test.ast
 	"	18	0
 	^	107732	1
@@ -765,19 +769,6 @@ $
 	+	25	0
 	+	25	0
 
-> ~/test.cpp
-	"	1	0
-	^	20	1
-	+	11	5
-	+	16	0
-	+	10	2
-	+	1	0
-	+	21	0
-	+	20	1
-	+	21	0
-	+	21	0
-	+	21	0
-
 > ~/.vimr
 	"	1	0
 
@@ -790,12 +781,6 @@ $
 
 > ~/test.
 	"	1	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	40
-	^	1	41
-	.	1	40
-	+	1	40
 
 > ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_notebook_config.py
 	"	647	68
@@ -833,17 +818,6 @@ $
 	^	1	40
 	.	1	39
 	+	1	39
-
-> ~/__run__
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	12	0
-	+	1	0
 
 > ~/wa
 	"	1	0

@@ -1,58 +1,23 @@
-Some addjustments.
+Vim plugin -- syntastic supports C++11 syntax check now.
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
 # Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   .bash_profile
 #	modified:   .ipython/profile_default/history.sqlite
-#	modified:   .vim/bundle/python-mode
-#	modified:   .vim/bundle/tagbar
-#	modified:   .vim/bundle/vim-airline
-#	modified:   .vim/bundle/vim-easymotion
-#	modified:   .vim/bundle/vim-signify
-#	modified:   .vim/bundle/vim-snipmate
-#	modified:   .vim/bundle/vim-snippets
-#	new file:   .vim/dirs/backups/.bash_profile~
-#	new file:   .vim/dirs/backups/.vimrc~
-#	new file:   .vim/dirs/backups/COMMIT_EDITMSG~
-#	new file:   .vim/dirs/backups/ConferenceProgram.html~
-#	new file:   .vim/dirs/backups/MERGE_MSG~
-#	new file:   .vim/dirs/backups/README.rst~
-#	new file:   .vim/dirs/backups/_commands.py~
-#	new file:   .vim/dirs/backups/article.tplx~
-#	new file:   .vim/dirs/backups/commands.py~
-#	new file:   .vim/dirs/backups/config~
-#	new file:   .vim/dirs/backups/debugger.py~
-#	new file:   .vim/dirs/backups/debugger.vim~
-#	new file:   .vim/dirs/backups/ipython_notebook_config.py~
-#	new file:   .vim/dirs/backups/main.m~
-#	new file:   .vim/dirs/backups/new_debugger.py~
-#	new file:   .vim/dirs/backups/py.py~
-#	new file:   .vim/dirs/backups/spams.py~
-#	new file:   .vim/dirs/backups/spyder.ini~
-#	new file:   .vim/dirs/backups/subwindows.py~
-#	new file:   .vim/dirs/backups/test.cpp~
-#	new file:   .vim/dirs/backups/ui.py~
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Downloads%ConferenceProgram.html
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.bash_profile
+#	modified:   .vim/dirs/backups/.vimrc~
+#	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
+#	modified:   .vim/dirs/backups/py.py~
+#	modified:   .vim/dirs/backups/test.cpp~
+#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
 #	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.vimrc
-#	new file:   .vim/dirs/undos/%Users%elsdrm%Dropbox%Chen Hsueh-Min%ipython_notebook%week_report%.git%COMMIT_EDITMSG
-#	new file:   .vim/dirs/undos/%Users%elsdrm%main.m
+#	modified:   .vim/dirs/undos/%Users%elsdrm%py.py
+#	modified:   .vim/dirs/undos/%Users%elsdrm%test.cpp
 #	modified:   .vim/dirs/viminfo
 #	modified:   .vim/dirs/yankring_history_v2.txt
 #	modified:   .vimrc
 #
 # Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#   (commit or discard the untracked or modified content in submodules)
-#
 #	modified:   .vim/bundle/YankRing.vim (untracked content)
 #	modified:   .vim/bundle/matchit.zip (untracked content)
 #	modified:   .vim/bundle/vim-choosewin (untracked content)
-#	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
-#	modified:   .vim/dirs/viminfo
 #

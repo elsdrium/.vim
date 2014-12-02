@@ -1,3 +1,4 @@
+let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ ',V
 n,v
 let g:syntastic_cpp_compiler = 'clang++',v
 0,v
@@ -97,4 +98,3 @@ nmap <CR><CR> o<Esc>,V
 Plugin 'joonty/vdebug',V
 http://blog.roodo.com/subing/archives/3375825.html,v
 A NumbaPro Mandelbrot Example,v
-http://code.activestate.com/komodo/remotedebugging/,v

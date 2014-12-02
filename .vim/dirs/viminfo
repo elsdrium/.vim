@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/syn
+~MSle0~/syntastic
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,11 +17,11 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-:196
-:w
-:h syntastic
 :q
+:wq
+:w
+:196
+:h syntastic
 :o .vimrc
 :PymodeRun
 :qa
@@ -42,6 +42,7 @@ $
 :help pymode
 
 # Search String History (newest to oldest):
+?/syntastic
 ?/syn
 ?/syntas
 ?/sign
@@ -75,26 +76,26 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	[<a target="_blank" href="http://www.camdemy.com/media/16476">Video</a>]
-"1	LINE	0
-	
+"0	LINE	0
+	let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
+""1	LINE	0
+	let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
 "2	LINE	0
-	            import pudb; pudb.set_trace()  # XXX BREAKPOINT
+	
 "3	LINE	0
-	    import pudb; pudb.set_trace()  # XXX BREAKPOINT
+	            import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "4	LINE	0
-	-->
+	    import pudb; pudb.set_trace()  # XXX BREAKPOINT
 "5	LINE	0
-	Released under the MIT license: http://jsbin.mit-license.org
+	-->
 "6	LINE	0
-	
+	Released under the MIT license: http://jsbin.mit-license.org
 "7	LINE	0
-	Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit)
-"8	LINE	0
 	
+"8	LINE	0
+	Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit)
 "9	LINE	0
-	http://jsbin.com
+	
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "l	CHAR	0
@@ -103,29 +104,35 @@ $
 	i 
 "u	CHAR	0
 	i
-""-	CHAR	0
+"-	CHAR	0
 	n
 
 # File marks:
-'0  197  39  ~/.vimrc
-'1  11  11  ~/test.cpp
-'2  190  31  ~/.vimrc
-'3  7  4  ~/test.cpp
-'4  13  3  ~/test.cpp
-'5  196  41  ~/.vimrc
-'6  1  17  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'7  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
-'8  21  1  ~/lasso_armadillo/source/C++/Lasso.cpp
-'9  9  2  ~/lasso_armadillo/source/C++/Lasso.cpp
+'0  1  0  ~/test.cpp
+'1  199  0  ~/Dropbox/.unix_settings/.vimrc
+'2  1  55  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'3  197  39  ~/.vimrc
+'4  11  11  ~/test.cpp
+'5  190  31  ~/.vimrc
+'6  7  4  ~/test.cpp
+'7  13  3  ~/test.cpp
+'8  196  41  ~/.vimrc
+'9  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
 
 # Jumplist (newest first):
+-'  1  0  ~/test.cpp
+-'  199  0  ~/Dropbox/.unix_settings/.vimrc
+-'  198  0  ~/Dropbox/.unix_settings/.vimrc
+-'  188  6  ~/Dropbox/.unix_settings/.vimrc
+-'  16  19  ~/Dropbox/.unix_settings/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
+-'  1  55  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  197  39  ~/.vimrc
 -'  188  6  ~/.vimrc
 -'  99  24  ~/.vimrc
 -'  16  19  ~/.vimrc
 -'  1  0  ~/.vimrc
 -'  11  11  ~/test.cpp
--'  1  0  ~/test.cpp
 -'  190  31  ~/.vimrc
 -'  5  0  ~/.vimrc
 -'  1  0  ~/py.py
@@ -145,7 +152,6 @@ $
 -'  196  41  ~/.vimrc
 -'  195  78  ~/.vimrc
 -'  17  0  ~/.vimrc
--'  1  17  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  55  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
 -'  68  3  ~/lasso_armadillo/source/C++/mexLasso.cpp
@@ -208,8 +214,42 @@ $
 -'  499  371  ~/Downloads/ConferenceProgram.html
 -'  476  28  ~/Downloads/ConferenceProgram.html
 -'  1  0  ~/py.py
+-'  197  39  ~/.vimrc
+-'  188  6  ~/.vimrc
+-'  99  24  ~/.vimrc
+-'  16  19  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/test.cpp
+	"	1	0
+	^	7	12
+	.	7	11
+	+	11	5
+	+	16	0
+	+	10	2
+	+	1	0
+	+	21	0
+	+	20	1
+	+	21	0
+	+	21	0
+	+	21	0
+	+	7	11
+
+> ~/Dropbox/.unix_settings/.vimrc
+	"	199	0
+	^	196	0
+	.	196	0
+	+	197	0
+	+	198	0
+	+	198	0
+	+	196	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	55
+	^	1	56
+	.	1	55
+	+	1	55
 
 > ~/.vimrc
 	"	197	39
@@ -253,21 +293,6 @@ $
 	+	16	0
 	+	190	31
 	+	197	39
-
-> ~/test.cpp
-	"	11	11
-	^	7	12
-	.	7	11
-	+	11	5
-	+	16	0
-	+	10	2
-	+	1	0
-	+	21	0
-	+	20	1
-	+	21	0
-	+	21	0
-	+	21	0
-	+	7	11
 
 > ~/py.py
 	"	1	0
@@ -416,12 +441,6 @@ $
 
 > ~/Dropbox/.unix_settings/.vim/bundle/syntastic/doc/syntastic.txt
 	"	131	11
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	17
-	^	1	18
-	.	1	17
-	+	1	17
 
 > ~/lasso_armadillo/source/MATLAB/testbench.m
 	"	28	0
@@ -820,7 +839,4 @@ $
 	+	1	39
 
 > ~/wa
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.vimrc
 	"	1	0

@@ -1,4 +1,7 @@
+ ,v
+--stdlib=libc++,v
 let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ ',V
+✗,v
 n,v
 let g:syntastic_cpp_compiler = 'clang++',v
 0,v
@@ -21,7 +24,6 @@ Week_Report_2014-11-23,v
 <,v
  [<a target="_blank" href="http://www.camdemy.com/media/16470">Video</a>],v
 [,v
- ,v
 -->,V
 Released under the MIT license: http://jsbin.mit-license.org,V
 Copyright (c) 2014 by anonymous (http://jsbin.com/memamahiti/1/edit),V
@@ -96,5 +98,3 @@ http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method
 <Leader>,v
 nmap <CR><CR> o<Esc>,V
 Plugin 'joonty/vdebug',V
-http://blog.roodo.com/subing/archives/3375825.html,v
-A NumbaPro Mandelbrot Example,v

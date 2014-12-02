@@ -1,17 +1,12 @@
-Vim plugin -- syntastic supports C++11 syntax check now.
+
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
 # Changes to be committed:
-#	modified:   .ipython/profile_default/history.sqlite
 #	modified:   .vim/dirs/backups/.vimrc~
 #	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
-#	modified:   .vim/dirs/backups/py.py~
-#	modified:   .vim/dirs/backups/test.cpp~
 #	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
 #	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.vimrc
-#	modified:   .vim/dirs/undos/%Users%elsdrm%py.py
-#	modified:   .vim/dirs/undos/%Users%elsdrm%test.cpp
 #	modified:   .vim/dirs/viminfo
 #	modified:   .vim/dirs/yankring_history_v2.txt
 #	modified:   .vimrc

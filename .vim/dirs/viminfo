@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/syntastic
+~MSle0~/synta
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,8 +17,8 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :w
 :196
 :h syntastic
@@ -42,6 +42,7 @@ $
 :help pymode
 
 # Search String History (newest to oldest):
+?/synta
 ?/syntastic
 ?/syn
 ?/syntas
@@ -78,7 +79,7 @@ $
 # Registers:
 "0	LINE	0
 	let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
-""1	LINE	0
+"1	LINE	0
 	let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
 "2	LINE	0
 	
@@ -104,29 +105,30 @@ $
 	i 
 "u	CHAR	0
 	i
-"-	CHAR	0
-	n
+""-	CHAR	0
+	 
 
 # File marks:
-'0  1  0  ~/test.cpp
-'1  199  0  ~/Dropbox/.unix_settings/.vimrc
-'2  1  55  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'3  197  39  ~/.vimrc
-'4  11  11  ~/test.cpp
-'5  190  31  ~/.vimrc
-'6  7  4  ~/test.cpp
-'7  13  3  ~/test.cpp
-'8  196  41  ~/.vimrc
-'9  55  2  ~/lasso_armadillo/source/C++/mexLasso.cpp
+'0  198  53  ~/Dropbox/.unix_settings/.vimrc
+'1  1  16  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'2  1  0  ~/test.cpp
+'3  199  0  ~/Dropbox/.unix_settings/.vimrc
+'4  197  39  ~/.vimrc
+'5  11  11  ~/test.cpp
+'6  190  31  ~/.vimrc
+'7  7  4  ~/test.cpp
+'8  13  3  ~/test.cpp
+'9  196  41  ~/.vimrc
 
 # Jumplist (newest first):
--'  1  0  ~/test.cpp
--'  199  0  ~/Dropbox/.unix_settings/.vimrc
--'  198  0  ~/Dropbox/.unix_settings/.vimrc
--'  188  6  ~/Dropbox/.unix_settings/.vimrc
+-'  198  53  ~/Dropbox/.unix_settings/.vimrc
+-'  188  30  ~/Dropbox/.unix_settings/.vimrc
+-'  99  24  ~/Dropbox/.unix_settings/.vimrc
 -'  16  19  ~/Dropbox/.unix_settings/.vimrc
 -'  1  0  ~/Dropbox/.unix_settings/.vimrc
--'  1  55  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  16  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  0  ~/test.cpp
+-'  199  0  ~/Dropbox/.unix_settings/.vimrc
 -'  197  39  ~/.vimrc
 -'  188  6  ~/.vimrc
 -'  99  24  ~/.vimrc
@@ -211,15 +213,24 @@ $
 -'  735  193  ~/Downloads/ConferenceProgram.html
 -'  734  45  ~/Downloads/ConferenceProgram.html
 -'  622  173  ~/Downloads/ConferenceProgram.html
--'  499  371  ~/Downloads/ConferenceProgram.html
--'  476  28  ~/Downloads/ConferenceProgram.html
--'  1  0  ~/py.py
--'  197  39  ~/.vimrc
--'  188  6  ~/.vimrc
--'  99  24  ~/.vimrc
--'  16  19  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/Dropbox/.unix_settings/.vimrc
+	"	198	53
+	^	196	0
+	.	198	53
+	+	197	0
+	+	198	0
+	+	198	0
+	+	196	0
+	+	198	53
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	16
+	^	1	17
+	.	1	16
+	+	1	16
 
 > ~/test.cpp
 	"	1	0
@@ -235,21 +246,6 @@ $
 	+	21	0
 	+	21	0
 	+	7	11
-
-> ~/Dropbox/.unix_settings/.vimrc
-	"	199	0
-	^	196	0
-	.	196	0
-	+	197	0
-	+	198	0
-	+	198	0
-	+	196	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	55
-	^	1	56
-	.	1	55
-	+	1	55
 
 > ~/.vimrc
 	"	197	39

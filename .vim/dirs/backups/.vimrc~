@@ -193,8 +193,9 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
+
 let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' --std=c++11 --stdlib=libc++ '
 
 """ Python-mode
 " don't use linter, we use syntastic for that

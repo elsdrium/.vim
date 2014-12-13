@@ -3,5 +3,44 @@
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
 # Changes to be committed:
-#	new file:   themes/bureau_elsdrm.zsh-theme
+#	modified:   .ipython/profile_default/history.sqlite
+#	new file:   .oh-my-zsh
+#	modified:   .vim/bundle/neocomplcache.vim
+#	modified:   .vim/bundle/python-mode
+#	modified:   .vim/bundle/syntastic
+#	modified:   .vim/bundle/tagbar
+#	modified:   .vim/bundle/vim-airline
+#	modified:   .vim/bundle/vim-easymotion
+#	modified:   .vim/bundle/vim-repeat
+#	modified:   .vim/bundle/vim-signify
+#	modified:   .vim/bundle/vim-snippets
+#	modified:   .vim/dirs/backups/.bash_profile~
+#	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
+#	modified:   .vim/dirs/backups/MERGE_MSG~
+#	new file:   .vim/dirs/tmp/.bashrc.swp
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.bashrc
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.oh-my-zsh%themes%bureau_elsdrm.zsh-theme
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.ssh%known_hosts
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.zsh_profile
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.zshrc
+#	new file:   .vim/dirs/undos/%Users%elsdrm%.zshrc.old
+#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.bash_profile
+#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
+#	new file:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.oh-my-zsh%.git%COMMIT_EDITMSG
+#	new file:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.oh-my-zsh%themes%bureau_elsdrm.zsh-theme
+#	new file:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.zshrc
+#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%Chen Hsueh-Min%ipython_notebook%week_report%.git%COMMIT_EDITMSG
+#	modified:   .vim/dirs/undos/%Users%elsdrm%py.py
+#	new file:   .vim/dirs/undos/%private%etc%shells
+#	new file:   .vim/dirs/undos/%private%var%folders%9p%m2_jpyp57g774zz9k1x57rs80000gw%T%chsh.KSFxxI
+#	new file:   .vim/dirs/undos/%private%var%folders%9p%m2_jpyp57g774zz9k1x57rs80000gw%T%chsh.UBER8s
+#	new file:   .vim/dirs/undos/%private%var%folders%9p%m2_jpyp57g774zz9k1x57rs80000gw%T%chsh.o9QeFK
+#	modified:   .vim/dirs/viminfo
+#	modified:   .vim/dirs/yankring_history_v2.txt
+#	new file:   .zshrc
+#
+# Changes not staged for commit:
+#	modified:   .vim/bundle/YankRing.vim (untracked content)
+#	modified:   .vim/bundle/matchit.zip (untracked content)
+#	modified:   .vim/bundle/vim-choosewin (untracked content)
 #

@@ -17,6 +17,38 @@ elif [[ "$unamestr" == 'FreeBSD' ]]; then
     platform='freebsd'
 fi
 
+function estimate_time_preexec {
+    start_time=$SECONDS
+}
+
+function estimate_time_precmd {
+    timer_result=$(( $SECONDS - $start_time ))
+    if [[ $timer_result -gt 10 ]]; then
+        calc_elapsed_time
+    fi
+    start_time=$SECONDS
+}
+
+function calc_elapsed_time {
+if [[ $timer_result -ge 3600 ]]; then
+    let "timer_hours = $timer_result / 3600"
+    let "remainder = $timer_result % 3600"
+    let "timer_minutes = $remainder / 60"
+    let "timer_seconds = $remainder % 60"
+    print -P "%B%F{red}>>> elapsed time ${timer_hours}h${timer_minutes}m${timer_seconds}s%b"
+elif [[ $timer_result -ge 60 ]]; then
+    let "timer_minutes = $timer_result / 60"
+    let "timer_seconds = $timer_result % 60"
+    print -P "%B%F{yellow}>>> elapsed time ${timer_minutes}m${timer_seconds}s%b"
+elif [[ $timer_result -gt 10 ]]; then
+    print -P "%B%F{green}>>> elapsed time ${timer_result}s%b"
+fi
+}
+autoload -Uz add-zsh-hook
+
+add-zsh-hook preexec estimate_time_preexec
+add-zsh-hook precmd estimate_time_precmd
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -76,10 +108,19 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+if [[ $platform == 'osx' ]]; then
+    alias ls='ls -pG'
+    alias ll='ls -plGA'
+    alias la='ls -pGA'
+else
+    alias ls='ls --color=auto -p'
+    alias ll='ls --color=auto -plA'
+    alias la='ls --color=auto -pA'
+fi
 
-alias ls='ls -pG'
-alias ll='ls -plGA'
-alias la='ls -pGA'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'

@@ -8,19 +8,41 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/hello
+~MSle0~/gg
+
+# Last Substitute Search Pattern:
+~MSle0&DBGP
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
-:wq
+:qa
 :q
 :w
+:o .zshrc
+:vs
+:pwd
+:19
+:39
+:W
+:s
+:vs .zshrc
+:28
+:o .bashrc
+:o .bash_profile
+:wq
 :20
 :44
-:qa
-:vs
-:o .zshrc
 
 # Search String History (newest to oldest):
+?/gg
+?/bindkey
+?/plugin
+?/map
+?/key
+?/vi-cmd
+?/10
 ?/hello
 ?/time
 
@@ -31,177 +53,115 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+"0	LINE	0
+	bindkey -M vicmd 'u' undo
 ""1	LINE	0
-	    echo 'world'
+	
 "2	LINE	0
-	    echo 'hello'
+	bindkey -M viins 'jj' vi-cmd-mode
 "3	LINE	0
-	                                        }V ]] ]] ]]}
+	bindkey -M vicmd 'u' undo
+"4	LINE	0
+	bindkey -M vicmd ';;' esc
+"5	LINE	0
+	
+"6	LINE	0
+	    print -P "${timer_result}"
+"7	LINE	0
+	PROMPT=%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}
+"8	LINE	0
+	PS1="${host_prompt} ${jobs_total}${history_total} ${directory_prompt}${error_total}${post_prompt} "
+	PROMPT=%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}
+"9	LINE	0
+	alias reload='source ~/.zshrc'
+"j	CHAR	0
+	jjjjkkVjjjjjjjjjjj\cc
+"l	CHAR	0
+	ll
+"u	CHAR	0
+	i
 "w	CHAR	0
 	ww
 "-	CHAR	0
-	$
+	d
 
 # File marks:
-'0  111  6  ~/.zshrc
-'1  119  14  ~/.zshrc
-'2  115  14  ~/.zshrc
-'3  1  0  ~/.zshrc
-'4  124  0  ~/.zshrc
-'5  116  0  ~/.zshrc
-'6  25  32  ~/.zshrc
-'7  32  0  ~/.zshrc
-'8  91  0  ~/.zshrc
-'9  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gitfast/gitfast.plugin.zsh
+'0  3  0  ~/.zshrc.old
+'1  112  18  ~/.zshrc
+'2  114  24  ~/.zshrc
+'3  218  0  ~/.zshrc.old
+'4  120  0  ~/.zshrc
+'5  45  27  ~/.zshrc
+'6  39  27  ~/.zshrc
+'7  124  3  ~/.zshrc
+'8  32  0  ~/.bashrc
+'9  345  11  ~/.zshrc
 
 # Jumplist (newest first):
--'  111  6  ~/.zshrc
--'  115  10  ~/.zshrc
+-'  3  0  ~/.zshrc.old
+-'  394  0  ~/.zshrc.old
+-'  189  0  ~/.zshrc.old
+-'  200  4  ~/.zshrc.old
+-'  198  4  ~/.zshrc.old
+-'  197  4  ~/.zshrc.old
+-'  194  4  ~/.zshrc.old
+-'  193  4  ~/.zshrc.old
+-'  190  4  ~/.zshrc.old
+-'  230  4  ~/.zshrc.old
+-'  227  4  ~/.zshrc.old
+-'  225  4  ~/.zshrc.old
+-'  224  20  ~/.zshrc.old
+-'  222  4  ~/.zshrc.old
+-'  221  20  ~/.zshrc.old
+-'  219  4  ~/.zshrc.old
+-'  218  4  ~/.zshrc.old
+-'  216  4  ~/.zshrc.old
+-'  215  4  ~/.zshrc.old
+-'  213  4  ~/.zshrc.old
+-'  212  4  ~/.zshrc.old
+-'  210  4  ~/.zshrc.old
+-'  209  4  ~/.zshrc.old
+-'  207  4  ~/.zshrc.old
+-'  206  4  ~/.zshrc.old
+-'  205  20  ~/.zshrc.old
+-'  203  4  ~/.zshrc.old
+-'  4  0  ~/.zshrc.old
+-'  1  0  ~/.zshrc.old
+-'  112  18  ~/.zshrc
+-'  114  22  ~/.zshrc
 -'  1  0  ~/.zshrc
--'  119  14  ~/.zshrc
--'  124  0  ~/.zshrc
--'  116  0  ~/.zshrc
--'  25  32  ~/.zshrc
--'  32  0  ~/.zshrc
--'  31  0  ~/.zshrc
--'  46  0  ~/.zshrc
--'  45  0  ~/.zshrc
--'  76  0  ~/.zshrc
--'  91  0  ~/.zshrc
--'  127  3  ~/.zshrc
--'  6  0  ~/.zshrc
--'  4  0  ~/.zshrc.old
--'  1  0  ~/.zshrc.old
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gitfast/gitfast.plugin.zsh
--'  57  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gnu-utils/gnu-utils.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gnu-utils/gnu-utils.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/rsync/rsync.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/pylint/_pylint
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/python.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/_python
--'  268  11  ~/.zshrc.old
--'  18  30  ~/.zshrc.old
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/_python
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/python.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/_python
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/_python
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/pylint/_pylint
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/python.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/_python
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  1  8  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  10  ~/Dropbox/.unix_settings/.gitignore
--'  59  0  ~/.zshrc
--'  95  3  ~/.zshrc
--'  92  4  ~/.zshrc
--'  4  0  ~/.zshrc.old
--'  1  0  ~/.zshrc.old
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gitfast/gitfast.plugin.zsh
--'  57  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gnu-utils/gnu-utils.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gnu-utils/gnu-utils.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/rsync/rsync.plugin.zsh
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/pylint/_pylint
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/python/python.plugin.zsh
+-'  111  0  ~/.zshrc.old
+-'  375  0  ~/.zshrc.old
+-'  120  0  ~/.zshrc
+-'  43  26  ~/.zshrc
+-'  28  5  ~/.zshrc
+-'  26  28  ~/.zshrc
+-'  4  0  ~/.zshrc
+-'  110  0  ~/.zshrc
+-'  125  31  ~/.zshrc
+-'  37  4  ~/.zshrc
+-'  39  28  ~/.zshrc
+-'  44  28  ~/.zshrc
+-'  45  4  ~/.zshrc
+-'  21  16  ~/.zshrc
+-'  25  22  ~/.zshrc
+-'  29  16  ~/.zshrc
+-'  19  0  ~/.zshrc
+-'  20  17  ~/.zshrc
+-'  32  7  ~/.zshrc
+-'  33  6  ~/.zshrc
 
 # History of marks within files (newest to oldest):
 
+> ~/.zshrc.old
+	"	3	0
+	.	208	0
+	+	208	0
+
 > ~/.zshrc
-	"	111	6
-	^	111	7
-	.	111	6
-	+	84	25
-	+	111	31
-	+	112	0
-	+	124	0
-	+	119	0
-	+	115	36
-	+	116	31
-	+	120	0
-	+	119	1
-	+	121	28
-	+	122	30
-	+	123	30
-	+	117	15
-	+	116	31
-	+	117	33
-	+	118	32
-	+	115	3
-	+	20	0
-	+	23	0
-	+	31	0
-	+	47	0
-	+	48	0
-	+	49	0
-	+	51	0
-	+	50	0
-	+	47	24
-	+	20	32
-	+	22	0
-	+	49	41
-	+	24	31
-	+	30	0
-	+	32	28
-	+	33	39
-	+	34	49
-	+	35	50
-	+	36	52
-	+	37	55
-	+	38	86
-	+	38	89
-	+	38	103
-	+	38	107
-	+	39	59
-	+	40	69
+	"	114	0
+	^	84	33
+	.	114	0
 	+	41	72
 	+	42	88
 	+	42	91
@@ -222,14 +182,103 @@
 	+	28	5
 	+	29	22
 	+	25	32
-	+	115	15
-	+	119	15
-	+	115	0
-	+	119	0
-	+	111	6
+	+	124	15
+	+	129	15
+	+	124	0
+	+	129	0
+	+	119	6
+	+	113	0
+	+	107	0
+	+	113	0
+	+	106	0
+	+	108	0
+	+	109	0
+	+	110	0
+	+	111	0
+	+	112	0
+	+	122	20
+	+	121	18
+	+	25	0
+	+	25	0
+	+	39	28
+	+	45	0
+	+	45	28
+	+	45	27
+	+	21	26
+	+	25	32
+	+	29	27
+	+	20	19
+	+	20	0
+	+	20	0
+	+	20	39
+	+	20	39
+	+	20	41
+	+	20	15
+	+	20	5
+	+	33	39
+	+	33	54
+	+	33	5
+	+	20	0
+	+	33	51
+	+	45	26
+	+	45	0
+	+	45	0
+	+	45	71
+	+	45	0
+	+	44	58
+	+	45	42
+	+	42	77
+	+	21	18
+	+	25	24
+	+	29	20
+	+	43	26
+	+	33	4
+	+	33	4
+	+	26	24
+	+	21	10
+	+	22	11
+	+	26	17
+	+	29	12
+	+	30	0
+	+	121	0
+	+	121	0
+	+	120	20
+	+	121	20
+	+	120	18
+	+	121	19
+	+	126	31
+	+	127	33
+	+	125	31
+	+	26	28
+	+	43	26
+	+	113	0
+	+	114	0
+	+	113	0
+	+	114	0
+	+	114	19
+	+	114	24
+	+	114	19
+	+	114	0
+	+	25	0
+	+	84	32
+	+	114	0
 
-> ~/.zshrc.old
-	"	23	0
+> /private/tmp/zshecl1998
+	"	1	0
+
+> ~/.bash_profile
+	"	11	0
+	.	19	0
+	+	15	17
+	+	19	81
+	+	19	82
+	+	19	144
+	+	19	0
+
+> ~/.bashrc
+	"	32	0
+	.	1	0
+	+	1	0
 
 > ~/Dropbox/.unix_settings/.oh-my-zsh/plugins/gitfast/gitfast.plugin.zsh
 	"	1	0

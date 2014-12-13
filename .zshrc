@@ -23,7 +23,7 @@ function estimate_time_preexec {
 
 function estimate_time_precmd {
     timer_result=$(( $SECONDS - $start_time ))
-    if [[ $timer_result -gt 10 ]]; then
+    if [[ $timer_result -gt 3 ]]; then
         calc_elapsed_time
     fi
     start_time=$SECONDS
@@ -40,7 +40,7 @@ elif [[ $timer_result -ge 60 ]]; then
     let "timer_minutes = $timer_result / 60"
     let "timer_seconds = $timer_result % 60"
     print -P "%B%F{yellow}>>> elapsed time ${timer_minutes}m${timer_seconds}s%b"
-elif [[ $timer_result -gt 10 ]]; then
+elif [[ $timer_result -gt 3 ]]; then
     print -P "%B%F{green}>>> elapsed time ${timer_result}s%b"
 fi
 }
@@ -81,7 +81,7 @@ add-zsh-hook precmd estimate_time_precmd
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx git autojump)
+plugins=(osx git autojump vi-mode)
 
 # User configuration
 
@@ -103,18 +103,28 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+setopt AUTO_PUSHD
+setopt GLOB_COMPLETE
+setopt PUSHD_MINUS
+setopt PUSHD_TO_HOME
+export EDITOR="vi"
+setopt NO_BEEP
+setopt NO_CASE_GLOB
+
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
-    alias ls='ls -pG'
-    alias ll='ls -plGA'
+    alias l='ls -hpG'
+    alias ls='ls -hpG'
+    alias ll='ls -hlpGA'
     alias la='ls -pGA'
 else
-    alias ls='ls --color=auto -p'
-    alias ll='ls --color=auto -plA'
+    alias l='ls --color=auto -hp'
+    alias ls='ls --color=auto -hp'
+    alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
 fi
 

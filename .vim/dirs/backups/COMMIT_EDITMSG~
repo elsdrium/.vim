@@ -3,16 +3,5 @@
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
 # Changes to be committed:
-#	modified:   .vim/dirs/backups/.vimrc~
-#	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.vimrc
-#	modified:   .vim/dirs/viminfo
-#	modified:   .vim/dirs/yankring_history_v2.txt
-#	modified:   .vimrc
-#
-# Changes not staged for commit:
-#	modified:   .vim/bundle/YankRing.vim (untracked content)
-#	modified:   .vim/bundle/matchit.zip (untracked content)
-#	modified:   .vim/bundle/vim-choosewin (untracked content)
+#	new file:   themes/bureau_elsdrm.zsh-theme
 #

@@ -12,9 +12,11 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias ..='cd ..'
 alias ....='cd ../..'
 alias ls='ls -pG'
+alias ll='ls -plGA'
 alias la='ls -pGA'
 alias reload='source ~/.bash_profile && source ~/.bashrc'
 alias reloadvim='vim +PluginClean +PluginInstall +PluginUpdate +qall'
+alias resync='rsync -r ~/Dropbox/.unix_settings elsdrm@140.109.21.234:~/.unix_settings && rsync -r ~/Dropbox/.unix_settings elsdrm@140.109.21.193:~/.uni    x_settings'
 function pdf() { mupdf-x11 "$1" & }
 
 source ~/.bashrc

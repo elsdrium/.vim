@@ -1,4 +1,56 @@
+Π,v
+Φ,v
+$,v
+%,v
+ ,v
+",V
+%{$reset_color%},v
+Y,v
+T,v
+R,v
+E,v
+B,v
+I,v
+L,v
+_,v
+",v
+=,v
+_LIBERTY="$_LIBERTY%{$reset_color%}",V
+$_VI_MODE,v
+[INSERT],v
+[NORMAL],v
+\,v
+vim .oh-my-zsh/themes/bureau_elsdrm.zsh-theme,v
+\e[41m,v
+${i},v
+0,v
+http://www.nextmag.com.tw/breaking-news/news/20141215/11910607,v
+for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done,v
+airline_mode_map,v
+%{$fg_bold[green]%},v
+K,v
+k,v
+ NORMAL >,v
+$(_VI_MODE),v
+),v
+(,v
+1,v
+S,v
+P,v
+    RPS2=$RPS1,V
+-,v
+ $_SYMBOL,v
+RPS1,v
+-- INSERT --,v
+-- NORMAL --,v
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}",V
+function zle-line-init zle-keymap-select {    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"    RPS2=$RPS1    zle reset-prompt}zle -N zle-line-initzle -N zle-keymap-select,V
+export EDITOR="vi",V
+function zle-line-init zle-keymap-select {    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"    RPS2=$RPS1    zle reset-prompt}zle -N zle-line-initzle -N zle-keymap-select,v
+bindkey -M vicmd "q" push-line,V
+fopen('~/FTP198/D/elsdrm/icassp2015/icassp.txt', 'r', 'n', 'ISO-8859'),v
 ,V
+研究院路2段128號 ,v
 bindkey -M viins 'jj' vi-cmd-mode,V
 bindkey -M vicmd 'u' undo,V
 bindkey -M vicmd ';;' esc,V
@@ -6,7 +58,6 @@ d,v
 n,v
 u,v
 bindkey -M viins ';;' vi-cmd-modebindkey -M vicmd 'u' undo,V
-1,v
 h,v
 l,v
 p,v
@@ -14,26 +65,20 @@ t,v
 r,v
 a,v
 s,v
-0,v
-$,v
 $(date + %s%N),v
 $(date +%s%N),v
 $(($(date +%s%N)/1000000)),v
 ${ms_result},v
 ${timer_result},v
 ${ms_result}ms,v
- ,v
     print -P "${timer_result}",V
     print -P "%B%F{green}>>> elapsed time ${timer_result}s%b",V
  == 1,v
 TIMER,v
-(,v
 /1000000)),v
 SECONDS,v
 ONDS,v
 C,v
-E,v
-S,v
 date +%s,v
 $TIMER == 1,v
 |,v
@@ -41,7 +86,6 @@ setopt NO_CASE_GLOB,V
 莊茱凌,v
 setopt NO_BEEP,V
 setopt NO_CLOBBER,V
-export EDITOR="vi",V
 setopt PUSHD_TO_HOME,V
 setopt PUSHD_MINUS,V
 setopt AUTO_PUSHD,V
@@ -54,9 +98,3 @@ function calc_elapsed_time {  if [[ $timer_result -ge 3600 ]]; then    let "ti
 prompt_paradox_precmd,v
 V ]] ]] ]]},v
                                         }V ]] ]] ]]},V
-prompt_paradox_preexec,v
-add-zsh-hook preexec prompt_paradox_preexec  add-zsh-hook precmd prompt_paradox_precmd,v
-then,v
-if [[ platform == 'linux' ]];,v
-timereport,v
-http://news.ltn.com.tw/news/politics/breakingnews/1179592,v

@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/gg
+~MSle0~/reset_
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,9 +17,16 @@
 $
 
 # Command Line History (newest to oldest):
-:qa
-:q
+:wq
 :w
+:81
+:q
+:ConqueTermSplit zsh
+:112
+:Q
+:q!
+:h surround
+:qa
 :o .zshrc
 :vs
 :pwd
@@ -31,11 +38,16 @@ $
 :28
 :o .bashrc
 :o .bash_profile
-:wq
 :20
 :44
 
 # Search String History (newest to oldest):
+?/NORMAL
+?/reset_
+?/nvm_prompt
+?/_LIBER
+?/PS1
+?/killer
 ?/gg
 ?/bindkey
 ?/plugin
@@ -53,27 +65,35 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	bindkey -M vicmd 'u' undo
-""1	LINE	0
-	
+"0	CHAR	0
+	%{$reset_color%}
+"1	LINE	0
+	"
 "2	LINE	0
-	bindkey -M viins 'jj' vi-cmd-mode
-"3	LINE	0
-	bindkey -M vicmd 'u' undo
-"4	LINE	0
-	bindkey -M vicmd ';;' esc
-"5	LINE	0
+	_LIBERTY="$_LIBERTY%{$reset_color%}"
+"3	CHAR	0
 	
+	function zle-line-init zle-keymap-select {
+	    _VI_MODE="${${KEYMAP/vicmd/%{fg{gr
+"4	LINE	0
+	    RPS2=$RPS1
+"5	LINE	0
+	_LIBERTY="$_LIBERTY%{$reset_color%}"
 "6	LINE	0
-	    print -P "${timer_result}"
+	    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
 "7	LINE	0
-	PROMPT=%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}
+	    RPS2=$RPS1
 "8	LINE	0
-	PS1="${host_prompt} ${jobs_total}${history_total} ${directory_prompt}${error_total}${post_prompt} "
-	PROMPT=%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}
+	function zle-line-init zle-keymap-select {
+	    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+	    RPS2=$RPS1
+	    zle reset-prompt
+	}
+	
+	zle -N zle-line-init
+	zle -N zle-keymap-select
 "9	LINE	0
-	alias reload='source ~/.zshrc'
+	export EDITOR="vi"
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "l	CHAR	0
@@ -82,22 +102,66 @@ $
 	i
 "w	CHAR	0
 	ww
-"-	CHAR	0
-	d
+""-	CHAR	0
+	Π
 
 # File marks:
-'0  3  0  ~/.zshrc.old
-'1  112  18  ~/.zshrc
-'2  114  24  ~/.zshrc
-'3  218  0  ~/.zshrc.old
-'4  120  0  ~/.zshrc
-'5  45  27  ~/.zshrc
-'6  39  27  ~/.zshrc
-'7  124  3  ~/.zshrc
-'8  32  0  ~/.bashrc
-'9  345  11  ~/.zshrc
+'0  111  73  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'1  119  17  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'2  120  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'3  82  52  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'4  115  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'5  109  49  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'6  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'7  1  0  /private/tmp/zshecl24301
+'8  97  0  ~/.zshrc
+'9  115  27  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
 
 # Jumplist (newest first):
+-'  111  73  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  119  17  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  120  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  82  52  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  99  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  74  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  115  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  83  24  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  20  55  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  19  57  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  18  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  17  51  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  16  47  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  15  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  13  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  78  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  109  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  77  2  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  84  19  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  1  0  /private/tmp/zshecl24301
+-'  55  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  112  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  114  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  80  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  106  7  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  97  0  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  113  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  48  0  ~/.zshrc
+-'  2  1  ~/.zshrc
+-'  10  0  ~/.zshrc
+-'  115  0  ~/.zshrc
+-'  99  0  ~/.zshrc
+-'  203  19  ~/.zshrc.old
+-'  202  19  ~/.zshrc.old
+-'  1  0  ~/.zshrc.old
+-'  1  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  252  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  6  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  1  7  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/week_report/.git/COMMIT_EDITMSG
+-'  114  0  ~/.zshrc
+-'  117  10  ~/.zshrc
+-'  32  0  ~/Dropbox/.unix_settings/[Vundle] Installer
 -'  3  0  ~/.zshrc.old
 -'  394  0  ~/.zshrc.old
 -'  189  0  ~/.zshrc.old
@@ -108,73 +172,164 @@ $
 -'  193  4  ~/.zshrc.old
 -'  190  4  ~/.zshrc.old
 -'  230  4  ~/.zshrc.old
--'  227  4  ~/.zshrc.old
--'  225  4  ~/.zshrc.old
--'  224  20  ~/.zshrc.old
--'  222  4  ~/.zshrc.old
--'  221  20  ~/.zshrc.old
--'  219  4  ~/.zshrc.old
--'  218  4  ~/.zshrc.old
--'  216  4  ~/.zshrc.old
--'  215  4  ~/.zshrc.old
--'  213  4  ~/.zshrc.old
--'  212  4  ~/.zshrc.old
--'  210  4  ~/.zshrc.old
--'  209  4  ~/.zshrc.old
--'  207  4  ~/.zshrc.old
--'  206  4  ~/.zshrc.old
--'  205  20  ~/.zshrc.old
--'  203  4  ~/.zshrc.old
--'  4  0  ~/.zshrc.old
--'  1  0  ~/.zshrc.old
--'  112  18  ~/.zshrc
--'  114  22  ~/.zshrc
+-'  1  0  /private/tmp/zshecl24301
+-'  97  0  ~/.zshrc
 -'  1  0  ~/.zshrc
--'  111  0  ~/.zshrc.old
--'  375  0  ~/.zshrc.old
--'  120  0  ~/.zshrc
--'  43  26  ~/.zshrc
--'  28  5  ~/.zshrc
--'  26  28  ~/.zshrc
--'  4  0  ~/.zshrc
--'  110  0  ~/.zshrc
--'  125  31  ~/.zshrc
--'  37  4  ~/.zshrc
--'  39  28  ~/.zshrc
--'  44  28  ~/.zshrc
--'  45  4  ~/.zshrc
--'  21  16  ~/.zshrc
--'  25  22  ~/.zshrc
--'  29  16  ~/.zshrc
--'  19  0  ~/.zshrc
--'  20  17  ~/.zshrc
--'  32  7  ~/.zshrc
--'  33  6  ~/.zshrc
+-'  48  0  ~/.zshrc
+-'  2  1  ~/.zshrc
+-'  10  0  ~/.zshrc
+-'  115  0  ~/.zshrc
+-'  99  0  ~/.zshrc
+-'  203  19  ~/.zshrc.old
+-'  202  19  ~/.zshrc.old
+-'  1  0  ~/.zshrc.old
+-'  1  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  252  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  6  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+-'  1  0  /private/tmp/zshecl24301
+-'  1  29  /private/tmp/zshecl2719
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/Gemfile
+-'  32  16  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline/init.vim
+-'  34  26  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline/init.vim
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline/init.vim
+-'  5  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline.vim
+-'  1  0  ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline.vim
+-'  1  0  /private/tmp/zshecl24301
+-'  121  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  81  52  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  100  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  116  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  110  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
 
 # History of marks within files (newest to oldest):
 
-> ~/.zshrc.old
-	"	3	0
-	.	208	0
-	+	208	0
+> ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+	"	111	73
+	^	111	74
+	.	111	73
+	+	109	0
+	+	109	0
+	+	109	46
+	+	119	21
+	+	101	0
+	+	120	0
+	+	119	22
+	+	109	46
+	+	109	46
+	+	109	49
+	+	109	0
+	+	119	25
+	+	82	71
+	+	84	0
+	+	115	0
+	+	115	0
+	+	119	17
+	+	115	0
+	+	115	0
+	+	115	19
+	+	86	0
+	+	84	0
+	+	82	0
+	+	115	28
+	+	82	55
+	+	119	0
+	+	109	57
+	+	120	17
+	+	112	0
+	+	109	11
+	+	109	11
+	+	120	37
+	+	109	0
+	+	109	0
+	+	112	0
+	+	111	36
+	+	112	0
+	+	121	0
+	+	120	37
+	+	111	0
+	+	82	72
+	+	111	48
+	+	120	28
+	+	119	18
+	+	84	0
+	+	81	0
+	+	84	0
+	+	118	0
+	+	119	27
+	+	118	0
+	+	119	17
+	+	111	73
+
+> ~/Dropbox/.unix_settings/zsh - 1
+	"	203	0
+	^	203	0
+	.	203	0
+	+	1	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	3	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	8	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	12	0
+	+	14	0
+	+	14	0
+	+	14	0
+	+	16	0
+	+	18	0
+	+	18	0
+	+	18	0
+	+	20	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	203	0
+
+> /private/tmp/zshecl2719
+	"	1	29
+	^	1	41
+	.	1	29
+	+	1	0
+	+	2	0
+	+	1	29
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/Gemfile
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline/init.vim
+	"	32	16
+	.	34	0
+	+	34	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-airline/autoload/airline.vim
+	"	5	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-surround/doc/surround.txt
+	"	21	45
+
+> /private/tmp/zshecl24301
+	"	1	0
+	^	1	1
+	.	1	0
+	+	1	0
 
 > ~/.zshrc
-	"	114	0
-	^	84	33
-	.	114	0
-	+	41	72
-	+	42	88
-	+	42	91
-	+	42	105
-	+	42	109
-	+	43	73
-	+	44	81
-	+	44	94
-	+	44	98
-	+	47	0
-	+	46	0
-	+	33	0
-	+	50	39
+	"	97	0
+	^	47	0
+	.	48	0
 	+	21	23
 	+	31	0
 	+	25	41
@@ -182,22 +337,22 @@ $
 	+	28	5
 	+	29	22
 	+	25	32
-	+	124	15
 	+	129	15
-	+	124	0
+	+	134	15
 	+	129	0
-	+	119	6
-	+	113	0
-	+	107	0
-	+	113	0
-	+	106	0
-	+	108	0
+	+	134	0
+	+	124	6
+	+	114	0
 	+	109	0
+	+	114	0
+	+	108	0
 	+	110	0
 	+	111	0
 	+	112	0
-	+	122	20
-	+	121	18
+	+	112	0
+	+	113	0
+	+	127	20
+	+	126	18
 	+	25	0
 	+	25	0
 	+	39	28
@@ -240,28 +395,67 @@ $
 	+	26	17
 	+	29	12
 	+	30	0
-	+	121	0
-	+	121	0
-	+	120	20
-	+	121	20
-	+	120	18
-	+	121	19
-	+	126	31
-	+	127	33
-	+	125	31
+	+	126	0
+	+	126	0
+	+	125	20
+	+	126	20
+	+	125	18
+	+	126	19
+	+	131	31
+	+	132	33
+	+	130	31
 	+	26	28
 	+	43	26
-	+	113	0
 	+	114	0
-	+	113	0
+	+	117	0
 	+	114	0
-	+	114	19
-	+	114	24
-	+	114	19
-	+	114	0
+	+	117	0
+	+	117	19
+	+	117	24
+	+	117	19
+	+	117	0
 	+	25	0
-	+	84	32
-	+	114	0
+	+	86	32
+	+	117	0
+	+	117	0
+	+	115	0
+	+	116	0
+	+	112	0
+	+	118	0
+	+	119	0
+	+	48	42
+	+	48	68
+	+	48	20
+	+	48	23
+	+	48	0
+	+	47	0
+	+	48	0
+
+> ~/.zshrc.old
+	"	203	19
+	.	208	0
+	+	208	0
+
+> ~/FTP198/D/elsdrm/icassp2015/icassp.txt
+	"	1	0
+
+> ~/Dropbox/Chen Hsueh-Min/ipython_notebook/week_report/.git/COMMIT_EDITMSG
+	"	1	7
+	^	1	9
+	.	2	0
+	+	1	7
+	+	2	0
+
+> ~/Dropbox/.unix_settings/[Vundle] clean
+	"	2	0
+	.	1	0
+	+	1	0
+
+> ~/Dropbox/.unix_settings/[Vundle] Installer
+	"	32	0
+	.	1	0
+	+	32	0
+	+	1	0
 
 > /private/tmp/zshecl1998
 	"	1	0

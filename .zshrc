@@ -44,6 +44,8 @@ elif [[ $timer_result -gt 3 ]]; then
     print -P "%B%F{green}>>> elapsed time ${timer_result}s%b"
 fi
 }
+
+
 autoload -Uz add-zsh-hook
 
 add-zsh-hook preexec estimate_time_preexec
@@ -107,10 +109,13 @@ setopt AUTO_PUSHD
 setopt GLOB_COMPLETE
 setopt PUSHD_MINUS
 setopt PUSHD_TO_HOME
-export EDITOR="vi"
 setopt NO_BEEP
 setopt NO_CASE_GLOB
 
+
+bindkey -M vicmd "q" push-line
+
+export EDITOR="vi"
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
 

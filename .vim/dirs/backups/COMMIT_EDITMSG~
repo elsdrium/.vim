@@ -2,16 +2,126 @@
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
 # Changes to be committed:
-#	new file:   .gitignore
-#	modified:   .vim/dirs/backups/COMMIT_EDITMSG~
-#	modified:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.git%COMMIT_EDITMSG
-#	new file:   .vim/dirs/undos/%Users%elsdrm%Dropbox%.unix_settings%.gitignore
-#	modified:   .vim/dirs/viminfo
-#	modified:   .vim/dirs/yankring_history_v2.txt
+#	new file:   .ipynb_checkpoints/Week_Report_2014-12-14-checkpoint.ipynb
+#	new file:   Week_Report_2014-12-14.ipynb
 #
-# Changes not staged for commit:
-#	modified:   .vim/bundle/YankRing.vim (untracked content)
-#	modified:   .vim/bundle/matchit.zip (untracked content)
-#	modified:   .vim/bundle/vim-choosewin (untracked content)
-#
+# ------------------------ >8 ------------------------
+# Do not touch the line above.
+# Everything below will be removed.
+diff --git a/.ipynb_checkpoints/Week_Report_2014-12-14-checkpoint.ipynb b/.ipynb_checkpoints/Week_Report_2014-12-14-checkpoint.ipynb
+new file mode 100644
+index 0000000..18014b5
+--- /dev/null
++++ b/.ipynb_checkpoints/Week_Report_2014-12-14-checkpoint.ipynb
+@@ -0,0 +1,50 @@
++{
++ "metadata": {
++  "name": "",
++  "signature": "sha256:c63d6a48dd2472469491e4c654b51b89c6f29687914eee769a8e713504dd19b1"
++ },
++ "nbformat": 3,
++ "nbformat_minor": 0,
++ "worksheets": [
++  {
++   "cells": [
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##Brief Summary\n",
++      "1. Train dictionary for iKala dataset. (Large dimension dictionaries' are under computing.)\n",
++      "2. Do sepration on iKala dataset.\n",
++      " * iKala dataset lacks some pitch annotation."
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##TODO\n",
++      "1. Debug.\n",
++      "2. Finish the entire pipeflow."
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##Additional\n",
++      "1. ConvNetJS - Deep Learning in your browser\n",
++      " * http://cs.stanford.edu/people/karpathy/convnetjs/"
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "<br />"
++     ]
++    }
++   ],
++   "metadata": {}
++  }
++ ]
++}
+\ No newline at end of file
+diff --git a/Week_Report_2014-12-14.ipynb b/Week_Report_2014-12-14.ipynb
+new file mode 100644
+index 0000000..18014b5
+--- /dev/null
++++ b/Week_Report_2014-12-14.ipynb
+@@ -0,0 +1,50 @@
++{
++ "metadata": {
++  "name": "",
++  "signature": "sha256:c63d6a48dd2472469491e4c654b51b89c6f29687914eee769a8e713504dd19b1"
++ },
++ "nbformat": 3,
++ "nbformat_minor": 0,
++ "worksheets": [
++  {
++   "cells": [
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##Brief Summary\n",
++      "1. Train dictionary for iKala dataset. (Large dimension dictionaries' are under computing.)\n",
++      "2. Do sepration on iKala dataset.\n",
++      " * iKala dataset lacks some pitch annotation."
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##TODO\n",
++      "1. Debug.\n",
++      "2. Finish the entire pipeflow."
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "##Additional\n",
++      "1. ConvNetJS - Deep Learning in your browser\n",
++      " * http://cs.stanford.edu/people/karpathy/convnetjs/"
++     ]
++    },
++    {
++     "cell_type": "markdown",
++     "metadata": {},
++     "source": [
++      "<br />"
++     ]
++    }
++   ],
++   "metadata": {}
++  }
++ ]
++}
+\ No newline at end of file

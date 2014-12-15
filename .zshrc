@@ -116,17 +116,16 @@ setopt NO_CASE_GLOB
 bindkey -M vicmd "q" push-line
 
 export EDITOR="vi"
-
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
-
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
+    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
     alias l='ls -hpG'
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
 else
+    export PATH=/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:$PATH
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
@@ -140,3 +139,6 @@ alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
 function pdf() { mupdf-x11 "$1" & }
+
+NORMAL_SYMBOL='@'
+INSERT_SYMBOL='@'

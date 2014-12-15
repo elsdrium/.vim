@@ -1,25 +1,77 @@
+,V
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin",V
+r,v
+ ,v
+v,v
+export PATH=/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/pytho    n3/3.4.2_1/bin:$PATH,v
+m,v
+dep('src','src/main.m',3,{'fct1','fct3'},'fout'),v
+m2html('mfiles','MatlabMonteCarlo', 'htmldir','doc_output', 'recursive','on', 'global','on', 'template','frame', 'index','menu', 'graph','on');,v
+gc -m 'Zsh's mode indicator behaves better.',v
+INSERT_SYMBOL_PREFIX,v
+NORMAL_SYMBOL_PREFIX,v
+%{$bg[red]%}%{$fg_bold[white]%},v
+NORMAL_SYMBOL_SUFFIX="%{$reset_color%}",V
+NORMAL_SYMBOL_SUFFIX,v
+NORMAL,v
+NORMAL_SYMBOL_PREFIX="%{$bg[red]%}%{$fg_bold[white]%}",V
+@,v
+%{$reset_color%},v
+"%{$bg[red]%}%{$fg_bold[white]%}@%{$reset_color%}",v
+"%{$bg[red]%}%{$fg_bold[white]%}@%{$reset_color%}",v
+x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /etc/x11vnc.pass -rfbport 5900 -localhost,v
+'@',v
+w,v
+1,v
+e,v
+g,v
+n,v
+a,v
+y,v
+c,v
+%{$fg_bold[green]%},v
+%{$fg[cyan]%}#%{$reset_color%},v
+%{$fg[cyan]%},v
+    Size = size(x);    if x(2) > 1,        x = ( x(:,1) + x(:,2) ) / 2;    end,v
+%,v
+k,v
+},v
+l,v
+p,v
+u,v
+{,v
+K,v
+],v
+[,v
+I,v
+V,v
+_,v
+%{$fg_bold[blue]%},v
+%},v
+%{$bg[49]%},v
+b,v
+9,v
+4,v
+\,v
+3,v
+\33[49m,v
 Π,v
+https://github.com/elsdrm/.unix_settings.git,v
 Φ,v
 $,v
-%,v
- ,v
 ",V
-%{$reset_color%},v
 Y,v
 T,v
 R,v
 E,v
 B,v
-I,v
 L,v
-_,v
 ",v
 =,v
 _LIBERTY="$_LIBERTY%{$reset_color%}",V
 $_VI_MODE,v
 [INSERT],v
 [NORMAL],v
-\,v
 vim .oh-my-zsh/themes/bureau_elsdrm.zsh-theme,v
 \e[41m,v
 ${i},v
@@ -27,14 +79,10 @@ ${i},v
 http://www.nextmag.com.tw/breaking-news/news/20141215/11910607,v
 for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done,v
 airline_mode_map,v
-%{$fg_bold[green]%},v
-K,v
-k,v
  NORMAL >,v
 $(_VI_MODE),v
 ),v
 (,v
-1,v
 S,v
 P,v
     RPS2=$RPS1,V
@@ -49,52 +97,4 @@ export EDITOR="vi",V
 function zle-line-init zle-keymap-select {    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"    RPS2=$RPS1    zle reset-prompt}zle -N zle-line-initzle -N zle-keymap-select,v
 bindkey -M vicmd "q" push-line,V
 fopen('~/FTP198/D/elsdrm/icassp2015/icassp.txt', 'r', 'n', 'ISO-8859'),v
-,V
 研究院路2段128號 ,v
-bindkey -M viins 'jj' vi-cmd-mode,V
-bindkey -M vicmd 'u' undo,V
-bindkey -M vicmd ';;' esc,V
-d,v
-n,v
-u,v
-bindkey -M viins ';;' vi-cmd-modebindkey -M vicmd 'u' undo,V
-h,v
-l,v
-p,v
-t,v
-r,v
-a,v
-s,v
-$(date + %s%N),v
-$(date +%s%N),v
-$(($(date +%s%N)/1000000)),v
-${ms_result},v
-${timer_result},v
-${ms_result}ms,v
-    print -P "${timer_result}",V
-    print -P "%B%F{green}>>> elapsed time ${timer_result}s%b",V
- == 1,v
-TIMER,v
-/1000000)),v
-SECONDS,v
-ONDS,v
-C,v
-date +%s,v
-$TIMER == 1,v
-|,v
-setopt NO_CASE_GLOB,V
-莊茱凌,v
-setopt NO_BEEP,V
-setopt NO_CLOBBER,V
-setopt PUSHD_TO_HOME,V
-setopt PUSHD_MINUS,V
-setopt AUTO_PUSHD,V
-setopt GLOB_COMPLETE,V
-https://www.youtube.com/watch?v=ENmRt2iEuVs,v
-http://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=288130074&lg=zh_TW&sign=7634129370ad855ffb50fc4c1ae44cd0&viral_id=100002238242290_1418471238674&fish_msg_type=feed,v
-    echo 'world',V
-    echo 'hello',V
-function calc_elapsed_time {  if [[ $timer_result -ge 3600 ]]; then    let "timer_hours = $timer_result / 3600"    let "remainder = $timer_result % 3600"    let "timer_minutes = $remainder / 60"    let "timer_seconds = $remainder % 60"    print -P "%B%F{red}>>> elapsed time ${timer_hours}h${timer_minutes}m${timer_seconds}s%b"  elif [[ $timer_result -ge 60 ]]; then    let "timer_minutes = $timer_result / 60"    let "timer_seconds = $timer_result % 60"    print -P "%B%F{yellow}>>> elapsed time ${timer_minutes}m${timer_seconds}s%b"  elif [[ $timer_result -gt 10 ]]; then    print -P "%B%F{green}>>> elapsed time ${timer_result}s%b"  fi},v
-prompt_paradox_precmd,v
-V ]] ]] ]]},v
-                                        }V ]] ]] ]]},V

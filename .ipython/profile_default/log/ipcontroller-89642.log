@@ -1,0 +1,76 @@
+2014-12-16 03:18:36.954 [IPControllerApp] Hub listening on tcp://127.0.0.1:55893 for registration.
+2014-12-16 03:18:36.955 [IPControllerApp] Hub using DB backend: 'NoDB'
+2014-12-16 03:18:37.212 [IPControllerApp] hub::created hub
+2014-12-16 03:18:37.212 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json
+2014-12-16 03:18:37.214 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json
+2014-12-16 03:18:37.215 [IPControllerApp] task::using Python leastload Task scheduler
+2014-12-16 03:18:37.216 [IPControllerApp] Heartmonitor started
+2014-12-16 03:18:37.229 [IPControllerApp] Creating pid file: /Users/elsdrm/.ipython/profile_default/pid/ipcontroller.pid
+2014-12-16 03:18:37.243 [IPControllerApp] client::client b'\x00\x80\x00A\xa7' requested 'connection_request'
+2014-12-16 03:18:37.243 [IPControllerApp] client::client [b'\x00\x80\x00A\xa7'] connected
+2014-12-16 03:18:38.097 [IPControllerApp] client::client b'e773c3e1-608a-4520-aa83-3f5d8fdf1c48' requested 'registration_request'
+2014-12-16 03:18:38.183 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '64e958fb-34f2-4c79-bfcc-38eb9f028a52', 'msg_type': 'status', 'header': {'username': 'elsdrm', 'session': 'e773c3e1-608a-4520-aa83-3f5d8fdf1c48', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 3, 18, 38, 182719), 'msg_id': '64e958fb-34f2-4c79-bfcc-38eb9f028a52'}, 'metadata': {}, 'content': {'execution_state': 'starting'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 03:18:38.217 [IPControllerApp] client::client b'6fc1e835-b28e-4f8c-aba7-5e433c68c556' requested 'registration_request'
+2014-12-16 03:18:38.277 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '416a1202-2c0f-49e6-932c-ec083587f9de', 'msg_type': 'status', 'header': {'session': '6fc1e835-b28e-4f8c-aba7-5e433c68c556', 'msg_id': '416a1202-2c0f-49e6-932c-ec083587f9de', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 3, 18, 38, 275658), 'username': 'elsdrm'}, 'metadata': {}, 'content': {'execution_state': 'starting'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 03:18:43.217 [IPControllerApp] registration::finished registering engine 0:e773c3e1-608a-4520-aa83-3f5d8fdf1c48
+2014-12-16 03:18:43.219 [IPControllerApp] engine::Engine Connected: 0
+2014-12-16 03:18:43.219 [IPControllerApp] registration::finished registering engine 1:6fc1e835-b28e-4f8c-aba7-5e433c68c556
+2014-12-16 03:18:43.219 [IPControllerApp] engine::Engine Connected: 1
+2014-12-16 11:10:42.345 [IPControllerApp] client::client b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' requested 'registration_request'
+2014-12-16 11:10:42.373 [IPControllerApp] client::client b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' requested 'registration_request'
+2014-12-16 11:10:42.374 [IPControllerApp] client::client b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' requested 'registration_request'
+2014-12-16 11:10:42.517 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '0b4b4b87-b490-4ccf-a251-c8592b1e6ac6', 'msg_type': 'status', 'header': {'username': 'elsdrm', 'session': 'f27f6c6f-23d6-4183-8d5e-3e0d22a13909', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 11, 10, 42, 514091), 'msg_id': '0b4b4b87-b490-4ccf-a251-c8592b1e6ac6'}, 'metadata': {}, 'content': {'execution_state': 'starting'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:10:42.521 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '85ec8c7d-c631-4e7b-9b85-2b9844b4abe2', 'msg_type': 'status', 'header': {'username': 'elsdrm', 'session': '8dd3d730-c77c-4a72-ad06-504c8bf1b607', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 11, 10, 42, 516526), 'msg_id': '85ec8c7d-c631-4e7b-9b85-2b9844b4abe2'}, 'metadata': {}, 'content': {'execution_state': 'starting'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:10:42.522 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '9fa0c8c2-cbf3-4e12-90ee-9f523f5dbf9f', 'msg_type': 'status', 'header': {'username': 'elsdrm', 'msg_id': '9fa0c8c2-cbf3-4e12-90ee-9f523f5dbf9f', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 11, 10, 42, 516514), 'session': '33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf'}, 'metadata': {}, 'content': {'execution_state': 'starting'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:10:46.218 [IPControllerApp] registration::finished registering engine 4:f27f6c6f-23d6-4183-8d5e-3e0d22a13909
+2014-12-16 11:10:46.218 [IPControllerApp] engine::Engine Connected: 4
+2014-12-16 11:10:46.219 [IPControllerApp] registration::finished registering engine 2:33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf
+2014-12-16 11:10:46.219 [IPControllerApp] engine::Engine Connected: 2
+2014-12-16 11:10:46.219 [IPControllerApp] registration::finished registering engine 3:8dd3d730-c77c-4a72-ad06-504c8bf1b607
+2014-12-16 11:10:46.219 [IPControllerApp] engine::Engine Connected: 3
+2014-12-16 11:57:08.889 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': 'c503b8f4-79e2-442a-9564-d191e45d81e1', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'msg_id': 'c503b8f4-79e2-442a-9564-d191e45d81e1', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 888791), 'session': '33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'Error in atexit._run_exitfuncs:\nTraceback (most recent call last):\n  File "/usr/local/lib/python3.4/site-packages/IPython/core/magics/script.py", line 273, in kill_bg_processes\n    '}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:08.903 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '8753c03a-3b28-4b80-9101-d107c5aea001', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'session': 'f27f6c6f-23d6-4183-8d5e-3e0d22a13909', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 888791), 'msg_id': '8753c03a-3b28-4b80-9101-d107c5aea001'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'Error in atexit._run_exitfuncs:\nTraceback (most recent call last):\n  File "/usr/local/lib/python3.4/site-packages/IPython/core/magics/script.py", line 266, in kill_bg_processes\n    '}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:08.904 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': 'bd98dd1f-7632-4f2c-9e34-3b293d437e7c', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'session': '8dd3d730-c77c-4a72-ad06-504c8bf1b607', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 888785), 'msg_id': 'bd98dd1f-7632-4f2c-9e34-3b293d437e7c'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'Error in atexit._run_exitfuncs:\nTraceback (most recent call last):\n  File "/usr/local/lib/python3.4/site-packages/IPython/core/magics/script.py", line 273, in kill_bg_processes\n    '}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:08.904 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '890d17cb-ad3e-43d1-bab1-4865e98d8902', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'msg_id': '890d17cb-ad3e-43d1-bab1-4865e98d8902', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 889360), 'session': '33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'time.sleep(0.1)\nKeyboardInterrupt\n'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:08.905 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': 'daba0b85-eee0-49bd-9a84-23fe4af13a90', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'session': 'f27f6c6f-23d6-4183-8d5e-3e0d22a13909', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 889367), 'msg_id': 'daba0b85-eee0-49bd-9a84-23fe4af13a90'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'time.sleep(0.1)\nKeyboardInterrupt\n'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:08.905 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'msg_id': '5fb23098-b88c-4681-bef7-18b3089c5d6a', 'msg_type': 'stream', 'header': {'username': 'elsdrm', 'session': '8dd3d730-c77c-4a72-ad06-504c8bf1b607', 'msg_type': 'stream', 'date': datetime.datetime(2014, 12, 16, 11, 57, 8, 889310), 'msg_id': '5fb23098-b88c-4681-bef7-18b3089c5d6a'}, 'metadata': {}, 'content': {'name': 'stderr', 'data': 'time.sleep(0.1)\nKeyboardInterrupt\n'}, 'parent_header': {}, 'buffers': []}
+2014-12-16 11:57:13.220 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 1
+2014-12-16 11:57:13.221 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 1
+2014-12-16 11:57:13.221 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 1
+2014-12-16 11:57:16.220 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 2
+2014-12-16 11:57:16.221 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 2
+2014-12-16 11:57:16.221 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 2
+2014-12-16 11:57:19.217 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 3
+2014-12-16 11:57:19.217 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 3
+2014-12-16 11:57:19.217 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 3
+2014-12-16 11:57:22.220 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 4
+2014-12-16 11:57:22.220 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 4
+2014-12-16 11:57:22.220 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 4
+2014-12-16 11:57:25.220 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 5
+2014-12-16 11:57:25.221 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 5
+2014-12-16 11:57:25.221 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 5
+2014-12-16 11:57:28.221 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 6
+2014-12-16 11:57:28.221 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 6
+2014-12-16 11:57:28.221 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 6
+2014-12-16 11:57:31.216 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 7
+2014-12-16 11:57:31.216 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 7
+2014-12-16 11:57:31.216 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 7
+2014-12-16 11:57:34.217 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 8
+2014-12-16 11:57:34.217 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 8
+2014-12-16 11:57:34.217 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 8
+2014-12-16 11:57:37.219 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 9
+2014-12-16 11:57:37.219 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 9
+2014-12-16 11:57:37.220 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 9
+2014-12-16 11:57:40.219 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 10
+2014-12-16 11:57:40.219 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 10
+2014-12-16 11:57:40.219 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 10
+2014-12-16 11:57:43.221 [IPControllerApp] heartbeat::missed b'f27f6c6f-23d6-4183-8d5e-3e0d22a13909' : 11
+2014-12-16 11:57:43.221 [IPControllerApp] heartbeat::missed b'33baae6e-2ce7-4fb3-a48e-2a9fb4dd4acf' : 11
+2014-12-16 11:57:43.221 [IPControllerApp] heartbeat::missed b'8dd3d730-c77c-4a72-ad06-504c8bf1b607' : 11
+2014-12-16 11:57:43.221 [IPControllerApp] registration::unregister_engine(4)
+2014-12-16 11:57:43.222 [IPControllerApp] registration::unregister_engine(2)
+2014-12-16 11:57:43.232 [IPControllerApp] registration::unregister_engine(3)
+2014-12-16 21:31:32.701 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-16 21:31:32.732 [IPControllerApp] CRITICAL | terminating children...
+2014-12-16 21:31:32.739 [IPControllerApp] ERROR | Failed to cleanup connection file: [Errno 2] No such file or directory: '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json'
+2014-12-16 21:31:32.741 [IPControllerApp] ERROR | Failed to cleanup connection file: [Errno 2] No such file or directory: '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'

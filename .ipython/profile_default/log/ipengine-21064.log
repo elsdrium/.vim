@@ -1,0 +1,7 @@
+2014-12-16 21:04:50.305 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2014-12-16 21:04:50.331 [IPEngineApp] Registering with controller at tcp://127.0.0.1:53987
+2014-12-16 21:04:50.581 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2014-12-16 21:04:50.600 [IPEngineApp] Using existing profile dir: u'/Users/elsdrm/.ipython/profile_default'
+2014-12-16 21:04:50.601 [IPEngineApp] Completed registration with id 10
+2014-12-16 21:04:58.868 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

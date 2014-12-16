@@ -1,0 +1,9 @@
+2014-12-16 03:18:18.426 [IPEngineApp] WARNING | url_file '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json' not found
+2014-12-16 03:18:18.427 [IPEngineApp] WARNING | Waiting up to 5.0 seconds for it to arrive.
+2014-12-16 03:18:18.932 [IPEngineApp] Loading url_file '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2014-12-16 03:18:19.009 [IPEngineApp] Registering with controller at tcp://127.0.0.1:55807
+2014-12-16 03:18:19.245 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2014-12-16 03:18:19.256 [IPEngineApp] Using existing profile dir: '/Users/elsdrm/.ipython/profile_default'
+2014-12-16 03:18:19.259 [IPEngineApp] Completed registration with id 2
+2014-12-16 03:18:34.212 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

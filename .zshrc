@@ -125,7 +125,7 @@ if [[ $platform == 'osx' ]]; then
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
 else
-    export PATH=/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:$PATH
+    export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'

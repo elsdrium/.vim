@@ -1,0 +1,28 @@
+2014-12-16 03:18:18.652 [IPControllerApp] Hub listening on tcp://127.0.0.1:55807 for registration.
+2014-12-16 03:18:18.658 [IPControllerApp] Hub using DB backend: 'NoDB'
+2014-12-16 03:18:18.916 [IPControllerApp] hub::created hub
+2014-12-16 03:18:18.916 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json
+2014-12-16 03:18:18.917 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json
+2014-12-16 03:18:18.919 [IPControllerApp] task::using Python leastload Task scheduler
+2014-12-16 03:18:18.920 [IPControllerApp] Heartmonitor started
+2014-12-16 03:18:18.955 [IPControllerApp] Creating pid file: /Users/elsdrm/.ipython/profile_default/pid/ipcontroller.pid
+2014-12-16 03:18:18.978 [IPControllerApp] client::client b'\x00\x80\x00A\xa7' requested 'connection_request'
+2014-12-16 03:18:18.978 [IPControllerApp] client::client [b'\x00\x80\x00A\xa7'] connected
+2014-12-16 03:18:19.011 [IPControllerApp] client::client b'a07bd13d-0230-4621-b51b-4ab1e077ced3' requested 'registration_request'
+2014-12-16 03:18:19.013 [IPControllerApp] client::client b'e5376fc7-f21a-4895-a44c-95877cfb5306' requested 'registration_request'
+2014-12-16 03:18:19.014 [IPControllerApp] client::client b'66f036b4-8121-49b5-9900-d82b6506498b' requested 'registration_request'
+2014-12-16 03:18:19.017 [IPControllerApp] client::client b'43a2e743-c847-455d-835d-e53a206d0ccb' requested 'registration_request'
+2014-12-16 03:18:19.226 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_id': '164f87ef-9e7e-4cc1-bf49-191364a33728', 'header': {'session': 'a07bd13d-0230-4621-b51b-4ab1e077ced3', 'username': 'elsdrm', 'date': datetime.datetime(2014, 12, 16, 3, 18, 19, 224971), 'msg_type': 'status', 'msg_id': '164f87ef-9e7e-4cc1-bf49-191364a33728'}, 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status', 'metadata': {}}
+2014-12-16 03:18:19.226 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_id': '8055c9c2-92b5-4517-a907-c3f76c6fc483', 'header': {'session': 'e5376fc7-f21a-4895-a44c-95877cfb5306', 'username': 'elsdrm', 'date': datetime.datetime(2014, 12, 16, 3, 18, 19, 225115), 'msg_type': 'status', 'msg_id': '8055c9c2-92b5-4517-a907-c3f76c6fc483'}, 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status', 'metadata': {}}
+2014-12-16 03:18:19.226 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_id': '12f43c2d-fb4b-4ccf-8fad-6dc9d26b811b', 'header': {'username': 'elsdrm', 'session': '43a2e743-c847-455d-835d-e53a206d0ccb', 'msg_id': '12f43c2d-fb4b-4ccf-8fad-6dc9d26b811b', 'msg_type': 'status', 'date': datetime.datetime(2014, 12, 16, 3, 18, 19, 225434)}, 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status', 'metadata': {}}
+2014-12-16 03:18:19.259 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_id': '84e0c6c0-af3b-48a7-b53c-126d4996d834', 'header': {'session': '66f036b4-8121-49b5-9900-d82b6506498b', 'username': 'elsdrm', 'date': datetime.datetime(2014, 12, 16, 3, 18, 19, 258790), 'msg_type': 'status', 'msg_id': '84e0c6c0-af3b-48a7-b53c-126d4996d834'}, 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status', 'metadata': {}}
+2014-12-16 03:18:24.923 [IPControllerApp] registration::finished registering engine 2:66f036b4-8121-49b5-9900-d82b6506498b
+2014-12-16 03:18:24.924 [IPControllerApp] engine::Engine Connected: 2
+2014-12-16 03:18:24.924 [IPControllerApp] registration::finished registering engine 1:e5376fc7-f21a-4895-a44c-95877cfb5306
+2014-12-16 03:18:24.924 [IPControllerApp] engine::Engine Connected: 1
+2014-12-16 03:18:24.930 [IPControllerApp] registration::finished registering engine 3:43a2e743-c847-455d-835d-e53a206d0ccb
+2014-12-16 03:18:24.930 [IPControllerApp] engine::Engine Connected: 3
+2014-12-16 03:18:24.956 [IPControllerApp] registration::finished registering engine 0:a07bd13d-0230-4621-b51b-4ab1e077ced3
+2014-12-16 03:18:24.956 [IPControllerApp] engine::Engine Connected: 0
+2014-12-16 03:18:34.202 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-16 03:18:34.202 [IPControllerApp] CRITICAL | terminating children...

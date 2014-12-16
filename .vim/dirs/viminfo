@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/NORMAL_SYM
+~MSle0~/60
 
 # Last Substitute Search Pattern:
 ~MSle0&DBGP
@@ -17,10 +17,14 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-:w
-:q!
 :q
+:w
+:wq
+:PymodeRun
+:16
+:o demo_py2so.sh
+:sp 
+:q!
 :h surround
 :113
 :112
@@ -43,6 +47,12 @@ $
 :44
 
 # Search String History (newest to oldest):
+?/60
+?/1200
+? \s\+$
+?/ipython
+?/#include
+?/DLien
 ?/NORMAL_SYM
 ?/visual
 ?/select
@@ -74,27 +84,30 @@ $
 
 # Registers:
 "0	CHAR	0
-	INSERT_SYMBOL_PREFIX
-""1	LINE	0
+	sdfs
+"1	LINE	0
 	
 "2	LINE	0
-	
+	                                                                                    
 "3	LINE	0
-	export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
-"4	CHAR	0
-	"%{$bg[red]%}%{$fg_bold[white]%}@%{$reset_color%}"
-	
+	                                                                                    
+"4	LINE	0
+	cdef extern from "<vector>" namespace "std":
+	    cdef cppclass vector[T]:
+	        vector()
+	        void push_back(T&)
+	        T& push_back(T&)
+	        size_t size()
 "5	LINE	0
-	
-"6	CHAR	0
-	"%{$bg[red]%}%{$fg_bold[white]%}@%{$reset_color%}"
-	
+	    v.push_back( 5566 )
+"6	LINE	0
+	cythonized_module = cythonize('vector.pyx', language='c++')
 "7	LINE	0
 	
 "8	LINE	0
-	"
+	from Cython.Build import cythonize
 "9	LINE	0
-	_LIBERTY="$_LIBERTY%{$reset_color%}"
+	
 "j	CHAR	0
 	jjjjkkVjjjjjjjjjjj\cc
 "l	CHAR	0
@@ -103,27 +116,96 @@ $
 	i
 "w	CHAR	0
 	ww
-"-	CHAR	0
-	r
+""-	CHAR	0
+	$
 
 # File marks:
-'0  119  0  ~/.zshrc
-'1  143  16  ~/.zshrc
-'2  2  0  /private/tmp/zshecl668
-'3  1  0  ~/Dropbox/meeting_20141217/dep/dep/dep.m
-'4  134  0  ~/.zshrc
-'5  128  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
-'6  118  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
-'7  5  29  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
-'8  5  15  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
-'9  124  30  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+'0  130  30  ~/.zshrc
+'1  1  0  /usr/local/lib/python2.7/site-packages/pymatbridge/publish.py
+'2  153  8  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+'3  61  65  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+'4  11  17  /private/etc/shells
+'5  1  1  /private/tmp/zshecl92998
+'6  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+'7  19  0  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+'8  17  0  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+'9  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_py2so_includeC++.sh
 
 # Jumplist (newest first):
+-'  130  30  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  /usr/local/lib/python2.7/site-packages/pymatbridge/publish.py
+-'  128  0  /usr/local/lib/python2.7/site-packages/pymatbridge/publish.py
+-'  153  8  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  151  8  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  61  63  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  5  0  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  1  0  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  131  0  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  231  0  /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+-'  11  17  /private/etc/shells
+-'  1  0  /private/etc/shells
+-'  1  1  /private/tmp/zshecl92998
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+-'  19  0  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+-'  17  0  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_py2so_includeC++.sh
+-'  5  0  ~/Dropbox/meeting_20141217/cython_demo/demo_py2so_includeC++.sh
+-'  18  21  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/vector.cpp
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/vector.c
+-'  21  4  ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+-'  3  0  ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+-'  5  0  ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+-'  4  0  ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_py2so.sh
+-'  4  0  ~/Dropbox/meeting_20141217/cython_demo/demo_includeC++.sh
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo_includeC++.sh
+-'  12  17  ~/Dropbox/meeting_20141217/cython_demo/iostream.py
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/iostream.py
+-'  16  17  ~/Dropbox/meeting_20141217/cython_demo/wahaaa.py
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/wahaaa.py
+-'  2  3  ~/Dropbox/meeting_20141217/cython_demo/demo.sh
+-'  3  243  ~/Dropbox/meeting_20141217/cython_demo/demo.sh
+-'  1  0  ~/Dropbox/meeting_20141217/cython_demo/demo.sh
+-'  1  6  ~/py.py
+-'  2  7  ~/py.py
+-'  3  10  ~/Dropbox/meeting_20141217/test.m
+-'  1  0  ~/Dropbox/meeting_20141217/test.m
+-'  2540  2  ~/wahaha.cpp
+-'  2304  0  ~/wahaha.cpp
+-'  2303  0  ~/wahaha.cpp
+-'  2302  0  ~/wahaha.cpp
+-'  565  0  ~/wahaha.cpp
+-'  504  0  ~/wahaha.cpp
+-'  237  0  ~/wahaha.cpp
+-'  233  0  ~/wahaha.cpp
+-'  23  0  ~/wahaha.cpp
+-'  16  0  ~/wahaha.cpp
+-'  8  0  ~/wahaha.cpp
+-'  715  35  ~/wahaha.cpp
+-'  714  31  ~/wahaha.cpp
+-'  707  9  ~/wahaha.cpp
+-'  672  27  ~/wahaha.cpp
+-'  671  27  ~/wahaha.cpp
+-'  670  27  ~/wahaha.cpp
+-'  669  27  ~/wahaha.cpp
+-'  667  43  ~/wahaha.cpp
+-'  665  38  ~/wahaha.cpp
+-'  661  36  ~/wahaha.cpp
+-'  652  31  ~/wahaha.cpp
+-'  639  31  ~/wahaha.cpp
+-'  638  31  ~/wahaha.cpp
+-'  637  31  ~/wahaha.cpp
+-'  620  0  ~/wahaha.cpp
+-'  2943  0  ~/wahaha.cpp
+-'  1  0  ~/wahaha.cpp
+-'  110  0  ~/Dropbox/.unix_settings/.zshrc
+-'  1  0  ~/Dropbox/.unix_settings/.zshrc
 -'  119  0  ~/.zshrc
 -'  128  73  ~/.zshrc
--'  1  0  ~/.zshrc
 -'  143  16  ~/.zshrc
--'  130  0  ~/.zshrc
 -'  2  0  /private/tmp/zshecl668
 -'  1  0  /private/tmp/zshecl668
 -'  1  0  ~/Dropbox/meeting_20141217/dep/dep/dep.m
@@ -147,85 +229,14 @@ $
 -'  79  18  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
 -'  1  0  .oh-my-zsh/themes/bureau_elsdrm.zsh-theme
 -'  125  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  87  52  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  104  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  120  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  88  24  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  25  55  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  24  57  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  23  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  22  51  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  20  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  18  54  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  83  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  114  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  82  2  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  89  19  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  1  0  /private/tmp/zshecl24301
--'  60  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  117  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  119  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  85  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  111  7  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  97  0  ~/.zshrc
--'  48  0  ~/.zshrc
--'  2  1  ~/.zshrc
--'  10  0  ~/.zshrc
--'  115  0  ~/.zshrc
--'  99  0  ~/.zshrc
--'  203  19  ~/.zshrc.old
--'  202  19  ~/.zshrc.old
--'  1  0  ~/.zshrc.old
--'  1  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
--'  252  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
--'  6  0  ~/FTP198/D/elsdrm/icassp2015/icassp.txt
--'  1  7  ~/Dropbox/Chen Hsueh-Min/ipython_notebook/week_report/.git/COMMIT_EDITMSG
--'  114  0  ~/.zshrc
--'  117  10  ~/.zshrc
--'  32  0  ~/Dropbox/.unix_settings/[Vundle] Installer
--'  3  0  ~/.zshrc.old
--'  394  0  ~/.zshrc.old
--'  189  0  ~/.zshrc.old
--'  200  4  ~/.zshrc.old
--'  198  4  ~/.zshrc.old
--'  197  4  ~/.zshrc.old
--'  194  4  ~/.zshrc.old
--'  193  4  ~/.zshrc.old
--'  190  4  ~/.zshrc.old
--'  230  4  ~/.zshrc.old
--'  1  0  /private/tmp/zshecl24301
--'  1  0  .oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  128  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  1  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  118  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  116  36  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  9  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  8  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  7  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  5  14  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  3  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  17  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  12  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  21  40  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  55  4  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  11  6  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  124  30  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  77  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  79  18  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  1  0  .oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  125  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  87  52  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  104  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
--'  120  0  ~/Dropbox/.unix_settings/.oh-my-zsh/themes/bureau_elsdrm.zsh-theme
+-'  2540  2  ~/wahaha.cpp
 
 # History of marks within files (newest to oldest):
 
 > ~/.zshrc
-	"	119	0
-	^	128	104
-	.	119	0
-	+	127	15
-	+	133	15
+	"	130	30
+	^	128	141
+	.	128	141
 	+	127	0
 	+	133	0
 	+	121	6
@@ -324,6 +335,200 @@ $
 	+	119	0
 	+	122	0
 	+	119	0
+	+	128	16
+	+	128	141
+
+> /usr/local/lib/python2.7/site-packages/pymatbridge/publish.py
+	"	1	0
+
+> /usr/local/lib/python2.7/site-packages/pymatbridge/pymatbridge.py
+	"	153	8
+	^	61	66
+	.	61	65
+	+	61	65
+
+> /private/etc/shells
+	"	11	17
+	^	11	18
+	.	11	17
+	+	11	17
+
+> /private/tmp/zshecl92998
+	"	1	1
+	^	1	8
+	.	1	7
+	+	1	145
+	+	1	1
+	+	1	145
+	+	2	0
+	+	1	7
+
+> ~/Dropbox/meeting_20141217/cython_demo/demo_loadPyx.py
+	"	1	0
+	^	3	0
+	.	1	0
+	+	4	0
+	+	4	34
+	+	4	42
+	+	4	23
+	+	4	57
+	+	4	5
+	+	5	0
+	+	1	49
+	+	2	13
+	+	1	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/vector.pyx
+	"	19	0
+	^	14	21
+	.	20	0
+	+	18	0
+	+	17	0
+	+	18	42
+	+	17	0
+	+	20	0
+	+	20	0
+	+	1	0
+	+	16	0
+	+	1	44
+	+	2	32
+	+	4	49
+	+	5	69
+	+	6	83
+	+	7	86
+	+	7	95
+	+	8	85
+	+	8	86
+	+	9	101
+	+	9	104
+	+	10	106
+	+	10	107
+	+	10	108
+	+	10	112
+	+	11	108
+	+	11	112
+	+	12	125
+	+	12	126
+	+	13	131
+	+	13	132
+	+	16	130
+	+	16	134
+	+	16	207
+	+	2	0
+	+	8	0
+	+	9	0
+	+	15	0
+	+	16	0
+	+	16	84
+	+	16	0
+	+	16	83
+	+	21	21
+	+	16	0
+	+	21	21
+	+	18	21
+	+	17	0
+	+	14	20
+	+	19	0
+	+	20	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/demo_py2so_includeC++.sh
+	"	1	0
+	^	5	237
+	.	5	236
+	+	4	38
+	+	5	236
+
+> ~/Dropbox/meeting_20141217/cython_demo/vector.cpp
+	"	1	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/vector.c
+	"	1	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/demo_py2so.sh
+	"	1	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/demo_includeC++.sh
+	"	4	0
+	^	4	0
+	.	4	0
+	+	1	42
+	+	4	0
+
+> ~/Dropbox/meeting_20141217/cython_demo/iostream.py
+	"	12	17
+	^	12	18
+	.	12	20
+	+	1	44
+	+	2	28
+	+	13	20
+	+	2	28
+	+	3	15
+	+	13	0
+	+	4	25
+	+	5	24
+	+	8	26
+	+	9	17
+	+	10	19
+	+	8	18
+	+	6	20
+	+	11	22
+	+	12	20
+
+> ~/Dropbox/meeting_20141217/cython_demo/wahaaa.py
+	"	16	17
+	^	9	21
+	.	9	20
+	+	2	15
+	+	5	6
+	+	2	7
+	+	5	18
+	+	6	11
+	+	7	0
+	+	8	8
+	+	9	19
+	+	10	11
+	+	4	0
+	+	12	18
+	+	15	21
+	+	16	17
+	+	2	20
+	+	9	20
+
+> ~/Dropbox/meeting_20141217/cython_demo/demo.sh
+	"	2	3
+	^	2	244
+	.	2	0
+	+	3	0
+	+	2	243
+	+	2	0
+
+> ~/py.py
+	"	1	6
+	^	1	7
+	.	1	6
+	+	3	0
+	+	1	15
+	+	2	7
+	+	1	6
+
+> ~/Dropbox/meeting_20141217/test.m
+	"	3	10
+	^	3	11
+	.	3	10
+	+	1	15
+	+	2	14
+	+	3	10
+
+> ~/wahaha.cpp
+	"	2540	2
+
+> ~/Dropbox/.unix_settings/.zshrc
+	"	110	0
 
 > /private/tmp/zshecl668
 	"	2	0

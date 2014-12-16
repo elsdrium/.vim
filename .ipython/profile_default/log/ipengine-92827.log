@@ -1,0 +1,23 @@
+2014-12-16 12:04:13.439 [IPEngineApp] Loading url_file '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2014-12-16 12:04:13.462 [IPEngineApp] Registering with controller at tcp://127.0.0.1:62721
+2014-12-16 12:04:13.554 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2014-12-16 12:04:13.558 [IPEngineApp] Using existing profile dir: '/Users/elsdrm/.ipython/profile_default'
+2014-12-16 12:04:13.560 [IPEngineApp] Completed registration with id 1
+2014-12-16 16:54:46.347 [IPEngineApp] Exception in execute request:
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-3-ed4824d8e1b5>[0m in [0;36m<module>[0;34m()[0m
+[0;32m----> 1[0;31m [0ma[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mrandom[0m[0;34m([0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0m
+[0m
+[0;31mNameError[0m: name 'np' is not defined
+2014-12-16 21:30:37.988 [IPEngineApp] Exception in execute request:
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
+[0;32m<ipython-input-7-5b8f118c32fb>[0m in [0;36m<module>[0;34m()[0m
+[0;32m----> 1[0;31m [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m [0;32mpass[0m[0;34m[0m[0m
+[0m
+[0;31mKeyboardInterrupt[0m: 
+2014-12-16 21:30:37.992 [IPEngineApp] Aborting:
+2014-12-16 21:30:37.993 [IPEngineApp] {'msg_type': 'execute_request', 'msg_id': '1b75d59e-c783-471a-a048-0be50d037ec7', 'header': {'msg_type': 'execute_request', 'session': '5abaee35-2f46-4b67-a6ce-76c7b6a1296b', 'msg_id': '1b75d59e-c783-471a-a048-0be50d037ec7', 'date': datetime.datetime(2014, 12, 16, 21, 2, 25, 154359), 'username': 'elsdrm'}, 'content': {'user_expressions': {}, 'code': 'while True: pass', 'silent': False, 'user_variables': []}, 'metadata': {}, 'buffers': [], 'parent_header': {}}
+2014-12-16 21:30:38.072 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

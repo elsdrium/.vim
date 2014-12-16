@@ -1,0 +1,74 @@
+2014-12-16 12:04:12.686 [IPControllerApp] Hub listening on tcp://127.0.0.1:62721 for registration.
+2014-12-16 12:04:12.690 [IPControllerApp] Hub using DB backend: 'NoDB'
+2014-12-16 12:04:12.945 [IPControllerApp] hub::created hub
+2014-12-16 12:04:12.945 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json
+2014-12-16 12:04:12.946 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json
+2014-12-16 12:04:12.947 [IPControllerApp] task::using Python leastload Task scheduler
+2014-12-16 12:04:12.947 [IPControllerApp] Heartmonitor started
+2014-12-16 12:04:12.981 [IPControllerApp] Creating pid file: /Users/elsdrm/.ipython/profile_default/pid/ipcontroller.pid
+2014-12-16 12:04:12.991 [IPControllerApp] client::client b'\x00\x80\x00A\xa7' requested 'connection_request'
+2014-12-16 12:04:12.992 [IPControllerApp] client::client [b'\x00\x80\x00A\xa7'] connected
+2014-12-16 12:04:13.321 [IPControllerApp] client::client b'd6445aff-affb-42e2-947e-f513cda85681' requested 'registration_request'
+2014-12-16 12:04:13.407 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'header': {'username': 'elsdrm', 'msg_id': 'd992e95c-37f6-4aad-9e32-7e0d8e296458', 'date': datetime.datetime(2014, 12, 16, 12, 4, 13, 405975), 'session': 'd6445aff-affb-42e2-947e-f513cda85681', 'msg_type': 'status'}, 'metadata': {}, 'msg_id': 'd992e95c-37f6-4aad-9e32-7e0d8e296458', 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status'}
+2014-12-16 12:04:13.464 [IPControllerApp] client::client b'c002adb1-1ac6-445b-8960-bf1171ccf80a' requested 'registration_request'
+2014-12-16 12:04:13.561 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'header': {'session': 'c002adb1-1ac6-445b-8960-bf1171ccf80a', 'msg_id': '809c66bb-36c7-4db4-8050-e28389ac6e17', 'date': datetime.datetime(2014, 12, 16, 12, 4, 13, 559901), 'msg_type': 'status', 'username': 'elsdrm'}, 'metadata': {}, 'msg_id': '809c66bb-36c7-4db4-8050-e28389ac6e17', 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status'}
+2014-12-16 12:04:13.618 [IPControllerApp] client::client b'aca81a69-23f2-4acb-9a3a-f399b13e5da5' requested 'registration_request'
+2014-12-16 12:04:13.719 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'header': {'date': datetime.datetime(2014, 12, 16, 12, 4, 13, 719051), 'msg_id': '7d2a34a9-5bbc-4392-aeef-598860a5b2fa', 'session': 'aca81a69-23f2-4acb-9a3a-f399b13e5da5', 'msg_type': 'status', 'username': 'elsdrm'}, 'metadata': {}, 'msg_id': '7d2a34a9-5bbc-4392-aeef-598860a5b2fa', 'content': {'execution_state': 'starting'}, 'buffers': [], 'msg_type': 'status'}
+2014-12-16 12:04:18.949 [IPControllerApp] registration::finished registering engine 0:d6445aff-affb-42e2-947e-f513cda85681
+2014-12-16 12:04:18.949 [IPControllerApp] engine::Engine Connected: 0
+2014-12-16 12:04:18.950 [IPControllerApp] registration::finished registering engine 2:aca81a69-23f2-4acb-9a3a-f399b13e5da5
+2014-12-16 12:04:18.950 [IPControllerApp] engine::Engine Connected: 2
+2014-12-16 12:04:18.951 [IPControllerApp] registration::finished registering engine 1:c002adb1-1ac6-445b-8960-bf1171ccf80a
+2014-12-16 12:04:18.951 [IPControllerApp] engine::Engine Connected: 1
+2014-12-16 16:50:53.734 [IPControllerApp] client::client b'\x00\x80\x00A\xa8' requested 'connection_request'
+2014-12-16 16:50:53.755 [IPControllerApp] client::client [b'\x00\x80\x00A\xa8'] connected
+2014-12-16 16:51:49.938 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request 'f6b71fa0-83a2-4fbc-9aac-27fdf0aeff85' to 0
+2014-12-16 16:51:49.939 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request 'c1f8ad89-9230-4830-ba6e-0678c07c7d52' to 1
+2014-12-16 16:51:49.940 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request 'd4b471ba-38ca-48e7-bdfc-9de7da67d4ea' to 2
+2014-12-16 16:51:49.954 [IPControllerApp] queue::request 'f6b71fa0-83a2-4fbc-9aac-27fdf0aeff85' completed on 0
+2014-12-16 16:51:49.955 [IPControllerApp] queue::request 'd4b471ba-38ca-48e7-bdfc-9de7da67d4ea' completed on 2
+2014-12-16 16:51:49.957 [IPControllerApp] queue::request 'c1f8ad89-9230-4830-ba6e-0678c07c7d52' completed on 1
+2014-12-16 16:53:40.377 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request '7620f645-e17f-48a4-90be-a6b7c7d2e025' to 0
+2014-12-16 16:53:40.378 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request 'fed9e9fb-66d3-415c-b6ba-3d159ba66b9b' to 1
+2014-12-16 16:53:40.379 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request '97a2e4b6-d2dd-437e-b068-227ae44b16a4' to 2
+2014-12-16 16:53:40.383 [IPControllerApp] queue::request '7620f645-e17f-48a4-90be-a6b7c7d2e025' completed on 0
+2014-12-16 16:53:40.384 [IPControllerApp] queue::request 'fed9e9fb-66d3-415c-b6ba-3d159ba66b9b' completed on 1
+2014-12-16 16:53:40.384 [IPControllerApp] queue::request '97a2e4b6-d2dd-437e-b068-227ae44b16a4' completed on 2
+2014-12-16 16:54:46.178 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request '923e09bd-44cc-4d20-abdf-2057fa62b315' to 0
+2014-12-16 16:54:46.179 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request 'd2a0e27a-32bc-40e5-90d6-d5f086e0d399' to 1
+2014-12-16 16:54:46.179 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd8' submitted request '94f78cf9-f1d8-4e56-a1e6-f85288451f0e' to 2
+2014-12-16 16:54:46.356 [IPControllerApp] queue::request '923e09bd-44cc-4d20-abdf-2057fa62b315' completed on 0
+2014-12-16 16:54:46.357 [IPControllerApp] queue::request 'd2a0e27a-32bc-40e5-90d6-d5f086e0d399' completed on 1
+2014-12-16 16:54:46.385 [IPControllerApp] queue::request '94f78cf9-f1d8-4e56-a1e6-f85288451f0e' completed on 2
+2014-12-16 16:58:27.376 [IPControllerApp] client::client b'\x00\x80\x00A\xa9' requested 'connection_request'
+2014-12-16 16:58:27.376 [IPControllerApp] client::client [b'\x00\x80\x00A\xa9'] connected
+2014-12-16 16:58:58.446 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '81b331de-e8c0-4277-9b79-0ba773c6c79e' to 0
+2014-12-16 16:58:58.446 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request 'ac5e1c2b-4816-462b-9527-38e2d254cf93' to 1
+2014-12-16 16:58:58.447 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '15061370-9474-401c-a3c1-b3d727ebce3d' to 2
+2014-12-16 16:58:58.451 [IPControllerApp] queue::request '81b331de-e8c0-4277-9b79-0ba773c6c79e' completed on 0
+2014-12-16 16:58:58.452 [IPControllerApp] queue::request 'ac5e1c2b-4816-462b-9527-38e2d254cf93' completed on 1
+2014-12-16 16:58:58.453 [IPControllerApp] queue::request '15061370-9474-401c-a3c1-b3d727ebce3d' completed on 2
+2014-12-16 16:59:05.233 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '1647cd38-23c4-4f52-a98b-d4e4d610e8ee' to 0
+2014-12-16 16:59:05.235 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request 'd3168056-e3c7-479c-9dd9-5f29f82aafe0' to 1
+2014-12-16 16:59:05.236 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request 'ba8d690d-5d0f-4fe8-b243-008882b075b0' to 2
+2014-12-16 16:59:05.238 [IPControllerApp] queue::request '1647cd38-23c4-4f52-a98b-d4e4d610e8ee' completed on 0
+2014-12-16 16:59:05.239 [IPControllerApp] queue::request 'ba8d690d-5d0f-4fe8-b243-008882b075b0' completed on 2
+2014-12-16 16:59:05.242 [IPControllerApp] queue::request 'd3168056-e3c7-479c-9dd9-5f29f82aafe0' completed on 1
+2014-12-16 16:59:13.009 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '43d21889-8950-428e-af2c-b7979bbaafc0' to 0
+2014-12-16 16:59:13.009 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '23d552bd-4080-4284-a550-f26c9b26b27a' to 1
+2014-12-16 16:59:13.010 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request 'f7ed0021-89cd-4f35-b155-a70d49dbb3e1' to 2
+2014-12-16 16:59:13.014 [IPControllerApp] queue::request '23d552bd-4080-4284-a550-f26c9b26b27a' completed on 1
+2014-12-16 16:59:13.015 [IPControllerApp] queue::request '43d21889-8950-428e-af2c-b7979bbaafc0' completed on 0
+2014-12-16 16:59:13.015 [IPControllerApp] queue::request 'f7ed0021-89cd-4f35-b155-a70d49dbb3e1' completed on 2
+2014-12-16 16:59:22.209 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '153899a4-2145-4024-9a9b-6aa7bbacae4c' to 0
+2014-12-16 16:59:22.209 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '2f8eb2e7-8961-46e7-926a-c58b31a91ed5' to 1
+2014-12-16 16:59:22.210 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xd9' submitted request '37b8e1f0-ebdd-4251-8baa-f0c520b27d1c' to 2
+2014-12-16 21:01:47.030 [IPControllerApp] client::client b'\x00\x80\x00A\xaa' requested 'connection_request'
+2014-12-16 21:01:47.043 [IPControllerApp] client::client [b'\x00\x80\x00A\xaa'] connected
+2014-12-16 21:02:25.155 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xda' submitted request '36ba9dab-9f06-47ec-9f8c-48367c4f71ac' to 0
+2014-12-16 21:02:25.156 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xda' submitted request '1b75d59e-c783-471a-a048-0be50d037ec7' to 1
+2014-12-16 21:02:25.157 [IPControllerApp] queue::client b'\x00\x06\x05\x8e\xda' submitted request '49822482-3800-4cd2-8afa-7c95c6bad441' to 2
+2014-12-16 21:30:37.874 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-16 21:30:37.913 [IPControllerApp] CRITICAL | terminating children...
+2014-12-16 21:30:37.914 [IPControllerApp] ERROR | Failed to cleanup connection file: [Errno 2] No such file or directory: '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json'
+2014-12-16 21:30:37.915 [IPControllerApp] ERROR | Failed to cleanup connection file: [Errno 2] No such file or directory: '/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'

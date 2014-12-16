@@ -1,0 +1,76 @@
+2014-12-16 21:04:46.761 [IPControllerApp] Hub listening on tcp://127.0.0.1:53987 for registration.
+2014-12-16 21:04:46.769 [IPControllerApp] Hub using DB backend: 'NoDB'
+2014-12-16 21:04:47.024 [IPControllerApp] hub::created hub
+2014-12-16 21:04:47.024 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json
+2014-12-16 21:04:47.064 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json
+2014-12-16 21:04:47.065 [IPControllerApp] task::using Python leastload Task scheduler
+2014-12-16 21:04:47.066 [IPControllerApp] Heartmonitor started
+2014-12-16 21:04:47.143 [IPControllerApp] Creating pid file: /Users/elsdrm/.ipython/profile_default/pid/ipcontroller.pid
+2014-12-16 21:04:47.160 [IPControllerApp] client::client '\x00\x80\x00A\xa7' requested u'connection_request'
+2014-12-16 21:04:47.160 [IPControllerApp] client::client ['\x00\x80\x00A\xa7'] connected
+2014-12-16 21:04:49.326 [IPControllerApp] client::client '7dec6f75-3bd6-4c3e-8427-c73256c715c9' requested u'registration_request'
+2014-12-16 21:04:49.329 [IPControllerApp] client::client '7811b60e-6177-496d-9ef1-56f5904c9c64' requested u'registration_request'
+2014-12-16 21:04:49.331 [IPControllerApp] client::client 'd50a4be5-42f8-486f-ada5-bd5957beca96' requested u'registration_request'
+2014-12-16 21:04:49.346 [IPControllerApp] client::client '16157af6-43bc-47ef-be93-38918d085e4c' requested u'registration_request'
+2014-12-16 21:04:49.373 [IPControllerApp] client::client 'ebdc7c77-7ab0-4a59-8278-12bb5c0dcdf8' requested u'registration_request'
+2014-12-16 21:04:49.384 [IPControllerApp] client::client '9ece9c24-9686-47f5-ab48-163a92dd84dc' requested u'registration_request'
+2014-12-16 21:04:49.932 [IPControllerApp] client::client '7fc117da-ffe9-4d8f-90c5-4738c8c7b931' requested u'registration_request'
+2014-12-16 21:04:49.940 [IPControllerApp] client::client '4924a82a-beab-4950-b791-82074829c55f' requested u'registration_request'
+2014-12-16 21:04:49.944 [IPControllerApp] client::client '41e1fd9c-1768-4a08-be6f-664a7c8fcae9' requested u'registration_request'
+2014-12-16 21:04:50.244 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'8d92b8a5-a9b7-48d8-9c84-4ae845c6caec', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 241027), u'username': u'elsdrm', u'session': u'ebdc7c77-7ab0-4a59-8278-12bb5c0dcdf8', u'msg_id': u'8d92b8a5-a9b7-48d8-9c84-4ae845c6caec', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.248 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'c025b2bc-45be-4c98-bfc3-0115c817e55e', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 241645), u'username': u'elsdrm', u'session': u'4924a82a-beab-4950-b791-82074829c55f', u'msg_id': u'c025b2bc-45be-4c98-bfc3-0115c817e55e', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.251 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'5aa012fe-33b6-4b8e-85b6-b1fa7cdb9c1b', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 242510), u'username': u'elsdrm', u'session': u'7dec6f75-3bd6-4c3e-8427-c73256c715c9', u'msg_id': u'5aa012fe-33b6-4b8e-85b6-b1fa7cdb9c1b', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.254 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'91e31718-8fc8-485c-a01a-ce160284b60f', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 243633), u'username': u'elsdrm', u'session': u'16157af6-43bc-47ef-be93-38918d085e4c', u'msg_id': u'91e31718-8fc8-485c-a01a-ce160284b60f', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.258 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'000386b0-999e-4166-994f-f85731833b68', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 244932), u'username': u'elsdrm', u'session': u'd50a4be5-42f8-486f-ada5-bd5957beca96', u'msg_id': u'000386b0-999e-4166-994f-f85731833b68', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.262 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'99a0b3d7-d784-4a2e-99cc-e0839e05ecda', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 247270), u'username': u'elsdrm', u'session': u'7fc117da-ffe9-4d8f-90c5-4738c8c7b931', u'msg_id': u'99a0b3d7-d784-4a2e-99cc-e0839e05ecda', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.265 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'325d5fa1-f6e7-4652-bc52-5a656a470fc6', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 249387), u'username': u'elsdrm', u'session': u'7811b60e-6177-496d-9ef1-56f5904c9c64', u'msg_id': u'325d5fa1-f6e7-4652-bc52-5a656a470fc6', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.268 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'ca582059-649d-4376-be24-0851ec55b5eb', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 257393), u'username': u'elsdrm', u'session': u'9ece9c24-9686-47f5-ab48-163a92dd84dc', u'msg_id': u'ca582059-649d-4376-be24-0851ec55b5eb', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.299 [IPControllerApp] client::client '9d106f80-c04f-4616-b526-801cda47d35f' requested u'registration_request'
+2014-12-16 21:04:50.304 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'df4ec5c8-38ba-4aff-92c8-d5273aae8319', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 303831), u'username': u'elsdrm', u'session': u'41e1fd9c-1768-4a08-be6f-664a7c8fcae9', u'msg_id': u'df4ec5c8-38ba-4aff-92c8-d5273aae8319', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.334 [IPControllerApp] client::client '259ac90e-8f6e-46f9-8ccf-a8fa256aaf9b' requested u'registration_request'
+2014-12-16 21:04:50.582 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'd8423c91-43c8-4335-8577-3f920afcd0ad', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 578293), u'username': u'elsdrm', u'session': u'9d106f80-c04f-4616-b526-801cda47d35f', u'msg_id': u'd8423c91-43c8-4335-8577-3f920afcd0ad', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.602 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'cb270320-ff41-4446-a6cc-a2b29f37ce58', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 601603), u'username': u'elsdrm', u'session': u'259ac90e-8f6e-46f9-8ccf-a8fa256aaf9b', u'msg_id': u'cb270320-ff41-4446-a6cc-a2b29f37ce58', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.620 [IPControllerApp] client::client '86e43e27-016c-4168-9670-58a6e4eeeb4a' requested u'registration_request'
+2014-12-16 21:04:50.621 [IPControllerApp] client::client '944e6487-1666-4c52-82b3-40acca780bc4' requested u'registration_request'
+2014-12-16 21:04:50.722 [IPControllerApp] client::client 'efb6f085-e5ae-473e-b3bc-c5f5fc165321' requested u'registration_request'
+2014-12-16 21:04:50.739 [IPControllerApp] client::client '559c3fc0-63f8-423a-959e-0d8f6f26915a' requested u'registration_request'
+2014-12-16 21:04:50.759 [IPControllerApp] client::client '509bb562-c4e8-4ffb-8e17-7545139a894e' requested u'registration_request'
+2014-12-16 21:04:50.798 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'83a24078-88bc-4252-ab56-bf80f57c1424', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 797242), u'username': u'elsdrm', u'session': u'86e43e27-016c-4168-9670-58a6e4eeeb4a', u'msg_id': u'83a24078-88bc-4252-ab56-bf80f57c1424', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.809 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'0251f65b-8157-4c4c-886f-38fb7e1d9c6e', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 808444), u'username': u'elsdrm', u'session': u'944e6487-1666-4c52-82b3-40acca780bc4', u'msg_id': u'0251f65b-8157-4c4c-886f-38fb7e1d9c6e', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.869 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'8aa3dd29-a515-4459-8f14-5fc8a76ff242', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 868345), u'username': u'elsdrm', u'session': u'efb6f085-e5ae-473e-b3bc-c5f5fc165321', u'msg_id': u'8aa3dd29-a515-4459-8f14-5fc8a76ff242', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.891 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'8de72c61-2c84-4ec1-b73c-2c98a5059d94', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 890259), u'username': u'elsdrm', u'session': u'559c3fc0-63f8-423a-959e-0d8f6f26915a', u'msg_id': u'8de72c61-2c84-4ec1-b73c-2c98a5059d94', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:50.902 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'6471a8d5-1fc6-4ed5-a215-4108433b14a8', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 16, 21, 4, 50, 901502), u'username': u'elsdrm', u'session': u'509bb562-c4e8-4ffb-8e17-7545139a894e', u'msg_id': u'6471a8d5-1fc6-4ed5-a215-4108433b14a8', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-16 21:04:53.067 [IPControllerApp] registration::finished registering engine 4:ebdc7c77-7ab0-4a59-8278-12bb5c0dcdf8
+2014-12-16 21:04:53.068 [IPControllerApp] engine::Engine Connected: 4
+2014-12-16 21:04:53.068 [IPControllerApp] registration::finished registering engine 2:d50a4be5-42f8-486f-ada5-bd5957beca96
+2014-12-16 21:04:53.069 [IPControllerApp] engine::Engine Connected: 2
+2014-12-16 21:04:53.069 [IPControllerApp] registration::finished registering engine 7:4924a82a-beab-4950-b791-82074829c55f
+2014-12-16 21:04:53.070 [IPControllerApp] engine::Engine Connected: 7
+2014-12-16 21:04:53.070 [IPControllerApp] registration::finished registering engine 1:7811b60e-6177-496d-9ef1-56f5904c9c64
+2014-12-16 21:04:53.071 [IPControllerApp] engine::Engine Connected: 1
+2014-12-16 21:04:53.071 [IPControllerApp] registration::finished registering engine 0:7dec6f75-3bd6-4c3e-8427-c73256c715c9
+2014-12-16 21:04:53.071 [IPControllerApp] engine::Engine Connected: 0
+2014-12-16 21:04:53.072 [IPControllerApp] registration::finished registering engine 3:16157af6-43bc-47ef-be93-38918d085e4c
+2014-12-16 21:04:53.072 [IPControllerApp] engine::Engine Connected: 3
+2014-12-16 21:04:53.072 [IPControllerApp] registration::finished registering engine 8:41e1fd9c-1768-4a08-be6f-664a7c8fcae9
+2014-12-16 21:04:53.073 [IPControllerApp] engine::Engine Connected: 8
+2014-12-16 21:04:53.078 [IPControllerApp] registration::finished registering engine 5:9ece9c24-9686-47f5-ab48-163a92dd84dc
+2014-12-16 21:04:53.079 [IPControllerApp] engine::Engine Connected: 5
+2014-12-16 21:04:53.080 [IPControllerApp] registration::finished registering engine 6:7fc117da-ffe9-4d8f-90c5-4738c8c7b931
+2014-12-16 21:04:53.080 [IPControllerApp] engine::Engine Connected: 6
+2014-12-16 21:04:56.068 [IPControllerApp] registration::finished registering engine 11:86e43e27-016c-4168-9670-58a6e4eeeb4a
+2014-12-16 21:04:56.069 [IPControllerApp] engine::Engine Connected: 11
+2014-12-16 21:04:56.069 [IPControllerApp] registration::finished registering engine 15:509bb562-c4e8-4ffb-8e17-7545139a894e
+2014-12-16 21:04:56.070 [IPControllerApp] engine::Engine Connected: 15
+2014-12-16 21:04:56.070 [IPControllerApp] registration::finished registering engine 9:9d106f80-c04f-4616-b526-801cda47d35f
+2014-12-16 21:04:56.071 [IPControllerApp] engine::Engine Connected: 9
+2014-12-16 21:04:56.072 [IPControllerApp] registration::finished registering engine 12:944e6487-1666-4c52-82b3-40acca780bc4
+2014-12-16 21:04:56.072 [IPControllerApp] engine::Engine Connected: 12
+2014-12-16 21:04:56.073 [IPControllerApp] registration::finished registering engine 14:559c3fc0-63f8-423a-959e-0d8f6f26915a
+2014-12-16 21:04:56.073 [IPControllerApp] engine::Engine Connected: 14
+2014-12-16 21:04:56.074 [IPControllerApp] registration::finished registering engine 13:efb6f085-e5ae-473e-b3bc-c5f5fc165321
+2014-12-16 21:04:56.075 [IPControllerApp] engine::Engine Connected: 13
+2014-12-16 21:04:56.076 [IPControllerApp] registration::finished registering engine 10:259ac90e-8f6e-46f9-8ccf-a8fa256aaf9b
+2014-12-16 21:04:56.076 [IPControllerApp] engine::Engine Connected: 10
+2014-12-16 21:04:58.888 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-16 21:04:58.888 [IPControllerApp] CRITICAL | terminating children...

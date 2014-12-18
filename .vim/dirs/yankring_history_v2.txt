@@ -1,1 +1,4 @@
+NASHome,v
+curlftpfs -o user=elsdrm 140.109.21.198:10000 /home/elsdrm/ftp198,v
+c6ce5fd38e5d6fb2922e36efd93f837f28b35c04,v
 , p.window, p.hop,v

@@ -130,7 +130,7 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
-    alias cdw='cd /home/elsdrm/NASHome/workspace/'
+    alias cdw='cd /home/elsdrm/nas/workspace/'
 fi
 
 alias grep='grep --color=auto -n'

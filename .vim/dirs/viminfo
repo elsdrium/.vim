@@ -7,10 +7,15 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/cdw
+
 # Command Line History (newest to oldest):
 :wq
+:q
 
 # Search String History (newest to oldest):
+?/cdw
 
 # Expression History (newest to oldest):
 
@@ -19,14 +24,31 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+""-	CHAR	0
+	NASHome
 
 # File marks:
-'0  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'0  133  33  ~/.zshrc
+'1  142  0  ~/.zshrc
+'2  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 
 # Jumplist (newest first):
+-'  133  33  ~/.zshrc
+-'  5  0  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  142  0  ~/.zshrc
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 
 # History of marks within files (newest to oldest):
+
+> ~/.zshrc
+	"	133	33
+	^	133	34
+	.	133	33
+	+	133	33
 
 > ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 	"	1	19

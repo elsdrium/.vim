@@ -130,11 +130,12 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
+    alias cdw='cd /home/elsdrm/NASHome/workspace/'
 fi
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto -n'
+alias egrep='egrep --color=auto -n'
+alias fgrep='fgrep --color=auto -n'
 alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'

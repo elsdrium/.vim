@@ -40,7 +40,7 @@ c = get_config()
 # c.IPythonQtConsoleApp.sshkey = ''
 
 # Path to an extra config file to load.
-# 
+#
 # If specified, load this config file in addition to any other IPython config.
 # c.IPythonQtConsoleApp.extra_config_file = u''
 
@@ -63,7 +63,7 @@ c = get_config()
 # c.IPythonQtConsoleApp.profile = u'default'
 
 # JSON file in which to store connection info [default: kernel-<pid>.json]
-# 
+#
 # This file will contain the IP, ports, and authentication key needed to connect
 # clients to this kernel. By default, this file will be created in the security-
 # dir of the current profile, but can be specified by absolute path.
@@ -97,7 +97,7 @@ c = get_config()
 # The Logging format template
 # c.IPythonQtConsoleApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
-# 
+#
 # c.IPythonQtConsoleApp.transport = 'tcp'
 
 #------------------------------------------------------------------------------
@@ -110,7 +110,7 @@ c = get_config()
 # ConsoleWidget
 
 # The type of completer to use. Valid values are:
-# 
+#
 # 'plain'   : Show the available completion as a text list
 #             Below the editing area.
 # 'droplist': Show the completion in a drop down list navigable
@@ -133,16 +133,16 @@ c = get_config()
 # with `vsplit` paging)
 # c.IPythonWidget.height = 25
 
-# 
+#
 # c.IPythonWidget.out_prompt = 'Out[<span class="out-prompt-number">%i</span>]: '
 
-# 
+#
 # c.IPythonWidget.input_sep = '\n'
 
 # Whether to draw information calltips on open-parentheses.
 # c.IPythonWidget.enable_calltips = True
 
-# 
+#
 # c.IPythonWidget.in_prompt = 'In [<span class="in-prompt-number">%i</span>]: '
 
 # The width of the console at start time in number of characters (will double
@@ -166,11 +166,11 @@ c = get_config()
 # The pygments lexer class to use.
 # c.IPythonWidget.lexer_class = <IPython.utils.traitlets.Undefined object at 0x102485590>
 
-# 
+#
 # c.IPythonWidget.output_sep2 = ''
 
 # Whether to automatically execute on syntactically complete input.
-# 
+#
 # If False, Shift-Enter is required to submit each execution. Disabling this is
 # mainly useful for non-Python kernels, where the completion check would be
 # wrong.
@@ -180,10 +180,10 @@ c = get_config()
 # positive number disables text truncation (not recommended).
 # c.IPythonWidget.buffer_size = 500
 
-# 
+#
 # c.IPythonWidget.history_lock = False
 
-# 
+#
 # c.IPythonWidget.banner = u''
 
 # The type of underlying text widget to use. Valid values are 'plain', which
@@ -206,7 +206,7 @@ c = get_config()
 # c.IPythonWidget.clear_on_kernel_restart = True
 
 # The type of paging to use. Valid values are:
-# 
+#
 # 'inside'
 #    The widget pages like a traditional terminal.
 # 'hsplit'
@@ -221,7 +221,7 @@ c = get_config()
 #    The text is written directly to the console.
 # c.IPythonWidget.paging = 'inside'
 
-# 
+#
 # c.IPythonWidget.output_sep = ''
 
 #------------------------------------------------------------------------------
@@ -252,7 +252,7 @@ c = get_config()
 # c.IPKernelApp.verbose_crash = False
 
 # The Kernel subclass to be used.
-# 
+#
 # This should allow easy re-use of the IPKernelApp entry point to configure and
 # launch kernels other than IPython's own.
 # c.IPKernelApp.kernel_class = 'IPython.kernel.zmq.ipkernel.Kernel'
@@ -285,7 +285,7 @@ c = get_config()
 # c.IPKernelApp.exec_lines = []
 
 # Path to an extra config file to load.
-# 
+#
 # If specified, load this config file in addition to any other IPython config.
 # c.IPKernelApp.extra_config_file = u''
 
@@ -298,7 +298,7 @@ c = get_config()
 # set the heartbeat port [default: random]
 # c.IPKernelApp.hb_port = 0
 
-# 
+#
 # c.IPKernelApp.transport = 'tcp'
 
 # redirect stdout to the null device
@@ -317,7 +317,7 @@ c = get_config()
 # The IPython profile to use.
 # c.IPKernelApp.profile = u'default'
 
-# 
+#
 # c.IPKernelApp.parent_appname = u''
 
 # kill this process if its parent dies.  On Windows, the argument specifies the
@@ -325,7 +325,7 @@ c = get_config()
 # c.IPKernelApp.parent_handle = 0
 
 # JSON file in which to store connection info [default: kernel-<pid>.json]
-# 
+#
 # This file will contain the IP, ports, and authentication key needed to connect
 # clients to this kernel. By default, this file will be created in the security
 # dir of the current profile, but can be specified by absolute path.
@@ -333,7 +333,7 @@ c = get_config()
 
 # If true, IPython will populate the user namespace with numpy, pylab, etc. and
 # an ``import *`` is done from numpy and pylab, when using pylab mode.
-# 
+#
 # When False, pylab mode should not import any names into the user namespace.
 # c.IPKernelApp.pylab_import_all = True
 
@@ -391,7 +391,7 @@ c = get_config()
 # user input before code is run.
 # c.ZMQInteractiveShell.ast_transformers = []
 
-# 
+#
 # c.ZMQInteractiveShell.history_length = 10000
 
 # Don't call post-execute functions that have failed in the past.
@@ -401,15 +401,15 @@ c = get_config()
 # c.ZMQInteractiveShell.show_rewritten_input = True
 
 # Set the color scheme (NoColor, Linux, or LightBG).
-# c.ZMQInteractiveShell.colors = 'LightBG'
+c.ZMQInteractiveShell.colors = 'Linux'
 
-# 
+#
 # c.ZMQInteractiveShell.separate_in = '\n'
 
 # Deprecated, use PromptManager.in2_template
 # c.ZMQInteractiveShell.prompt_in2 = '   .\\D.: '
 
-# 
+#
 # c.ZMQInteractiveShell.separate_out = ''
 
 # Deprecated, use PromptManager.in_template
@@ -431,28 +431,28 @@ c = get_config()
 # no arguments are present).
 # c.ZMQInteractiveShell.autocall = 0
 
-# 
+#
 # c.ZMQInteractiveShell.separate_out2 = ''
 
 # Deprecated, use PromptManager.justify
 # c.ZMQInteractiveShell.prompts_pad_left = True
 
-# 
+#
 # c.ZMQInteractiveShell.readline_parse_and_bind = ['tab: complete', '"\\C-l": clear-screen', 'set show-all-if-ambiguous on', '"\\C-o": tab-insert', '"\\C-r": reverse-search-history', '"\\C-s": forward-search-history', '"\\C-p": history-search-backward', '"\\C-n": history-search-forward', '"\\e[A": history-search-backward', '"\\e[B": history-search-forward', '"\\C-k": kill-line', '"\\C-u": unix-line-discard']
 
 # Enable magic commands to be called without the leading %.
 # c.ZMQInteractiveShell.automagic = True
 
-# 
+#
 # c.ZMQInteractiveShell.debug = False
 
-# 
+#
 # c.ZMQInteractiveShell.object_info_string_level = 0
 
-# 
+#
 # c.ZMQInteractiveShell.ipython_dir = ''
 
-# 
+#
 # c.ZMQInteractiveShell.readline_remove_delims = '-/~'
 
 # Start logging to the default log file.
@@ -461,7 +461,7 @@ c = get_config()
 # The name of the logfile to use.
 # c.ZMQInteractiveShell.logfile = ''
 
-# 
+#
 # c.ZMQInteractiveShell.wildcards_case_sensitive = True
 
 # Save multi-line entries as one entry in readline history
@@ -470,10 +470,10 @@ c = get_config()
 # Start logging to the given file in append mode.
 # c.ZMQInteractiveShell.logappend = ''
 
-# 
+#
 # c.ZMQInteractiveShell.xmode = 'Context'
 
-# 
+#
 # c.ZMQInteractiveShell.quiet = False
 
 # Deprecated, use PromptManager.out_template
@@ -499,7 +499,7 @@ c = get_config()
 #------------------------------------------------------------------------------
 
 # Manages a single kernel in a subprocess on this host.
-# 
+#
 # This version starts kernels with Popen.
 
 # KernelManager will inherit config from: ConnectionFileMixin
@@ -517,7 +517,7 @@ c = get_config()
 # to connect to the Kernel, so be careful!
 # c.KernelManager.ip = u''
 
-# 
+#
 # c.KernelManager.transport = 'tcp'
 
 # Should we autorestart the kernel if it dies.
@@ -528,10 +528,10 @@ c = get_config()
 #------------------------------------------------------------------------------
 
 # An object to manage the profile directory and its resources.
-# 
+#
 # The profile directory is used by all IPython applications, to manage
 # configuration, logging and security.
-# 
+#
 # This object knows how to find, create and manage these directories. This
 # should be used by any code that wants to handle profiles.
 
@@ -544,27 +544,27 @@ c = get_config()
 #------------------------------------------------------------------------------
 
 # Object for handling serialization and sending of messages.
-# 
+#
 # The Session object handles building messages and sending them with ZMQ sockets
 # or ZMQStream objects.  Objects can communicate with each other over the
 # network via Session objects, and only need to work with the dict-based IPython
 # message spec. The Session will handle serialization/deserialization, security,
 # and metadata.
-# 
+#
 # Sessions support configurable serialization via packer/unpacker traits, and
 # signing with HMAC digests via the key/keyfile traits.
-# 
+#
 # Parameters ----------
-# 
+#
 # debug : bool
 #     whether to trigger extra debugging statements
 # packer/unpacker : str : 'json', 'pickle' or import_string
 #     importstrings for methods to serialize message parts.  If just
 #     'json' or 'pickle', predefined JSON and pickle packers will be used.
 #     Otherwise, the entire importstring must be used.
-# 
+#
 #     The functions must accept at least valid JSON input, and output *bytes*.
-# 
+#
 #     For example, to use msgpack:
 #     packer = 'msgpack.packb', unpacker='msgpack.unpackb'
 # pack/unpack : callables
@@ -595,7 +595,7 @@ c = get_config()
 # c.Session.packer = 'json'
 
 # The maximum number of digests to remember.
-# 
+#
 # The digest history will be culled when it exceeds this value.
 # c.Session.digest_history_size = 65536
 
@@ -640,17 +640,17 @@ c = get_config()
 # c.InlineBackend.figure_formats = set(['png'])
 
 # Extra kwargs to be passed to fig.canvas.print_figure.
-# 
+#
 # Logical examples include: bbox_inches, quality (for jpeg figures), etc.
 # c.InlineBackend.print_figure_kwargs = {'bbox_inches': 'tight'}
 
 # Close all figures at the end of each cell.
-# 
+#
 # When True, ensures that each cell starts with no active figures, but it also
 # means that one must keep track of references in order to edit or redraw
 # figures in subsequent cells. This mode is ideal for the notebook, where
 # residual plots from other cells might be surprising.
-# 
+#
 # When False, one must call figure() to create new figures. This means that
 # gcf() and getfigs() can reference figures created in other cells, and the
 # active figure can continue to be edited with pylab/pyplot methods that

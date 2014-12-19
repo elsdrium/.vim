@@ -124,6 +124,9 @@ if [[ $platform == 'osx' ]]; then
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
+    alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
+    alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
+    alias rmlab234='ssh -Y 140.109.21.234 "matlab -desktop"'
 else
     export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
     alias l='ls --color=auto -hp'

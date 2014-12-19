@@ -8,13 +8,22 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/cdw
+~MSle0~/colors
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
 :wq
+:w
 :q
 
 # Search String History (newest to oldest):
+? \s\+$
+?/colors
+?/color
+?/light
+?/lighten
 ?/cdw
 
 # Expression History (newest to oldest):
@@ -24,31 +33,128 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""-	CHAR	0
-	NASHome
+""0	LINE	0
+	    alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
+"1	LINE	0
+	    alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
+"-	CHAR	0
+	LightBG
 
 # File marks:
-'0  133  33  ~/.zshrc
-'1  142  0  ~/.zshrc
-'2  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'0  134  19  ~/.zshrc
+'1  1  0  ~/ipyt
+'2  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+'3  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+'4  1  0  ~/test.cpp
+'5  1  0  ~/wahaaa.py
+'6  136  33  ~/.zshrc
+'7  145  0  ~/.zshrc
+'8  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 
 # Jumplist (newest first):
--'  133  33  ~/.zshrc
--'  5  0  ~/.zshrc
+-'  134  19  ~/.zshrc
+-'  130  4  ~/.zshrc
+-'  131  68  ~/.zshrc
+-'  127  42  ~/.zshrc
 -'  1  0  ~/.zshrc
--'  142  0  ~/.zshrc
+-'  1  0  ~/ipyt
+-'  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  385  6  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  388  24  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  387  2  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  3  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  1  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  307  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  1  0  ~/test.cpp
+-'  1  0  ~/wahaaa.py
+-'  136  33  ~/.zshrc
+-'  5  0  ~/.zshrc
+-'  145  0  ~/.zshrc
 -'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  0  ~/wahaaa.py
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  0  ~/test.cpp
+-'  1  0  ~/wahaaa.py
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  0  ~/wahaaa.py
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  385  6  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  388  24  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  387  2  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  3  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+-'  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  1  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  307  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  1  0  ~/test.cpp
+-'  1  0  ~/wahaaa.py
 
 # History of marks within files (newest to oldest):
 
 > ~/.zshrc
-	"	133	33
-	^	133	34
-	.	133	33
-	+	133	33
+	"	134	19
+	^	129	18
+	.	128	17
+	+	136	33
+	+	127	59
+	+	127	0
+	+	130	0
+	+	130	0
+	+	128	0
+	+	129	0
+	+	128	40
+	+	129	17
+	+	128	17
+
+> ~/ipyt
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
+	"	404	36
+	^	404	37
+	.	43	0
+	+	404	36
+	+	43	0
+
+> ~/Library/Eudb_en_free/dict_res/20020/dict.js
+	"	98	1
+
+> ~/test.cpp
+	"	1	0
+
+> ~/wahaaa.py
+	"	1	0
 
 > ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 	"	1	19

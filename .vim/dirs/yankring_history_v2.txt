@@ -1,3 +1,8 @@
+    alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"',V
+    alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"',V
+LightBG,v
+ssh -Y 140.109.21.196 "matlab -desktop",v
+https://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=288130074&lg=zh_TW&sign=2a07d92b084d6ea5952db0e1206993d3&viral_id=100002238242290_1418903126226&fish_msg_type=feed,v
 NASHome,v
 curlftpfs -o user=elsdrm 140.109.21.198:10000 /home/elsdrm/ftp198,v
 c6ce5fd38e5d6fb2922e36efd93f837f28b35c04,v

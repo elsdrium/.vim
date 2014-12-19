@@ -1,0 +1,30 @@
+2014-12-18 20:45:24.115 [IPControllerApp] Hub listening on tcp://127.0.0.1:59558 for registration.
+2014-12-18 20:45:24.117 [IPControllerApp] Hub using DB backend: 'NoDB'
+2014-12-18 20:45:24.373 [IPControllerApp] hub::created hub
+2014-12-18 20:45:24.373 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-client.json
+2014-12-18 20:45:24.375 [IPControllerApp] writing connection info to /Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json
+2014-12-18 20:45:24.376 [IPControllerApp] task::using Python leastload Task scheduler
+2014-12-18 20:45:24.377 [IPControllerApp] Heartmonitor started
+2014-12-18 20:45:24.425 [IPControllerApp] Creating pid file: /Users/elsdrm/.ipython/profile_default/pid/ipcontroller.pid
+2014-12-18 20:45:24.428 [IPControllerApp] client::client '\x00\x80\x00A\xa7' requested u'connection_request'
+2014-12-18 20:45:24.428 [IPControllerApp] client::client ['\x00\x80\x00A\xa7'] connected
+2014-12-18 20:45:25.189 [IPControllerApp] client::client '07ce022d-8d0c-4995-9b6f-91e34a7b4d03' requested u'registration_request'
+2014-12-18 20:45:25.274 [IPControllerApp] client::client '7f041cfa-3314-43c0-beb8-3438fc37767b' requested u'registration_request'
+2014-12-18 20:45:25.317 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'bdffeed4-e6e2-4470-813a-55ad7c0821f1', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 18, 20, 45, 25, 316195), u'username': u'elsdrm', u'session': u'07ce022d-8d0c-4995-9b6f-91e34a7b4d03', u'msg_id': u'bdffeed4-e6e2-4470-813a-55ad7c0821f1', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-18 20:45:25.364 [IPControllerApp] client::client '530555b5-4d2d-436e-a912-a054309a9dcb' requested u'registration_request'
+2014-12-18 20:45:25.394 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'0ee30353-3f73-43f4-b38c-70da9ef7a9ec', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 18, 20, 45, 25, 393145), u'username': u'elsdrm', u'session': u'7f041cfa-3314-43c0-beb8-3438fc37767b', u'msg_id': u'0ee30353-3f73-43f4-b38c-70da9ef7a9ec', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-18 20:45:25.430 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'e561dd35-9945-4948-93f2-f40f5eaf033f', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 18, 20, 45, 25, 429171), u'username': u'elsdrm', u'session': u'530555b5-4d2d-436e-a912-a054309a9dcb', u'msg_id': u'e561dd35-9945-4948-93f2-f40f5eaf033f', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-18 20:45:25.467 [IPControllerApp] client::client 'c8c5a6fa-c110-47d0-993a-c17a246e754d' requested u'registration_request'
+2014-12-18 20:45:25.572 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'dd933cd3-d478-4576-8d2d-6c24001b197b', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2014, 12, 18, 20, 45, 25, 571312), u'username': u'elsdrm', u'session': u'c8c5a6fa-c110-47d0-993a-c17a246e754d', u'msg_id': u'dd933cd3-d478-4576-8d2d-6c24001b197b', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2014-12-18 20:45:30.381 [IPControllerApp] registration::finished registering engine 3:c8c5a6fa-c110-47d0-993a-c17a246e754d
+2014-12-18 20:45:30.382 [IPControllerApp] engine::Engine Connected: 3
+2014-12-18 20:45:30.382 [IPControllerApp] registration::finished registering engine 2:530555b5-4d2d-436e-a912-a054309a9dcb
+2014-12-18 20:45:30.382 [IPControllerApp] engine::Engine Connected: 2
+2014-12-18 20:45:30.383 [IPControllerApp] registration::finished registering engine 1:7f041cfa-3314-43c0-beb8-3438fc37767b
+2014-12-18 20:45:30.383 [IPControllerApp] engine::Engine Connected: 1
+2014-12-18 20:45:30.383 [IPControllerApp] registration::finished registering engine 0:07ce022d-8d0c-4995-9b6f-91e34a7b4d03
+2014-12-18 20:45:30.383 [IPControllerApp] engine::Engine Connected: 0
+2014-12-18 20:45:39.960 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-18 20:45:39.961 [IPControllerApp] CRITICAL | terminating children...
+2014-12-18 20:45:39.962 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2014-12-18 20:45:39.962 [IPControllerApp] CRITICAL | terminating children...

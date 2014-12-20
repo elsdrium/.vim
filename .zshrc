@@ -120,15 +120,22 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
     export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
+
+    function pdf() { mupdf-x11 "$1" & }
+
     alias l='ls -hpG'
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
-    alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
-    alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
-    alias rmlab234='ssh -Y 140.109.21.234 "matlab -desktop"'
+    alias rmatlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
+    alias rmatlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
+    alias rmatlab234='ssh -Y 140.109.21.234 "matlab -desktop"'
+    alias rpycharm196='ssh -Y 140.109.21.196 "/home/elsdrm/pycharm4"'
+    alias rpycharm193='ssh -Y 140.109.21.193 "/home/elsdrm/pycharm4"'
+
 else
     export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
+
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
@@ -142,7 +149,6 @@ alias fgrep='fgrep --color=auto -n'
 alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
-function pdf() { mupdf-x11 "$1" & }
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'

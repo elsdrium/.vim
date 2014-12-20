@@ -1,3 +1,55 @@
+y,v
+inoremap yr :YRShow<CR>,V
+:YRShow,V
+inoremap yr :YRShow<CR>,V
+,,v
+ ,v
+>,v
+t,v
+n,v
+e,v
+l,v
+i,v
+s,v
+<,v
+# Optionally, if you set this to "random", it'll load a random theme each# time that oh-my-zsh is loaded.,V
+https://apps.facebook.com/happyfishbowl/artifact.do?src=feed_artifact_help&method=help&uid=3532190&lg=zh_TW&sign=c825dcb398c311fe5ba6e774a741dadf&viral_id=100000033743851_1419135206851&fish_msg_type=feed,v
+http://nic.uoregon.edu/projects/hipersat/hipersat1.1.tgz,v
+http://www.setn.com/News.aspx?PageGroupID=1&NewsID=53561,v
+http://www.setn.com/news.aspx?pagegroupid=1&newsid=53561,v
+3,v
+F,v
+map <F3> :NERDTreeToggle<CR>,V
+4,v
+",v
+',v
+☢,v
+⚠,v
+✗,v
+let g:syntastic_warning_symbol = '⚠'let g:syntastic_style_error_symbol = '☢',V
+☣,v
+set smartindentset tabstop=4,V
+function pdf() { mupdf-x11 "$1" & },V
+https://www.facebook.com/photo.php?fbid=913240888687983&set=a.271216102890468.76955.100000062417263&type=1&permPage=1,v
+http://www.slideshare.net/littlebtc/git-5528339,v
+inoremap <silent> ,y :YRShow<CR>,V
+" End of plugins' settings --------------------------,V
+1,v
+ ",v
+	vec.push_back( 5 );	vec.push_back( 5 );	vec.push_back( 8 );	for ( auto &i : vec ) {		cout << i << endl;	}	cout << "hello world" << endl;	return 0;,V
+using,v
+Plugin 'MarcWeber/vim-addon-mw-utils',V
+vim-addon-mw-utils',v
+Plugin 'kien/tabman.vim'"Plugin 'edkolev/tmuxline.vim',V
+~/.vim/dirs/tmp/.vimrc.swp",v
+Git,v
+Plugin 'kien/tabman.vim',v
+s/vim-snipmate'Plugin 'kien/t,v
+o/,v
+140.109.21.193 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChICruqM3ZuvcO+IIEid9DpgSEYn0PBdDeLzlKPadU6RJ+FYQJutvGnVQ0iC48/dpB/UrlFP8sy5rfl1FFyRvQqywFZj04tKDz9+QpTqrprTsLXJ6g2WGt6YSdC9NQpxS6pgaMBJ/ixOJyt42R0Tgw2lprV6N12fBz1h70eCJlaE4GWvLbh5DbW8ze3fjE9T1DmnPSqDU1enCgUtW51y5QHX2EM7vdzTiPpJMMKwm41zDH4Ndb2yVzRCP0R2px1UdwuvWMPYoUNXsgI6TaXOrK5z0Lg0p7EqyCBgMU2QznILuJhhwiVsoBcFrc905Ijwo/qBORkqbM1xQ6+toVy0zR,V
+https://www.facebook.com/m.ltn.tw/posts/753965304689138,v
+ssh -Y 140.109.21.196 "/home/elsdrm/pycharm4",v
+sshfs <YOUR NAS ID>@140.109.21.195:/ ~/NAS,v
     alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"',V
     alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"',V
 LightBG,v

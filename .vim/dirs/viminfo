@@ -8,18 +8,76 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/colors
+~MSle0~/,y
+
+# Last Substitute Search Pattern:
+~MSle0&mlab
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:wq
-:w
 :q
+:w
+:qa
+:wq
+:so %
+:h yankr
+:q!
+:e!
+:bw
+:8
+:h g
+:vs
+:sp
+:o py.py
+:map
+:h t
+:h tabman
+:h tagman
+:YRShow
+:h "
+:20
+:h utils
+:h addon
+:h addon-mw
+:21
+:quit
+:h ctrlp
+:44
+:h cmdpalette
+:h snippet
+:h snippets
+:h snipmate
+:h nerdcomme
+:h repeat
+:h vimrepeat
+:h tmuxline
+:h tlib
+:%s/mlab/matlab/g
 
 # Search String History (newest to oldest):
+?/,y
+?/oggle
+?/yr
+?/sadflkjasdfklajsfg
+?/Infomax
+?/infomax
+?/CPU
+?/cpu
+?/tl
+?/tb
+?/F4
+?/F11
+?/syntas
 ? \s\+$
+?/inno
+?/yank
+?/ctrlp_m
+?/ython
+?/lipboard
+?/yankring_max_history
+? mlab
 ?/colors
 ?/color
 ?/light
@@ -29,113 +87,494 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@y
+@n
+@:q
 
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	    alias rmlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
+""0	CHAR	0
+	y
 "1	LINE	0
+	:YRShow
+"2	LINE	0
+	:YRShow
+"3	LINE	0
+	function pdf() { mupdf-x11 "$1" & }
+"4	CHAR	0
+	using
+"5	CHAR	0
+	using
+"6	LINE	0
+	Plugin 'MarcWeber/vim-addon-mw-utils'
+"7	LINE	0
+	Plugin 'kien/tabman.vim'
+	"Plugin 'edkolev/tmuxline.vim'
+"8	LINE	0
+	398
+<140.109.21.193 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChICruqM3ZuvcO+IIEid9DpgSEYn0PBdDeLzlKPadU6RJ+FYQJutvGnVQ0iC48/dpB/UrlFP8sy5rfl1FFyRvQqywFZj04tKDz9+QpTqrprTsLXJ6g2WGt6YSdC9NQpxS6pgaMBJ/ixOJyt42R0Tgw2lprV6N12fBz1h70eCJlaE4GWvLbh5DbW8ze3fjE9T1DmnPSqDU1enCgUtW51y5QHX2EM7vdzTiPpJMMKwm41zDH4Ndb2yVzRCP0R2px1UdwuvWMPYoUNXsgI6TaXOrK5z0Lg0p7EqyCBgMU2QznILuJhhwiVsoBcFrc905Ijwo/qBORkqbM1xQ6+toVy0zR
+"9	LINE	0
 	    alias rmlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
+"a	CHAR	0
+	using
+"j	CHAR	0
+	kjkkkkkkkkkko""" YankR	l
+"z	LINE	0
+		vec.push_back( 5 );
+		vec.push_back( 5 );
+		vec.push_back( 8 );
+		for ( auto &i : vec ) {
+			cout << i << endl;
+		}
+	
+		cout << "hello world" << endl;
+	
+		return 0;
 "-	CHAR	0
-	LightBG
+	y
 
 # File marks:
-'0  134  19  ~/.zshrc
-'1  1  0  ~/ipyt
-'2  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
-'3  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
-'4  1  0  ~/test.cpp
-'5  1  0  ~/wahaaa.py
-'6  136  33  ~/.zshrc
-'7  145  0  ~/.zshrc
-'8  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'0  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'1  226  16  ~/Dropbox/.unix_settings/.vimrc
+'2  25  1  ~/[YankRing]
+'3  234  6  ~/.vimrc
+'4  129  6  ~/.vimrc
+'5  224  9  ~/.vimrc
+'6  222  0  ~/.vimrc
+'7  84  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+'8  238  0  ~/Downloads/hipersat-1.0.1119/doc/INSTALL
+'9  13  0  ~/Downloads/hipersat-1.0.1119/README
 
 # Jumplist (newest first):
--'  134  19  ~/.zshrc
--'  130  4  ~/.zshrc
--'  131  68  ~/.zshrc
--'  127  42  ~/.zshrc
+-'  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  226  16  ~/Dropbox/.unix_settings/.vimrc
+-'  222  18  ~/Dropbox/.unix_settings/.vimrc
+-'  1  0  ~/Dropbox/.unix_settings/.vimrc
+-'  25  1  ~/[YankRing]
+-'  1  0  ~/[YankRing]
+-'  65  0  ~/[YankRing]
+-'  1  0  ~/.vimrc
+-'  234  6  ~/.vimrc
+-'  222  5  ~/.vimrc
+-'  223  0  ~/.vimrc
+-'  129  6  ~/.vimrc
+-'  131  5  ~/.vimrc
+-'  224  9  ~/.vimrc
+-'  268  0  ~/.vimrc
+-'  84  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  83  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  81  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  79  13  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  73  13  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  7  29  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  248  28  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  244  62  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  1  0  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  238  0  ~/Downloads/hipersat-1.0.1119/doc/INSTALL
+-'  1  0  ~/Downloads/hipersat-1.0.1119/doc/INSTALL
+-'  13  0  ~/Downloads/hipersat-1.0.1119/README
+-'  1  0  ~/Downloads/hipersat-1.0.1119/README
+-'  154  0  ~/.zshrc
+-'  124  0  ~/.zshrc
+-'  126  4  ~/.zshrc
+-'  153  0  ~/.zshrc
 -'  1  0  ~/.zshrc
--'  1  0  ~/ipyt
--'  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  385  6  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  388  24  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  387  2  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  3  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
--'  1  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
--'  307  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
+-'  1  0  ~/py.py
 -'  1  0  ~/test.cpp
+-'  10  0  ~/test.cpp
+-'  17  0  ~/test.cpp
+-'  14  8  ~/test.cpp
+-'  13  0  ~/test.cpp
+-'  9  0  ~/test.cpp
+-'  11  5  ~/test.cpp
+-'  7  0  ~/test.cpp
+-'  8  1  ~/test.cpp
+-'  2  0  ~/test.cpp
+-'  5  0  ~/test.cpp
+-'  3  12  ~/test.cpp
+-'  4  0  ~/test.cpp
+-'  4  0  ~/py.py
+-'  1  0  ~/TabManager
 -'  1  0  ~/wahaaa.py
--'  136  33  ~/.zshrc
--'  5  0  ~/.zshrc
--'  145  0  ~/.zshrc
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  27  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  19  10  ~/py.py
+-'  1  0  ~/py
+-'  133  4  ~/.zshrc
+-'  144  0  ~/.zshrc
+-'  4  0  ~/.zshrc
+-'  30  0  ~/[Vundle] Installer
+-'  4  0  ~/wahaaa.py
 -'  1  0  ~/wahaaa.py
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  0  ~/test.cpp
+-'  28  0  ~/NERD_tree_1
+-'  1  0  ~/py
+-'  30  0  ~/[Vundle] Installer
+-'  4  0  ~/wahaaa.py
 -'  1  0  ~/wahaaa.py
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  27  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
 -'  1  0  ~/wahaaa.py
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  1  19  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
--'  404  36  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  385  6  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  388  24  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  387  2  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  3  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  1  0  ~/Dropbox/.unix_settings/.ipython/profile_default/ipython_qtconsole_config.py
--'  98  1  ~/Library/Eudb_en_free/dict_res/20020/dict.js
--'  1  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
--'  307  0  ~/Library/Eudb_en_free/dict_res/20020/dict.js
--'  1  0  ~/test.cpp
+-'  27  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/py
+-'  155  6  ~/.vimrc
+-'  115  23  ~/.vimrc
+-'  20  16  ~/.vimrc
+-'  233  24  ~/.vimrc
+-'  120  5  ~/.vimrc
+-'  1  0  ~/TabManager
 -'  1  0  ~/wahaaa.py
+-'  27  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  128  8  ~/.vimrc
+-'  130  4  ~/.vimrc
+-'  1  0  ~/TabManager
+-'  1  0  ~/wahaaa.py
+-'  27  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/py
+-'  30  0  ~/[Vundle] Installer
+-'  4  0  ~/wahaaa.py
+-'  1  0  ~/wahaaa.py
+-'  28  0  ~/NERD_tree_1
+-'  1  0  ~/py
+-'  30  0  ~/[Vundle] Installer
+-'  84  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  84  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  83  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  81  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  25  1  ~/[YankRing]
+-'  1  0  ~/[YankRing]
 
 # History of marks within files (newest to oldest):
 
-> ~/.zshrc
-	"	134	19
-	^	129	18
-	.	128	17
-	+	136	33
-	+	127	59
-	+	127	0
-	+	130	0
-	+	130	0
-	+	128	0
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	0
+	^	1	20
+	.	1	19
+	+	1	19
+
+> ~/Dropbox/.unix_settings/.vimrc
+	"	226	16
+
+> ~/Dropbox/.unix_settings/[YankRing]
+	"	4	0
+	.	2	0
+	+	2	0
+
+> ~/.vimrc
+	"	1	0
+	.	223	0
+	+	44	4
+	+	183	0
+	+	26	0
+	+	30	0
+	+	29	0
+	+	26	0
+	+	160	0
+	+	160	0
+	+	20	0
+	+	20	0
+	+	23	61
+	+	220	0
+	+	221	11
+	+	222	0
+	+	194	0
+	+	194	0
+	+	195	38
+	+	196	40
+	+	194	0
+	+	193	0
+	+	194	0
+	+	193	0
+	+	194	37
+	+	120	6
+	+	129	7
+	+	115	24
+	+	129	6
+	+	131	6
+	+	222	7
+	+	222	0
+	+	222	0
+	+	223	0
+	+	222	0
 	+	129	0
-	+	128	40
-	+	129	17
-	+	128	17
+	+	222	0
+	+	223	0
+	+	223	0
+
+> ~/[YankRing]
+	"	25	1
+	.	2	0
+	+	297	0
+	+	297	0
+	+	263	0
+	+	233	0
+	+	233	0
+	+	233	0
+	+	233	0
+	+	233	0
+	+	233	0
+	+	191	0
+	+	128	0
+	+	65	0
+	+	2	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/YankRing.vim/doc/yankring.txt
+	"	579	2
+
+> ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+	"	84	3
+
+> ~/Downloads/hipersat-1.0.1119/doc/INSTALL
+	"	238	0
+
+> ~/Downloads/hipersat-1.0.1119/README
+	"	13	0
+
+> ~/.zshrc
+	"	154	0
+	.	124	0
+	+	142	33
+	+	129	59
+	+	129	0
+	+	135	0
+	+	135	0
+	+	130	0
+	+	131	0
+	+	130	40
+	+	131	17
+	+	130	17
+	+	132	68
+	+	133	3
+	+	135	4
+	+	133	21
+	+	123	0
+	+	137	0
+	+	134	0
+	+	129	0
+	+	151	0
+	+	124	0
+	+	124	0
+
+> ~/py.py
+	"	1	0
+
+> ~/test.cpp
+	"	1	0
+	.	14	0
+	+	7	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	14	0
+	+	13	0
+	+	12	0
+	+	7	0
+	+	13	0
+	+	14	0
+	m	8	2
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/index.txt
+	"	180	28
+
+> ~/TabManager
+	"	1	0
+	.	54	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	55	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	54	0
+
+> ~/__Tagbar__
+	"	1	0
+	.	5	0
+	+	43	0
+	+	43	0
+	+	5	0
+	+	5	0
+	+	5	0
+
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/tabman.vim/doc/tabman.txt
+	"	98	0
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/motion.txt
+	"	262	7
+
+> ~/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	11	0
+	+	2	0
+
+> ~/wahaaa.py
+	"	1	0
+
+> ~/NERD_tree_2
+	"	28	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/py
+	"	1	0
+
+> ~/[Vundle] clean
+	"	4	0
+	.	1	0
+	+	7	0
+	+	4	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	145	0
+	+	117	0
+	+	88	0
+	+	59	0
+	+	30	0
+	+	1	0
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/change.txt
+	"	924	0
+
+> ~/Dropbox/.unix_settings/test.cpp
+	"	1	0
+
+> ~/Library/Preferences/com.apple.quicktime.plugin.preferences.plist
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/ctrlp.vim/doc/ctrlp.txt
+	"	2	19
+
+> ~/Dropbox/.unix_settings/.vim/bundle/tlib_vim/doc/tlib.txt
+	"	447	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/tmuxline.vim/doc/tmuxline.txt
+	"	1	0
+
+> /usr/local/Cellar/vim/7.4.488/share/vim/vim74/doc/eval.txt
+	"	1	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/nerdcommenter/doc/NERD_commenter.txt
+	"	92	0
+
+> ~/Dropbox/.unix_settings/.vim/bundle/vim-snipmate/doc/SnipMate.txt
+	"	3	47
+
+> ~/.ssh/known_hosts
+	"	7	0
+	.	10	0
+	+	10	0
 
 > ~/ipyt
 	"	1	0
@@ -149,15 +588,3 @@ $
 
 > ~/Library/Eudb_en_free/dict_res/20020/dict.js
 	"	98	1
-
-> ~/test.cpp
-	"	1	0
-
-> ~/wahaaa.py
-	"	1	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	19
-	^	1	20
-	.	1	19
-	+	1	19

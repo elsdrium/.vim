@@ -17,12 +17,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'majutsushi/tagbar'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+"Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils' " dependency of snipmate
 Plugin 'kien/tabman.vim'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fisadev/vim-ctrlp-cmdpalette'
 Plugin 'tpope/vim-surround'
@@ -41,7 +41,7 @@ Plugin 'fholgado/minibufexpl.vim'
 " Python
 Plugin 'klen/python-mode'
 
-" SVN
+" Git
 Plugin 'mhinz/vim-signify'
 "Plugin 'motemen/git-vim'
 Plugin 'tpope/vim-fugitive'
@@ -112,12 +112,12 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 """ Tabman
 " mappings to toggle display, and to focus on it
-let g:tabman_toggle = 'tl'
+let g:tabman_toggle = 'tm'
 let g:tabman_focus  = 'tf'
 
 """ Tagbar
 " toggle tagbar display
-map <F4> :TagbarToggle<CR>
+nmap tb :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 let tagbar_map_closefold = ['zc']
@@ -126,8 +126,9 @@ let tagbar_map_openfold = ['zo']
 """ Nerdtree
 " toggle nerdtree display
 map <F3> :NERDTreeToggle<CR>
+nmap ,t :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
-nmap ,t :NERDTreeFind<CR>
+nmap tf :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
@@ -191,8 +192,8 @@ let g:syntastic_enable_signs = 1
 " custom icons (enable them if you use a patched font, and enable the previous setting)
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = '☢'
+let g:syntastic_style_warning_symbol = '☣'
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' --std=c++11 '
@@ -216,6 +217,9 @@ nmap ,o :RopeFindOccurrences<CR>
 """ MiniBufExpl
 nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
 let g:miniBufExplorerAutoStart = 0
+
+""" YankRing
+nnoremap <silent> ,y :YRShow<CR>
 
 " End of plugins' settings --------------------------
 

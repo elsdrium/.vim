@@ -1,4 +1,9 @@
+nmap ,tf :NERDTreeFind<CR>,V
+NERDTreeFind,v
+map <F3> :NERDTreeToggle<CR>,V
 y,v
+http://www.appledaily.com.tw/realtimenews/article/politics/20141216/525199/%E9%81%BF%E5%85%8D%E8%A2%AB%E8%BB%8A%E8%A1%9D%E6%92%9E%E3%80%80%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%89%8D%E6%94%BE%E9%8B%BC%E8%B3%AA%E8%8A%B1%E5%8F%B0%E7%95%B6%E8%BB%8A%E9%98%BB,v
+~/.vim/dirs/tmp/.zshrc.swp",v
 inoremap yr :YRShow<CR>,V
 :YRShow,V
 inoremap yr :YRShow<CR>,V
@@ -19,7 +24,6 @@ http://www.setn.com/News.aspx?PageGroupID=1&NewsID=53561,v
 http://www.setn.com/news.aspx?pagegroupid=1&newsid=53561,v
 3,v
 F,v
-map <F3> :NERDTreeToggle<CR>,V
 4,v
 ",v
 ',v

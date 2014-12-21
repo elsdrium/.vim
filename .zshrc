@@ -143,6 +143,7 @@ else
     alias cdw='cd /home/elsdrm/nas/workspace/'
 fi
 
+alias gcb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'

@@ -1,3 +1,8 @@
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,V
+.ipython/profile_*/security,v
+https://bootstrap.pypa.io/get-pip.py,v
+~/nas/workspace/bss_mlrr_public/output_iKala_withDefaultDict/[mlrr]_1_[unknown]_spec_1000_1000,v
+ImportError: No module named 'latex',v
 nmap ,tf :NERDTreeFind<CR>,V
 NERDTreeFind,v
 map <F3> :NERDTreeToggle<CR>,V

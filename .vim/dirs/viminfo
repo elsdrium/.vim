@@ -18,13 +18,13 @@ $
 
 # Command Line History (newest to oldest):
 :q
+:q!
+:wq
 :w
 :map
 :so %
-:wq
 :qa
 :h yankr
-:q!
 :e!
 :bw
 :8
@@ -37,24 +37,6 @@ $
 :h tagman
 :YRShow
 :h "
-:20
-:h utils
-:h addon
-:h addon-mw
-:21
-:quit
-:h ctrlp
-:44
-:h cmdpalette
-:h snippet
-:h snippets
-:h snipmate
-:h nerdcomme
-:h repeat
-:h vimrepeat
-:h tmuxline
-:h tlib
-:%s/mlab/matlab/g
 
 # Search String History (newest to oldest):
 ?/tf
@@ -77,13 +59,6 @@ $
 ?/ctrlp_m
 ?/ython
 ?/lipboard
-?/yankring_max_history
-? mlab
-?/colors
-?/color
-?/light
-?/lighten
-?/cdw
 
 # Expression History (newest to oldest):
 
@@ -98,24 +73,23 @@ $
 "0	CHAR	0
 	NERDTreeFind
 ""1	LINE	0
-	nmap ,tf :NERDTreeFind<CR>
+	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "2	LINE	0
-	map <F3> :NERDTreeToggle<CR>
+	nmap ,tf :NERDTreeFind<CR>
 "3	LINE	0
-	:YRShow
+	map <F3> :NERDTreeToggle<CR>
 "4	LINE	0
 	:YRShow
 "5	LINE	0
+	:YRShow
+"6	LINE	0
 	function pdf() { mupdf-x11 "$1" & }
-"6	CHAR	0
-	using
 "7	CHAR	0
 	using
-"8	LINE	0
-	Plugin 'MarcWeber/vim-addon-mw-utils'
+"8	CHAR	0
+	using
 "9	LINE	0
-	Plugin 'kien/tabman.vim'
-	"Plugin 'edkolev/tmuxline.vim'
+	Plugin 'MarcWeber/vim-addon-mw-utils'
 "a	CHAR	0
 	using
 "j	CHAR	0
@@ -135,27 +109,38 @@ $
 	NERDTreeToggle
 
 # File marks:
-'0  130  0  ~/.vimrc
-'1  154  0  ~/.zshrc
-'2  1  0  ~/.zshrc
-'3  226  16  ~/Dropbox/.unix_settings/.vimrc
-'4  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-'5  25  1  ~/[YankRing]
-'6  233  6  ~/.vimrc
-'7  128  6  ~/.vimrc
-'8  223  9  ~/.vimrc
-'9  221  0  ~/.vimrc
+'0  1  0  ~/Dropbox/.unix_settings/.gitignore
+'1  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+'2  2  26  ~/Dropbox/.unix_settings/.gitignore
+'3  151  25  ~/.zshrc
+'4  6  0  ~/Week_Report_2014-12-21.rst
+'5  11  88  ~/Downloads/Week_Report_2014-12-21.rst
+'6  130  0  ~/.vimrc
+'7  155  0  ~/.zshrc
+'8  1  0  ~/.zshrc
+'9  226  16  ~/Dropbox/.unix_settings/.vimrc
 
 # Jumplist (newest first):
+-'  1  0  ~/Dropbox/.unix_settings/.gitignore
+-'  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+-'  2  26  ~/Dropbox/.unix_settings/.gitignore
+-'  151  25  ~/.zshrc
+-'  5  0  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  6  0  ~/Week_Report_2014-12-21.rst
+-'  9  0  ~/Week_Report_2014-12-21.rst
+-'  12  0  ~/Week_Report_2014-12-21.rst
+-'  10  0  ~/Week_Report_2014-12-21.rst
+-'  1  0  ~/Week_Report_2014-12-21.rst
+-'  11  88  ~/Downloads/Week_Report_2014-12-21.rst
+-'  1  0  ~/Downloads/Week_Report_2014-12-21.rst
 -'  130  0  ~/.vimrc
 -'  116  23  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  154  0  ~/.zshrc
--'  1  0  ~/.zshrc
+-'  155  0  ~/.zshrc
 -'  226  16  ~/Dropbox/.unix_settings/.vimrc
 -'  222  18  ~/Dropbox/.unix_settings/.vimrc
 -'  1  0  ~/Dropbox/.unix_settings/.vimrc
--'  1  0  ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
 -'  25  1  ~/[YankRing]
 -'  1  0  ~/[YankRing]
 -'  65  0  ~/[YankRing]
@@ -180,7 +165,7 @@ $
 -'  1  0  ~/Downloads/hipersat-1.0.1119/README
 -'  124  0  ~/.zshrc
 -'  126  4  ~/.zshrc
--'  153  0  ~/.zshrc
+-'  154  0  ~/.zshrc
 -'  1  0  ~/py.py
 -'  1  0  ~/test.cpp
 -'  10  0  ~/test.cpp
@@ -232,8 +217,62 @@ $
 -'  1  0  ~/py
 -'  30  0  ~/[Vundle] Installer
 -'  84  3  ~/Downloads/hipersat-1.0.1119/doc/HiPerSatManual.txt
+-'  130  0  ~/.vimrc
+-'  116  23  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/Dropbox/.unix_settings/.gitignore
+	"	1	0
+	^	2	27
+	.	2	0
+	+	1	8
+	+	2	0
+
+> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
+	"	1	0
+	^	1	20
+	.	1	19
+	+	1	19
+
+> ~/.zshrc
+	"	151	25
+	^	146	34
+	.	146	33
+	+	142	33
+	+	129	59
+	+	129	0
+	+	135	0
+	+	135	0
+	+	130	0
+	+	131	0
+	+	130	40
+	+	131	17
+	+	130	17
+	+	132	68
+	+	133	3
+	+	135	4
+	+	133	21
+	+	123	0
+	+	137	0
+	+	134	0
+	+	129	0
+	+	152	0
+	+	124	0
+	+	124	0
+	+	146	33
+
+> ~/Week_Report_2014-12-21.rst
+	"	6	0
+	.	11	0
+	+	11	0
+	+	10	0
+	+	11	0
+	+	9	0
+	+	11	0
+
+> ~/Downloads/Week_Report_2014-12-21.rst
+	"	11	88
 
 > ~/.vimrc
 	"	130	0
@@ -385,31 +424,6 @@ $
 	+	1	0
 	+	2	0
 
-> ~/.zshrc
-	"	154	0
-	.	124	0
-	+	142	33
-	+	129	59
-	+	129	0
-	+	135	0
-	+	135	0
-	+	130	0
-	+	131	0
-	+	130	40
-	+	131	17
-	+	130	17
-	+	132	68
-	+	133	3
-	+	135	4
-	+	133	21
-	+	123	0
-	+	137	0
-	+	134	0
-	+	129	0
-	+	151	0
-	+	124	0
-	+	124	0
-
 > ~/Dropbox/.unix_settings/.vimrc
 	"	226	16
 
@@ -418,12 +432,6 @@ $
 	.	2	0
 	+	65	0
 	+	2	0
-
-> ~/Dropbox/.unix_settings/.git/COMMIT_EDITMSG
-	"	1	0
-	^	1	20
-	.	1	19
-	+	1	19
 
 > ~/[YankRing]
 	"	25	1

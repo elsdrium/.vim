@@ -37,9 +37,11 @@ Plugin 'fholgado/minibufexpl.vim'
 
 " Latex
 "Plugin 'LaTeX-Box-Team/LaTeX-Box'
+"Plugin 'gerw/vim-latex-suite'
 
 " Python
 Plugin 'klen/python-mode'
+Plugin 'ivanov/vim-ipython'
 
 " Git
 Plugin 'mhinz/vim-signify'

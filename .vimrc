@@ -41,7 +41,7 @@ Plugin 'fholgado/minibufexpl.vim'
 
 " Python
 Plugin 'klen/python-mode'
-Plugin 'ivanov/vim-ipython'
+"Plugin 'ivanov/vim-ipython'
 
 " Git
 Plugin 'mhinz/vim-signify'

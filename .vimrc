@@ -19,8 +19,9 @@ Plugin 'bling/vim-bufferline'
 Plugin 'majutsushi/tagbar'
 "Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils' " dependency of snipmate
+"Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
+"Plugin 'MarcWeber/vim-addon-mw-utils'  " dependency of snipmate
 Plugin 'kien/tabman.vim'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'kien/ctrlp.vim'
@@ -28,6 +29,7 @@ Plugin 'fisadev/vim-ctrlp-cmdpalette'
 Plugin 'tpope/vim-surround'
 Plugin 'Townk/vim-autoclose'
 Plugin 'Shougo/neocomplcache.vim'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 't9md/vim-choosewin'
 Plugin 'elsdrm/Conque-Shell'
 Plugin 'fholgado/minibufexpl.vim'
@@ -41,6 +43,7 @@ Plugin 'fholgado/minibufexpl.vim'
 
 " Python
 Plugin 'klen/python-mode'
+"Plugin 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
 "Plugin 'ivanov/vim-ipython'
 
 " Git
@@ -71,37 +74,41 @@ let g:EasyMotion_leader_key = '\'
 nmap <Leader>v <Plug>(easymotion-bd-w)
 
 """ Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
-let g:airline#extensions#tabline#show_buffers = 0
 
-""" Neocomplcache
-" most of them not documented because I'm not sure how they work
-" (docs aren't good, had to do a lot of trial and error to make 
-" it play nice)
-inoremap <expr><TAB>  pumvisible() ? "\<CR>" : "\<TAB>"
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_ignore_case = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_fuzzy_completion = 0
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_fuzzy_completion_start_length = 1
-let g:neocomplcache_auto_completion_start_length = 1
-let g:neocomplcache_auto_completion_start_length = 1
-let g:neocomplcache_manual_completion_start_length = 1
-let g:neocomplcache_min_keyword_length = 1
-let g:neocomplcache_min_syntax_length = 1
-" complete with workds from any opened file
-let g:neocomplcache_same_filetype_lists = {}
-let g:neocomplcache_same_filetype_lists._ = '_'
+"""" Neocomplcache
+"" most of them not documented because I'm not sure how they work
+"" (docs aren't good, had to do a lot of trial and error to make 
+"" it play nice)
+"imap <expr><TAB>  pumvisible() ? "\<CR>" : "\<TAB>"
+"imap <expr><Space> pumvisible() ? neocomplcache#close_popup() : "\<Space>"
+
+"let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_ignore_case = 1
+"let g:neocomplcache_enable_smart_case = 1
+"let g:neocomplcache_enable_auto_select = 1
+"let g:neocomplcache_enable_fuzzy_completion = 0
+"let g:neocomplcache_enable_camel_case_completion = 1
+"let g:neocomplcache_enable_underbar_completion = 1
+"let g:neocomplcache_fuzzy_completion_start_length = 1
+"let g:neocomplcache_auto_completion_start_length = 1
+"let g:neocomplcache_auto_completion_start_length = 1
+"let g:neocomplcache_manual_completion_start_length = 1
+"let g:neocomplcache_min_keyword_length = 1
+"let g:neocomplcache_min_syntax_length = 1
+"" complete with workds from any opened file
+"let g:neocomplcache_same_filetype_lists = {}
+"let g:neocomplcache_same_filetype_lists._ = '_'
+
+""" Ultisnips
+let g:UltiSnipsExpandTrigger="<TAB>"
+let g:UltiSnipsJumpForwardTrigger="<C-g>"
+let g:UltiSnipsJumpBackwardTrigger="<C-h>"
+
 
 """ choosewin
 nmap  -  <Plug>(choosewin)

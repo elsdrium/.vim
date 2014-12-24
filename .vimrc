@@ -150,7 +150,7 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
 """ CtrlP
 " file finder mapping
-let g:ctrlp_map = ',e'
+let g:ctrlp_map = ',p' " very slow, not recommended.............
 " tags (symbols) in current file finder mapping
 nmap ,g :CtrlPBufTag<CR>
 " tags (symbols) in all files finder mapping
@@ -160,7 +160,7 @@ nmap ,f :CtrlPLine<CR>
 " recent files finder mapping
 nmap ,m :CtrlPMRUFiles<CR>
 " commands finder mapping
-nmap ,c :CtrlPCmdPalette<CR>
+"nmap ,c :CtrlPCmdPalette<CR> " Not support Python3
 " to be able to call CtrlP with default search text
 function! CtrlPWithSearchText(search_text, ctrlp_command_end)
     execute ':CtrlP' . a:ctrlp_command_end
@@ -185,7 +185,7 @@ let g:ctrlp_custom_ignore = {
 
 """ Syntastic
 " show list of errors and warnings on the current file
-nmap <leader>e :Errors<CR>
+nmap ,e :Errors<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 1
 " don't put icons on the sign column (it hides the vcs status icons of signify)

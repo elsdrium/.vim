@@ -7,14 +7,14 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau_elsdrm"
 
-platform='unknown'
+export platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-    platform='linux'
+    export platform='linux'
 elif [[ "$unamestr" == 'Darwin' ]]; then
-    platform='osx'
+    export platform='osx'
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
-    platform='freebsd'
+    export platform='freebsd'
 fi
 
 function estimate_time_preexec {
@@ -123,6 +123,7 @@ if [[ $platform == 'osx' ]]; then
 
     function pdf() { mupdf-x11 "$1" & }
 
+    alias cdw='cd /Users/elsdrm/nas/workspace/'
     alias l='ls -hpG'
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
@@ -136,11 +137,11 @@ if [[ $platform == 'osx' ]]; then
 else
     export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
 
+    alias cdw='cd /home/elsdrm/nas/workspace/'
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
-    alias cdw='cd /home/elsdrm/nas/workspace/'
 fi
 
 alias gcb='git show-branch --color'

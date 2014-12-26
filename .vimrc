@@ -279,6 +279,10 @@ set incsearch
 " highlighted search results
 set hlsearch
 
+" no annoying beeps anymore...
+set vb
+set t_vb=
+
 " general settings
 syntax on
 colo elflord

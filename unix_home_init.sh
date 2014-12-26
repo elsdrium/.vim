@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 
 # Create mount points
 if [[ "$platform" == 'osx' ]]; then

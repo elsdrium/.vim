@@ -157,15 +157,15 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
 """ CtrlP
 " file finder mapping
-let g:ctrlp_map = ',p' " very slow, not recommended.............
+let g:ctrlp_map = ',F' " very slow, not recommended.............
 " tags (symbols) in current file finder mapping
 nmap ,g :CtrlPBufTag<CR>
 " tags (symbols) in all files finder mapping
 nmap ,G :CtrlPBufTagAll<CR>
 " general code finder in all files mapping
-nmap ,f :CtrlPLine<CR>
+nmap ,L :CtrlPLine<CR>
 " recent files finder mapping
-nmap ,m :CtrlPMRUFiles<CR>
+nmap ,M :CtrlPMRUFiles<CR>
 " commands finder mapping
 "nmap ,c :CtrlPCmdPalette<CR> " Not support Python3
 " to be able to call CtrlP with default search text
@@ -177,7 +177,7 @@ endfunction
 " text
 nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
 nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
-nmap ,wf :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
+nmap ,wl :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
 nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
 nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
 nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>

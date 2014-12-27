@@ -136,7 +136,7 @@ let tagbar_map_openfold = ['zo']
 " toggle nerdtree display
 nmap ,t :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
-map <F3> :NERDTreeFind<CR>
+map ,q :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 

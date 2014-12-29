@@ -135,20 +135,26 @@ if [[ $platform == 'osx' ]]; then
     alias rpycharm193='ssh -Y 140.109.21.193 "/home/elsdrm/pycharm4"'
 
 else
-    export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
     alias cdw='cd /home/elsdrm/nas/workspace/'
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
+
+    # system management
+    alias dstat='dstat -cdlmnpsy'
+    alias nmon='nmon -s 1'
 fi
 
+alias r='ranger'
 alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'
 alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
+alias ev='vim ~/.vimrc'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
 

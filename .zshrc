@@ -148,7 +148,7 @@ else
     alias nmon='nmon -s 1'
 fi
 
-alias r='ranger'
+alias rr='ranger'
 alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'

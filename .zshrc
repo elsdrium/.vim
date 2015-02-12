@@ -161,6 +161,8 @@ alias rlsftp='with-readline sftp'
 alias rlftp='with-readline ftp'
 alias clang++='clang++ -std=c++11'
 alias g++='g++ -std=c++11'
+alias pipi='sudo -H pip install'
+alias pipu='sudo -H pip install --upgrade'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'

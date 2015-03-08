@@ -1,0 +1,5 @@
+2015-02-18 14:11:09.875 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2015-02-18 14:11:10.002 [IPEngineApp] Registering with controller at tcp://127.0.0.1:63011
+2015-02-18 14:11:10.778 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2015-02-18 14:11:10.832 [IPEngineApp] Using existing profile dir: u'/Users/elsdrm/.ipython/profile_default'
+2015-02-18 14:11:10.833 [IPEngineApp] Completed registration with id 90

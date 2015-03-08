@@ -644,7 +644,7 @@ c = get_config()
 # c.FileNotebookManager.save_script = False
 
 #
-c.FileNotebookManager.notebook_dir = u'/Users/elsdrm/ipython_notebook'
+# c.FileNotebookManager.notebook_dir = u'/Users/elsdrm/ipython_notebook'
 
 #------------------------------------------------------------------------------
 # NotebookNotary configuration

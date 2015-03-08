@@ -1,0 +1,8 @@
+2015-02-18 13:59:59.547 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2015-02-18 13:59:59.683 [IPEngineApp] Registering with controller at tcp://127.0.0.1:61162
+2015-02-18 14:00:00.735 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2015-02-18 14:00:01.546 [IPEngineApp] Using existing profile dir: u'/Users/elsdrm/.ipython/profile_default'
+2015-02-18 14:00:01.550 [IPEngineApp] Completed registration with id 78
+2015-02-18 14:00:06.757 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (1 time(s) in a row).
+2015-02-18 14:10:44.197 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

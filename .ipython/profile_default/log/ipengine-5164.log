@@ -1,0 +1,4 @@
+2015-02-18 14:00:03.822 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
+2015-02-18 14:00:03.896 [IPEngineApp] Registering with controller at tcp://127.0.0.1:61162
+2015-02-18 14:10:44.196 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

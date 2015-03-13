@@ -1,6 +1,0 @@
-2015-02-18 14:11:05.435 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
-2015-02-18 14:11:05.503 [IPEngineApp] Registering with controller at tcp://127.0.0.1:63011
-2015-02-18 14:11:06.073 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
-2015-02-18 14:11:06.079 [IPEngineApp] Using existing profile dir: u'/Users/elsdrm/.ipython/profile_default'
-2015-02-18 14:11:06.081 [IPEngineApp] Completed registration with id 61
-2015-02-18 14:11:12.098 [IPEngineApp] WARNING | No heartbeat in the last 3010 ms (1 time(s) in a row).

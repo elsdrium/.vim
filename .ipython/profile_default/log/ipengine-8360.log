@@ -1,3 +1,0 @@
-2015-02-18 14:11:11.306 [IPEngineApp] Loading url_file u'/Users/elsdrm/.ipython/profile_default/security/ipcontroller-engine.json'
-2015-02-18 14:11:11.312 [IPEngineApp] Registering with controller at tcp://127.0.0.1:63011
-2015-02-18 14:11:16.336 [IPEngineApp] CRITICAL | Registration timed out after 5.0 seconds

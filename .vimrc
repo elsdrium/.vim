@@ -283,9 +283,13 @@ set hlsearch
 set vb
 set t_vb=
 
+" fold codes based on syntax(indent is nice for python)
+set foldmethod=indent
+
 " general settings
 syntax on
 colo elflord
+set nowrap
 set nu
 
 " personal key mappings

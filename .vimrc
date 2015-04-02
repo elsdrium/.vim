@@ -107,7 +107,6 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -126,8 +125,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
     "let col = col('.') - 1
     "return !col || getline('.')[col - 1]  =~ '\s'
 "endfunction"}}}
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+" <BS>: close popup and delete backword char.
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
@@ -172,9 +170,9 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 """ Ultisnips
-let g:UltiSnipsExpandTrigger="<C-h>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsExpandTrigger=",us"
+let g:UltiSnipsJumpForwardTrigger="<C-g>"
+let g:UltiSnipsJumpBackwardTrigger="<C-t>"
 
 
 """ choosewin
@@ -270,6 +268,7 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '☢'
 let g:syntastic_style_warning_symbol = '☣'
 
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '--std=c++11'
 
@@ -361,6 +360,7 @@ set nu
 
 " personal key mappings
 nmap <CR><CR> o<Esc>
+imap <C-]> <C-o>l
 nmap ;l  :res +10<CR>
 nmap ;s  :res -10<CR>
 nmap ;vl :vertical res +10<CR>
@@ -368,4 +368,4 @@ nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>
-inoremap '' <End>
+inoremap ,, <End>

@@ -135,7 +135,7 @@ if [[ $platform == 'osx' ]]; then
     alias rpycharm193='ssh -Y 140.109.21.193 "/home/elsdrm/pycharm4"'
 
 else
-    export PATH="/home/elsdrm/.linuxbrew/bin:/home/elsdrm/.linuxbrew/Cellar/python3/3.4.2_1/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
     alias cdw='cd /home/elsdrm/nas/workspace/'
     alias l='ls --color=auto -hp'
@@ -153,6 +153,7 @@ alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'
+alias v='vim'
 alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
 alias ev='vim ~/.vimrc'
 alias rz='source ~/.zshrc'
@@ -165,6 +166,7 @@ alias p2i='sudo -H pip2 install'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3i='sudo -H pip3 install'
 alias p3u='sudo -H pip3 install --upgrade'
+alias ipy='ipython'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'

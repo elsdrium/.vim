@@ -135,7 +135,8 @@ if [[ $platform == 'osx' ]]; then
     alias rpycharm193='ssh -Y 140.109.21.193 "/home/elsdrm/pycharm4"'
 
 else
-    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 
     alias cdw='cd /home/elsdrm/nas/workspace/'
     alias l='ls --color=auto -hp'

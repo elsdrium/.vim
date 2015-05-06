@@ -355,6 +355,9 @@ set foldmethod=indent
 " general settings
 syntax on
 colo elflord
+set cul
+"set cuc
+set history=1000
 set nowrap
 set nu
 

@@ -1,5 +1,4 @@
-.vim/dirs/*
-.vim/bundle/*
+.vim/*
 .ipython/profile_*/security/*
 .ipython/profile_*/pid/*
 .ipython/profile_*/log/*

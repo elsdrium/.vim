@@ -167,7 +167,7 @@ alias p2i='sudo -H pip2 install'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3i='sudo -H pip3 install'
 alias p3u='sudo -H pip3 install --upgrade'
-alias ipy='ipython'
+alias ipy='ipython console'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'

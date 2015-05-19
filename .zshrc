@@ -128,11 +128,6 @@ if [[ $platform == 'osx' ]]; then
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
-    alias rmatlab193='ssh -Y 140.109.21.193 "matlab -desktop"'
-    alias rmatlab196='ssh -Y 140.109.21.196 "matlab -desktop"'
-    alias rmatlab234='ssh -Y 140.109.21.234 "matlab -desktop"'
-    alias rpycharm196='ssh -Y 140.109.21.196 "/home/elsdrm/pycharm4"'
-    alias rpycharm193='ssh -Y 140.109.21.193 "/home/elsdrm/pycharm4"'
 
 else
     export PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
@@ -143,6 +138,7 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
+    alias sap='sudo apt-get'
 
     # system management
     alias dstat='dstat -cdlmnpsy'
@@ -167,7 +163,7 @@ alias p2i='sudo -H pip2 install'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3i='sudo -H pip3 install'
 alias p3u='sudo -H pip3 install --upgrade'
-alias ipy='ipython console'
+alias ipy='ipython'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'

@@ -43,9 +43,10 @@ Plugin 'fholgado/minibufexpl.vim'
 "Plugin 'gerw/vim-latex-suite'
 
 " Python
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'  " Confilict with jedi-vim
 "Plugin 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
 "Plugin 'ivanov/vim-ipython'
+Plugin 'davidhalter/jedi-vim'
 
 " Git
 Plugin 'mhinz/vim-signify'
@@ -372,3 +373,4 @@ noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>
 inoremap ,, <End>
+vnoremap // y/<C-R>"<CR>

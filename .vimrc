@@ -273,21 +273,25 @@ let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '--std=c++11'
 
-""" Python-mode
-" don't use linter, we use syntastic for that
-let g:pymode = 1
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_signs = 0
-" don't fold python code on open
-let g:pymode_folding = 0
-" don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
-" open definitions on same window, and custom mappings for definitions and
-" occurrences
-let g:pymode_rope_goto_definition_bind = ',d'
-let g:pymode_rope_goto_definition_cmd = 'e'
-nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-nmap ,o :RopeFindOccurrences<CR>
+"""" Python-mode
+"" don't use linter, we use syntastic for that
+"let g:pymode = 1
+"let g:pymode_lint_on_write = 0
+"let g:pymode_lint_signs = 0
+"" don't fold python code on open
+"let g:pymode_folding = 0
+"" don't load rope by default. Change to 1 to use rope
+"let g:pymode_rope = 0
+"" open definitions on same window, and custom mappings for definitions and
+"" occurrences
+"let g:pymode_rope_goto_definition_bind = ',d'
+"let g:pymode_rope_goto_definition_cmd = 'e'
+"nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
+"nmap ,o :RopeFindOccurrences<CR>
+
+""" jedi-vim
+"let g:jedi#force_py_version = 3
+let g:jedi#completions_command = '<C-k>'
 
 """ MiniBufExpl
 nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
@@ -341,6 +345,17 @@ if !isdirectory(&undodir)
     call mkdir(&undodir, "p")
 endif
 
+" toogle relativenumber
+function! RNUToggle()
+    if(&relativenumber == 1)
+        set relativenumber!
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap ,r :call RNUToggle()<cr>
+
 " incremental search
 set incsearch
 " highlighted search results
@@ -361,6 +376,7 @@ set cul
 set history=1000
 set nowrap
 set nu
+set rnu
 
 " personal key mappings
 nmap <CR><CR> o<Esc>

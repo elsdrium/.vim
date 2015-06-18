@@ -299,6 +299,18 @@ if exists(":Tabularize")
     vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
+inoremap <silent> ,<Tab> <Bar><Esc>:call <SID>align()<CR>a 
+function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+        Tabularize/|/l1
+        normal! 0
+        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+endfunction
+
 """ jedi-vim
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<C-k>'
@@ -397,6 +409,6 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
-inoremap ;; <Esc>
+noremap ;; <Esc>
 inoremap ,, <End>
 vnoremap // y/<C-R>"<CR> 

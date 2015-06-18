@@ -34,6 +34,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 't9md/vim-choosewin'
 Plugin 'elsdrm/Conque-Shell'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'godlygeek/tabular'
 
 " Javascript
 "Plugin 'pangloss/vim-javascript'
@@ -289,6 +290,15 @@ let g:syntastic_cpp_compiler_options = '--std=c++11'
 "nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
 "nmap ,o :RopeFindOccurrences<CR>
 
+""" tabular
+let mapleader=','
+if exists(":Tabularize")
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a: :Tabularize /:\zs<CR>
+    vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
 """ jedi-vim
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<C-k>'
@@ -389,4 +399,4 @@ noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>
 inoremap ,, <End>
-vnoremap // y/<C-R>"<CR>
+vnoremap // y/<C-R>"<CR> 

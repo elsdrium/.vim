@@ -138,7 +138,7 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
-    alias sap='sudo apt-get'
+    alias sag='sudo apt-get'
 
     # system management
     alias dstat='dstat -cdlmnpsy'
@@ -152,7 +152,8 @@ alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'
 alias ccat='highlight -O ansi'
 alias v='vim'
-alias rv='vim +PluginClean +PluginInstall +PluginUpdate +qall'
+alias rv='vim +PluginUpdate +qall'
+alias rrv='vim +PluginClean +PluginUpdate +PluginInstall +qall'
 alias ev='vim ~/.vimrc'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'

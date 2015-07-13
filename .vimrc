@@ -40,8 +40,9 @@ Plugin 'godlygeek/tabular'
 "Plugin 'pangloss/vim-javascript'
 
 " LaTeX
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-"Plugin 'gerw/vim-latex-suite'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'gerw/vim-latex-suite'
+"Plugin 'xuhdev/vim-latex-live-preview'
 
 " Python
 "Plugin 'klen/python-mode'  " Confilict with jedi-vim
@@ -72,18 +73,18 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " plugins' settings
-""" EasyMotion
+""" vim-easymotion
 let g:EasyMotion_leader_key = '\'
 nmap <Leader>v <Plug>(easymotion-bd-w)
 
-""" Airline
+""" vim-airline
 let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 
-""" Neocomplete
+""" neocomplete.vim
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -171,27 +172,31 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-""" Ultisnips
+
+""" ultisnips
 let g:UltiSnipsExpandTrigger=",us"
 let g:UltiSnipsJumpForwardTrigger="<C-g>"
 let g:UltiSnipsJumpBackwardTrigger="<C-t>"
 
 
-""" choosewin
+""" vim-choosewin
 nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
+
 
 """ Autoclose
 " Fix to let ESC work as espected with Autoclose plugin
 let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
-""" Tabman
+
+""" tabman.vim
 " mappings to toggle display, and to focus on it
 let g:tabman_toggle = 'tm'
 let g:tabman_focus  = 'tf'
 
-""" Tagbar
+
+""" tagbar
 " toggle tagbar display
 nmap tb :TagbarToggle<CR>
 " autofocus on tagbar open
@@ -199,7 +204,8 @@ let g:tagbar_autofocus = 1
 let tagbar_map_closefold = ['zc']
 let tagbar_map_openfold = ['zo']
 
-""" Nerdtree
+
+""" nerdtree
 " toggle nerdtree display
 nmap ,t :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
@@ -207,7 +213,8 @@ map ,q :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
-""" Signify
+
+""" vim-signify
 " this first setting decides in which order try to guess your current vcs
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -222,7 +229,8 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-""" CtrlP
+
+""" ctrlp.vim
 " file finder mapping
 let g:ctrlp_map = ',F' " very slow, not recommended.............
 " tags (symbols) in current file finder mapping
@@ -257,7 +265,11 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\.pyc$\|\.pyo$',
             \ }
 
-""" Syntastic
+
+""" vim-surround
+"autocmd FileType tex let b:surround_108 = "\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}"
+
+""" syntastic
 " show list of errors and warnings on the current file
 nmap ,e :Errors<CR>
 " check also when just opened the file
@@ -274,7 +286,8 @@ let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '--std=c++11'
 
-"""" Python-mode
+
+"""" python-mode
 "" don't use linter, we use syntastic for that
 "let g:pymode = 1
 "let g:pymode_lint_on_write = 0
@@ -289,6 +302,7 @@ let g:syntastic_cpp_compiler_options = '--std=c++11'
 "let g:pymode_rope_goto_definition_cmd = 'e'
 "nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
 "nmap ,o :RopeFindOccurrences<CR>
+
 
 """ tabular
 let mapleader=','
@@ -311,16 +325,23 @@ function! s:align()
     endif
 endfunction
 
+
 """ jedi-vim
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<C-k>'
 
-""" MiniBufExpl
+
+""" minibufexpl.vim
 nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
 let g:miniBufExplorerAutoStart = 0
 
-""" YankRing
+
+""" YankRing.vim
 nnoremap <silent> ,y :YRShow<CR>
+
+
+""" LaTeX-Box
+nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
 " End of plugins' settings --------------------------
 
@@ -376,7 +397,7 @@ function! RNUToggle()
     endif
 endfunc
 
-nnoremap ,r :call RNUToggle()<cr>
+"nnoremap ,r :call RNUToggle()<cr>
 
 " incremental search
 set incsearch
@@ -389,6 +410,8 @@ set t_vb=
 
 " fold codes based on syntax(indent is nice for python)
 set foldmethod=indent
+set foldenable
+set autoindent
 
 " general settings
 syntax on
@@ -398,7 +421,7 @@ set cul
 set history=1000
 set wrap
 set nu
-set rnu
+"set rnu
 
 " personal key mappings
 nmap <CR><CR> o<Esc>

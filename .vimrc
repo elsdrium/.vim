@@ -219,8 +219,8 @@ let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
 " mappings to jump to changed blocks
-nmap <leader>sn <plug>(signify-next-hunk)
-nmap <leader>sp <plug>(signify-prev-hunk)
+nmap <leader>sn <Plug>(signify-next-hunk)
+nmap <leader>sp <Plug>(signify-prev-hunk)
 " nicer colors
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
@@ -324,6 +324,12 @@ function! s:align()
         call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
     endif
 endfunction
+
+
+""" vim-latex-suite
+let g:tex_flavor='latex'
+imap <C-d> <Plug>IMAP_JumpForward
+imap <C-l> <Plug>Tex_LeftRight
 
 
 """ jedi-vim

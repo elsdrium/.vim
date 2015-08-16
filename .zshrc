@@ -138,6 +138,7 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
+    alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
 
     # system management
@@ -157,8 +158,8 @@ alias rrv='vim +PluginClean +PluginUpdate +PluginInstall +qall'
 alias ev='vim ~/.vimrc'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
-alias rlsftp='with-readline sftp'
-alias rlftp='with-readline ftp'
+#alias rlsftp='with-readline sftp'
+#alias rlftp='with-readline ftp'
 alias clang++='clang++ -std=c++11'
 alias g++='g++ -std=c++11'
 alias p2i='sudo -H pip2 install'

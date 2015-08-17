@@ -108,7 +108,7 @@ c.NotebookApp.port = 9999
 # c.NotebookApp.notebook_dir = ''
 
 # The full path to an SSL/TLS certificate file.
-c.NotebookApp.certfile = u'/home/elsdrm/.ipython/profile_nbserver/security/mycert.pem'
+c.NotebookApp.certfile = u'/etc/jupyter/mycert.pem'
 
 # The number of additional ports to try if the specified port is not available.
 # c.NotebookApp.port_retries = 50
@@ -224,6 +224,9 @@ c.NotebookApp.password = u'sha1:f2bab9332ee4:976717d04cf3ab989ccbaae05b4555ac729
 
 # The config manager class to use
 # c.NotebookApp.config_manager_class = <class 'notebook.services.config.manager.ConfigManager'>
+
+# ipyparallel
+c.NotebookApp.server_extensions.append('ipyparallel.nbextension')
 
 #------------------------------------------------------------------------------
 # LoggingConfigurable configuration

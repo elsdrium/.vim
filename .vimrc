@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()        " required
 
-Plugin 'gmarik/Vundle.vim' " required
+Plugin 'VundleVim/Vundle.vim' " required
 
 "Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'

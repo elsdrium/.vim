@@ -121,6 +121,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 if [[ $platform == 'osx' ]]; then
     export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
 
+    # spark 1.5.1 require JVM 1.7+
+    export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
+
     function pdf() { mupdf-x11 "$1" & }
 
     alias cdw='cd /Users/elsdrm/nas/workspace/'

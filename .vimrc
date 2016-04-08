@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-bufferline'
 Plugin 'majutsushi/tagbar'
 "Plugin 'tomtom/tlib_vim'
@@ -41,8 +42,8 @@ Plugin 'godlygeek/tabular'
 "Plugin 'pangloss/vim-javascript'
 
 " LaTeX
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
-Plugin 'gerw/vim-latex-suite'
+"Plugin 'LaTeX-Box-Team/LaTeX-Box'
+"Plugin 'gerw/vim-latex-suite'
 "Plugin 'xuhdev/vim-latex-live-preview'
 
 " Python
@@ -56,7 +57,7 @@ Plugin 'mhinz/vim-signify'
 "Plugin 'motemen/git-vim'
 Plugin 'tpope/vim-fugitive'
 
-" vim-scripts
+" Vim enhancement
 Plugin 'IndexedSearch'
 Plugin 'matchit.zip'
 Plugin 'YankRing.vim'
@@ -80,7 +81,7 @@ nmap <Leader>v <Plug>(easymotion-bd-w)
 
 """ vim-airline
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'zenburn'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
@@ -396,13 +397,13 @@ if !isdirectory(&undodir)
 endif
 
 " toogle relativenumber
-function! RNUToggle()
-    if(&relativenumber == 1)
-        set relativenumber!
-    else
-        set relativenumber
-    endif
-endfunc
+"function! RNUToggle()
+    "if(&relativenumber == 1)
+        "set relativenumber!
+    "else
+        "set relativenumber
+    "endif
+"endfunc
 
 "nnoremap ,r :call RNUToggle()<cr>
 

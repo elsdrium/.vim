@@ -121,7 +121,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 if [[ $platform == 'osx' ]]; then
     export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
 
-    # spark 1.5.1 require JVM 1.7+
+    # spark 1.5.1 requires JVM 1.7+
     export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
 
     function pdf() { mupdf-x11 "$1" & }
@@ -133,7 +133,7 @@ if [[ $platform == 'osx' ]]; then
     alias la='ls -pGA'
 
 else
-    export PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/MATLAB/R2015b/bin"
     export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 
     alias cdw='cd /home/elsdrm/nas/workspace/'
@@ -141,9 +141,9 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
-    alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
+    #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
-    alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
+    #alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
 
     # system management
     alias dstat='dstat -cdlmnpsy'

@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bureau_elsdrm"
+ZSH_THEME="bureau_custom"
 
 export platform='unknown'
 unamestr=`uname`
@@ -83,7 +83,7 @@ add-zsh-hook precmd estimate_time_precmd
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast vi-mode)
+plugins=(git gitfast vi-mode)
 
 # User configuration
 

@@ -8,35 +8,41 @@ call vundle#begin()        " required
 
 Plugin 'VundleVim/Vundle.vim' " required
 
+" Vim enhancement
+Plugin 'IndexedSearch'
+Plugin 'matchit.zip'
+Plugin 'YankRing.vim'
+Plugin 't9md/vim-choosewin'
+Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplcache.vim'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-surround'
+Plugin 'Townk/vim-autoclose'
+Plugin 'kien/tabman.vim'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'bling/vim-bufferline'
 "Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'Lokaltog/powerline'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'edkolev/tmuxline.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fisadev/vim-ctrlp-cmdpalette'
+
+" Development
+Plugin 'elsdrm/Conque-Shell'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'bling/vim-bufferline'
-Plugin 'majutsushi/tagbar'
-"Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 "Plugin 'garbas/vim-snipmate'
 Plugin 'SirVer/ultisnips'
 "Plugin 'MarcWeber/vim-addon-mw-utils'  " dependency of snipmate
-Plugin 'kien/tabman.vim'
-"Plugin 'edkolev/tmuxline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'fisadev/vim-ctrlp-cmdpalette'
-Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
-"Plugin 'Shougo/neocomplcache.vim'
-Plugin 'Shougo/neocomplete.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 't9md/vim-choosewin'
-Plugin 'elsdrm/Conque-Shell'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'godlygeek/tabular'
+Plugin 'scrooloose/syntastic'
 
 " Javascript
 "Plugin 'pangloss/vim-javascript'
@@ -55,12 +61,8 @@ Plugin 'davidhalter/jedi-vim'
 " Git
 Plugin 'mhinz/vim-signify'
 "Plugin 'motemen/git-vim'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
-" Vim enhancement
-Plugin 'IndexedSearch'
-Plugin 'matchit.zip'
-Plugin 'YankRing.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -329,9 +331,9 @@ endfunction
 
 
 """ vim-latex-suite
-let g:tex_flavor='latex'
-imap <C-d> <Plug>IMAP_JumpForward
-imap <C-l> <Plug>Tex_LeftRight
+"let g:tex_flavor='latex'
+"imap <C-d> <Plug>IMAP_JumpForward
+"imap <C-l> <Plug>Tex_LeftRight
 
 
 """ jedi-vim
@@ -349,7 +351,7 @@ nnoremap <silent> ,y :YRShow<CR>
 
 
 """ LaTeX-Box
-nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
+"nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
 " End of plugins' settings --------------------------
 
@@ -443,4 +445,6 @@ noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>
 vnoremap ;; <Esc>
 inoremap ,, <End>
+inoremap ,. <Esc>I
+inoremap .. <Home>
 vnoremap // y/<C-R>"<CR> 

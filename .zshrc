@@ -142,7 +142,8 @@ else
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
-    alias sag='sudo apt-get'
+    alias sa='sudo apt'
+    alias sy='sudo yum'
     #alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
 
     # system management

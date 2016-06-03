@@ -7,36 +7,34 @@ then
     exit
 fi
 
-# Get this file's own directory
-BASEDIR=$(dirname "$0")
-
-cd $BASEDIR
+# Back to home
+`cd`
 
 # Get Vundle and oh-my-zsh
-git clone https://github.com/VundleVim/Vundle.vim .vim/bundle/Vundle.vim
-git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
+`git clone https://github.com/VundleVim/Vundle.vim .vim/bundle/Vundle.vim`
+`git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh`
 
 # Use personalized theme
-cp bureau_custom.zsh-theme .oh-my-zsh/themes/bureau_custom.zsh-theme
+`cp bureau_custom.zsh-theme .oh-my-zsh/themes/bureau_custom.zsh-theme`
 
 # Install and update vim plugins
-vim +PluginInstall +PluginUpdate +qall
+`vim +PluginInstall +PluginUpdate +qall`
 
 # Create symbolic links for dot-files
-ln -s .zshrc ~/.zshrc
-ln -s .oh-my-zsh ~/.oh-my-zsh
-ln -s .vim ~/.vim
-ln -s .vimrc ~/.vimrc
-ln -s .inputrc ~/.inputrc
-ln -s .jupyter ~/.jupyter
-ln -s .ipython ~/.ipython
-ln -s .tmux.conf ~/.tmux.conf
+`ln -s .unix_settings/.zshrc`
+`ln -s .unix_settings/.oh-my-zsh`
+`ln -s .unix_settings/.vim`
+`ln -s .unix_settings/.vimrc`
+`ln -s .unix_settings/.inputrc`
+`ln -s .unix_settings/.jupyter`
+`ln -s .unix_settings/.ipython`
+`ln -s .unix_settings/.tmux.conf`
 
 ## (optional)
-ln -s .pudb-theme.py ~/.pudb-theme.py
-ln -s .Xmodmap ~/.Xmodmap
-ln -s .spyder2-py3
-ln -s .spyder2
+#`ln -s .unix_settings/.pudb-theme.py`
+#`ln -s .unix_settings/.Xmodmap`
+#`ln -s .unix_settings/.spyder2-py3`
+#`ln -s .unix_settings/.spyder2`
 
 # Update zsh
 source .zshrc

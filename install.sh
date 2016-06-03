@@ -11,11 +11,11 @@ fi
 `cd`
 
 # Get Vundle and oh-my-zsh
-`git clone https://github.com/VundleVim/Vundle.vim .vim/bundle/Vundle.vim`
-`git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh`
+`git clone https://github.com/VundleVim/Vundle.vim .unix_settings/.vim/bundle/Vundle.vim`
+`git clone https://github.com/robbyrussell/oh-my-zsh .unix_settings/.oh-my-zsh`
 
 # Use personalized theme
-`cp bureau_custom.zsh-theme .oh-my-zsh/themes/bureau_custom.zsh-theme`
+`cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/bureau_custom.zsh-theme`
 
 # Install and update vim plugins
 `vim +PluginInstall +PluginUpdate +qall`

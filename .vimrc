@@ -43,6 +43,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 "Plugin 'MarcWeber/vim-addon-mw-utils'  " dependency of snipmate
 Plugin 'scrooloose/syntastic'
+Plugin 'flazz/vim-colorschemes' " manage color schemes
 
 " Javascript
 "Plugin 'pangloss/vim-javascript'
@@ -425,7 +426,7 @@ set autoindent
 
 " general settings
 syntax on
-colo elflord
+colo lucario
 set cul
 "set cuc
 set history=1000

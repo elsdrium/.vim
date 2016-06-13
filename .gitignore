@@ -6,3 +6,4 @@
 .ssh/*
 
 !.ssh/config
+!.vim/colors

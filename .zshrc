@@ -133,16 +133,17 @@ if [[ $platform == 'osx' ]]; then
     alias la='ls -pGA'
 
 else
-    export PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/MATLAB/R2015b/bin"
-    export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl"
+    export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64"
+    #export JAVA_HOME="/home/elsdrm/android-studio/jdk1.8.0_92"
 
-    alias cdw='cd /home/elsdrm/nas/workspace/'
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
+    alias rdwin='rdesktop-vrdp -g 1920x980'
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
-    alias sa='sudo apt'
+    alias sag='sudo apt-get'
     alias sy='sudo yum'
     #alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
 
@@ -151,7 +152,6 @@ else
     alias nmon='nmon -s 1'
 fi
 
-alias rr='ranger'
 alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'

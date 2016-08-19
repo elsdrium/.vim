@@ -46,7 +46,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes' " manage color schemes
 
 " Javascript
-"Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 
 " LaTeX
 "Plugin 'LaTeX-Box-Team/LaTeX-Box'

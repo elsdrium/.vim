@@ -134,7 +134,7 @@ if [[ $platform == 'osx' ]]; then
 
 else
     export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl"
-    export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64"
+    export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64:/usr/local/lib:/usr/lib"
     #export JAVA_HOME="/home/elsdrm/android-studio/jdk1.8.0_92"
 
     alias l='ls --color=auto -hp'
@@ -147,8 +147,9 @@ else
     alias sy='sudo yum'
     #alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
 
-    # system management
+    # system management 
     alias dstat='dstat -cdlmnpsy'
+    alias dus='du -smh' # disk usage summary
     alias nmon='nmon -s 1'
 fi
 
@@ -167,9 +168,7 @@ alias ez='vim ~/.zshrc'
 #alias rlftp='with-readline ftp'
 alias clang++='clang++ -std=c++11'
 alias g++='g++ -std=c++11'
-alias p2i='sudo -H pip2 install'
 alias p2u='sudo -H pip2 install --upgrade'
-alias p3i='sudo -H pip3 install'
 alias p3u='sudo -H pip3 install --upgrade'
 alias ipy='ipython3'
 

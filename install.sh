@@ -8,7 +8,7 @@ then
 fi
 
 # Back to home
-`cd`
+cd ~
 
 # Get Vundle and oh-my-zsh
 `git clone https://github.com/VundleVim/Vundle.vim .unix_settings/.vim/bundle/Vundle.vim`
@@ -21,14 +21,15 @@ fi
 `vim +PluginInstall +PluginUpdate +qall`
 
 # Create symbolic links for dot-files
-`ln -s .unix_settings/.zshrc`
-`ln -s .unix_settings/.oh-my-zsh`
-`ln -s .unix_settings/.vim`
-`ln -s .unix_settings/.vimrc`
-`ln -s .unix_settings/.inputrc`
-`ln -s .unix_settings/.jupyter`
-`ln -s .unix_settings/.ipython`
-`ln -s .unix_settings/.tmux.conf`
+ln -s .unix_settings/.zshrc
+ln -s .unix_settings/.oh-my-zsh
+ln -s .unix_settings/.vim
+ln -s .unix_settings/.vimrc
+ln -s .unix_settings/.inputrc
+ln -s .unix_settings/.jupyter
+ln -s .unix_settings/.ipython
+ln -s .unix_settings/.tmux.conf
+ln -s .unix_settings/.pylintrc
 
 ## (optional)
 #`ln -s .unix_settings/.pudb-theme.py`

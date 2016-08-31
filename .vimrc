@@ -120,18 +120,18 @@ inoremap <expr><C-g>     neocomplete#undo_completion()
 " <CR>: close popup and save indent.
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 "function! s:my_cr_function()
-    ""return neocomplete#close_popup() . "\<CR>"
-    "" For no inserting <CR> key.
-    "return pumvisible() ? "\<C-n>": "\<CR>"
+""return neocomplete#close_popup() . "\<CR>"
+"" For no inserting <CR> key.
+"return pumvisible() ? "\<C-n>": "\<CR>"
 "endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-            "\ <SID>check_back_space() ? "\<TAB>" :
-            "\ neocomplete#start_manual_complete()
+"\ <SID>check_back_space() ? "\<TAB>" :
+"\ neocomplete#start_manual_complete()
 "function! s:check_back_space() "{{{
-    "let col = col('.') - 1
-    "return !col || getline('.')[col - 1]  =~ '\s'
+"let col = col('.') - 1
+"return !col || getline('.')[col - 1]  =~ '\s'
 "endfunction"}}}
 " <BS>: close popup and delete backword char.
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -275,6 +275,16 @@ let g:ctrlp_custom_ignore = {
 "autocmd FileType tex let b:surround_108 = "\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}"
 
 """ syntastic
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+" toggle list of errors and warnings on the current file
+nnoremap <C-e> :call ToggleErrors()<CR>
 " show list of errors and warnings on the current file
 nmap ,e :Errors<CR>
 " check also when just opened the file
@@ -288,6 +298,7 @@ let g:syntastic_style_error_symbol = '☢'
 let g:syntastic_style_warning_symbol = '☣'
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '--std=c++11'
 
@@ -401,11 +412,11 @@ endif
 
 " toogle relativenumber
 "function! RNUToggle()
-    "if(&relativenumber == 1)
-        "set relativenumber!
-    "else
-        "set relativenumber
-    "endif
+"if(&relativenumber == 1)
+"set relativenumber!
+"else
+"set relativenumber
+"endif
 "endfunc
 
 "nnoremap ,r :call RNUToggle()<cr>

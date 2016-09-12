@@ -458,5 +458,4 @@ inoremap ;; <Esc>
 vnoremap ;; <Esc>
 inoremap ,, <End>
 inoremap ,. <Esc>I
-inoremap .. <Home>
 vnoremap // y/<C-R>"<CR> 

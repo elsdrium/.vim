@@ -17,7 +17,7 @@ cd ~
 `cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/bureau_custom.zsh-theme`
 
 # Install and update vim plugins
-`vim +PluginInstall +PluginUpdate +qall`
+vim +PluginInstall +PluginUpdate +qall
 
 # Create symbolic links for dot-files
 ln -fs .unix_settings/.zshrc

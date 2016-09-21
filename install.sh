@@ -29,6 +29,7 @@ ln -fs .unix_settings/.jupyter
 ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
+ln -fs .unix_settings/.ssh/config .ssh/config
 
 ## (optional)
 #`ln -fs .unix_settings/.pudb-theme.py`

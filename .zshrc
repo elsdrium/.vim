@@ -119,9 +119,9 @@ export EDITOR="vi"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
-    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Matlab_R2014b.app/bin:/usr/texbin"
+    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:`echo $PATH`"
 
-    # spark 1.5.1 requires JVM 1.7+
+    # Spark 1.5.1 requires JVM 1.7+
     export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
 
     function pdf() { mupdf-x11 "$1" & }
@@ -133,7 +133,7 @@ if [[ $platform == 'osx' ]]; then
     alias la='ls -pGA'
 
 else
-    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl"
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:`echo $PATH`"
     export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64:/usr/local/lib:/usr/lib"
     #export JAVA_HOME="/home/elsdrm/android-studio/jdk1.8.0_92"
 
@@ -141,7 +141,7 @@ else
     alias ls='ls --color=auto -hp'
     alias ll='ls --color=auto -hlpA'
     alias la='ls --color=auto -pA'
-    alias rdwin='rdesktop-vrdp -g 1920x980'
+    alias rdwin='rdesktop -g 1620x980'
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
     alias sy='sudo yum'
@@ -157,7 +157,6 @@ alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'
-alias ccat='highlight -O ansi'
 alias v='vim'
 alias rv='vim +PluginUpdate +qall'
 alias rrv='vim +PluginClean +PluginUpdate +PluginInstall +qall'
@@ -168,6 +167,7 @@ alias ez='vim ~/.zshrc'
 #alias rlftp='with-readline ftp'
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
+alias vnc=xvnc4viewer -FullColor
 alias clang++='clang++ -std=c++11'
 alias g++='g++ -std=c++11'
 alias p2u='sudo -H pip2 install --upgrade'

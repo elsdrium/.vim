@@ -1,10 +1,15 @@
 #!/usr/bin/env zsh
 
-# You should use ZSH
-#if [ `basename $SHELL` != "zsh" ]; then
-    #echo "Please use zsh."
-    #exit
-#fi
+# Check Vim and Zsh
+VIM_CHECK=`echo "$(vim --version | egrep -o 'Vi IMproved [0-9]+[.][0-9]+' | cut -d' ' -f3) >= 7.4" | bc`
+ZSH_CHECK=`which zsh`    
+if [[ ! $VIM_CHECK ]]; then
+    echo 'Cannot find Vim with version >= 7.4'
+    exit
+elif [[ ! $ZSH_CHECK ]]; then
+    echo 'Zsh does not exist.'
+if
+# Note: it won't check git here, the environment should have git if this script already downloaded.
 
 # Back to home
 cd ~

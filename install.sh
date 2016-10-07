@@ -3,12 +3,13 @@
 # Check Vim and Zsh
 VIM_CHECK=`echo "$(vim --version | egrep -o 'Vi IMproved [0-9]+[.][0-9]+' | cut -d' ' -f3) >= 7.4" | bc`
 ZSH_CHECK=`which zsh`    
-if [[ ! $VIM_CHECK ]]; then
+if [ ! $VIM_CHECK ]; then
     echo 'Cannot find Vim with version >= 7.4'
     exit
-elif [[ ! $ZSH_CHECK ]]; then
+elif [ ! $ZSH_CHECK ]; then
     echo 'Zsh does not exist.'
-if
+    exit
+fi
 # Note: it won't check git here, the environment should have git if this script already downloaded.
 
 # Back to home
@@ -21,9 +22,6 @@ cd ~
 # Use personalized theme
 `cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/bureau_custom.zsh-theme`
 
-# Install and update vim plugins
-vim +PluginInstall +PluginUpdate +qall
-
 # Create symbolic links for dot-files
 ln -fs .unix_settings/.zshrc
 ln -fs .unix_settings/.oh-my-zsh
@@ -35,6 +33,9 @@ ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
 ln -fs .unix_settings/.ssh/config .ssh/config
+
+# Install and update vim plugins
+vim +PluginInstall +PluginUpdate +qall
 
 ## (optional)
 #`ln -fs .unix_settings/.pudb-theme.py`

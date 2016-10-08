@@ -133,7 +133,7 @@ if [[ $platform == 'osx' ]]; then
     alias la='ls -pGA'
 
 else
-    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:`echo $PATH`"
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:/usr/local/nvidia/bin:/usr/local/cuda/bin:`echo $PATH`"
     export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64:/usr/local/lib:/usr/lib"
     #export JAVA_HOME="/home/elsdrm/android-studio/jdk1.8.0_92"
 
@@ -176,3 +176,4 @@ alias ipy='ipython3'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'
+alias ndrun='nvidia-docker run -t -i -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm'

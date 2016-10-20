@@ -168,6 +168,7 @@ alias ez='vim ~/.zshrc'
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias vnc=xvnc4viewer -FullColor
+alias nvcc='nvcc -std=c++11'
 alias clang++='clang++ -std=c++11'
 alias g++='g++ -std=c++11'
 alias p2u='sudo -H pip2 install --upgrade'

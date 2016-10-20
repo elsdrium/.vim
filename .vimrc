@@ -300,7 +300,8 @@ let g:syntastic_style_warning_symbol = '☣'
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '--std=c++11'
+let g:syntastic_cpp_compiler_options = '-std=c++14'
+let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 
 """" python-mode
@@ -455,6 +456,7 @@ nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>
+inoremap ;, ;<Esc>
 vnoremap ;; <Esc>
 inoremap ,, <End>
 inoremap ,. <Esc>I

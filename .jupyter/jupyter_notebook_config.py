@@ -166,10 +166,10 @@ c.NotebookApp.open_browser = False
 #   from notebook.auth import passwd; passwd()
 # 
 # The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = u'sha1:f2bab9332ee4:976717d04cf3ab989ccbaae05b4555ac72971426'
+c.NotebookApp.password = u'sha1:34021a6e32ab:f4f5416b2264624938a19c0de8ed091d82f291be'
 
 # The full path to a private key file for usage with SSL/TLS.
-# c.NotebookApp.keyfile = ''
+c.NotebookApp.keyfile = '/etc/jupyter/mykey.key'
 
 # Supply extra arguments that will be passed to Jinja environment.
 # c.NotebookApp.jinja_environment_options = traitlets.Undefined
@@ -226,7 +226,7 @@ c.NotebookApp.password = u'sha1:f2bab9332ee4:976717d04cf3ab989ccbaae05b4555ac729
 # c.NotebookApp.config_manager_class = <class 'notebook.services.config.manager.ConfigManager'>
 
 # ipyparallel
-c.NotebookApp.server_extensions.append('ipyparallel.nbextension')
+# c.NotebookApp.server_extensions.append('ipyparallel.nbextension')
 
 #------------------------------------------------------------------------------
 # LoggingConfigurable configuration

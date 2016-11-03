@@ -1,81 +1,66 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set encoding=utf-8
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()        " required
 
-Plugin 'VundleVim/Vundle.vim' " required
+" Use vim.plug to manage plugins
+call plug#begin('~/.vim/plugged')        " required
 
 " Vim enhancement
-Plugin 'IndexedSearch'
-Plugin 'matchit.zip'
-Plugin 'YankRing.vim'
-Plugin 't9md/vim-choosewin'
-Plugin 'Shougo/neocomplete.vim'
-"Plugin 'Shougo/neocomplcache.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
-Plugin 'kien/tabman.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'bling/vim-bufferline'
-"Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-repeat'
-Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'Lokaltog/powerline'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'edkolev/tmuxline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'IndexedSearch'
+Plug 'matchit.zip'
+Plug 'YankRing.vim'
+Plug 't9md/vim-choosewin'
+Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/neocomplcache.vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-surround'
+Plug 'Townk/vim-autoclose'
+Plug 'kien/tabman.vim'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
+"Plug 'ervandew/supertab'
+Plug 'tpope/vim-repeat'
+Plug 'Lokaltog/vim-easymotion'
+"Plug 'tomtom/tlib_vim'
+"Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+"Plug 'fisadev/vim-ctrlp-cmdpalette'
 
 " Development
-Plugin 'elsdrm/Conque-Shell'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'honza/vim-snippets'
-"Plugin 'garbas/vim-snipmate'
-Plugin 'SirVer/ultisnips'
-"Plugin 'MarcWeber/vim-addon-mw-utils'  " dependency of snipmate
-Plugin 'scrooloose/syntastic'
-Plugin 'flazz/vim-colorschemes' " manage color schemes
+"Plug 'elsdrm/Conque-Shell'
+"Plug 'fholgado/minibufexpl.vim'
+"Plug 'godlygeek/tabular'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'flazz/vim-colorschemes' " manage color schemes
 
 " Javascript
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 
 " LaTeX
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-"Plugin 'gerw/vim-latex-suite'
-"Plugin 'xuhdev/vim-latex-live-preview'
+"Plug 'LaTeX-Box-Team/LaTeX-Box'
+"Plug 'gerw/vim-latex-suite'
+"Plug 'xuhdev/vim-latex-live-preview'
 
 " Python
-"Plugin 'klen/python-mode'  " Confilict with jedi-vim
-"Plugin 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
-"Plugin 'ivanov/vim-ipython'
-Plugin 'davidhalter/jedi-vim'
+"Plug 'klen/python-mode'  " Confilict with jedi-vim
+"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
+"Plug 'ivanov/vim-ipython'
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 " Git
-Plugin 'mhinz/vim-signify'
-"Plugin 'motemen/git-vim'
-"Plugin 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+"Plug 'motemen/git-vim'
+"Plug 'tpope/vim-fugitive'
 
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()              " required
+" filetype plugin indent on    " required
 
 " plugins' settings
 """ vim-easymotion
@@ -235,40 +220,18 @@ highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
 
-""" ctrlp.vim
-" file finder mapping
-let g:ctrlp_map = ',F' " very slow, not recommended.............
-" tags (symbols) in current file finder mapping
-nmap ,g :CtrlPBufTag<CR>
-" tags (symbols) in all files finder mapping
-nmap ,G :CtrlPBufTagAll<CR>
-" general code finder in all files mapping
-nmap ,L :CtrlPLine<CR>
-" recent files finder mapping
-nmap ,M :CtrlPMRUFiles<CR>
-" commands finder mapping
-"nmap ,c :CtrlPCmdPalette<CR> " Not support Python3
-" to be able to call CtrlP with default search text
-function! CtrlPWithSearchText(search_text, ctrlp_command_end)
-    execute ':CtrlP' . a:ctrlp_command_end
-    call feedkeys(a:search_text)
-endfunction
-" same as previous mappings, but calling with current word as default
-" text
-nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
-nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
-nmap ,wl :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
-nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
-nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
-nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>
-nmap ,wc :call CtrlPWithSearchText(expand('<cword>'), 'CmdPalette')<CR>
-" don't change working directory
-let g:ctrlp_working_path_mode = 0
-" ignore these files and folders on file finder
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
-            \ 'file': '\.pyc$\|\.pyo$',
-            \ }
+""" fzf.vim
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" commands shortcut
+nnoremap ,b :Buffers<CR>
+nnoremap ,f :Files<CR>
+nnoremap ,L :Lines<CR>
+nnoremap ,l :BLines<CR>
+nnoremap ,w :Windows<CR>
 
 
 """ vim-surround
@@ -355,8 +318,8 @@ let g:jedi#completions_command = '<C-k>'
 
 
 """ minibufexpl.vim
-nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
-let g:miniBufExplorerAutoStart = 0
+"nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
+"let g:miniBufExplorerAutoStart = 0
 
 
 """ YankRing.vim

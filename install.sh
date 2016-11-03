@@ -14,9 +14,13 @@ fi
 
 # Back to home
 cd ~
+ 
+# Get FZF
+`git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf`
+~/.fzf/install
 
-# Get Vundle and oh-my-zsh
-`git clone https://github.com/VundleVim/Vundle.vim .unix_settings/.vim/bundle/Vundle.vim`
+# Get vim.plug and oh-my-zsh
+`curl -fLo ~/.unix_settings/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 `git clone https://github.com/robbyrussell/oh-my-zsh .unix_settings/.oh-my-zsh`
 
 # Use personalized theme
@@ -34,8 +38,8 @@ ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
 ln -fs .unix_settings/.ssh/config .ssh/config
 
-# Install and update vim plugins
-vim +PluginInstall +PluginUpdate +qall
+# Install vim plugins
+vim +PlugInstall +qall
 
 ## (optional)
 #`ln -fs .unix_settings/.pudb-theme.py`

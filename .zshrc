@@ -119,7 +119,7 @@ export EDITOR="vi"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
-    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:`echo $PATH`"
+    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 
     # Spark 1.5.1 requires JVM 1.7+
     export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
@@ -133,9 +133,9 @@ if [[ $platform == 'osx' ]]; then
     alias la='ls -pGA'
 
 else
-    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:/usr/local/nvidia/bin:/usr/local/cuda/bin:`echo $PATH`"
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:/usr/local/nvidia/bin:/usr/local/cuda/bin"
     export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64:/usr/local/lib:/usr/lib"
-    #export JAVA_HOME="/home/elsdrm/android-studio/jdk1.8.0_92"
+    export JAVA_HOME="/usr/local/jdk1.8.0_112"
 
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
@@ -145,7 +145,7 @@ else
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
     alias sy='sudo yum'
-    #alias spark-ipynb='IPYTHON_OPTS="notebook" /home/elsdrm/spark-1.4.1-bin-hadoop2.6/bin/pyspark --master spark://140.109.21.193:7077'
+    alias spark-jpnb='PYSPARK_DRIVER_PYTHON="jupyter" PYSPARK_DRIVER_PYTHON_OPTS="notebook" SPARK_EXECUTOR_MEMORY=100G /home/elsdrium/nas/spark-2.0.1-bin-hadoop2.7/bin/pyspark --master spark://140.109.21.158:7077'
 
     # system management 
     alias dstat='dstat -cdlmnpsy'
@@ -158,8 +158,8 @@ alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto -n'
 alias fgrep='fgrep --color=auto -n'
 alias v='vim'
-alias rv='vim +PluginUpdate +qall'
-alias rrv='vim +PluginClean +PluginUpdate +PluginInstall +qall'
+alias rv='vim +PlugUpdate +qall'
+alias rrv='vim +PlugClean +PlugUpdate +PlugInstall +qall'
 alias ev='vim ~/.vimrc'
 alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
@@ -178,3 +178,5 @@ alias ipy='ipython3'
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'
 alias ndrun='nvidia-docker run -t -i -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

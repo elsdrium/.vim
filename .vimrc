@@ -22,6 +22,7 @@ Plug 'bling/vim-bufferline'
 "Plug 'ervandew/supertab'
 Plug 'tpope/vim-repeat'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'terryma/vim-multiple-cursors'
 "Plug 'tomtom/tlib_vim'
 "Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -401,7 +402,7 @@ set autoindent
 
 " general settings
 syntax on
-colo lucario
+colo molokai
 set cul
 "set cuc
 set history=1000

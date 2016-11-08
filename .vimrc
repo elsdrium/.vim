@@ -32,7 +32,7 @@ Plug 'junegunn/fzf.vim'
 " Development
 "Plug 'elsdrm/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
-"Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -263,9 +263,11 @@ let g:syntastic_style_warning_symbol = '☣'
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++14'
-let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
+let g:syntastic_cpp_compiler_options = '-std=c++14 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart'
+"let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 
 """" python-mode

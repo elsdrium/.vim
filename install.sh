@@ -9,6 +9,9 @@ if [ ! $VIM_CHECK ]; then
 elif [ ! $ZSH_CHECK ]; then
     echo 'Zsh does not exist.'
     exit
+elif [ ! `which curl` ]; then
+    echo 'curl is required for installing vim.plug.'
+    exit
 fi
 # Note: it doesn't check git here, the environment should have git if this script already downloaded.
 

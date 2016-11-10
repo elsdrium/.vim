@@ -166,7 +166,7 @@ alias ez='vim ~/.zshrc'
 #alias rlsftp='with-readline sftp'
 #alias rlftp='with-readline ftp'
 alias ssh='TERM=xterm ssh'
-alias tmux='tmux -2'
+alias tmux='tmux -2 -u'
 alias vnc=xvnc4viewer -FullColor
 alias nvcc='nvcc -std=c++11'
 alias clang++='clang++ -std=c++11'

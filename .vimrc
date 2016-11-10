@@ -397,6 +397,9 @@ set hlsearch
 set vb
 set t_vb=
 
+" support 256 colors
+set t_Co=256 "
+
 " fold codes based on syntax(indent is nice for python)
 set foldmethod=indent
 set foldenable

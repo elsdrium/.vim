@@ -32,7 +32,7 @@ Plug 'junegunn/fzf.vim'
 " Development
 "Plug 'elsdrm/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -407,7 +407,8 @@ set autoindent
 
 " general settings
 syntax on
-colorscheme onedark2
+"colo onedark2
+colo molokai2
 set cul
 "set cuc
 set history=1000

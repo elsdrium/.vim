@@ -170,6 +170,7 @@ alias tmux='tmux -2 -u'
 alias vnc=xvnc4viewer -FullColor
 alias nvcc='nvcc -std=c++11'
 alias clang++='clang++ -std=c++11'
+alias cuda='clang++ -std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 alias g++='g++ -std=c++11'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3u='sudo -H pip3 install --upgrade'

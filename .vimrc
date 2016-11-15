@@ -266,7 +266,7 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_c_compiler = 'clang'
 let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++14 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 "let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 

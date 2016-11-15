@@ -407,7 +407,7 @@ set autoindent
 
 " general settings
 syntax on
-colo molokai
+colorscheme onedark2
 set cul
 "set cuc
 set history=1000

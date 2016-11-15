@@ -55,7 +55,7 @@ add-zsh-hook precmd estimate_time_precmd
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -145,7 +145,7 @@ else
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
     alias sy='sudo yum'
-    alias spark-jpnb='PYSPARK_DRIVER_PYTHON="jupyter" PYSPARK_DRIVER_PYTHON_OPTS="notebook" SPARK_EXECUTOR_MEMORY=100G /home/elsdrium/nas/spark-2.0.1-bin-hadoop2.7/bin/pyspark --master spark://140.109.21.158:7077'
+    alias spark-jpnb='PYSPARK_DRIVER_PYTHON="jupyter" PYSPARK_DRIVER_PYTHON_OPTS="notebook" SPARK_EXECUTOR_MEMORY=200G /opt/spark-2.0.1-bin-hadoop2.7/bin/pyspark --executor-memory 200G --driver-memory 20G --executor-cores 96'
 
     # system management 
     alias dstat='dstat -cdlmnpsy'

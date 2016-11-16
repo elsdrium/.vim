@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')        " required
 " Vim enhancement
 Plug 'IndexedSearch'
 Plug 'matchit.zip'
-Plug 'YankRing.vim'
+Plug 'YankRing.vim', {'on': 'YRShow'}
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
 "Plug 'Shougo/neocomplcache.vim'
@@ -248,9 +248,9 @@ function! ToggleErrors()
     endif
 endfunction
 " toggle list of errors and warnings on the current file
-nnoremap <C-e> :call ToggleErrors()<CR>
+nnoremap <C-e> :Errors<CR>
 " show list of errors and warnings on the current file
-nmap ,e :Errors<CR>
+nmap ,e :call ToggleErrors()<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 1
 " don't put icons on the sign column (it hides the vcs status icons of signify)
@@ -261,12 +261,12 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '☢'
 let g:syntastic_style_warning_symbol = '☣'
 
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:syntastic_python_python_exec = '/usr/bin/env python3'
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_c_compiler = 'clang'
-let g:syntastic_cuda_checkers = ['cpp/gcc']
+"let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
+"let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 "let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 

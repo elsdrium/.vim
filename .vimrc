@@ -405,6 +405,11 @@ set foldmethod=indent
 set foldenable
 set autoindent
 
+" mouse support
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+
 " general settings
 syntax on
 "colo onedark2

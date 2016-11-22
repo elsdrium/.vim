@@ -247,9 +247,9 @@ function! ToggleErrors()
         Errors
     endif
 endfunction
-" toggle list of errors and warnings on the current file
-nnoremap <C-e> :Errors<CR>
 " show list of errors and warnings on the current file
+nnoremap <C-e> :Errors<CR>
+" toggle list of errors and warnings on the current file
 nmap ,e :call ToggleErrors()<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 1
@@ -266,6 +266,7 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_c_compiler = 'clang'
 "let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 "let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
@@ -388,6 +389,17 @@ endif
 
 "nnoremap ,r :call RNUToggle()<cr>
 
+command TagList noautocmd vimgrep /TODO\|FIXME/j % | cw
+function! ToggleTagList()
+    let old_last_winnr = winnr('$')
+    cclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        TagList
+    endif
+endfunction
+nmap td :call ToggleTagList()<CR>
+
 " incremental search
 set incsearch
 " highlighted search results
@@ -424,10 +436,10 @@ set nu
 " personal key mappings
 nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
-nmap ;l  :res +10<CR>
-nmap ;s  :res -10<CR>
-nmap ;vl :vertical res +10<CR>
-nmap ;vs :vertical res -10 <CR>
+"nmap ;l  :res +10<CR>
+"nmap ;s  :res -10<CR>
+"nmap ;vl :vertical res +10<CR>
+"nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
 inoremap ;; <Esc>

@@ -4,13 +4,12 @@
 VIM_CHECK=`echo "$(vim --version | egrep -o 'Vi IMproved [0-9]+[.][0-9]+' | cut -d' ' -f3) >= 7.4" | bc`
 ZSH_CHECK=`which zsh`    
 if [ ! $VIM_CHECK ]; then
-    echo 'Cannot find Vim of version >= 7.4'
-    exit
+    echo '[WARNING] Cannot find Vim of version >= 7.4'
 elif [ ! $ZSH_CHECK ]; then
-    echo 'Zsh does not exist.'
+    echo '[ERROR] Cannot find Zsh.'
     exit
 elif [ ! `which curl` ]; then
-    echo 'curl is required for installing vim.plug.'
+    echo '[ERROR] curl is required for installing vim.plug.'
     exit
 fi
 # Note: it doesn't check git here, the environment should have git if this script already downloaded.

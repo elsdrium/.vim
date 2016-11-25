@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')        " required
 " Vim enhancement
 Plug 'IndexedSearch'
 Plug 'matchit.zip'
-Plug 'YankRing.vim', {'on': 'YRShow'}
+Plug 'YankRing.vim'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
 "Plug 'Shougo/neocomplcache.vim'
@@ -268,7 +268,7 @@ let g:syntastic_c_compiler = 'clang'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
-"let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
+let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 
 """" python-mode

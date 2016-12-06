@@ -390,7 +390,7 @@ endif
 
 "nnoremap ,r :call RNUToggle()<cr>
 
-command TagList noautocmd vimgrep /TODO\|FIXME/j % | cw
+command! TagList noautocmd vimgrep /TODO\|FIXME/j % | cw
 function! ToggleTagList()
     let old_last_winnr = winnr('$')
     cclose
@@ -422,6 +422,7 @@ set autoindent
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+set clipboard=unnamed
 
 " general settings
 syntax on
@@ -449,3 +450,4 @@ vnoremap ;; <Esc>
 inoremap ,, <End>
 inoremap ,. <Esc>I
 vnoremap // y/<C-R>"<CR> 
+vnoremap <C-c> "+y

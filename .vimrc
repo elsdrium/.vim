@@ -417,11 +417,15 @@ set t_Co=256 "
 set foldmethod=indent
 set foldenable
 set autoindent
+" use F2 as pastetoggle
+set pastetoggle=<F2>
 
 " mouse support
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+
+" clipboard support
 set clipboard=unnamed
 
 " general settings

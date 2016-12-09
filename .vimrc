@@ -11,8 +11,7 @@ Plug 'matchit.zip'
 Plug 'YankRing.vim'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
-"Plug 'Shougo/neocomplcache.vim'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
 Plug 'kien/tabman.vim'
@@ -37,7 +36,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes' " manage color schemes
 
 " Javascript
@@ -106,31 +105,31 @@ inoremap <expr><C-g>     neocomplete#undo_completion()
 " <CR>: close popup and save indent.
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 "function! s:my_cr_function()
-""return neocomplete#close_popup() . "\<CR>"
+""return neocomplete#close_popup() . '\<CR>'
 "" For no inserting <CR> key.
-"return pumvisible() ? "\<C-n>": "\<CR>"
+"return pumvisible() ? '\<C-n>': '\<CR>'
 "endfunction
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-"\ <SID>check_back_space() ? "\<TAB>" :
+inoremap <expr><TAB>  pumvisible() ? '\<C-n>' : '\<TAB>'
+"inoremap <expr><TAB>  pumvisible() ? '\<C-n>' :
+"\ <SID>check_back_space() ? '\<TAB>' :
 "\ neocomplete#start_manual_complete()
 "function! s:check_back_space() "{{{
 "let col = col('.') - 1
 "return !col || getline('.')[col - 1]  =~ '\s'
 "endfunction"}}}
 " <BS>: close popup and delete backword char.
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup().'\<C-h>'
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : '\<Space>'
 
 " For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
+"inoremap <expr><Left>  neocomplete#close_popup() . '\<Left>'
+"inoremap <expr><Right> neocomplete#close_popup() . '\<Right>'
+"inoremap <expr><Up>    neocomplete#close_popup() . '\<Up>'
+"inoremap <expr><Down>  neocomplete#close_popup() . '\<Down>'
 " Or set this.
 "let g:neocomplete#enable_cursor_hold_i = 1
 " Or set this.
@@ -148,7 +147,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -165,9 +164,9 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 """ ultisnips
-let g:UltiSnipsExpandTrigger=",us"
-let g:UltiSnipsJumpForwardTrigger="<C-g>"
-let g:UltiSnipsJumpBackwardTrigger="<C-t>"
+let g:UltiSnipsExpandTrigger=',us'
+let g:UltiSnipsJumpForwardTrigger='<C-g>'
+let g:UltiSnipsJumpBackwardTrigger='<C-t>'
 
 
 """ vim-choosewin
@@ -178,7 +177,7 @@ let g:choosewin_overlay_enable = 1
 
 """ Autoclose
 " Fix to let ESC work as espected with Autoclose plugin
-let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
+let g:AutoClosePumvisible = {'ENTER': '\<C-Y>', 'ESC': '\<ESC>'}
 
 
 """ tabman.vim
@@ -236,7 +235,7 @@ nnoremap ,w :Windows<CR>
 
 
 """ vim-surround
-"autocmd FileType tex let b:surround_108 = "\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}"
+"autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
 """ syntastic
 function! ToggleErrors()
@@ -291,7 +290,7 @@ let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
 """ tabular
 let mapleader=','
-if exists(":Tabularize")
+if exists(':Tabularize')
     nmap <Leader>a= :Tabularize /=<CR>
     vmap <Leader>a= :Tabularize /=<CR>
     nmap <Leader>a: :Tabularize /:\zs<CR>
@@ -319,7 +318,9 @@ endfunction
 
 """ jedi-vim
 "let g:jedi#force_py_version = 3
-let g:jedi#completions_command = '<C-k>'
+let g:jedi#completions_command = '<TAB>'
+let g:jedi#show_call_signatures = 1
+let g:jedi#show_call_signatures_delay = 50
 
 
 """ minibufexpl.vim
@@ -333,6 +334,42 @@ nnoremap <silent> ,y :YRShow<CR>
 
 """ LaTeX-Box
 "nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
+
+""" YouCompleteMe
+let g:ycm_auto_trigger = 1
+"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.unix_settings/ycm_extra_conf.py'
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_min_num_of_chars_for_completion = 9999
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_cache_omnifunc = 1
+let g:ycm_max_diagnostics_to_display=16
+let g:ycm_disable_for_files_larger_than_kb = 50000
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-k>']
+let g:ycm_filetype_blacklist = {
+			\ 'tagbar' : 1,
+			\ 'qf' : 1,
+			\ 'notes' : 1,
+			\ 'markdown' : 1,
+			\ 'unite' : 1,
+			\ 'text' : 1,
+			\ 'vimwiki' : 1,
+			\ 'pandoc' : 1,
+			\ 'infolog' : 1,
+			\ 'mail' : 1,
+			\ 'mundo': 1,
+			\ 'fzf': 1,
+			\ 'ctrlp' : 1
+			\}
+
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+" Go to Definition variable
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " End of plugins' settings --------------------------
 
@@ -370,13 +407,13 @@ let g:yankring_history_dir = '~/.vim/dirs/'
 
 " create needed directories if they don't exist
 if !isdirectory(&backupdir)
-    call mkdir(&backupdir, "p")
+    call mkdir(&backupdir, 'p')
 endif
 if !isdirectory(&directory)
-    call mkdir(&directory, "p")
+    call mkdir(&directory, 'p')
 endif
 if !isdirectory(&undodir)
-    call mkdir(&undodir, "p")
+    call mkdir(&undodir, 'p')
 endif
 
 " toogle relativenumber
@@ -455,3 +492,4 @@ inoremap ,, <End>
 inoremap ,. <Esc>I
 vnoremap // y/<C-R>"<CR> 
 vnoremap <C-c> "+y
+nnoremap <F3> :NeoCompleteToggle<CR>

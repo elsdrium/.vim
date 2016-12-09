@@ -18,7 +18,6 @@ Plug 'kien/tabman.vim'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
-"Plug 'ervandew/supertab'
 Plug 'tpope/vim-repeat'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
@@ -36,11 +35,11 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes' " manage color schemes
 
 " Javascript
-Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 
 " LaTeX
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
@@ -48,9 +47,7 @@ Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 "Plug 'xuhdev/vim-latex-live-preview'
 
 " Python
-"Plug 'klen/python-mode'  " Confilict with jedi-vim
 "Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
-"Plug 'ivanov/vim-ipython'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 " Git
@@ -103,21 +100,8 @@ inoremap <expr><C-g>     neocomplete#undo_completion()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-"function! s:my_cr_function()
-""return neocomplete#close_popup() . '\<CR>'
-"" For no inserting <CR> key.
-"return pumvisible() ? '\<C-n>': '\<CR>'
-"endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? '\<C-n>' : '\<TAB>'
-"inoremap <expr><TAB>  pumvisible() ? '\<C-n>' :
-"\ <SID>check_back_space() ? '\<TAB>' :
-"\ neocomplete#start_manual_complete()
-"function! s:check_back_space() "{{{
-"let col = col('.') - 1
-"return !col || getline('.')[col - 1]  =~ '\s'
-"endfunction"}}}
 " <BS>: close popup and delete backword char.
 inoremap <expr><BS> neocomplete#smart_close_popup().'\<C-h>'
 inoremap <expr><C-y>  neocomplete#close_popup()
@@ -125,30 +109,12 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : '\<Space>'
 
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplete#close_popup() . '\<Left>'
-"inoremap <expr><Right> neocomplete#close_popup() . '\<Right>'
-"inoremap <expr><Up>    neocomplete#close_popup() . '\<Up>'
-"inoremap <expr><Down>  neocomplete#close_popup() . '\<Down>'
-" Or set this.
-"let g:neocomplete#enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplete#enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType python setlocal omnifunc=jedi#completions
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -157,10 +123,6 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 """ ultisnips
@@ -237,6 +199,7 @@ nnoremap ,w :Windows<CR>
 """ vim-surround
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
+
 """ syntastic
 function! ToggleErrors()
     let old_last_winnr = winnr('$')
@@ -269,23 +232,6 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
-
-
-"""" python-mode
-"" don't use linter, we use syntastic for that
-"let g:pymode = 1
-"let g:pymode_lint_on_write = 0
-"let g:pymode_lint_signs = 0
-"" don't fold python code on open
-"let g:pymode_folding = 0
-"" don't load rope by default. Change to 1 to use rope
-"let g:pymode_rope = 0
-"" open definitions on same window, and custom mappings for definitions and
-"" occurrences
-"let g:pymode_rope_goto_definition_bind = ',d'
-"let g:pymode_rope_goto_definition_cmd = 'e'
-"nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-"nmap ,o :RopeFindOccurrences<CR>
 
 
 """ tabular
@@ -330,6 +276,7 @@ let g:jedi#show_call_signatures_delay = 50
 
 """ YankRing.vim
 nnoremap <silent> ,y :YRShow<CR>
+let g:yankring_history_dir = '~/.vim/dirs/'
 
 
 """ LaTeX-Box
@@ -368,7 +315,6 @@ let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
 " Go to Definition variable
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " End of plugins' settings --------------------------
@@ -402,8 +348,6 @@ set backupdir=~/.vim/dirs/backups " where to put backup files
 set undofile                      " persistent undos - undo after you re-open the file
 set undodir=~/.vim/dirs/undos
 set viminfo+=n~/.vim/dirs/viminfo
-" store yankring history file there too
-let g:yankring_history_dir = '~/.vim/dirs/'
 
 " create needed directories if they don't exist
 if !isdirectory(&backupdir)
@@ -416,17 +360,7 @@ if !isdirectory(&undodir)
     call mkdir(&undodir, 'p')
 endif
 
-" toogle relativenumber
-"function! RNUToggle()
-"if(&relativenumber == 1)
-"set relativenumber!
-"else
-"set relativenumber
-"endif
-"endfunc
-
-"nnoremap ,r :call RNUToggle()<cr>
-
+" todo / fixme list
 command! TagList noautocmd vimgrep /TODO\|FIXME/j % | cw
 function! ToggleTagList()
     let old_last_winnr = winnr('$')
@@ -467,7 +401,6 @@ set clipboard=unnamed
 
 " general settings
 syntax on
-"colo onedark2
 colo molokai2
 set cul
 "set cuc

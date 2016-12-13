@@ -32,7 +32,7 @@ Plug 'junegunn/fzf.vim'
 "Plug 'fholgado/minibufexpl.vim'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
@@ -125,10 +125,11 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 
-""" ultisnips
-let g:UltiSnipsExpandTrigger=',us'
+""" UltiSnips
+let g:UltiSnipsExpandTrigger='<Leader><TAB>'
 let g:UltiSnipsJumpForwardTrigger='<C-g>'
 let g:UltiSnipsJumpBackwardTrigger='<C-t>'
+let g:UltiSnipsListSnippets=',ls'
 
 
 """ vim-choosewin
@@ -157,13 +158,17 @@ let tagbar_map_closefold = ['zc']
 let tagbar_map_openfold = ['zo']
 
 
-""" nerdtree
-" toggle nerdtree display
-nmap ,t :NERDTreeToggle<CR>
+""" vim-nerdtree-tabs / nerdtree
+" toggle nerdtree tab
+nmap ,t :NERDTreeTabsToggle<CR>
 " open nerdtree with the current file selected
 map ,q :NERDTreeFind<CR>
 " don;t show these file types
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+"let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeShowHidden = 1
+let NERDTreeDirArrows = 1
+let NERDTreeMouseMode = 2
+"autocmd FileType nerdtree setlocal nolist
 
 
 """ vim-signify
@@ -171,8 +176,8 @@ let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
 " mappings to jump to changed blocks
-nmap <leader>sn <Plug>(signify-next-hunk)
-nmap <leader>sp <Plug>(signify-prev-hunk)
+nmap <Leader>sn <Plug>(signify-next-hunk)
+nmap <Leader>sp <Plug>(signify-prev-hunk)
 " nicer colors
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
@@ -184,9 +189,9 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
 """ fzf.vim
 " Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+nmap <Leader><TAB> <plug>(fzf-maps-n)
+xmap <Leader><TAB> <plug>(fzf-maps-x)
+omap <Leader><TAB> <plug>(fzf-maps-o)
 
 " commands shortcut
 nnoremap ,b :Buffers<CR>
@@ -243,7 +248,7 @@ if exists(':Tabularize')
     vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-inoremap <silent> ,<Tab> <Bar><Esc>:call <SID>align()<CR>a 
+inoremap <silent> ,tb <Bar><Esc>:call <SID>align()<CR>a 
 function! s:align()
     let p = '^\s*|\s.*\s|\s*$'
     if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -290,7 +295,7 @@ let g:ycm_auto_trigger = 1
 "let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.unix_settings/ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_min_num_of_chars_for_completion = 9999
+let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_cache_omnifunc = 1
@@ -314,8 +319,8 @@ let g:ycm_filetype_blacklist = {
 			\}
 
 " Go to Definition variable
-nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " End of plugins' settings --------------------------
 
@@ -376,6 +381,9 @@ nmap td :call ToggleTagList()<CR>
 set incsearch
 " highlighted search results
 set hlsearch
+" case insensitive search
+set ignorecase
+set smartcase
 
 " no annoying beeps anymore...
 set vb

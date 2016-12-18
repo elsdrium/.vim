@@ -37,6 +37,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes' " manage color schemes
+Plug 'Yggdroot/indentLine'
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
@@ -66,10 +67,11 @@ nmap <Leader>v <Plug>(easymotion-bd-w)
 
 """ vim-airline
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'zenburn'
+let g:airline_theme = 'kalisi'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
+let g:airline#extensions#tabline#enabled = 1
 
 """ neocomplete.vim
 " Disable AutoComplPop.
@@ -169,6 +171,8 @@ let NERDTreeShowHidden = 1
 let NERDTreeDirArrows = 1
 let NERDTreeMouseMode = 2
 "autocmd FileType nerdtree setlocal nolist
+"hi Directory ctermfg=darkred
+autocmd FileType nerdtree highlight Directory ctermfg=darkred
 
 
 """ vim-signify
@@ -259,6 +263,10 @@ function! s:align()
         call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
     endif
 endfunction
+
+
+""" indentLine
+let g:indentLine_color_term = 239
 
 
 """ vim-latex-suite
@@ -392,10 +400,6 @@ set t_vb=
 " support 256 colors
 set t_Co=256 "
 
-" fold codes based on syntax(indent is nice for python)
-set foldmethod=indent
-set foldenable
-set autoindent
 " use F2 as pastetoggle
 set pastetoggle=<F2>
 
@@ -417,6 +421,10 @@ set shortmess+=c
 set wrap
 set nu
 "set rnu
+"set foldmethod=indent
+"set foldenable
+set autoindent
+"set cursorline
 
 " personal key mappings
 nmap <CR><CR> o<Esc>

@@ -234,7 +234,7 @@ let g:syntastic_style_warning_symbol = '☣'
 
 "let g:syntastic_python_python_exec = '/usr/bin/env python3'
 let g:syntastic_python_python_exec = '/usr/bin/env python'
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_c_compiler = 'clang'
 "let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
@@ -360,7 +360,6 @@ set backup                        " make backup files
 set backupdir=~/.vim/dirs/backups " where to put backup files
 set undofile                      " persistent undos - undo after you re-open the file
 set undodir=~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo
 
 " create needed directories if they don't exist
 if !isdirectory(&backupdir)
@@ -405,11 +404,23 @@ set pastetoggle=<F2>
 
 " mouse support
 set ttyfast
-set mouse=a
-set ttymouse=xterm2
+if has('mouse')
+    set mouse=a
+endif
 
 " clipboard support
-set clipboard=unnamed
+if has('clipboard')
+    set clipboard=unnamed
+endif
+
+" nvim vs vim stuffs
+if has('nvim')
+    set viminfo+=n~/.vim/dirs/nviminfo
+    tnoremap ;; <C-\><C-n>
+else
+    set viminfo+=n~/.vim/dirs/viminfo
+    set ttymouse=xterm2
+endif
 
 " general settings
 syntax on

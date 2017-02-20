@@ -38,10 +38,20 @@ ln -fs .unix_settings/.jupyter
 ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
-ln -fs .unix_settings/.ssh/config .ssh/config
+#ln -fs .unix_settings/.ssh/config .ssh/config
 
-# Install vim plugins
-vim +PlugInstall +qall
+if [ "$1" = "--use-nvim" ]; then
+    # Neovim
+    mkdir .config 2> /dev/null
+    ln -fs ~/.unix_settings/.vim ~/.config/nvim
+    ln -fs ~/.unix_settings/.vimrc ~/.config/nvim/init.vim
+
+    # Install vim plugins for nvim
+    nvim +PlugInstall +qall
+else
+    # Install vim plugins
+    vim +PlugInstall +qall
+fi
 
 ## (optional)
 #`ln -fs .unix_settings/.pudb-theme.py`

@@ -38,7 +38,9 @@ ln -fs .unix_settings/.jupyter
 ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
-#ln -fs .unix_settings/.ssh/config .ssh/config
+
+mkdir .ssh 2> /dev/null
+ln -fs ~/.unix_settings/.ssh/config ~/.ssh/config
 
 if [ "$1" = "--use-nvim" ]; then
     # Neovim
@@ -46,7 +48,7 @@ if [ "$1" = "--use-nvim" ]; then
     ln -fs ~/.unix_settings/.vim ~/.config/nvim
     ln -fs ~/.unix_settings/.vimrc ~/.config/nvim/init.vim
 
-    # Install vim plugins for nvim
+    # Install vim plugins in nvim
     nvim +PlugInstall +qall
 else
     # Install vim plugins

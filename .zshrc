@@ -83,7 +83,7 @@ add-zsh-hook precmd estimate_time_precmd
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast vi-mode)
+plugins=(git gitfast vi-mode ssh-agent)
 
 # User configuration
 
@@ -104,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa elsdrium_github elsdrium_bitbucket
 
 setopt AUTO_PUSHD
 setopt GLOB_COMPLETE

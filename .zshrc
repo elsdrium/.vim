@@ -51,6 +51,9 @@ autoload -Uz add-zsh-hook
 add-zsh-hook preexec estimate_time_preexec
 add-zsh-hook precmd estimate_time_precmd
 
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa id_github id_bitbucket
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -104,8 +107,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa elsdrium_github elsdrium_bitbucket
 
 setopt AUTO_PUSHD
 setopt GLOB_COMPLETE

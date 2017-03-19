@@ -396,6 +396,9 @@ set smartcase
 set vb
 set t_vb=
 
+" make backspace works
+set backspace=2
+
 " support 256 colors
 set t_Co=256 "
 
@@ -436,6 +439,9 @@ set nu
 "set foldenable
 set autoindent
 "set cursorline
+set showcmd
+set wildmenu
+set lazyredraw
 
 " personal key mappings
 nmap <CR><CR> o<Esc>
@@ -454,3 +460,4 @@ inoremap ,. <Esc>I
 vnoremap // y/<C-R>"<CR> 
 vnoremap <C-c> "+y
 nnoremap <F3> :NeoCompleteToggle<CR>
+nnoremap gV `[v`]

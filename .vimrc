@@ -39,6 +39,10 @@ Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes' " manage color schemes
 Plug 'Yggdroot/indentLine'
 
+" Python
+"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 
@@ -47,9 +51,8 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 "Plug 'gerw/vim-latex-suite'
 "Plug 'xuhdev/vim-latex-live-preview'
 
-" Python
-"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
+" Markdown
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " Git
 Plug 'mhinz/vim-signify'
@@ -294,6 +297,11 @@ let g:yankring_history_dir = '~/.vim/dirs/'
 
 """ LaTeX-Box
 "nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
+
+""" vim-instant-markdown
+nnoremap <C-m> :InstantMarkdownPreview<CR>
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_allow_unsafe_content = 1
 
 """ YouCompleteMe
 "check syntax with syntastic instead

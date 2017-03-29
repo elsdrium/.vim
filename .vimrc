@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')        " required
 Plug 'IndexedSearch'
 Plug 'matchit.zip'
 Plug 'YankRing.vim'
+Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
@@ -37,8 +38,11 @@ Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
-Plug 'flazz/vim-colorschemes' " manage color schemes
 Plug 'Yggdroot/indentLine'
+
+" colorscheme
+Plug 'flazz/vim-colorschemes'
+Plug 'liuchengxu/space-vim-dark'
 
 " Python
 "Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
@@ -437,6 +441,7 @@ endif
 " general settings
 syntax on
 colo molokai2
+hi Comment cterm=italic
 set cul
 "set cuc
 set history=1000

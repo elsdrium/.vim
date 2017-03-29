@@ -14,6 +14,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
+Plug 'itchyny/vim-cursorword'
 Plug 'kien/tabman.vim'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

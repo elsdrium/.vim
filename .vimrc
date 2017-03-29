@@ -445,7 +445,6 @@ hi Comment cterm=italic
 set cul
 "set cuc
 set history=1000
-set shortmess+=c
 set wrap
 set nu
 "set rnu
@@ -456,6 +455,10 @@ set autoindent
 set showcmd
 set wildmenu
 set lazyredraw
+" better detection for shortmess c
+if has('patch-7.4.314')
+  set shortmess+=c
+endif
 
 " personal key mappings
 nmap <CR><CR> o<Esc>

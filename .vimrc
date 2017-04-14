@@ -22,7 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-repeat'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 "Plug 'tomtom/tlib_vim'
 "Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -441,7 +441,6 @@ endif
 " general settings
 syntax on
 colo molokai2
-hi Comment cterm=italic
 set cul
 "set cuc
 set history=1000

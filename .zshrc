@@ -86,7 +86,7 @@ zstyle :omz:plugins:ssh-agent identities id_rsa id_github id_bitbucket
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast vi-mode ssh-agent)
+plugins=(git gitfast github vi-mode ssh-agent web-search)
 
 # User configuration
 

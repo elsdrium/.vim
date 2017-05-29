@@ -6,9 +6,9 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')        " required
 
 " Vim enhancement
-Plug 'IndexedSearch'
-Plug 'matchit.zip'
-Plug 'YankRing.vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'

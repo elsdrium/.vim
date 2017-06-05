@@ -148,6 +148,7 @@ else
     alias rdwin='rdesktop -g 1620x980'
     #alias rs='rsync -av -e ssh elsdrm@140.109.135.120:/Users/elsdrm/Dropbox/.unix_settings /home/elsdrm'
     alias sag='sudo apt-get'
+    alias acs='apt-cache search'
     alias sy='sudo yum'
     alias spark-jpnb='PYSPARK_DRIVER_PYTHON="jupyter" PYSPARK_DRIVER_PYTHON_OPTS="notebook" SPARK_EXECUTOR_MEMORY=200G /opt/spark-2.0.1-bin-hadoop2.7/bin/pyspark --executor-memory 200G --driver-memory 20G --executor-cores 96'
 

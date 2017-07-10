@@ -48,6 +48,9 @@ Plug 'liuchengxu/space-vim-dark'
 "Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
+" Scala
+Plug 'derekwyatt/vim-scala', {'for': 'scala'}
+
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 

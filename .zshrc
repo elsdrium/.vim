@@ -160,8 +160,8 @@ fi
 
 alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
-alias egrep='egrep --color=auto -n'
-alias fgrep='fgrep --color=auto -n'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 alias nv='nvim'
 alias v='vim'
 alias rv='vim +PlugUpdate +qall'

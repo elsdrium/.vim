@@ -39,6 +39,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
+"Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
+Plug 'junegunn/vim-easy-align'
 
 " colorscheme
 Plug 'flazz/vim-colorschemes'
@@ -64,8 +66,8 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " Git
 Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
 "Plug 'motemen/git-vim'
-"Plug 'tpope/vim-fugitive'
 
 
 call plug#end()              " required
@@ -280,6 +282,13 @@ endfunction
 let g:indentLine_color_term = 239
 
 
+""" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
 """ vim-latex-suite
 "let g:tex_flavor='latex'
 "imap <C-d> <Plug>IMAP_JumpForward
@@ -423,6 +432,7 @@ set pastetoggle=<F2>
 
 " mouse support
 set ttyfast
+set mousehide
 if has('mouse')
     set mouse=a
 endif

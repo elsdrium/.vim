@@ -18,15 +18,15 @@ fi
 cd ~
  
 # Get FZF
-`git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf`
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # Get vim.plug and oh-my-zsh
-`curl -fLo ~/.unix_settings/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-`git clone https://github.com/robbyrussell/oh-my-zsh .unix_settings/.oh-my-zsh`
+curl -fLo ~/.unix_settings/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/robbyrussell/oh-my-zsh .unix_settings/.oh-my-zsh
 
 # Use personalized theme
-`cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/bureau_custom.zsh-theme`
+cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/bureau_custom.zsh-theme
 
 # Create symbolic links for dot-files
 ln -fs .unix_settings/.zshrc

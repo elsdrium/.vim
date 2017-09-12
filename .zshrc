@@ -184,10 +184,11 @@ alias ipy='ipython3'
 
 NORMAL_SYMBOL='@'
 INSERT_SYMBOL='@'
-alias ndrun='nvidia-docker run -t -i -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#alias ndrun='nvidia-docker run -t -i -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm' # run Nvidia docker with X11 GUI
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source synology_config

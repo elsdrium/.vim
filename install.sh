@@ -1,5 +1,11 @@
 #!/usr/bin/env zsh
 
+# Check cmake, node and npm
+if ! type cmake &> /dev/null || ! type node &> /dev/null || ! type npm &> /dev/null ; then
+    echo 'Prerequisites are not installed. Please check the existences of cmake, node and npm.'
+    exit
+fi
+
 # Check Vim and Zsh
 VIM_CHECK=`echo "$(vim --version | egrep -o 'Vi IMproved [0-9]+[.][0-9]+' | cut -d' ' -f3) >= 7.4" | bc`
 ZSH_CHECK=`which zsh`    
@@ -63,3 +69,5 @@ fi
 
 # Update zsh
 source .zshrc
+
+echo 'Done. Do not forget to install ctags and jsctags.'

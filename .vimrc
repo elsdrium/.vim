@@ -55,6 +55,7 @@ Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript'}
 
 " LaTeX
 "Plug 'LaTeX-Box-Team/LaTeX-Box'

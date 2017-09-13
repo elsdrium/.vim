@@ -191,4 +191,4 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
-if [[ -f ~/.unix_settings/synology_config ]]; then; source ~/.unix_settings/synology_config; fi
+if [[ -f ~/.synology_config ]]; then; source ~/.synology_config; fi

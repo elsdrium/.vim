@@ -41,9 +41,10 @@ ln -fs .unix_settings/.vim
 ln -fs .unix_settings/.vimrc
 ln -fs .unix_settings/.inputrc
 ln -fs .unix_settings/.jupyter
-ln -fs .unix_settings/.ipython
+#ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
+ln -fs .unix_settings/.gitconfig
 
 mkdir .ssh 2> /dev/null
 ln -fs ~/.unix_settings/.ssh/config ~/.ssh/config

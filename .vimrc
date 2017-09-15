@@ -12,7 +12,6 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
 Plug 'itchyny/vim-cursorword'
@@ -29,6 +28,35 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "Plug 'fisadev/vim-ctrlp-cmdpalette'
 
+" colorscheme
+Plug 'flazz/vim-colorschemes'
+Plug 'liuchengxu/space-vim-dark'
+
+" Python
+"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+
+" Scala
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+
+" Javascript
+Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript'}
+
+" LaTeX
+"Plug 'LaTeX-Box-Team/LaTeX-Box'
+"Plug 'gerw/vim-latex-suite'
+"Plug 'xuhdev/vim-latex-live-preview'
+
+" Markdown
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+"Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d', 'for': 'markdown' }
+
+" Git
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+"Plug 'motemen/git-vim'
+
 " Development
 "Plug 'elsdrm/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
@@ -41,34 +69,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
-
-" colorscheme
-Plug 'flazz/vim-colorschemes'
-Plug 'liuchengxu/space-vim-dark'
-
-" Python
-"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
-
-" Scala
-Plug 'derekwyatt/vim-scala', {'for': 'scala'}
-
-" Javascript
-Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript'}
-
-" LaTeX
-"Plug 'LaTeX-Box-Team/LaTeX-Box'
-"Plug 'gerw/vim-latex-suite'
-"Plug 'xuhdev/vim-latex-live-preview'
-
-" Markdown
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-
-" Git
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
-"Plug 'motemen/git-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 
 
 call plug#end()              " required
@@ -246,9 +247,12 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '☢'
 let g:syntastic_style_warning_symbol = '☣'
 
+let g:syntastic_javascript_checkers=['jshint']
+
 "let g:syntastic_python_python_exec = '/usr/bin/env python3'
 let g:syntastic_python_python_exec = '/usr/bin/env python'
 let g:syntastic_python_checkers = ['flake8']
+
 let g:syntastic_c_compiler = 'clang'
 "let g:syntastic_cuda_checkers = ['cpp/gcc']
 let g:syntastic_cpp_compiler = 'clang++'
@@ -356,6 +360,10 @@ let g:ycm_filetype_blacklist = {
 nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+""" tern_for_vim
+let g:tern#is_show_argument_hints_enabled = 1
+nnoremap <silent> td :TernDoc<CR>
+
 " End of plugins' settings --------------------------
 
 
@@ -408,7 +416,7 @@ function! ToggleTagList()
         TagList
     endif
 endfunction
-nmap td :call ToggleTagList()<CR>
+nmap tt :call ToggleTagList()<CR>
 
 " incremental search
 set incsearch

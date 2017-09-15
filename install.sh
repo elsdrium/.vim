@@ -44,6 +44,7 @@ ln -fs .unix_settings/.jupyter
 #ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
 ln -fs .unix_settings/.pylintrc
+ln -fs .unix_settings/.jshintrc
 ln -fs .unix_settings/.gitconfig
 
 mkdir .ssh 2> /dev/null
@@ -71,4 +72,4 @@ fi
 # Update zsh
 source .zshrc
 
-echo 'Done. Do not forget to install ctags and jsctags.'
+echo 'Done. For better vim support, do not forget to install ctags, jsctags and jshint.'

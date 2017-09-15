@@ -136,10 +136,10 @@ if [[ $platform == 'osx' ]]; then
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
 
-else
-    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/ampl:/usr/local/nvidia/bin:/usr/local/cuda/bin"
-    export LD_LIBRARY_PATH="/usr/local/cuda/lib64:/usr/local/lib64:/usr/local/lib:/usr/lib"
-    export JAVA_HOME="/usr/local/jdk1.8.0_112"
+else # Linux
+    export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    export LD_LIBRARY_PATH="/usr/local/lib64:/usr/local/lib:/usr/lib"
+    #export JAVA_HOME="/usr/local/jdk1.8.0_112"
 
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
@@ -150,12 +150,12 @@ else
     alias sag='sudo apt-get'
     alias acs='apt-cache search'
     alias sy='sudo yum'
-    alias spark-jpnb='PYSPARK_DRIVER_PYTHON="jupyter" PYSPARK_DRIVER_PYTHON_OPTS="notebook" SPARK_EXECUTOR_MEMORY=200G /opt/spark-2.0.1-bin-hadoop2.7/bin/pyspark --executor-memory 200G --driver-memory 20G --executor-cores 96'
 
     # system management 
     alias dstat='dstat -cdlmnpsy'
     alias dus='du -smh' # disk usage summary
     alias nmon='nmon -s 1'
+    alias xopen='xdg-open'
 fi
 
 alias gsb='git show-branch --color'

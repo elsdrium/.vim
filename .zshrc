@@ -158,12 +158,24 @@ else # Linux
     alias xopen='xdg-open'
 fi
 
+
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/env ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
 alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias nv='nvim'
-alias v='vim'
+alias nv='nvim -O'
+alias v='vim -O'
+alias vim='vim -O'
 alias rv='vim +PlugUpdate +qall'
 alias rrv='vim +PlugClean +PlugUpdate +PlugInstall +qall'
 alias ev='vim ~/.vimrc'
@@ -171,6 +183,7 @@ alias rz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
 #alias rlsftp='with-readline sftp'
 #alias rlftp='with-readline ftp'
+alias rcd='ranger-cd'
 alias ssh='TERM=xterm ssh -X'
 alias tmux='tmux -2 -u'
 alias vnc=xvnc4viewer -FullColor

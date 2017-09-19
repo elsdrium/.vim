@@ -85,8 +85,10 @@ let g:airline_powerline_fonts = 0
 let g:airline_theme = 'kalisi'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
 
 """ neocomplete.vim
 " Disable AutoComplPop.
@@ -204,6 +206,10 @@ highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
 highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
+
+
+""" vim-fugitive
+nnoremap gb :Gblame<CR>
 
 
 """ fzf.vim

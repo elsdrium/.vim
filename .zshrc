@@ -136,6 +136,19 @@ if [[ $platform == 'osx' ]]; then
     alias ll='ls -hlpGA'
     alias la='ls -pGA'
 
+    # iTerm2 support
+    alias imgcat=~/.iterm2/imgcat
+    alias imgls=~/.iterm2/imgls
+    alias it2attention=~/.iterm2/it2attention
+    alias it2check=~/.iterm2/it2check
+    alias it2copy=~/.iterm2/it2copy
+    alias it2dl=~/.iterm2/it2dl
+    alias it2getvar=~/.iterm2/it2getvar
+    alias it2setcolor=~/.iterm2/it2setcolor
+    alias it2setkeylabel=~/.iterm2/it2setkeylabel
+    alias it2ul=~/.iterm2/it2ul
+    alias it2universion=~/.iterm2/it2universion
+
 else # Linux
     export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
     export LD_LIBRARY_PATH="/usr/local/lib64:/usr/local/lib:/usr/lib"

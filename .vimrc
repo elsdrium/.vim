@@ -42,6 +42,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript'}
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
 
 " LaTeX
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
@@ -385,6 +386,7 @@ set expandtab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar
 set ls=2

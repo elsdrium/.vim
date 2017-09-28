@@ -40,9 +40,9 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
 " Javascript
-Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript'}
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " LaTeX
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
@@ -181,10 +181,15 @@ let tagbar_map_openfold = ['zo']
 
 
 """ vim-nerdtree-tabs / nerdtree
-" toggle nerdtree tab
-nmap ,t :NERDTreeTabsToggle<CR>
-" open nerdtree with the current file selected
-map ,q :NERDTreeFind<CR>
+function! NERDTreeFindToggle()
+    if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+        NERDTreeTabsClose
+    else
+        NERDTreeFind
+    endif
+endfunction
+" toggle nerdtree tab with the current file selected
+nmap ,t :call NERDTreeFindToggle()<CR>
 " don;t show these file types
 "let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 let NERDTreeShowHidden = 1
@@ -243,7 +248,7 @@ function! ToggleErrors()
     endif
 endfunction
 " show list of errors and warnings on the current file
-nnoremap <C-e> :Errors<CR>
+"nnoremap <C-e> :Errors<CR>
 " toggle list of errors and warnings on the current file
 nmap ,e :call ToggleErrors()<CR>
 " check also when just opened the file
@@ -383,6 +388,7 @@ set shiftwidth=4
 set expandtab
 
 " tab length exceptions on some file types
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -505,6 +511,7 @@ inoremap ;, ;<Esc>
 vnoremap ;; <Esc>
 inoremap ,, <End>
 inoremap ,. <Esc>I
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 vnoremap // y/<C-R>"<CR> 
 vnoremap <C-c> "+y
 nnoremap <F3> :NeoCompleteToggle<CR>

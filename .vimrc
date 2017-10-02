@@ -506,6 +506,8 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
+noremap <C-e> <Esc>:e!<CR>
+inoremap <C-e> <Esc>:e!<CR>
 inoremap ;; <Esc>
 inoremap ;, ;<Esc>
 vnoremap ;; <Esc>

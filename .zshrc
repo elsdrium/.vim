@@ -118,6 +118,7 @@ setopt NO_CASE_GLOB
 
 
 bindkey -M vicmd "q" push-line
+bindkey -M viins ";;" vi-cmd-mode
 
 export EDITOR="vi"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -186,6 +187,7 @@ alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias gir='grep -ir'
 alias vim='vim -O'
 alias nv='nvim -O'
 alias v='vim'

@@ -387,6 +387,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" indicate tab characters
+set list lcs=tab:\|\ 
+
 " tab length exceptions on some file types
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -518,3 +521,4 @@ vnoremap // y/<C-R>"<CR>
 vnoremap <C-c> "+y
 nnoremap <F3> :NeoCompleteToggle<CR>
 nnoremap gV `[v`]
+nnoremap ,= :s/<[^>]*>/\r&\r/g<CR>:g/^$/d<CR>gg=G

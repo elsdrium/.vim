@@ -61,6 +61,7 @@ Plug 'tpope/vim-fugitive'
 " Development
 "Plug 'elsdrm/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
+Plug 'tpope/vim-sleuth'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
 Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
@@ -383,7 +384,9 @@ nnoremap <silent> td :TernDoc<CR>
 
 " tabs and spaces
 set smartindent
+set smarttab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 

@@ -222,6 +222,60 @@ nnoremap gb :Gblame<CR>
 
 
 """ fzf.vim
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+" Quickfix window for quick navigation
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': function('s:build_quickfix_list')
+  \ }
+
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" In neovim, set up fzf window using a Vim command
+if has('nvim')
+  let g:fzf_layout = { 'window': 'enew' }
+  let g:fzf_layout = { 'window': '-tabnew' }
+  let g:fzf_layout = { 'window': '10split enew' }
+end
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors = {
+  \ 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.vim/dirs/fzf-history'
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+" [Commands] --expect expression for directly executing the command
+"let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
 " Mapping selecting mappings
 nmap <Leader><TAB> <plug>(fzf-maps-n)
 xmap <Leader><TAB> <plug>(fzf-maps-x)
@@ -234,6 +288,11 @@ nnoremap ,L :Lines<CR>
 nnoremap ,l :BLines<CR>
 nnoremap ,w :Windows<CR>
 
+command! -bang -nargs=* Ag
+	    \ call fzf#vim#ag(<q-args>,
+	    \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+	    \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+	    \                 <bang>0)
 
 """ vim-surround
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
@@ -336,7 +395,7 @@ let g:yankring_history_dir = '~/.vim/dirs/'
 "nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
 """ vim-instant-markdown
-nnoremap <C-m> :InstantMarkdownPreview<CR>
+autocmd FileType markdown nnoremap <C-m> :InstantMarkdownPreview<CR>
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_allow_unsafe_content = 1
 
@@ -524,4 +583,6 @@ vnoremap // y/<C-R>"<CR>
 vnoremap <C-c> "+y
 nnoremap <F3> :NeoCompleteToggle<CR>
 nnoremap gV `[v`]
+" formatting html
 nnoremap ,= :s/<[^>]*>/\r&\r/g<CR>:g/^$/d<CR>gg=G
+nnoremap <C-f> :Ag 

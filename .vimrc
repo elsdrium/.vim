@@ -43,6 +43,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " LaTeX
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
@@ -179,6 +180,20 @@ nmap tb :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let tagbar_map_closefold = ['zc']
 let tagbar_map_openfold = ['zo']
+
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
 
 
 """ vim-nerdtree-tabs / nerdtree
@@ -438,6 +453,9 @@ nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:tern#is_show_argument_hints_enabled = 1
 nnoremap <silent> td :TernDoc<CR>
 
+""" typescript-vim
+let g:typescript_indent_disable = 1
+
 " End of plugins' settings --------------------------
 
 
@@ -457,6 +475,7 @@ autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar

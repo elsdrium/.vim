@@ -70,6 +70,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
+Plug 'elsdrium/autoload_cscope.vim'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 if v:version > 704 || (v:version == 704 && has('patch1578'))
@@ -507,16 +508,16 @@ if !isdirectory(&undodir)
 endif
 
 " todo / fixme list
-command! TagList noautocmd vimgrep /TODO\|FIXME/j % | cw
-function! ToggleTagList()
+command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
+function! ToggleTODOList()
     let old_last_winnr = winnr('$')
     cclose
     if old_last_winnr == winnr('$')
         " Nothing was closed, open syntastic error location panel
-        TagList
+        TODOList
     endif
 endfunction
-nmap tt :call ToggleTagList()<CR>
+nmap tt :call ToggleTODOList()<CR>
 
 " incremental search
 set incsearch
@@ -559,6 +560,31 @@ else
     set viminfo+=n~/.vim/dirs/viminfo
     set ttymouse=xterm2
 endif
+
+" search ctags file upward
+set tags=./tags;
+
+" cscope setting
+if has("cscope")
+  set csprg=/usr/local/bin/cscope
+  set csto=1
+  set cst
+  set nocsverb
+  " Use both cscope and ctag
+  set cscopetag
+  " Show msg when cscope db added
+  set cscopeverbose
+  " Use tags for definition search first
+  set cscopetagorder=1
+  " Use quickfix window to show cscope results
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
+  " add any database in current directory
+  if filereadable("cscope.out")
+    cs add cscope.out
+  endif
+  set csverb
+endif
+
 
 " general settings
 syntax on

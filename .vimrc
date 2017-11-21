@@ -74,7 +74,7 @@ Plug 'elsdrium/autoload_cscope.vim'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 if v:version > 704 || (v:version == 704 && has('patch1578'))
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 endif
 
 
@@ -109,14 +109,14 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+  let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -143,11 +143,14 @@ autocmd FileType python setlocal omnifunc=jedi#completions
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
+  let g:neocomplete#sources#omni#input_patterns = {}
 endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+""" NERDCommenter
+let g:NERDSpaceDelims = 1
 
 
 """ UltiSnips
@@ -183,27 +186,27 @@ let tagbar_map_closefold = ['zc']
 let tagbar_map_openfold = ['zo']
 
 let g:tagbar_type_typescript = {
-  \ 'ctagstype': 'typescript',
-  \ 'kinds': [
-    \ 'c:classes',
-    \ 'n:modules',
-    \ 'f:functions',
-    \ 'v:variables',
-    \ 'v:varlambdas',
-    \ 'm:members',
-    \ 'i:interfaces',
-    \ 'e:enums',
-  \ ]
-\ }
+      \ 'ctagstype': 'typescript',
+      \ 'kinds': [
+      \ 'c:classes',
+      \ 'n:modules',
+      \ 'f:functions',
+      \ 'v:variables',
+      \ 'v:varlambdas',
+      \ 'm:members',
+      \ 'i:interfaces',
+      \ 'e:enums',
+      \ ]
+      \ }
 
 
 """ vim-nerdtree-tabs / nerdtree
 function! NERDTreeFindToggle()
-    if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
-        NERDTreeTabsClose
-    else
-        NERDTreeFind
-    endif
+  if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+    NERDTreeTabsClose
+  else
+    NERDTreeFind
+  endif
 endfunction
 " toggle nerdtree tab with the current file selected
 nmap ,t :call NERDTreeFindToggle()<CR>
@@ -248,8 +251,8 @@ endfunction
 
 " This is the default extra key bindings
 let g:fzf_action = {
-  \ 'ctrl-t': function('s:build_quickfix_list')
-  \ }
+      \ 'ctrl-t': function('s:build_quickfix_list')
+      \ }
 
 " Default fzf layout
 " - down / up / left / right
@@ -264,19 +267,19 @@ end
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors = {
-  \ 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+      \ 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 " Enable per-command history.
 " CTRL-N and CTRL-P will be automatically bound to next-history and
@@ -305,10 +308,10 @@ nnoremap ,l :BLines<CR>
 nnoremap ,w :Windows<CR>
 
 command! -bang -nargs=* Ag
-	    \ call fzf#vim#ag(<q-args>,
-	    \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-	    \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-	    \                 <bang>0)
+      \ call fzf#vim#ag(<q-args>,
+      \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+      \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \                 <bang>0)
 
 """ vim-surround
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
@@ -316,12 +319,12 @@ command! -bang -nargs=* Ag
 
 """ syntastic
 function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        Errors
-    endif
+  let old_last_winnr = winnr('$')
+  lclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic error location panel
+    Errors
+  endif
 endfunction
 " show list of errors and warnings on the current file
 "nnoremap <C-e> :Errors<CR>
@@ -354,22 +357,22 @@ let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 """ tabular
 let mapleader=','
 if exists(':Tabularize')
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
 inoremap <silent> ,tb <Bar><Esc>:call <SID>align()<CR>a 
 function! s:align()
-    let p = '^\s*|\s.*\s|\s*$'
-    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-        Tabularize/|/l1
-        normal! 0
-        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-    endif
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
 endfunction
 
 
@@ -405,6 +408,9 @@ let g:jedi#show_call_signatures_delay = 50
 """ YankRing.vim
 nnoremap <silent> ,y :YRShow<CR>
 let g:yankring_history_dir = '~/.vim/dirs/'
+" Useless, just for avoiding conflicts
+let g:yankring_replace_n_nkey = '<m-f>'
+let g:yankring_replace_n_pkey = '<m-r>'
 
 
 """ LaTeX-Box
@@ -431,20 +437,20 @@ let g:ycm_disable_for_files_larger_than_kb = 50000
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-k>']
 let g:ycm_filetype_blacklist = {
-			\ 'tagbar' : 1,
-			\ 'qf' : 1,
-			\ 'notes' : 1,
-			\ 'markdown' : 1,
-			\ 'unite' : 1,
-			\ 'text' : 1,
-			\ 'vimwiki' : 1,
-			\ 'pandoc' : 1,
-			\ 'infolog' : 1,
-			\ 'mail' : 1,
-			\ 'mundo': 1,
-			\ 'fzf': 1,
-			\ 'ctrlp' : 1
-			\}
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1,
+      \ 'mundo': 1,
+      \ 'fzf': 1,
+      \ 'ctrlp' : 1
+      \}
 
 " Go to Definition variable
 nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
@@ -498,24 +504,24 @@ set undodir=~/.vim/dirs/undos
 
 " create needed directories if they don't exist
 if !isdirectory(&backupdir)
-    call mkdir(&backupdir, 'p')
+  call mkdir(&backupdir, 'p')
 endif
 if !isdirectory(&directory)
-    call mkdir(&directory, 'p')
+  call mkdir(&directory, 'p')
 endif
 if !isdirectory(&undodir)
-    call mkdir(&undodir, 'p')
+  call mkdir(&undodir, 'p')
 endif
 
 " todo / fixme list
 command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
 function! ToggleTODOList()
-    let old_last_winnr = winnr('$')
-    cclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        TODOList
-    endif
+  let old_last_winnr = winnr('$')
+  cclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic error location panel
+    TODOList
+  endif
 endfunction
 nmap tt :call ToggleTODOList()<CR>
 
@@ -544,21 +550,21 @@ set pastetoggle=<F2>
 set ttyfast
 set mousehide
 if has('mouse')
-    set mouse=a
+  set mouse=a
 endif
 
 " clipboard support
 if has('clipboard')
-    set clipboard=unnamed
+  set clipboard=unnamed
 endif
 
 " nvim vs vim stuffs
 if has('nvim')
-    set viminfo+=n~/.vim/dirs/nviminfo
-    tnoremap ;; <C-\><C-n>
+  set viminfo+=n~/.vim/dirs/nviminfo
+  tnoremap ;; <C-\><C-n>
 else
-    set viminfo+=n~/.vim/dirs/viminfo
-    set ttymouse=xterm2
+  set viminfo+=n~/.vim/dirs/viminfo
+  set ttymouse=xterm2
 endif
 
 " search ctags file upward
@@ -566,24 +572,21 @@ set tags=./tags;
 
 " cscope setting
 if has("cscope")
-  set csprg=/usr/local/bin/cscope
+  " set csprg=/usr/local/bin/cscope
   set csto=1
   set cst
-  set nocsverb
+  set csverb
   " Use both cscope and ctag
   set cscopetag
-  " Show msg when cscope db added
-  set cscopeverbose
   " Use tags for definition search first
   set cscopetagorder=1
   " Use quickfix window to show cscope results
   set cscopequickfix=s-,c-,d-,i-,t-,e-
-  " add any database in current directory
-  if filereadable("cscope.out")
-    cs add cscope.out
-  endif
-  set csverb
 endif
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
 " general settings
@@ -616,6 +619,8 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
+nnoremap <C-p> :cp<CR>
+nnoremap <C-n> :cn<CR>
 noremap <C-e> <Esc>:e!<CR>
 inoremap <C-e> <Esc>:e!<CR>
 inoremap ;; <Esc>

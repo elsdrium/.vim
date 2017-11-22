@@ -2,8 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=utf-8
 
+"" Plugins {{{1
 " Use vim.plug to manage plugins
-call plug#begin('~/.vim/plugged')        " required
+call plug#begin('~/.vim/plugged') " required
 
 " Vim enhancement
 Plug 'vim-scripts/IndexedSearch'
@@ -33,7 +34,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'liuchengxu/space-vim-dark'
 
 " Python
-"Plug 'elsdrm/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
+"Plug 'elsdrium/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Scala
@@ -60,7 +61,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'motemen/git-vim'
 
 " Development
-"Plug 'elsdrm/Conque-Shell'
+"Plug 'elsdrium/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
@@ -81,7 +82,7 @@ endif
 call plug#end()              " required
 " filetype plugin indent on    " required
 
-" plugins' settings
+"" Plugins' Settings {{{1
 """ vim-easymotion
 let g:EasyMotion_leader_key = '\'
 nmap <Leader>v <Plug>(easymotion-bd-w)
@@ -96,7 +97,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 
-""" neocomplete.vim
+""" neocomplete.vim {{{2
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -149,35 +150,30 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
-""" NERDCommenter
+""" NERDCommenter {{{2
 let g:NERDSpaceDelims = 1
 
-
-""" UltiSnips
+""" UltiSnips {{{2
 let g:UltiSnipsExpandTrigger='<Leader><TAB>'
 let g:UltiSnipsJumpForwardTrigger='<C-g>'
 let g:UltiSnipsJumpBackwardTrigger='<C-t>'
 let g:UltiSnipsListSnippets=',ls'
 
-
-""" vim-choosewin
+""" vim-choosewin {{{2
 nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
 
-
-""" Autoclose
+""" Autoclose {{{2
 " Fix to let ESC work as espected with Autoclose plugin
 let g:AutoClosePumvisible = {'ENTER': '\<C-Y>', 'ESC': '\<ESC>'}
 
-
-""" tabman.vim
+""" tabman.vim {{{2
 " mappings to toggle display, and to focus on it
 let g:tabman_toggle = 'tm'
 let g:tabman_focus  = 'tf'
 
-
-""" tagbar
+""" tagbar {{{2
 " toggle tagbar display
 nmap tb :TagbarToggle<CR>
 " autofocus on tagbar open
@@ -199,8 +195,7 @@ let g:tagbar_type_typescript = {
       \ ]
       \ }
 
-
-""" vim-nerdtree-tabs / nerdtree
+""" vim-nerdtree-tabs / nerdtree {{{2
 function! NERDTreeFindToggle()
   if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
     NERDTreeTabsClose
@@ -219,8 +214,7 @@ let NERDTreeMouseMode = 2
 "hi Directory ctermfg=darkred
 autocmd FileType nerdtree highlight Directory ctermfg=darkred
 
-
-""" vim-signify
+""" vim-signify {{{2
 " this first setting decides in which order try to guess your current vcs
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -235,12 +229,10 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-
-""" vim-fugitive
+""" vim-fugitive {{{2
 nnoremap gb :Gblame<CR>
 
-
-""" fzf.vim
+""" fzf.vim {{{2
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 " Quickfix window for quick navigation
 function! s:build_quickfix_list(lines)
@@ -313,11 +305,10 @@ command! -bang -nargs=* Ag
       \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
       \                 <bang>0)
 
-""" vim-surround
+""" vim-surround {{{2
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
-
-""" syntastic
+""" syntastic {{{2
 function! ToggleErrors()
   let old_last_winnr = winnr('$')
   lclose
@@ -353,8 +344,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
-
-""" tabular
+""" tabular {{{2
 let mapleader=','
 if exists(':Tabularize')
   nmap <Leader>a= :Tabularize /=<CR>
@@ -375,53 +365,49 @@ function! s:align()
   endif
 endfunction
 
-
-""" indentLine
+""" indentLine {{{2
 let g:indentLine_color_term = 239
 
+""" autoload_cscope {{{2
+nnoremap <C-w> :write<CR>:RefreshCSDB<CR>
 
-""" vim-easy-align
+""" vim-easy-align {{{2
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-
-""" vim-latex-suite
+""" vim-latex-suite {{{2
 "let g:tex_flavor='latex'
 "imap <C-d> <Plug>IMAP_JumpForward
 "imap <C-l> <Plug>Tex_LeftRight
 
-
-""" jedi-vim
+""" jedi-vim {{{2
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<TAB>'
 let g:jedi#show_call_signatures = 1
 let g:jedi#show_call_signatures_delay = 50
 
-
-""" minibufexpl.vim
+""" minibufexpl.vim {{{2
 "nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
 "let g:miniBufExplorerAutoStart = 0
 
-
-""" YankRing.vim
+""" YankRing.vim {{{2
 nnoremap <silent> ,y :YRShow<CR>
 let g:yankring_history_dir = '~/.vim/dirs/'
 " Useless, just for avoiding conflicts
 let g:yankring_replace_n_nkey = '<m-f>'
 let g:yankring_replace_n_pkey = '<m-r>'
 
-
-""" LaTeX-Box
+""" LaTeX-Box {{{2
 "nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
-""" vim-instant-markdown
+""" vim-instant-markdown {{{2
 autocmd FileType markdown nnoremap <C-m> :InstantMarkdownPreview<CR>
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_allow_unsafe_content = 1
 
-""" YouCompleteMe
+""" YouCompleteMe {{{2
 "check syntax with syntastic instead
 let g:ycm_show_diagnostics_ui = 0
 
@@ -456,17 +442,17 @@ let g:ycm_filetype_blacklist = {
 nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-""" tern_for_vim
+""" tern_for_vim {{{2
 let g:tern#is_show_argument_hints_enabled = 1
 nnoremap <silent> td :TernDoc<CR>
 
-""" typescript-vim
+""" typescript-vim {{{2
 let g:typescript_indent_disable = 1
 
 " End of plugins' settings --------------------------
 
-
-" tabs and spaces
+"" Enviroment Settings {{{1
+" tabs and spaces {{{2
 set smartindent
 set smarttab
 set tabstop=4
@@ -477,7 +463,7 @@ set expandtab
 " indicate tab characters
 set list lcs=tab:\|\ 
 
-" tab length exceptions on some file types
+" file types with tab length exceptions {{{2
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -485,6 +471,97 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+" todo / fixme list {{{2
+command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
+function! ToggleTODOList()
+  let old_last_winnr = winnr('$')
+  cclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic error location panel
+    TODOList
+  endif
+endfunction
+nmap tt :call ToggleTODOList()<CR>
+
+" native search {{{2
+" incremental search
+set incsearch
+" highlighted search results
+set hlsearch
+" case insensitive search
+set ignorecase
+set smartcase
+
+" mouse support {{{2
+set ttyfast
+set mousehide
+if has('mouse')
+  set mouse=a
+endif
+
+" clipboard support {{{2
+if has('clipboard')
+  set clipboard=unnamed
+endif
+
+" folding setting {{{2
+set foldenable
+set foldmethod=marker
+set foldcolumn=1
+
+" cscope setting {{{2
+if has("cscope")
+  " set csprg=/usr/local/bin/cscope
+  set csto=1
+  set cst
+  set csverb
+  " Use both cscope and ctag
+  set cscopetag
+  " Use tags for definition search first
+  set cscopetagorder=1
+  " Use quickfix window to show cscope results
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
+endif
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+" search ctags file upward
+set tags=./tags;
+
+" nvim vs vim stuffs {{{2
+if has('nvim')
+  set viminfo+=n~/.vim/dirs/nviminfo
+  tnoremap ;; <C-\><C-n>
+else
+  set viminfo+=n~/.vim/dirs/viminfo
+  set ttymouse=xterm2
+endif
+
+
+" general settings
+syntax on
+colo molokai2
+set cul
+"set cuc
+set history=1000
+set wrap
+set nu
+"set rnu
+"set foldmethod=indent
+"set foldenable
+set autoindent
+"set cursorline
+set showcmd
+set wildmenu
+set lazyredraw
+" better detection for shortmess c
+if has('patch-7.4.314')
+  set shortmess+=c
+endif
+
+" miscellaneous {{{2
 " always show status bar
 set ls=2
 
@@ -513,26 +590,6 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, 'p')
 endif
 
-" todo / fixme list
-command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
-function! ToggleTODOList()
-  let old_last_winnr = winnr('$')
-  cclose
-  if old_last_winnr == winnr('$')
-    " Nothing was closed, open syntastic error location panel
-    TODOList
-  endif
-endfunction
-nmap tt :call ToggleTODOList()<CR>
-
-" incremental search
-set incsearch
-" highlighted search results
-set hlsearch
-" case insensitive search
-set ignorecase
-set smartcase
-
 " no annoying beeps anymore...
 set vb
 set t_vb=
@@ -546,71 +603,7 @@ set t_Co=256 "
 " use F2 as pastetoggle
 set pastetoggle=<F2>
 
-" mouse support
-set ttyfast
-set mousehide
-if has('mouse')
-  set mouse=a
-endif
-
-" clipboard support
-if has('clipboard')
-  set clipboard=unnamed
-endif
-
-" nvim vs vim stuffs
-if has('nvim')
-  set viminfo+=n~/.vim/dirs/nviminfo
-  tnoremap ;; <C-\><C-n>
-else
-  set viminfo+=n~/.vim/dirs/viminfo
-  set ttymouse=xterm2
-endif
-
-" search ctags file upward
-set tags=./tags;
-
-" cscope setting
-if has("cscope")
-  " set csprg=/usr/local/bin/cscope
-  set csto=1
-  set cst
-  set csverb
-  " Use both cscope and ctag
-  set cscopetag
-  " Use tags for definition search first
-  set cscopetagorder=1
-  " Use quickfix window to show cscope results
-  set cscopequickfix=s-,c-,d-,i-,t-,e-
-endif
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-
-" general settings
-syntax on
-colo molokai2
-set cul
-"set cuc
-set history=1000
-set wrap
-set nu
-"set rnu
-"set foldmethod=indent
-"set foldenable
-set autoindent
-"set cursorline
-set showcmd
-set wildmenu
-set lazyredraw
-" better detection for shortmess c
-if has('patch-7.4.314')
-  set shortmess+=c
-endif
-
-" personal key mappings
+"" Personal Key Mappings {{{1
 nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
 "nmap ;l  :res +10<CR>

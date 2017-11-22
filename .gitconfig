@@ -1,31 +1,31 @@
 [core]
-	filemode = true
-	editor = vim
+    filemode = true
+    editor = vim
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	br = branch
-	df = diff
-	pick = cherry-pick
-	fp = format-patch
-	la = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ll = log --graph --decorate --pretty=oneline --abbrev-commit
-	lf = log --stat --decorate --format=fuller abbrev-commit
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    df = diff
+    pick = cherry-pick
+    fp = format-patch
+    la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ll = log --graph --decorate --pretty=oneline --abbrev-commit
+    lf = log --stat --decorate --format=fuller abbrev-commit
 [color]
-	ui = auto
-	diff = auto
-	status = auto
-	branch = auto
-	log = auto
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    log = auto
 [push]
-	default = simple
+    default = simple
 [diff]
     tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [mergetool]
-	prompt = false
+    prompt = false

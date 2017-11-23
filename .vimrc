@@ -79,15 +79,15 @@ if v:version > 704 || (v:version == 704 && has('patch1578'))
 endif
 
 
-call plug#end()              " required
-" filetype plugin indent on    " required
+call plug#end() " required
+" }}}
 
-"" Plugins' Settings {{{1
-""" vim-easymotion
+"" Plugins' Settings
+""" vim-easymotion {{{1
 let g:EasyMotion_leader_key = '\'
 nmap <Leader>v <Plug>(easymotion-bd-w)
 
-""" vim-airline
+""" vim-airline {{{1
 let g:airline_powerline_fonts = 0
 let g:airline_theme = 'kalisi'
 let g:airline#extensions#whitespace#enabled = 0
@@ -97,7 +97,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 
-""" neocomplete.vim {{{2
+""" neocomplete.vim {{{1
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -150,30 +150,30 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
-""" NERDCommenter {{{2
+""" NERDCommenter {{{1
 let g:NERDSpaceDelims = 1
 
-""" UltiSnips {{{2
+""" UltiSnips {{{1
 let g:UltiSnipsExpandTrigger='<Leader><TAB>'
 let g:UltiSnipsJumpForwardTrigger='<C-g>'
 let g:UltiSnipsJumpBackwardTrigger='<C-t>'
 let g:UltiSnipsListSnippets=',ls'
 
-""" vim-choosewin {{{2
+""" vim-choosewin {{{1
 nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
 
-""" Autoclose {{{2
+""" Autoclose {{{1
 " Fix to let ESC work as espected with Autoclose plugin
 let g:AutoClosePumvisible = {'ENTER': '\<C-Y>', 'ESC': '\<ESC>'}
 
-""" tabman.vim {{{2
+""" tabman.vim {{{1
 " mappings to toggle display, and to focus on it
 let g:tabman_toggle = 'tm'
 let g:tabman_focus  = 'tf'
 
-""" tagbar {{{2
+""" tagbar {{{1
 " toggle tagbar display
 nmap tb :TagbarToggle<CR>
 " autofocus on tagbar open
@@ -195,7 +195,7 @@ let g:tagbar_type_typescript = {
       \ ]
       \ }
 
-""" vim-nerdtree-tabs / nerdtree {{{2
+""" vim-nerdtree-tabs / nerdtree {{{1
 function! NERDTreeFindToggle()
   if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
     NERDTreeTabsClose
@@ -214,7 +214,7 @@ let NERDTreeMouseMode = 2
 "hi Directory ctermfg=darkred
 autocmd FileType nerdtree highlight Directory ctermfg=darkred
 
-""" vim-signify {{{2
+""" vim-signify {{{1
 " this first setting decides in which order try to guess your current vcs
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -229,10 +229,10 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-""" vim-fugitive {{{2
+""" vim-fugitive {{{1
 nnoremap gb :Gblame<CR>
 
-""" fzf.vim {{{2
+""" fzf.vim {{{1
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 " Quickfix window for quick navigation
 function! s:build_quickfix_list(lines)
@@ -305,10 +305,10 @@ command! -bang -nargs=* Ag
       \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
       \                 <bang>0)
 
-""" vim-surround {{{2
+""" vim-surround {{{1
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
-""" syntastic {{{2
+""" syntastic {{{1
 function! ToggleErrors()
   let old_last_winnr = winnr('$')
   lclose
@@ -344,7 +344,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
 
-""" tabular {{{2
+""" tabular {{{1
 let mapleader=','
 if exists(':Tabularize')
   nmap <Leader>a= :Tabularize /=<CR>
@@ -365,49 +365,49 @@ function! s:align()
   endif
 endfunction
 
-""" indentLine {{{2
+""" indentLine {{{1
 let g:indentLine_color_term = 239
 
-""" autoload_cscope {{{2
-nnoremap <C-w> :write<CR>:RefreshCSDB<CR>
+""" autoload_cscope {{{1
+nnoremap \r :write<CR>:RefreshCSDB<CR>
 
-""" vim-easy-align {{{2
+""" vim-easy-align {{{1
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-""" vim-latex-suite {{{2
+""" vim-latex-suite {{{1
 "let g:tex_flavor='latex'
 "imap <C-d> <Plug>IMAP_JumpForward
 "imap <C-l> <Plug>Tex_LeftRight
 
-""" jedi-vim {{{2
+""" jedi-vim {{{1
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<TAB>'
 let g:jedi#show_call_signatures = 1
 let g:jedi#show_call_signatures_delay = 50
 
-""" minibufexpl.vim {{{2
+""" minibufexpl.vim {{{1
 "nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
 "let g:miniBufExplorerAutoStart = 0
 
-""" YankRing.vim {{{2
+""" YankRing.vim {{{1
 nnoremap <silent> ,y :YRShow<CR>
 let g:yankring_history_dir = '~/.vim/dirs/'
 " Useless, just for avoiding conflicts
 let g:yankring_replace_n_nkey = '<m-f>'
 let g:yankring_replace_n_pkey = '<m-r>'
 
-""" LaTeX-Box {{{2
+""" LaTeX-Box {{{1
 "nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
-""" vim-instant-markdown {{{2
+""" vim-instant-markdown {{{1
 autocmd FileType markdown nnoremap <C-m> :InstantMarkdownPreview<CR>
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_allow_unsafe_content = 1
 
-""" YouCompleteMe {{{2
+""" YouCompleteMe {{{1
 "check syntax with syntastic instead
 let g:ycm_show_diagnostics_ui = 0
 
@@ -442,17 +442,17 @@ let g:ycm_filetype_blacklist = {
 nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-""" tern_for_vim {{{2
+""" tern_for_vim {{{1
 let g:tern#is_show_argument_hints_enabled = 1
 nnoremap <silent> td :TernDoc<CR>
 
-""" typescript-vim {{{2
+""" typescript-vim {{{1
 let g:typescript_indent_disable = 1
 
-" End of plugins' settings --------------------------
+" End of plugins' settings -------------------------- }}}
 
-"" Enviroment Settings {{{1
-" tabs and spaces {{{2
+"" Enviroment Settings
+" tabs and spaces {{{1
 set smartindent
 set smarttab
 set tabstop=4
@@ -463,7 +463,7 @@ set expandtab
 " indicate tab characters
 set list lcs=tab:\|\ 
 
-" file types with tab length exceptions {{{2
+" file types with tab length exceptions {{{1
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -471,7 +471,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-" todo / fixme list {{{2
+" todo / fixme list {{{1
 command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
 function! ToggleTODOList()
   let old_last_winnr = winnr('$')
@@ -483,7 +483,7 @@ function! ToggleTODOList()
 endfunction
 nmap tt :call ToggleTODOList()<CR>
 
-" native search {{{2
+" native search {{{1
 " incremental search
 set incsearch
 " highlighted search results
@@ -492,24 +492,24 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" mouse support {{{2
+" mouse support {{{1
 set ttyfast
 set mousehide
 if has('mouse')
   set mouse=a
 endif
 
-" clipboard support {{{2
+" clipboard support {{{1
 if has('clipboard')
   set clipboard=unnamed
 endif
 
-" folding setting {{{2
+" folding setting {{{1
 set foldenable
 set foldmethod=marker
 set foldcolumn=1
 
-" cscope setting {{{2
+" cscope setting {{{1
 if has("cscope")
   " set csprg=/usr/local/bin/cscope
   set csto=1
@@ -530,7 +530,7 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " search ctags file upward
 set tags=./tags;
 
-" nvim vs vim stuffs {{{2
+" nvim vs vim stuffs {{{1
 if has('nvim')
   set viminfo+=n~/.vim/dirs/nviminfo
   tnoremap ;; <C-\><C-n>
@@ -561,7 +561,7 @@ if has('patch-7.4.314')
   set shortmess+=c
 endif
 
-" miscellaneous {{{2
+" miscellaneous {{{1
 " always show status bar
 set ls=2
 

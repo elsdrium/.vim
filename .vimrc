@@ -14,7 +14,7 @@ Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-surround'
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/vim-cursorword'
 Plug 'kien/tabman.vim'
 Plug 'bling/vim-airline'
@@ -164,9 +164,8 @@ nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
 
-""" Autoclose {{{1
-" Fix to let ESC work as espected with Autoclose plugin
-let g:AutoClosePumvisible = {'ENTER': '\<C-Y>', 'ESC': '\<ESC>'}
+""" auto-pairs {{{1
+let g:AutoPairsFlyMode = 1
 
 """ tabman.vim {{{1
 " mappings to toggle display, and to focus on it

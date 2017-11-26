@@ -84,7 +84,7 @@ if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 endif
 
-if v:version >= 800
+if v:version >= 800 || has('nvim')
   Plug 'w0rp/ale'
 else
   Plug 'scrooloose/syntastic'
@@ -116,59 +116,6 @@ augroup MyDeoplete
   au!
   autocmd CompleteDone * silent! pclose!
 augroup END
-
-""" neocomplete.vim {{{1
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
-      \ 'scheme' : $HOME.'/.gosh_completions'
-      \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? '\<C-n>' : '\<TAB>'
-" <BS>: close popup and delete backword char.
-inoremap <expr><BS> neocomplete#smart_close_popup().'\<C-h>'
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : '\<Space>'
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=jedi#completions
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 """ NERDCommenter {{{1
 let g:NERDSpaceDelims = 1
@@ -401,6 +348,9 @@ nmap ga <Plug>(EasyAlign)
 let g:jedi#completions_command = '<TAB>'
 let g:jedi#show_call_signatures = 1
 let g:jedi#show_call_signatures_delay = 50
+if has('python3')
+  let g:jedi#force_py_version = 3
+endif
 
 """ minibufexpl.vim {{{1
 "nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>

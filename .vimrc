@@ -12,7 +12,14 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/vim-cursorword'
@@ -69,13 +76,18 @@ Plug 'majutsushi/tagbar'
 Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'elsdrium/autoload_cscope.vim'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+endif
+
+if v:version >= 800
+  Plug 'w0rp/ale'
+else
+  Plug 'scrooloose/syntastic'
 endif
 
 
@@ -96,6 +108,14 @@ let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+
+""" deoplete.nvim {{{1
+let g:deoplete#enable_at_startup = 1
+augroup MyDeoplete
+  au!
+  autocmd CompleteDone * silent! pclose!
+augroup END
 
 """ neocomplete.vim {{{1
 " Disable AutoComplPop.
@@ -165,7 +185,7 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 """ auto-pairs {{{1
-let g:AutoPairsFlyMode = 1
+" let g:AutoPairsFlyMode = 1
 
 """ tabman.vim {{{1
 " mappings to toggle display, and to focus on it
@@ -307,19 +327,14 @@ command! -bang -nargs=* Ag
 """ vim-surround {{{1
 "autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
+""" ale {{{1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:ale_open_list = 0
+
 """ syntastic {{{1
-function! ToggleErrors()
-  let old_last_winnr = winnr('$')
-  lclose
-  if old_last_winnr == winnr('$')
-    " Nothing was closed, open syntastic error location panel
-    Errors
-  endif
-endfunction
 " show list of errors and warnings on the current file
 "nnoremap <C-e> :Errors<CR>
-" toggle list of errors and warnings on the current file
-nmap ,e :call ToggleErrors()<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 1
 " don't put icons on the sign column (it hides the vcs status icons of signify)
@@ -482,6 +497,24 @@ function! ToggleTODOList()
 endfunction
 nmap tt :call ToggleTODOList()<CR>
 
+" toggle list of errors and warnings on the current file
+function! ToggleErrors()
+  let old_last_winnr = winnr('$')
+  let g:ale_open_list = 0
+  lclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic/ale error location panel
+    if exists(":Errors")
+      Errors
+    else
+      let g:ale_open_list = 1
+      let g:ale_keep_list_window_open = 1
+      lw
+    endif
+  endif
+endfunction
+nmap ,e :call ToggleErrors()<CR>
+
 " native search {{{1
 " incremental search
 set incsearch
@@ -611,8 +644,10 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
-nnoremap <C-p> :cp<CR>
-nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cprevious<CR>
+nnoremap <C-n> :cnext<CR>
+nnoremap <C-k> :lprevious<CR>
+nnoremap <C-j> :lnext<CR>
 noremap <C-e> <Esc>:e!<CR>
 inoremap <C-e> <Esc>:e!<CR>
 inoremap ;; <Esc>

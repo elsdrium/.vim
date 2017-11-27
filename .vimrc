@@ -77,7 +77,6 @@ Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
-Plug 'elsdrium/autoload_cscope.vim'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 if v:version > 704 || (v:version == 704 && has('patch1578'))
@@ -493,7 +492,9 @@ set foldcolumn=1
 
 " cscope setting {{{1
 if has("cscope")
-  " set csprg=/usr/local/bin/cscope
+  let b:csdb = findfile("cscope.out", ".;")
+  let b:dbdir = fnamemodify(b:csdb, ":h")
+  silent exe "cs add " . b:csdb . " " . b:dbdir
   set csto=1
   set cst
   set csverb
@@ -503,11 +504,20 @@ if has("cscope")
   set cscopetagorder=1
   " Use quickfix window to show cscope results
   set cscopequickfix=s-,c-,d-,i-,t-,e-
+  function! RefreshCsdb()
+    if !empty(b:dbdir)
+      silent exe "!cscope -b -i " . b:dbdir . "/cscope.files -f " . b:dbdir . "/cscope.out"
+      silent exe "cs reset"
+      exe "redraw!"
+    endif
+  endfunction
+  nnoremap \r :call RefreshCsdb()<CR>
+
+  nmap <C-s>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-s>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-s>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-s>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " search ctags file upward
 set tags=./tags;

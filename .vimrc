@@ -328,9 +328,6 @@ endfunction
 """ indentLine {{{1
 let g:indentLine_color_term = 239
 
-""" autoload_cscope {{{1
-nnoremap \r :write<CR>:RefreshCSDB<CR>
-
 """ vim-easy-align {{{1
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -492,9 +489,9 @@ set foldcolumn=1
 
 " cscope setting {{{1
 if has("cscope")
-  let b:csdb = findfile("cscope.out", ".;")
-  let b:dbdir = fnamemodify(b:csdb, ":h")
-  silent exe "cs add " . b:csdb . " " . b:dbdir
+  let g:csdb = findfile("cscope.out", ".;")
+  let g:dbdir = fnamemodify(g:csdb, ":h")
+  silent exe "cs add " . g:csdb . " " . g:dbdir
   set csto=1
   set cst
   set csverb
@@ -505,8 +502,8 @@ if has("cscope")
   " Use quickfix window to show cscope results
   set cscopequickfix=s-,c-,d-,i-,t-,e-
   function! RefreshCsdb()
-    if !empty(b:dbdir)
-      silent exe "!cscope -b -i " . b:dbdir . "/cscope.files -f " . b:dbdir . "/cscope.out"
+    if !empty(get(b:, 'dbdir'))
+      silent exe "!cscope -b -i " . g:dbdir . "/cscope.files -f " . g:dbdir . "/cscope.out -P " . g:dbdir
       silent exe "cs reset"
       exe "redraw!"
     endif

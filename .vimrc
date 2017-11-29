@@ -89,7 +89,6 @@ else
   Plug 'scrooloose/syntastic'
 endif
 
-
 call plug#end() " required
 " }}}
 
@@ -432,7 +431,7 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " todo / fixme list {{{1
-command! TODOList noautocmd vimgrep /TODO\|FIXME/j % | cw
+command! TODOList noautocmd silent! vimgrep /TODO\|FIXME/j % | cw
 function! ToggleTODOList()
   let old_last_winnr = winnr('$')
   cclose
@@ -492,15 +491,14 @@ if has("cscope")
   let g:csdb = findfile("cscope.out", ".;")
   let g:dbdir = fnamemodify(g:csdb, ":h")
   silent exe "cs add " . g:csdb . " " . g:dbdir
-  set csto=1
-  set cst
   set csverb
   " Use both cscope and ctag
   set cscopetag
   " Use tags for definition search first
   set cscopetagorder=1
   " Use quickfix window to show cscope results
-  set cscopequickfix=s-,c-,d-,i-,t-,e-
+  set cscopequickfix=s-,c-,d-,i-,t-,e-,a-,g-
+
   function! RefreshCsdb()
     if !empty(get(b:, 'dbdir'))
       silent exe "!cscope -b -i " . g:dbdir . "/cscope.files -f " . g:dbdir . "/cscope.out -P " . g:dbdir
@@ -508,12 +506,30 @@ if has("cscope")
       exe "redraw!"
     endif
   endfunction
-  nnoremap \r :call RefreshCsdb()<CR>
 
-  nmap <C-s>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-  nmap <C-s>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-  nmap <C-s>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-  nmap <C-s>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+  function! CscopeQueryQF(type)
+    if &ft == 'qf'
+      cclose
+      return
+    endif
+    call setqflist([])
+    let wview = winsaveview()
+    let fname = @%
+    exe "normal! mY"
+    silent! keepjumps exe "cs find " . a:type . " " . expand("<cword>")
+    if fname != @%
+      exe "normal! `Y"
+      bd #
+    endif
+    call winrestview(wview)
+    botright cw
+  endfunction
+
+  nnoremap ;r :call RefreshCsdb()<CR>
+  nnoremap ;s :call CscopeQueryQF("s")<CR>
+  nnoremap ;g :call CscopeQueryQF("g")<CR>
+  nnoremap ;c :call CscopeQueryQF("c")<CR>
+  nnoremap ;d :call CscopeQueryQF("d")<CR>
 endif
 
 " search ctags file upward

@@ -276,6 +276,9 @@ command! -bang -nargs=* Ag
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:ale_open_list = 0
+let g:ale_fixers = {
+      \   'javascript': ['eslint'],
+      \}
 
 """ syntastic {{{1
 " show list of errors and warnings on the current file
@@ -497,17 +500,17 @@ if has("cscope")
   " Use tags for definition search first
   set cscopetagorder=1
   " Use quickfix window to show cscope results
-  set cscopequickfix=s-,c-,d-,i-,t-,e-,a-,g-
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
 
   function! RefreshCsdb()
-    if !empty(get(b:, 'dbdir'))
-      silent exe "!cscope -b -i " . g:dbdir . "/cscope.files -f " . g:dbdir . "/cscope.out -P " . g:dbdir
+    if !empty(get(g:, 'dbdir'))
+      silent exe "!(cd " . g:dbdir . " && exec cscope -b -i cscope.files)"
       silent exe "cs reset"
       exe "redraw!"
     endif
   endfunction
 
-  function! CscopeQueryQF(type)
+  function! CscopeQueryQF(qtype)
     if &ft == 'qf'
       cclose
       return
@@ -516,7 +519,7 @@ if has("cscope")
     let wview = winsaveview()
     let fname = @%
     exe "normal! mY"
-    silent! keepjumps exe "cs find " . a:type . " " . expand("<cword>")
+    silent! keepjumps exe "cs find " . a:qtype . " " . expand("<cword>")
     if fname != @%
       exe "normal! `Y"
       bd #

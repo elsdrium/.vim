@@ -170,6 +170,7 @@ else # Linux
     alias dus='du -smh' # disk usage summary
     alias nmon='nmon -s 1'
     alias xopen='xdg-open'
+    alias gir='grep -ir'
 fi
 
 
@@ -187,7 +188,6 @@ alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias gir='grep -ir'
 alias vim='vim -O'
 alias nv='nvim -O'
 alias nvdiff='nvim -d'
@@ -199,14 +199,13 @@ alias rz='source ~/.zshrc'
 alias ez='v ~/.zshrc'
 #alias rlsftp='with-readline sftp'
 #alias rlftp='with-readline ftp'
-alias rr='ranger'
 alias rcd='ranger-cd'
-alias ssh='TERM=xterm ssh -X'
-alias tmux='tmux -2 -u'
+alias ssh='TERM=screen-256color-bce ssh -X'
+alias tmux='TERM=screen-256color-bce tmux -2 -u'
 alias vnc=xvnc4viewer -FullColor
 alias nvcc='nvcc -std=c++11'
 alias clang++='clang++ -std=c++11'
-alias cuda='clang++ -std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
+# alias cuda='clang++ -std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
 alias g++='g++ -std=c++11'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3u='sudo -H pip3 install --upgrade'

@@ -463,6 +463,12 @@ function! ToggleErrors()
 endfunction
 nmap ,e :call ToggleErrors()<CR>
 
+" auto-close quickfix window if it's the last one
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
+
 " native search {{{1
 " incremental search
 set incsearch

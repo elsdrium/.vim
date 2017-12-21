@@ -277,6 +277,9 @@ let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:ale_open_list = 0
 let g:ale_fixers = {
+      \   'c': ['clang'],
+      \   'cpp': ['clang'],
+      \   'python': ['flake8'],
       \   'javascript': ['eslint'],
       \}
 
@@ -370,7 +373,7 @@ let g:instant_markdown_autostart = 0
 let g:instant_markdown_allow_unsafe_content = 1
 
 """ YouCompleteMe {{{1
-"check syntax with syntastic instead
+"check syntax with other plugins instead
 let g:ycm_show_diagnostics_ui = 0
 
 let g:ycm_auto_trigger = 1
@@ -576,6 +579,10 @@ if has('patch-7.4.314')
 endif
 
 " miscellaneous {{{1
+aug MyMiscStuff
+  autocmd!
+  autocmd! Syntax python :syn keyword Keyword self
+aug END
 " always show status bar
 set ls=2
 

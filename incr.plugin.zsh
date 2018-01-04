@@ -14,6 +14,7 @@ compinit
 
 bindkey -M viins '^[' vi-cmd-mode-incr
 bindkey -M viins '^?' vi-backward-delete-char-incr
+bindkey -M viins '^H' vi-backward-delete-char-incr
 bindkey -M viins '^w' vi-backward-kill-word-incr
 bindkey -M viins '^i' expand-or-complete-prefix-incr
 bindkey -M viins '^z' set-no-prediction

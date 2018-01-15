@@ -38,9 +38,14 @@ cp .unix_settings/bureau_custom.zsh-theme .unix_settings/.oh-my-zsh/themes/burea
 mkdir -p .unix_settings/.oh-my-zsh/custom/plugins/incr
 cp .unix_settings/incr.plugin.zsh .unix_settings/.oh-my-zsh/custom/plugins/incr
 
+# tmux plugin manager and corresponding plugins
+git clone --depth 1 https://github.com/tmux-plugins/tpm .unix_settings/.tmux/plugins/tpm
+git clone --depth 1 https://github.com/tmux-plugins/tmux-resurrect .unix_settings/.tmux/plugins/tmux-resurrect
+
 # Create symbolic links for dot-files
 ln -fs .unix_settings/.zshrc
 ln -fs .unix_settings/.oh-my-zsh
+ln -fs .unix_settings/.tmux
 ln -fs .unix_settings/.vim
 ln -fs .unix_settings/.vimrc
 ln -fs .unix_settings/.inputrc

@@ -185,7 +185,8 @@ function ranger-cd {
 }
 
 function findcpp {
-    find "$1" -type f \
+    TARGET=$([[ $1 = /*  ]] && echo "$1" || echo "$PWD/${1#./}")
+    find $TARGET -type f \
         -iname '*.c' -o -iname '*.C' -o -iname '*.cpp' -o -iname '*.cxx' -o -iname '*.cc' -o -iname '*.c++' -o \
         -iname '*.h' -o -iname '*.H' -o -iname '*.hpp' -o -iname '*.hxx' -o -iname '*.hh' -o -iname '*.h++' -o \
         -iname '*.inl'

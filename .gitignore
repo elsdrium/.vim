@@ -5,6 +5,7 @@
 .ipython/profile_*/history*
 .ssh/*
 .tmux/resurrect/*
+.tmux/plugins/*
 
 !.ssh/config
 !.vim/colors

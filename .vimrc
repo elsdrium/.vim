@@ -70,7 +70,7 @@ Plug 'tpope/vim-fugitive'
 " Development
 "Plug 'elsdrium/Conque-Shell'
 "Plug 'fholgado/minibufexpl.vim'
-Plug 'tpope/vim-sleuth'
+Plug 'elsdrium/vim-sleuth'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
 Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
@@ -509,7 +509,7 @@ if has("cscope")
   " Use tags for definition search first
   set cscopetagorder=1
   " Use quickfix window to show cscope results
-  set cscopequickfix=s-,c-,d-,i-,t-,e-
+  set cscopequickfix=s-,g-,c-,d-,i-,t-,e-
 
   function! RefreshCsdb()
     if !empty(get(g:, 'dbdir'))

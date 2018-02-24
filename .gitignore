@@ -1,4 +1,5 @@
 .vim/*
+.oh-my-zsh/*
 .ipython/profile_*/security/*
 .ipython/profile_*/pid/*
 .ipython/profile_*/log/*

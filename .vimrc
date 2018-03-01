@@ -196,6 +196,9 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 """ vim-fugitive {{{1
 nnoremap gb :Gblame<CR>
 
+" diff with HEAD (overrided default behavior for starting select mode)
+nnoremap gh :Gdiff HEAD
+
 """ fzf.vim {{{1
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 " Quickfix window for quick navigation

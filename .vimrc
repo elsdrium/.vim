@@ -625,6 +625,23 @@ set t_Co=256 "
 set pastetoggle=<F2>
 
 "" Personal Key Mappings {{{1
+function! GoPrevious()
+  if &diff
+    exe ":normal! [c"
+  else
+    exe ":cprevious"
+  endif
+endfunction
+function! GoNext()
+  if &diff
+    exe ":normal! ]c"
+  else
+    exe ":cnext"
+  endif
+endfunction
+nnoremap <C-p> :call GoPrevious()<CR>
+nnoremap <C-n> :call GoNext()<CR>
+
 nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
 "nmap ;l  :res +10<CR>
@@ -633,8 +650,6 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
-nnoremap <C-p> :cprevious<CR>
-nnoremap <C-n> :cnext<CR>
 nnoremap <C-k> :lprevious<CR>
 nnoremap <C-j> :lnext<CR>
 noremap <C-e> <Esc>:e!<CR>

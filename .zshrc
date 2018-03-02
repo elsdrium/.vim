@@ -124,7 +124,7 @@ export EDITOR="vi"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
-    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
+    export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/python@2/libexec/bin"
 
     # Spark 1.5.1 requires JVM 1.7+
     export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
@@ -139,16 +139,6 @@ if [[ $platform == 'osx' ]]; then
 
     # iTerm2 support
     alias imgcat=~/.iterm2/imgcat
-    alias imgls=~/.iterm2/imgls
-    alias it2attention=~/.iterm2/it2attention
-    alias it2check=~/.iterm2/it2check
-    alias it2copy=~/.iterm2/it2copy
-    alias it2dl=~/.iterm2/it2dl
-    alias it2getvar=~/.iterm2/it2getvar
-    alias it2setcolor=~/.iterm2/it2setcolor
-    alias it2setkeylabel=~/.iterm2/it2setkeylabel
-    alias it2ul=~/.iterm2/it2ul
-    alias it2universion=~/.iterm2/it2universion
 
 else # Linux
     export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
@@ -199,7 +189,7 @@ alias fgrep='fgrep --color=auto'
 alias vim='vim -O'
 alias nv='nvim -O'
 alias nvdiff='nvim -d'
-alias v='nvim'
+alias v='nvim -O'
 alias rv='v +PlugUpdate +qall'
 alias rrv='v +PlugClean +PlugUpdate +PlugInstall +qall'
 alias ev='v ~/.vimrc'
@@ -218,10 +208,11 @@ alias g++='g++ -std=c++11'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3u='sudo -H pip3 install --upgrade'
 alias ipy='ipython3'
+unalias grv
 
 # fall back if no neovim
 if ! type "nvim" > /dev/null; then
-    alias v='vim'
+    alias v='vim -O'
 fi
 
 NORMAL_SYMBOL='@'

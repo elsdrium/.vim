@@ -73,6 +73,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'elsdrium/vim-sleuth'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -614,6 +615,9 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, 'p')
 endif
 
+" allow searching file recursively 
+set path=.,/usr/include,,**
+
 " no annoying beeps anymore...
 set vb
 set t_vb=
@@ -653,8 +657,6 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap ,, <Esc>:bnext<CR>
 noremap ,. <Esc>:bprevious<CR>
-nnoremap <C-k> :lprevious<CR>
-nnoremap <C-j> :lnext<CR>
 noremap <C-e> <Esc>:e!<CR>
 inoremap <C-e> <Esc>:e!<CR>
 inoremap ;; <Esc>

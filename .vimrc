@@ -86,8 +86,6 @@ endif
 
 if v:version >= 800 || has('nvim')
   Plug 'w0rp/ale'
-else
-  Plug 'scrooloose/syntastic'
 endif
 
 call plug#end() " required
@@ -286,32 +284,7 @@ let g:ale_fixers = {
       \   'python': ['flake8'],
       \   'javascript': ['eslint'],
       \}
-
-""" syntastic {{{1
-" show list of errors and warnings on the current file
-"nnoremap <C-e> :Errors<CR>
-" check also when just opened the file
-let g:syntastic_check_on_open = 1
-" don't put icons on the sign column (it hides the vcs status icons of signify)
-let g:syntastic_enable_signs = 1
-" custom icons (enable them if you use a patched font, and enable the previous setting)
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_error_symbol = '☢'
-let g:syntastic_style_warning_symbol = '☣'
-
-let g:syntastic_javascript_checkers=['jshint']
-
-"let g:syntastic_python_python_exec = '/usr/bin/env python3'
-let g:syntastic_python_python_exec = '/usr/bin/env python'
-let g:syntastic_python_checkers = ['flake8']
-
-let g:syntastic_c_compiler = 'clang'
-"let g:syntastic_cuda_checkers = ['cpp/gcc']
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
-"let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
-let g:syntastic_cuda_config_file = '~/.unix_settings/.syntastic_cuda_config'
+let g:ale_cpp_clang_options = '-std=c++14 -Wall'
 
 """ tabular {{{1
 let mapleader=','
@@ -429,8 +402,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" indicate tab characters
-set list lcs=tab:\|\ 
+" indicate tab characters and trailing spaces
+set list lcs=tab:\|\ ,trail:\|
 
 " file types with tab length exceptions {{{1
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -616,7 +589,7 @@ if !isdirectory(&undodir)
 endif
 
 " allow searching file recursively 
-set path=.,/usr/include,,**
+set path=.,/usr/include,/usr/local/include,,**
 
 " no annoying beeps anymore...
 set vb

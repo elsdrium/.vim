@@ -7,6 +7,7 @@
 .ssh/*
 .tmux/resurrect/*
 .tmux/plugins/*
+tags
 
 !.ssh/config
 !.vim/colors

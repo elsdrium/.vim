@@ -1,6 +1,6 @@
 [core]
     filemode = true
-    editor = vim
+    editor = nvim
 [alias]
     st = status
     ci = commit
@@ -20,10 +20,12 @@
     log = auto
 [push]
     default = simple
-[diff]
-    tool = vimdiff
 [difftool]
-    prompt = false
+    prompt = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 [merge]
     tool = vimdiff
     conflictstyle = diff3

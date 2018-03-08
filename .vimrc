@@ -158,6 +158,10 @@ let g:tagbar_type_typescript = {
       \ ]
       \ }
 
+""" vim-gutentags {{{1
+let g:gutentags_ctags_executable = 'ctags'
+let g:gutentags_ctags_tagfile = '.tags'
+
 """ vim-nerdtree-tabs / nerdtree {{{1
 function! NERDTreeFindToggle()
   if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
@@ -443,12 +447,6 @@ function! ToggleErrors()
 endfunction
 nmap ,e :call ToggleErrors()<CR>
 
-" auto-close quickfix window if it's the last one
-aug QFClose
-  au!
-  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
-aug END
-
 " native search {{{1
 " incremental search
 set incsearch
@@ -526,10 +524,10 @@ set tags=./tags;
 
 " nvim vs vim stuffs {{{1
 if has('nvim')
-  set viminfo+=n~/.vim/dirs/nviminfo
+  set viminfo+='10,"1000,:20,%,n~/.vim/dirs/nviminfo
   tnoremap ;; <C-\><C-n>
 else
-  set viminfo+=n~/.vim/dirs/viminfo
+  set viminfo+='10,"1000,:20,%,n~/.vim/dirs/viminfo
   set ttymouse=xterm2
 endif
 
@@ -558,7 +556,11 @@ endif
 " miscellaneous {{{1
 aug MyMiscStuff
   autocmd!
+  " auto-close quickfix window if it's the last one
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
   autocmd! Syntax python :syn keyword Keyword self
+  "Restore cursor position in previous editing session
+  au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 aug END
 " always show status bar
 set ls=2
@@ -588,8 +590,8 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, 'p')
 endif
 
-" allow searching file recursively 
-set path=.,/usr/include,/usr/local/include,,**
+" allow searching file recursively
+set path=.,;,/usr/include,/usr/local/include,**
 
 " no annoying beeps anymore...
 set vb

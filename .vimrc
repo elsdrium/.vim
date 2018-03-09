@@ -13,9 +13,6 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 " Plug 'Shougo/neocomplete.vim'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/vim-cursorword'
@@ -76,8 +73,13 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
+
 if v:version > 704 || (v:version == 704 && has('patch1578'))
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+  Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
 endif
 
 if v:version >= 800 || has('nvim')
@@ -552,9 +554,9 @@ endif
 " miscellaneous {{{1
 aug MyMiscStuff
   autocmd!
+  autocmd! Syntax python :syn keyword Keyword self
   " auto-close quickfix window if it's the last one
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
-  autocmd! Syntax python :syn keyword Keyword self
   "Restore cursor position in previous editing session
   au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 aug END
@@ -638,7 +640,7 @@ inoremap ,. <Esc>I
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 vnoremap // y/<C-R>"<CR> 
 vnoremap <C-c> "+y
-nnoremap <F3> :NeoCompleteToggle<CR>
+nnoremap <F3> :call deoplete#toggle()<CR>
 nnoremap gV `[v`]
 " formatting html
 nnoremap ,= :s/<[^>]*>/\r&\r/g<CR>:g/^$/d<CR>gg=G

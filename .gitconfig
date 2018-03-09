@@ -27,7 +27,8 @@
 [difftool "nvimdiff"]
     cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 [merge]
-    tool = vimdiff
+    tool = nvimdiff
     conflictstyle = diff3
-[mergetool]
+[mergetool "nvimdiff"]
     prompt = false
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c '$wincmd J'

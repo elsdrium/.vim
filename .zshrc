@@ -96,18 +96,8 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 setopt AUTO_PUSHD
 setopt GLOB_COMPLETE
@@ -120,7 +110,6 @@ setopt NO_CASE_GLOB
 bindkey -M vicmd "q" push-line
 bindkey -M viins ";;" vi-cmd-mode
 
-export EDITOR="vi"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [[ $platform == 'osx' ]]; then
@@ -158,7 +147,6 @@ else # Linux
     # system management 
     alias dstat='dstat -cdlmnpsy'
     alias dus='du -smh' # disk usage summary
-    alias nmon='nmon -s 1'
     alias xopen='xdg-open'
     alias gir='grep -ir'
 fi
@@ -182,37 +170,41 @@ function findcpp {
         -iname '*.inl'
 }
 
-alias gsb='git show-branch --color'
 alias grep='grep --color=auto -n'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias vim='vim -O'
 alias nv='nvim -O'
 alias nvdiff='nvim -d'
-alias v='nvim -O'
 alias rv='v +PlugUpdate +qall'
 alias rrv='v +PlugClean +PlugUpdate +PlugInstall +qall'
-alias ev='v ~/.vimrc'
+alias ev='v ~/.unix_settings/.vimrc'
 alias rz='source ~/.zshrc'
-alias ez='v ~/.zshrc'
+alias ez='v ~/.unix_settings/.zshrc'
 #alias rlsftp='with-readline sftp'
 #alias rlftp='with-readline ftp'
 alias rcd='ranger-cd'
 alias ssh='TERM=screen-256color-bce ssh -X'
 alias tmux='TERM=screen-256color-bce tmux -2 -u'
-alias vnc=xvnc4viewer -FullColor
+# alias vnc=xvnc4viewer -FullColor
 alias nvcc='nvcc -std=c++11'
-alias clang++='clang++ -std=c++11'
+alias clang++='clang++ -std=c++14'
 # alias cuda='clang++ -std=c++11 -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart --cuda-gpu-arch=sm_30'
-alias g++='g++ -std=c++11'
+alias g++='g++ -std=c++14'
 alias p2u='sudo -H pip2 install --upgrade'
 alias p3u='sudo -H pip3 install --upgrade'
 alias ipy='ipython3'
 unalias grv
 
-# fall back if no neovim
-if ! type "nvim" > /dev/null; then
+# neovim is preferred, otherwise fall back to vi
+if ! type nvim &> /dev/null; then
+    export VISUAL="vi"
+    export EDITOR="vi"
     alias v='vim -O'
+else
+    export VISUAL="nvim"
+    export EDITOR="nvim"
+    alias v='nvim -O'
 fi
 
 NORMAL_SYMBOL='@'

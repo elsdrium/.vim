@@ -155,9 +155,9 @@ if &t_Co > 255
    hi Define          ctermfg=81
    hi Delimiter       ctermfg=241
 
-   hi DiffAdd                     ctermbg=235
-   hi DiffChange                  ctermbg=237
-   hi DiffDelete      ctermfg=162 ctermbg=53
+   hi DiffAdd                     ctermbg=235 cterm=bold
+   hi DiffChange                  ctermbg=237 cterm=bold
+   hi DiffDelete      ctermfg=162 ctermbg=53  cterm=bold
    hi DiffText                    ctermbg=240 cterm=bold
 
    hi Directory       ctermfg=118               cterm=bold

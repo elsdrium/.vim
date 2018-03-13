@@ -120,7 +120,6 @@ if [[ $platform == 'osx' ]]; then
 
     function pdf() { mupdf-x11 "$1" & }
 
-    alias cdw='cd /Users/elsdrm/nas/workspace/'
     alias l='ls -hpG'
     alias ls='ls -hpG'
     alias ll='ls -hlpGA'
@@ -181,8 +180,6 @@ alias rrv='v +PlugClean +PlugUpdate +PlugInstall +qall'
 alias ev='v ~/.unix_settings/.vimrc'
 alias rz='source ~/.zshrc'
 alias ez='v ~/.unix_settings/.zshrc'
-#alias rlsftp='with-readline sftp'
-#alias rlftp='with-readline ftp'
 alias rcd='ranger-cd'
 alias ssh='TERM=screen-256color-bce ssh -X'
 alias tmux='TERM=screen-256color-bce tmux -2 -u'

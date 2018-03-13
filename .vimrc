@@ -22,12 +22,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-repeat'
 Plug 'Lokaltog/vim-easymotion'
-"Plug 'terryma/vim-multiple-cursors'
-"Plug 'tomtom/tlib_vim'
-"Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'fisadev/vim-ctrlp-cmdpalette'
 
 " colorscheme
 Plug 'flazz/vim-colorschemes'
@@ -56,13 +52,11 @@ Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 "Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d', 'for': 'markdown' }
 
 " Git
-Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-"Plug 'motemen/git-vim'
 
 " Development
 "Plug 'elsdrium/Conque-Shell'
-"Plug 'fholgado/minibufexpl.vim'
+Plug 'elsdrium/auto-cscope.vim'
 Plug 'elsdrium/vim-sleuth'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
@@ -111,6 +105,15 @@ augroup MyDeoplete
   au!
   autocmd CompleteDone * silent! pclose!
 augroup END
+
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
 
 """ NERDCommenter {{{1
 let g:NERDSpaceDelims = 1
@@ -179,24 +182,8 @@ let NERDTreeMouseMode = 2
 "hi Directory ctermfg=darkred
 autocmd FileType nerdtree highlight Directory ctermfg=darkred
 
-""" vim-signify {{{1
-" this first setting decides in which order try to guess your current vcs
-" UPDATE it to reflect your preferences, it will speed up opening files
-let g:signify_vcs_list = [ 'git', 'hg' ]
-" mappings to jump to changed blocks
-nmap <Leader>sn <Plug>(signify-next-hunk)
-nmap <Leader>sp <Plug>(signify-prev-hunk)
-" nicer colors
-highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
-highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
-highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
-highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
-highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
-highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
-
 """ vim-fugitive {{{1
 nnoremap gb :Gblame<CR>
-
 " diff with HEAD (overrided default behavior for starting select mode)
 nnoremap gh :Gdiff HEAD
 
@@ -288,6 +275,21 @@ let g:ale_fixers = {
       \}
 let g:ale_cpp_clang_options = '-std=c++14 -Wall'
 
+""" auto-cscope.vim {{{1
+if has("cscope")
+  " Use both cscope and ctag
+  set cscopetag
+  " Use tags for definition search first
+  set cscopetagorder=1
+
+  nnoremap ;r :call auto_cscope#RefreshCsdb()<CR>
+  nnoremap ;s :call auto_cscope#CscopeQueryQF("s")<CR>
+  nnoremap ;g :call auto_cscope#CscopeQueryQF("g")<CR>
+  nnoremap ;c :call auto_cscope#CscopeQueryQF("c")<CR>
+  nnoremap ;d :call auto_cscope#CscopeQueryQF("d")<CR>
+endif
+
+
 """ tabular {{{1
 let mapleader=','
 if exists(':Tabularize')
@@ -318,11 +320,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-""" vim-latex-suite {{{1
-"let g:tex_flavor='latex'
-"imap <C-d> <Plug>IMAP_JumpForward
-"imap <C-l> <Plug>Tex_LeftRight
-
 """ jedi-vim {{{1
 "let g:jedi#force_py_version = 3
 let g:jedi#completions_command = '<TAB>'
@@ -332,19 +329,12 @@ if has('python3')
   let g:jedi#force_py_version = 3
 endif
 
-""" minibufexpl.vim {{{1
-"nnoremap ,l :MBEToggleAll<CR>:MBEFocus<CR>
-"let g:miniBufExplorerAutoStart = 0
-
 """ YankRing.vim {{{1
 nnoremap <silent> ,y :YRShow<CR>
 let g:yankring_history_dir = '~/.vim/dirs/'
 " Useless, just for avoiding conflicts
 let g:yankring_replace_n_nkey = '<m-f>'
 let g:yankring_replace_n_pkey = '<m-r>'
-
-""" LaTeX-Box {{{1
-"nnoremap <Leader>la :w<CR>:LatexmkClean<CR>:Latexmk<CR>:LatexView<CR>
 
 """ vim-instant-markdown {{{1
 autocmd FileType markdown nnoremap <C-m> :InstantMarkdownPreview<CR>
@@ -383,7 +373,7 @@ let g:ycm_filetype_blacklist = {
       \}
 
 " Go to Definition variable
-nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 """ tern_for_vim {{{1
@@ -470,52 +460,6 @@ endif
 set foldenable
 set foldmethod=marker
 set foldcolumn=1
-
-" cscope setting {{{1
-if has("cscope")
-  let g:csdb = findfile("cscope.out", ".;")
-  let g:dbdir = fnamemodify(g:csdb, ":h")
-  silent exe "cs add " . g:csdb . " " . g:dbdir
-  set csverb
-  " Use both cscope and ctag
-  set cscopetag
-  " Use tags for definition search first
-  set cscopetagorder=1
-  " Use quickfix window to show cscope results
-  set cscopequickfix=s-,g-,c-,d-,i-,t-,e-
-
-  function! RefreshCsdb()
-    if !empty(get(g:, 'dbdir'))
-      silent exe "!(cd " . g:dbdir . " && exec cscope -b -i cscope.files)"
-      silent exe "cs reset"
-      exe "redraw!"
-    endif
-  endfunction
-
-  function! CscopeQueryQF(qtype)
-    if &ft == 'qf'
-      cclose
-      return
-    endif
-    call setqflist([])
-    let wview = winsaveview()
-    let fname = @%
-    exe "normal! mY"
-    silent! keepjumps exe "cs find " . a:qtype . " " . expand("<cword>")
-    if fname != @%
-      exe "normal! `Y"
-      bd #
-    endif
-    call winrestview(wview)
-    botright cw
-  endfunction
-
-  nnoremap ;r :call RefreshCsdb()<CR>
-  nnoremap ;s :call CscopeQueryQF("s")<CR>
-  nnoremap ;g :call CscopeQueryQF("g")<CR>
-  nnoremap ;c :call CscopeQueryQF("c")<CR>
-  nnoremap ;d :call CscopeQueryQF("d")<CR>
-endif
 
 " search ctags file upward
 set tags=./tags;

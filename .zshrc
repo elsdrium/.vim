@@ -88,16 +88,11 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gitfast github vi-mode ssh-agent sudo incr)
 
-# User configuration
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 setopt AUTO_PUSHD
 setopt GLOB_COMPLETE
@@ -109,6 +104,8 @@ setopt NO_CASE_GLOB
 
 bindkey -M vicmd "q" push-line
 bindkey -M viins ";;" vi-cmd-mode
+bindkey -M viins "^B" vi-backward-word
+bindkey -M viins "^F" vi-forward-word
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
@@ -117,8 +114,6 @@ if [[ $platform == 'osx' ]]; then
 
     # Spark 1.5.1 requires JVM 1.7+
     export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
-
-    function pdf() { mupdf-x11 "$1" & }
 
     alias l='ls -hpG'
     alias ls='ls -hpG'
@@ -131,7 +126,6 @@ if [[ $platform == 'osx' ]]; then
 else # Linux
     export PATH="/usr/local/bin:/usr/games:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
     export LD_LIBRARY_PATH="/usr/local/lib64:/usr/local/lib:/usr/lib"
-    #export JAVA_HOME="/usr/local/jdk1.8.0_112"
 
     alias l='ls --color=auto -hp'
     alias ls='ls --color=auto -hp'
@@ -143,7 +137,7 @@ else # Linux
     alias acs='apt-cache search'
     alias sy='sudo yum'
 
-    # system management 
+    # system management
     alias dstat='dstat -cdlmnpsy'
     alias dus='du -smh' # disk usage summary
     alias xopen='xdg-open'

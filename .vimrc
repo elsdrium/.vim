@@ -98,6 +98,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#gutentags#enabled = 1
 
 """ deoplete.nvim {{{1
 let g:deoplete#enable_at_startup = 1
@@ -162,6 +163,7 @@ let g:tagbar_type_typescript = {
 """ vim-gutentags {{{1
 let g:gutentags_ctags_executable = 'ctags'
 let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_project_root = ['.project_root']
 
 """ vim-nerdtree-tabs / nerdtree {{{1
 function! NERDTreeFindToggle()

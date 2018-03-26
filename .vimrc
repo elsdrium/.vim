@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged') " required
 " Vim enhancement
 Plug 'vim-scripts/IndexedSearch'
 Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/YankRing.vim'
+silent! Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 " Plug 'Shougo/neocomplete.vim'
@@ -58,6 +58,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'elsdrium/Conque-Shell'
 Plug 'elsdrium/auto-cscope.vim'
 Plug 'elsdrium/vim-sleuth'
+Plug 'matze/vim-move'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
@@ -140,7 +141,7 @@ let g:tabman_focus  = 'tf'
 
 """ tagbar {{{1
 " toggle tagbar display
-nmap tb :TagbarToggle<CR>
+nmap <silent> tb :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 let tagbar_map_closefold = ['zc']
@@ -174,7 +175,7 @@ function! NERDTreeFindToggle()
   endif
 endfunction
 " toggle nerdtree tab with the current file selected
-nmap ,t :call NERDTreeFindToggle()<CR>
+nmap <silent> ,t :call NERDTreeFindToggle()<CR>
 " don;t show these file types
 "let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 let NERDTreeShowHidden = 1
@@ -185,7 +186,7 @@ let NERDTreeMouseMode = 2
 autocmd FileType nerdtree highlight Directory ctermfg=darkred
 
 """ vim-fugitive {{{1
-nnoremap gb :Gblame<CR>
+nnoremap <silent> gb :Gblame<CR>
 " diff with HEAD (overrided default behavior for starting select mode)
 nnoremap gh :Gdiff HEAD
 
@@ -291,6 +292,10 @@ if has("cscope")
   nnoremap ;d :call auto_cscope#CscopeQueryQF("d")<CR>
 endif
 
+""" vim-move {{{1
+let g:move_map_keys = 0
+vmap <C-p> <Plug>MoveBlockUp
+vmap <C-n> <Plug>MoveBlockDown
 
 """ tabular {{{1
 let mapleader=','
@@ -417,7 +422,7 @@ function! ToggleTODOList()
     TODOList
   endif
 endfunction
-nmap tt :call ToggleTODOList()<CR>
+nmap <silent> tt :call ToggleTODOList()<CR>
 
 " toggle list of errors and warnings on the current file
 function! ToggleErrors()
@@ -435,7 +440,7 @@ function! ToggleErrors()
     endif
   endif
 endfunction
-nmap ,e :call ToggleErrors()<CR>
+nmap <silent> ,e :call ToggleErrors()<CR>
 
 " native search {{{1
 " incremental search
@@ -481,7 +486,7 @@ syntax on
 colo molokai2
 set cul
 "set cuc
-set history=1000
+set history=100
 set wrap
 set nu
 "set rnu
@@ -553,20 +558,20 @@ set pastetoggle=<F2>
 "" Personal Key Mappings {{{1
 function! GoPrevious()
   if &diff
-    exe ":normal! [c"
+    silent! exe ":normal! [c"
   else
-    exe ":cprevious"
+    silent! exe ":cprevious"
   endif
 endfunction
 function! GoNext()
   if &diff
-    exe ":normal! ]c"
+    silent! exe ":normal! ]c"
   else
-    exe ":cnext"
+    silent! exe ":cnext"
   endif
 endfunction
-nnoremap <C-p> :call GoPrevious()<CR>
-nnoremap <C-n> :call GoNext()<CR>
+nnoremap <silent> <C-p> :call GoPrevious()<CR>
+nnoremap <silent> <C-n> :call GoNext()<CR>
 
 nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
@@ -574,8 +579,8 @@ imap <C-]> <C-o>l
 "nmap ;s  :res -10<CR>
 nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
-noremap ,, <Esc>:bnext<CR>
-noremap ,. <Esc>:bprevious<CR>
+noremap <silent> ,, <Esc>:bnext<CR>
+noremap <silent> ,. <Esc>:bprevious<CR>
 noremap <C-e> <Esc>:e!<CR>
 inoremap <C-e> <Esc>:e!<CR>
 inoremap ;; <Esc>

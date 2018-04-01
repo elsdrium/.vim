@@ -27,7 +27,7 @@ Plug 'junegunn/fzf.vim'
 
 " colorscheme
 Plug 'flazz/vim-colorschemes'
-Plug 'liuchengxu/space-vim-dark'
+" Plug 'liuchengxu/space-vim-dark'
 
 " Python
 "Plug 'elsdrium/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins...
@@ -58,6 +58,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'elsdrium/Conque-Shell'
 Plug 'elsdrium/auto-cscope.vim'
 Plug 'elsdrium/vim-sleuth'
+Plug 'airblade/vim-rooter'
 Plug 'matze/vim-move'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 Plug 'majutsushi/tagbar'
@@ -78,7 +79,7 @@ if v:version > 704 || (v:version == 704 && has('patch1578'))
 endif
 
 if v:version >= 800 || has('nvim')
-  Plug 'w0rp/ale'
+  Plug 'w0rp/ale', { 'on': 'ALEEnable' }
 endif
 
 call plug#end() " required
@@ -252,9 +253,14 @@ omap <Leader><TAB> <plug>(fzf-maps-o)
 
 " commands shortcut
 nnoremap ,b :Buffers<CR>
+nnoremap ,c :Commits<CR>
 nnoremap ,f :Files<CR>
-nnoremap ,L :Lines<CR>
+nnoremap ,g :Tags<CR>
+nnoremap ,h :History:<CR>
+nnoremap ,H :History/<CR>
 nnoremap ,l :BLines<CR>
+nnoremap ,L :Lines<CR>
+nnoremap ,s :Snippets<CR>
 nnoremap ,w :Windows<CR>
 
 command! -bang -nargs=* Ag
@@ -262,9 +268,6 @@ command! -bang -nargs=* Ag
       \                 <bang>0 ? fzf#vim#with_preview('up:60%')
       \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
       \                 <bang>0)
-
-""" vim-surround {{{1
-"autocmd FileType tex let b:surround_108 = '\\begin{\1environment: \1}\r\\end{\1\r}.*\r\1}'
 
 """ ale {{{1
 let g:ale_sign_error = '>>'
@@ -291,6 +294,12 @@ if has("cscope")
   nnoremap ;c :call auto_cscope#CscopeQueryQF("c")<CR>
   nnoremap ;d :call auto_cscope#CscopeQueryQF("d")<CR>
 endif
+
+""" vim-rooter {{{1
+let g:rooter_patterns = ['.project_root', '.git/']
+let g:rooter_use_lcd = 1
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
 
 """ vim-move {{{1
 let g:move_map_keys = 0
@@ -353,7 +362,6 @@ let g:instant_markdown_allow_unsafe_content = 1
 let g:ycm_show_diagnostics_ui = 0
 
 let g:ycm_auto_trigger = 1
-"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.unix_settings/ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_min_num_of_chars_for_completion = 1
@@ -489,7 +497,6 @@ set cul
 set history=100
 set wrap
 set nu
-"set rnu
 "set foldmethod=indent
 "set foldenable
 set autoindent
@@ -575,8 +582,6 @@ nnoremap <silent> <C-n> :call GoNext()<CR>
 
 nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
-"nmap ;l  :res +10<CR>
-"nmap ;s  :res -10<CR>
 nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap <silent> ,, <Esc>:bnext<CR>

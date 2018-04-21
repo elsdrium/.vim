@@ -166,6 +166,7 @@ let g:tagbar_type_typescript = {
 let g:gutentags_ctags_executable = 'ctags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_project_root = ['.project_root']
+let g:gutentags_resolve_symlinks = 1
 
 """ vim-nerdtree-tabs / nerdtree {{{1
 function! NERDTreeFindToggle()

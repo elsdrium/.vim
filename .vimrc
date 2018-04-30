@@ -12,7 +12,6 @@ Plug 'vim-scripts/matchit.zip'
 silent! Plug 'vim-scripts/YankRing.vim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
-" Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/vim-cursorword'
@@ -61,25 +60,28 @@ Plug 'elsdrium/vim-sleuth'
 Plug 'airblade/vim-rooter'
 Plug 'matze/vim-move'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
-Plug 'majutsushi/tagbar'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'jistr/vim-nerdtree-tabs' | Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 
-if has('nvim')
+if v:version >= 800
+  Plug 'w0rp/ale', { 'on': 'ALEEnable' }
+  Plug 'ludovicchabant/vim-gutentags'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  if !has('nvim')
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+else
+  Plug 'Shougo/neocomplete.vim'
 endif
 
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
-endif
-
-if v:version >= 800 || has('nvim')
-  Plug 'w0rp/ale', { 'on': 'ALEEnable' }
 endif
 
 call plug#end() " required
@@ -587,8 +589,8 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap <silent> ,, <Esc>:bnext<CR>
 noremap <silent> ,. <Esc>:bprevious<CR>
-noremap <C-e> <Esc>:e!<CR>
-inoremap <C-e> <Esc>:e!<CR>
+noremap <C-i> <Esc>:e!<CR>
+inoremap <C-i> <Esc>:e!<CR>
 inoremap ;; <Esc>
 inoremap ;, ;<Esc>
 vnoremap ;; <Esc>

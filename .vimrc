@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'wsdjeg/FlyGrep.vim', { 'commit': '58d2054' }
 
 " colorscheme
 Plug 'flazz/vim-colorschemes'
@@ -589,8 +590,8 @@ nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 noremap <silent> ,, <Esc>:bnext<CR>
 noremap <silent> ,. <Esc>:bprevious<CR>
-noremap <C-i> <Esc>:e!<CR>
-inoremap <C-i> <Esc>:e!<CR>
+noremap <C-s> <Esc>:e!<CR>
+inoremap <C-s> <Esc>:e!<CR>
 inoremap ;; <Esc>
 inoremap ;, ;<Esc>
 vnoremap ;; <Esc>

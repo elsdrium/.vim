@@ -56,7 +56,6 @@ Plug 'tpope/vim-fugitive'
 
 " Development
 "Plug 'elsdrium/Conque-Shell'
-Plug 'elsdrium/auto-cscope.vim'
 Plug 'elsdrium/vim-sleuth'
 Plug 'airblade/vim-rooter'
 Plug 'matze/vim-move'
@@ -166,10 +165,26 @@ let g:tagbar_type_typescript = {
       \ }
 
 """ vim-gutentags {{{1
+let $GTAGSLABEL = 'native-pygments'
+let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
+let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_ctags_executable = 'ctags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_project_root = ['.project_root']
 let g:gutentags_resolve_symlinks = 1
+
+let g:gutentags_modules = []
+if executable('ctags')
+  let g:gutentags_modules += ['ctags']
+endif
+if executable('gtags-cscope') && executable('gtags')
+  let g:gutentags_modules += ['gtags_cscope']
+  " Use gtags-cscope instead of classic cscope, if possible
+  silent! set cscopeprg=gtags-cscope
+endif
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q', '--c++-kinds=+px', '--c-kinds=+px']
+" for universal ctags
+let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 """ vim-nerdtree-tabs / nerdtree {{{1
 function! NERDTreeFindToggle()
@@ -285,18 +300,37 @@ let g:ale_fixers = {
       \}
 let g:ale_cpp_clang_options = '-std=c++14 -Wall'
 
-""" auto-cscope.vim {{{1
 if has("cscope")
+  set csverb
+  " Use quickfix window to show cscope results
+  set cscopequickfix=s-,g-,c-,d-,i-,t-,e-
   " Use both cscope and ctag
   set cscopetag
   " Use tags for definition search first
   set cscopetagorder=1
 
-  nnoremap ;r :call auto_cscope#RefreshCsdb()<CR>
-  nnoremap ;s :call auto_cscope#CscopeQueryQF("s")<CR>
-  nnoremap ;g :call auto_cscope#CscopeQueryQF("g")<CR>
-  nnoremap ;c :call auto_cscope#CscopeQueryQF("c")<CR>
-  nnoremap ;d :call auto_cscope#CscopeQueryQF("d")<CR>
+  function! CscopeQueryQF(qtype)
+    if &ft == 'qf'
+      cclose
+      return
+    endif
+    call setqflist([])
+    let wview = winsaveview()
+    let fname = @%
+    exe "normal! mY"
+    silent! keepjumps exe "cs find " . a:qtype . " " . expand("<cword>")
+    if fname != @%
+      exe "normal! `Y"
+      bd #
+    endif
+    call winrestview(wview)
+    botright cw
+  endfunction
+
+  nnoremap ;s :call CscopeQueryQF("s")<CR>
+  nnoremap ;g :call CscopeQueryQF("g")<CR>
+  nnoremap ;c :call CscopeQueryQF("c")<CR>
+  nnoremap ;d :call CscopeQueryQF("d")<CR>
 endif
 
 """ vim-rooter {{{1

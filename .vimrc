@@ -36,6 +36,9 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
@@ -69,7 +72,7 @@ Plug 'junegunn/vim-easy-align'
 
 if v:version >= 800
   Plug 'w0rp/ale', { 'on': 'ALEEnable' }
-  Plug 'ludovicchabant/vim-gutentags'
+  Plug 'elsdrium/vim-gutentags'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
   if !has('nvim')
@@ -174,9 +177,9 @@ let g:gutentags_project_root = ['.project_root']
 let g:gutentags_resolve_symlinks = 1
 
 let g:gutentags_modules = []
-if executable('ctags')
-  let g:gutentags_modules += ['ctags']
-endif
+" if executable('ctags')
+  " let g:gutentags_modules += ['ctags']
+" endif
 if executable('gtags-cscope') && executable('gtags')
   let g:gutentags_modules += ['gtags_cscope']
   " Use gtags-cscope instead of classic cscope, if possible
@@ -303,11 +306,14 @@ let g:ale_cpp_clang_options = '-std=c++14 -Wall'
 if has("cscope")
   set csverb
   " Use quickfix window to show cscope results
-  set cscopequickfix=s-,g-,c-,d-,i-,t-,e-
+  " no 'g-' here for preventing disable tag stack
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
   " Use both cscope and ctag
   set cscopetag
   " Use tags for definition search first
   set cscopetagorder=1
+  " Use absolute path
+  set nocsre
 
   function! CscopeQueryQF(qtype)
     if &ft == 'qf'

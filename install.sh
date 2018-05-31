@@ -52,7 +52,7 @@ ln -fs .unix_settings/.inputrc
 ln -fs .unix_settings/.jupyter
 #ln -fs .unix_settings/.ipython
 ln -fs .unix_settings/.tmux.conf
-ln -fs .unix_settings/.ctags
+ln -fs .unix_settings/.ctags.d
 ln -fs .unix_settings/.pylintrc
 ln -fs .unix_settings/.jshintrc
 ln -fs .unix_settings/.gitconfig

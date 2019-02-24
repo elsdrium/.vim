@@ -4,7 +4,7 @@ set encoding=utf-8
 
 "" Plugins {{{1
 " Use vim.plug to manage plugins
-call plug#begin('~/.vim/plugged') " required
+call plug#begin(has('win32') ? '~\vimfiles\plugged' : '~/.vim/plugged')
 
 " Vim enhancement
 Plug 'vim-scripts/IndexedSearch'
@@ -95,7 +95,7 @@ Plug 'Glench/Vim-Jinja2-Syntax' " Jinja2
 "Plug 'gerw/vim-latex-suite'
 "Plug 'xuhdev/vim-latex-live-preview'
 
-call plug#end() " required
+call plug#end()
 " }}}
 
 "" Plugins' Settings

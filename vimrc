@@ -71,10 +71,10 @@ Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 "Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d', 'for': 'markdown' }
 
 " Javascript
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
@@ -436,10 +436,6 @@ endif
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_allow_unsafe_content = 1
 
-""" tern_for_vim {{{1
-let g:tern#is_show_argument_hints_enabled = 1
-nnoremap <silent> td :TernDoc<CR>
-
 """ typescript-vim {{{1
 let g:typescript_indent_disable = 1
 
@@ -603,6 +599,11 @@ endif
 " clipboard support {{{1
 if has('clipboard')
   set clipboard=unnamed
+endif
+
+" gui {{{1
+if has('gui_win32')
+  set guifont=Consolas:h11:cANSI
 endif
 
 " folding settings {{{1

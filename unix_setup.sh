@@ -36,6 +36,7 @@ if type nvim > /dev/null; then
     ln -fs ~/.vimrc ~/.config/nvim/init.vim
     nvim +PlugInstall +qall
 else
+    [[ -f ~/.gitconfig ]] && sed -i -e s/nvim/vim/g ~/.gitconfig
     vim +PlugInstall +qall
 fi
 

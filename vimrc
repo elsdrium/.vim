@@ -603,7 +603,8 @@ endif
 
 " gui {{{1
 if has('gui_win32')
-  set guifont=Consolas:h11:cANSI
+  set guifont=Consolas:h10:cANSI
+  set guioptions-=rL
 endif
 
 " folding settings {{{1

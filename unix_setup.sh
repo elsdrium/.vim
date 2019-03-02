@@ -33,7 +33,6 @@ if type nvim > /dev/null; then
     # Neovim
     mkdir .config 2> /dev/null
     ln -fs ~/.vim ~/.config/nvim
-    ln -fs ~/.vimrc ~/.config/nvim/init.vim
     nvim +PlugInstall +qall
 else
     [[ -f ~/.gitconfig ]] && sed -i -e s/nvim/vim/g ~/.gitconfig

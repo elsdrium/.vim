@@ -607,6 +607,11 @@ if has('gui_win32')
   set guioptions-=rL
 endif
 
+" win32 {{{1
+if has('win32')
+  set isfname-=:
+endif
+
 " folding settings {{{1
 " set foldenable
 " set foldmethod=marker
@@ -636,6 +641,7 @@ set nu
 "set rnu
 set autoindent
 "set cursorline
+set timeoutlen=200
 set showcmd
 set nojoinspaces
 set wildmenu

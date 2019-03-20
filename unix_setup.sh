@@ -27,7 +27,7 @@ cd ~
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Create symbolic links
-ln -fs ~/.vim/.vimrc
+ln -fs ~/.vim/vimrc .vimrc
 
 if type nvim > /dev/null; then
     # Neovim

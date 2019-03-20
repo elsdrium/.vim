@@ -1,30 +1,13 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
-" https://github.com/tomasr/molokai
-"
-" Note: Based on the Monokai theme for TextMate
+" Note: Based on the Monokai theme
+" by Tomas Restrepo
 " by Wimer Hazenberg and its darker variant
 " by Hamish Stuart Macpherson
 "
 
 hi clear
-
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-        syntax reset
-    endif
-endif
 let g:colors_name="molokai2"
-
-if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
-else
-    let s:molokai_original = 0
-endif
 
 
 hi Boolean         guifg=#AE81FF
@@ -109,41 +92,23 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
 hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
-if s:molokai_original == 1
-   hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#75715E
-   hi CursorLine                    guibg=#3E3D32
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#3E3D32
-   hi ColorColumn                   guibg=#3B3A32
-   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-   hi NonText         guifg=#75715E
-   hi SpecialKey      guifg=#75715E
-else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#7E8E91
-   hi CursorLine                    guibg=#293739
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#293739
-   hi ColorColumn                   guibg=#232526
-   hi LineNr          guifg=#465457 guibg=#232526
-   hi NonText         guifg=#465457
-   hi SpecialKey      guifg=#465457
-end
+hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
+hi Comment         guifg=#7E8E91
+hi CursorLine                    guibg=#293739
+hi CursorLineNr    guifg=#FD971F               gui=none
+hi CursorColumn                  guibg=#293739
+hi ColorColumn                   guibg=#232526
+hi LineNr          guifg=#465457 guibg=#232526
+hi NonText         guifg=#465457
+hi SpecialKey      guifg=#465457
 
 "
 " Support for 256-color terminal
 "
 if &t_Co > 255
-   if s:molokai_original == 1
-      hi Normal                   ctermbg=234
-      hi CursorLine               ctermbg=235   cterm=none
-      hi CursorLineNr ctermfg=208               cterm=none
-   else
-      hi Normal       ctermfg=252 ctermbg=233
-      hi CursorLine               ctermbg=234   cterm=none
-      hi CursorLineNr ctermfg=208               cterm=none
-   endif
+   hi Normal       ctermfg=252 ctermbg=233
+   hi CursorLine               ctermbg=235   cterm=none
+   hi CursorLineNr ctermfg=208               cterm=none
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
    hi Number          ctermfg=135
@@ -176,6 +141,7 @@ if &t_Co > 255
    hi Label           ctermfg=229               cterm=none
    hi Macro           ctermfg=193
    hi SpecialKey      ctermfg=81
+   hi BookmarkLine    ctermfg=NONE ctermbg=238
 
    hi MatchParen      ctermbg=236 cterm=bold
    hi ModeMsg         ctermfg=229

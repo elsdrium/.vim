@@ -18,6 +18,7 @@ Plug 'bling/vim-bufferline'
 Plug 'kshenoy/vim-signature'
 Plug 'elsdrium/vim-sleuth'
 
+Plug 'MattesGroeger/vim-bookmarks'
 silent! Plug 'vim-scripts/YankRing.vim'
 Plug 't9md/vim-choosewin'
 Plug 'jiangmiao/auto-pairs'
@@ -40,6 +41,7 @@ Plug 'Yggdroot/indentLine'
 "Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install', 'for': ['c', 'cpp', 'objc', 'objcpp'] }
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'AndrewRadev/linediff.vim'
 
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
@@ -98,7 +100,14 @@ Plug 'Glench/Vim-Jinja2-Syntax' " Jinja2
 call plug#end()
 " }}}
 
+
 "" Plugins' Settings
+""" vim-bookmarks
+let g:bookmark_highlight_lines = 1
+let g:bookmark_auto_save = 1
+let g:bookmark_center = 1
+let g:bookmark_auto_save_file = $HOME . '/.vim/dirs/bookmarks'
+
 """ YankRing.vim {{{1
 nnoremap <silent> ,y :YRShow<CR>
 let g:yankring_history_dir = '~/.vim/dirs/'
@@ -333,7 +342,7 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_trigger = 1
 let g:ycm_global_ycm_extra_conf = '~/.unix_settings/ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_min_num_of_chars_for_completion = 99
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_cache_omnifunc = 1

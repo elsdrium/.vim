@@ -102,7 +102,7 @@ call plug#end()
 
 
 "" Plugins' Settings
-""" vim-bookmarks
+""" vim-bookmarks {{{1
 let g:bookmark_highlight_lines = 1
 let g:bookmark_auto_save = 1
 let g:bookmark_center = 1
@@ -383,8 +383,12 @@ let g:ale_cpp_clang_options = '-std=c++14 -Wall'
 
 """ deoplete.nvim {{{1
 let g:deoplete#enable_at_startup = 1
+
 augroup MyDeoplete
   autocmd!
+  " Prevent conflicts with YCM
+  autocmd FileType c,cpp
+        \ call deoplete#custom#buffer_option('auto_complete', v:false)
   autocmd CompleteDone * silent! pclose!
 augroup END
 
@@ -613,7 +617,8 @@ endif
 " gui {{{1
 if has('gui_win32')
   set guifont=Consolas:h10:cANSI
-  set guioptions-=rL
+  set guioptions=egm
+  set winaltkeys=no
 endif
 
 " win32 {{{1
@@ -622,12 +627,9 @@ if has('win32')
 endif
 
 " folding settings {{{1
-" set foldenable
-" set foldmethod=marker
+set nofoldenable
+set foldmethod=indent
 " set foldcolumn=1
-
-" search ctags file upward
-set tags=./tags;
 
 " nvim vs vim stuffs {{{1
 if has('nvim')
@@ -660,17 +662,21 @@ if has('patch-7.4.314')
   set shortmess+=c
 endif
 
+" CVE-2019-12735 (Vim < 8.1.1365, Neovim < 0.3.6)
+set nomodeline
+
 " miscellaneous {{{1
 augroup MyMiscStuff
   autocmd!
   autocmd! Syntax python :syn keyword Keyword self
   autocmd VimResized * wincmd =
+  " still open but not modifiable when swap exists
+  autocmd SwapExists * let v:swapchoice = "e"
+  autocmd SwapExists * set nomodifiable
   " auto-close quickfix window if it's the last one
   autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
   " Restore cursor position in previous editing session
   autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-  autocmd BufWritePost *.exs silent :!mix format --check-equivalent %
-  autocmd BufWritePost *.ex silent :!mix format --check-equivalent %
 augroup END
 
 " always show status bar
@@ -723,6 +729,8 @@ set pastetoggle=<F2>
 " do not change directory
 set noautochdir
 
+set virtualedit=block
+
 " spelling check
 set spelllang=en
 
@@ -737,8 +745,8 @@ endfunction
 nnoremap <silent> <F3> :call Conditional(&spell, 'set nospell', 'set spell')<CR>
 nnoremap <silent> <C-p> :call Conditional(&diff, 'normal! [c', 'cprevious')<CR>
 nnoremap <silent> <C-n> :call Conditional(&diff, 'normal! ]c', 'cnext')<CR>
-noremap <silent> <M-l> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabnext', &list ? 'bnext' : '')<CR>
-noremap <silent> <M-h> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabprevious', &list ? 'bprevious' : '')<CR>
+noremap <silent> <M-PageDown> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabnext', &list ? 'bnext' : '')<CR>
+noremap <silent> <M-PageUp> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabprevious', &list ? 'bprevious' : '')<CR>
 
 " for git merge tool
 if &diff
@@ -754,9 +762,9 @@ nmap ;vs :vertical res -10 <CR>
 nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
 noremap <silent> ,, <Esc>:bnext<CR>
-noremap <silent> <M-,> <Esc>:bnext<CR>
+noremap <silent> <M-l> <Esc>:bnext<CR>
 noremap <silent> ,. <Esc>:bprevious<CR>
-noremap <silent> <M-.> <Esc>:bprevious<CR>
+noremap <silent> <M-h> <Esc>:bprevious<CR>
 noremap <silent> ,<Space> <Esc>:e#<CR>
 nnoremap <silent> <C-g> :tag<CR>
 noremap <C-s> <Esc>:e!<CR>
@@ -782,5 +790,3 @@ nnoremap <C-f> :Ag
   " exec "map \e".c." <M-".c.">"
   " exec "map! \e".c." <M-".c.">"
 " endfor
-
-" vim: foldenable foldmethod=marker foldcolumn=1

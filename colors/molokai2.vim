@@ -107,7 +107,7 @@ hi SpecialKey      guifg=#465457
 "
 if &t_Co > 255
    hi Normal       ctermfg=252 ctermbg=233
-   hi CursorLine               ctermbg=235   cterm=none
+   hi CursorLine               ctermbg=234   cterm=none
    hi CursorLineNr ctermfg=208               cterm=none
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
@@ -120,10 +120,10 @@ if &t_Co > 255
    hi Define          ctermfg=81
    hi Delimiter       ctermfg=241
 
-   hi DiffAdd                     ctermbg=235 cterm=bold
-   hi DiffChange                  ctermbg=237 cterm=bold
+   hi DiffAdd         ctermfg=46  ctermbg=235 cterm=bold
+   hi DiffChange                  ctermbg=235 cterm=bold
    hi DiffDelete      ctermfg=162 ctermbg=53  cterm=bold
-   hi DiffText                    ctermbg=240 cterm=bold
+   hi DiffText        ctermfg=46  ctermbg=22 cterm=bold
 
    hi Directory       ctermfg=118               cterm=bold
    hi Error           ctermfg=219 ctermbg=89

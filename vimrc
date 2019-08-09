@@ -395,7 +395,7 @@ augroup END
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#mappings#manual_complete()
+      \ deoplete#manual_complete()
 function! s:check_back_space() abort "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -405,7 +405,6 @@ endfunction"}}}
 let g:UltiSnipsExpandTrigger='<Leader><TAB>'
 let g:UltiSnipsJumpForwardTrigger='<C-g>'
 let g:UltiSnipsJumpBackwardTrigger='<C-t>'
-let g:UltiSnipsListSnippets=',ls'
 
 """ vim-gutentags {{{1
 let $GTAGSLABEL = 'native-pygments'
@@ -417,6 +416,7 @@ let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_project_root = ['.project_root']
 let g:gutentags_resolve_symlinks = 1
 let gutentags_define_advanced_commands = 1
+let g:gutentags_file_list_command = 'ag -g ""'
 
 let g:gutentags_modules = []
 if executable('ctags')
@@ -505,6 +505,9 @@ set expandtab
 set list lcs=tab:\|\ ,trail:\|
 " prune trailing tab/space
 command! PruneTrailing noautocmd silent! :%s/\s\+$//e
+
+" open built-in terminal in new tab
+command! Terminal noautocmd silent! :tabnew|terminal
 
 " filetype-specific settings {{{1
 augroup FileTypeStuff
@@ -660,6 +663,11 @@ set lazyredraw
 " better detection for shortmess c
 if has('patch-7.4.314')
   set shortmess+=c
+endif
+
+" use histogram diff
+if has('patch-8.1.0360') || has('nvim')
+  set diffopt& diffopt+=algorithm:histogram,indent-heuristic
 endif
 
 " CVE-2019-12735 (Vim < 8.1.1365, Neovim < 0.3.6)

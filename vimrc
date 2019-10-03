@@ -509,6 +509,16 @@ command! PruneTrailing noautocmd silent! :%s/\s\+$//e
 " open built-in terminal in new tab
 command! Terminal noautocmd silent! :tabnew|terminal
 
+function! GetVisualSelection()
+  try
+    let a_save = @a
+    silent! normal! gv"ay
+    return @a
+  finally
+    let @a = a_save
+  endtry
+endfunction
+
 " filetype-specific settings {{{1
 augroup FileTypeStuff
   autocmd!
@@ -527,6 +537,7 @@ augroup FileTypeStuff
   autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
   autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
   autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 augroup END
 
 " cscope settings
@@ -542,7 +553,7 @@ if has("cscope")
   " Use absolute path
   set nocsre
 
-  function! CscopeQueryQF(qtype)
+  function! CscopeQueryQF(qtype, selection)
     if &ft == 'qf'
       cclose
       return
@@ -551,7 +562,7 @@ if has("cscope")
     let wview = winsaveview()
     let fname = @%
     exe "normal! mY"
-    silent! keepjumps exe "cs find " . a:qtype . " " . expand("<cword>")
+    silent! keepjumps exe "cs find " . a:qtype . " " . a:selection
     if fname != @%
       exe "normal! `Y"
       bd #
@@ -560,10 +571,14 @@ if has("cscope")
     botright cw
   endfunction
 
-  nnoremap ;s :call CscopeQueryQF("s")<CR>
-  nnoremap ;g :call CscopeQueryQF("g")<CR>
-  nnoremap ;c :call CscopeQueryQF("c")<CR>
-  nnoremap ;d :call CscopeQueryQF("d")<CR>
+  nnoremap ;s :call CscopeQueryQF("s", expand("<cword>"))<CR>
+  nnoremap ;g :call CscopeQueryQF("g", expand("<cword>"))<CR>
+  nnoremap ;c :call CscopeQueryQF("c", expand("<cword>"))<CR>
+  nnoremap ;d :call CscopeQueryQF("d", expand("<cword>"))<CR>
+  vnoremap ;s :call CscopeQueryQF("s", GetVisualSelection())<CR>
+  vnoremap ;g :call CscopeQueryQF("g", GetVisualSelection())<CR>
+  vnoremap ;c :call CscopeQueryQF("c", GetVisualSelection())<CR>
+  vnoremap ;d :call CscopeQueryQF("d", GetVisualSelection())<CR>
 endif
 
 " todo / fixme list {{{1
@@ -767,19 +782,19 @@ nmap <CR><CR> o<Esc>
 imap <C-]> <C-o>l
 nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
-nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
-nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <silent> <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+vnoremap <silent> <expr> <M-j> ":<C-u>call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . getline('.') . "', '\\(^\\s*\\)') .'\\%>" . line('.') . "l\\S', 'n'), 0, 0])<CR>gv'Y"
+nnoremap <silent> <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+vnoremap <silent> <expr> <M-k> "<Esc>:call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . getline('.') . "', '\\(^\\s*\\)') .'\\%<" . line('.') . "l\\S', 'bn'), 0, 0])<CR>gv'Y"
 noremap <silent> ,, <Esc>:bnext<CR>
 noremap <silent> <M-l> <Esc>:bnext<CR>
 noremap <silent> ,. <Esc>:bprevious<CR>
 noremap <silent> <M-h> <Esc>:bprevious<CR>
+noremap <silent> <M-q> <Esc>:b #<CR>
 noremap <silent> ,<Space> <Esc>:e#<CR>
 nnoremap <silent> <C-g> :tag<CR>
 noremap <C-s> <Esc>:e!<CR>
 inoremap <C-s> <Esc>:e!<CR>
-inoremap ;; <Esc>
-inoremap ;, ;<Esc>
-vnoremap ;; <Esc>
 inoremap ,, <End>
 inoremap ,. <Esc>I
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>

@@ -216,7 +216,7 @@ nnoremap ,s :Snippets<CR>
 nnoremap ,w :Windows<CR>
 
 command! -bang -nargs=* Ag
-      \ call fzf#vim#ag(<q-args>,
+      \ call fzf#vim#ag(empty(<q-args>) ? GetVisualSelection() : <q-args>,
       \                 <bang>0 ? fzf#vim#with_preview('up:60%')
       \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
       \                 <bang>0)
@@ -553,7 +553,7 @@ if has("cscope")
   " Use absolute path
   set nocsre
 
-  function! CscopeQueryQF(qtype, selection)
+  function! CscopeQueryQF(qtype, query)
     if &ft == 'qf'
       cclose
       return
@@ -562,7 +562,7 @@ if has("cscope")
     let wview = winsaveview()
     let fname = @%
     exe "normal! mY"
-    silent! keepjumps exe "cs find " . a:qtype . " " . a:selection
+    silent! keepjumps exe "cs find " . a:qtype . " " . a:query
     if fname != @%
       exe "normal! `Y"
       bd #
@@ -783,18 +783,18 @@ imap <C-]> <C-o>l
 nmap ;vl :vertical res +10<CR>
 nmap ;vs :vertical res -10 <CR>
 nnoremap <silent> <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
-vnoremap <silent> <expr> <M-j> ":<C-u>call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . getline('.') . "', '\\(^\\s*\\)') .'\\%>" . line('.') . "l\\S', 'n'), 0, 0])<CR>gv'Y"
+vnoremap <silent> <expr> <M-j> ":<C-u>call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . substitute(getline('.'), "[']", '"', 'g') . "', '\\(^\\s*\\)') .'\\%>" . line('.') . "l\\S', 'n'), 0, 0])<CR>gv'Y"
 nnoremap <silent> <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
-vnoremap <silent> <expr> <M-k> "<Esc>:call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . getline('.') . "', '\\(^\\s*\\)') .'\\%<" . line('.') . "l\\S', 'bn'), 0, 0])<CR>gv'Y"
+vnoremap <silent> <expr> <M-k> "<Esc>:call setpos(\"'Y\", [bufnr('%'), search('^'. matchstr('" . substitute(getline('.'), "[']", '"', 'g') . "', '\\(^\\s*\\)') .'\\%<" . line('.') . "l\\S', 'bn'), 0, 0])<CR>gv'Y"
 noremap <silent> ,, <Esc>:bnext<CR>
 noremap <silent> <M-l> <Esc>:bnext<CR>
 noremap <silent> ,. <Esc>:bprevious<CR>
 noremap <silent> <M-h> <Esc>:bprevious<CR>
 noremap <silent> <M-q> <Esc>:b #<CR>
-noremap <silent> ,<Space> <Esc>:e#<CR>
 nnoremap <silent> <C-g> :tag<CR>
 noremap <C-s> <Esc>:e!<CR>
 inoremap <C-s> <Esc>:e!<CR>
+vnoremap <C-s> :<C-u>e!<CR>
 inoremap ,, <End>
 inoremap ,. <Esc>I
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
@@ -805,6 +805,7 @@ nnoremap gV `[v`]
 " formatting html
 nnoremap ,= :s/<[^>]*>/\r&\r/g<CR>:g/^$/d<CR>gg=G
 nnoremap <C-f> :Ag 
+vnoremap <C-f> :<C-u>Ag<CR>
 
 "" hooks {{{1
 " if ctrl-v + alt-x shows ^[x, remap alt keymaps
@@ -813,3 +814,5 @@ nnoremap <C-f> :Ag
   " exec "map \e".c." <M-".c.">"
   " exec "map! \e".c." <M-".c.">"
 " endfor
+
+source ~/.vimrc.local

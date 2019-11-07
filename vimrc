@@ -509,6 +509,9 @@ command! PruneTrailing noautocmd silent! :%s/\s\+$//e
 " open built-in terminal in new tab
 command! Terminal noautocmd silent! :tabnew|terminal
 
+" copy file path
+command! CopyFilePath noautocmd silent! :let @*=expand("%:p")
+
 function! GetVisualSelection()
   try
     let a_save = @a

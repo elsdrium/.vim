@@ -121,6 +121,8 @@ let g:choosewin_overlay_enable = 1
 
 """ auto-pairs {{{1
 " let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutJump = ''
 
 """ tabman.vim {{{1
 " mappings to toggle display, and to focus on it
@@ -142,6 +144,7 @@ let g:airline#extensions#gutentags#enabled = 1
 """ vim-easymotion {{{1
 let g:EasyMotion_leader_key = '\'
 nmap <Leader>v <Plug>(easymotion-bd-w)
+nmap <Space> <Plug>(easymotion-bd-w)
 
 """ fzf.vim {{{1
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
@@ -770,7 +773,9 @@ function! Conditional(cond, if, else)
 endfunction
 nnoremap <silent> <F3> :call Conditional(&spell, 'set nospell', 'set spell')<CR>
 nnoremap <silent> <C-p> :call Conditional(&diff, 'normal! [c', 'cprevious')<CR>
+nnoremap <silent> <M-p> :call Conditional(&diff, 'normal! [c', 'cprevious')<CR>
 nnoremap <silent> <C-n> :call Conditional(&diff, 'normal! ]c', 'cnext')<CR>
+nnoremap <silent> <M-n> :call Conditional(&diff, 'normal! ]c', 'cnext')<CR>
 noremap <silent> <M-PageDown> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabnext', &list ? 'bnext' : '')<CR>
 noremap <silent> <M-PageUp> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabprevious', &list ? 'bprevious' : '')<CR>
 
@@ -830,4 +835,6 @@ vnoremap <C-f> :<C-u>Ag<CR>
   " exec "map! \e".c." <M-".c.">"
 " endfor
 
-source ~/.vimrc.local
+if filereadable('~/.vimrc.local')
+  source ~/.vimrc.local
+endif

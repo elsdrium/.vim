@@ -42,6 +42,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'ryvnf/readline.vim'
+Plug 'rhysd/vim-clang-format'
 
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
@@ -66,7 +68,7 @@ Plug 'jreybert/vimagit', { 'on': 'Magit' }
 
 " Python
 "Plug 'elsdrium/vim-debug'  " It's awesome, but shortcut keys conflict to other plugins
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': ['python', 'pyrex'] }
 
 " Markdown
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
@@ -369,8 +371,7 @@ let g:ycm_filetype_blacklist = {
       \}
 
 " Go to Definition variable
-nnoremap <Leader>gd :YcmCompleter GoToDeclaration<CR>
-nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 """ ale {{{1
 let g:ale_sign_error = '>>'
@@ -544,6 +545,7 @@ augroup FileTypeStuff
   autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
   autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
   autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd FileType strace setlocal keywordprg=c++filt
 augroup END
 
 " cscope settings
@@ -701,7 +703,7 @@ augroup MyMiscStuff
   autocmd VimResized * wincmd =
   " still open but not modifiable when swap exists
   autocmd SwapExists * let v:swapchoice = "e"
-  autocmd SwapExists * set nomodifiable
+  autocmd SwapExists * echo "Warning: This file is opened in another session."
   " auto-close quickfix window if it's the last one
   autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
   " Restore cursor position in previous editing session

@@ -44,6 +44,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'ryvnf/readline.vim'
 Plug 'rhysd/vim-clang-format'
+Plug 'neovim/nvim-lspconfig'
 
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
@@ -241,8 +242,8 @@ let g:rooter_resolve_links = 1
 
 """ vim-move {{{1
 let g:move_map_keys = 0
-vmap <C-p> <Plug>MoveBlockUp
-vmap <C-n> <Plug>MoveBlockDown
+vmap <C-k> <Plug>MoveBlockUp
+vmap <C-j> <Plug>MoveBlockDown
 
 """ tabular {{{1
 let mapleader=','
@@ -340,6 +341,11 @@ nmap ga <Plug>(EasyAlign)
 """ vim-tmux-navigator {{{1
 let g:tmux_navigator_disable_when_zoomed = 1
 
+""" nvim-lspconfig
+lua << EOF
+require'lspconfig'.clangd.setup{}
+EOF
+
 """ YouCompleteMe {{{1
 "check syntax with other plugins instead
 let g:ycm_show_diagnostics_ui = 0
@@ -369,6 +375,8 @@ let g:ycm_filetype_blacklist = {
       \ 'fzf': 1,
       \ 'ctrlp' : 1
       \}
+let g:ycm_clangd_uses_ycmd_caching = 0
+let g:ycm_clangd_binary_path = exepath('clangd')
 
 " Go to Definition variable
 nnoremap <Leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -436,7 +444,7 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q', '--c++-kind
 let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 """ vim-fugitive {{{1
-nnoremap <silent> gb :Gblame<CR>
+nnoremap <silent> gb :Git blame<CR>
 " diff with HEAD (overrided default behavior for starting select mode)
 nnoremap gh :Gdiff HEAD
 
@@ -619,6 +627,22 @@ function! ToggleErrors()
 endfunction
 nmap <silent> ,e :call ToggleErrors()<CR>
 
+function! UpByIndent()
+  norm! ^
+  let start_col = col('.')
+  let col = start_col
+  while col >= start_col
+    norm! k^
+    if getline('.') =~# '^\s*$'
+      let col = start_col
+    elseif col('.') <= 1
+      return
+    else
+      let col = col('.')
+    endif
+  endwhile
+endfunction
+
 " native search {{{1
 " incremental search
 set incsearch
@@ -697,17 +721,18 @@ endif
 set nomodeline
 
 " miscellaneous {{{1
+autocmd SwapExists * let v:swapchoice = "e"
 augroup MyMiscStuff
   autocmd!
   autocmd! Syntax python :syn keyword Keyword self
   autocmd VimResized * wincmd =
   " still open but not modifiable when swap exists
-  autocmd SwapExists * let v:swapchoice = "e"
   autocmd SwapExists * echo "Warning: This file is opened in another session."
   " auto-close quickfix window if it's the last one
   autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
   " Restore cursor position in previous editing session
   autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+  autocmd BufNewFile,BufRead *.gdb set filetype=gdb
 augroup END
 
 " always show status bar
@@ -764,6 +789,8 @@ set virtualedit=block
 
 " spelling check
 set spelllang=en
+
+set hidden
 
 "" Personal Key Mappings {{{1
 function! Conditional(cond, if, else)
@@ -828,6 +855,8 @@ nnoremap gV `[v`]
 nnoremap ,= :s/<[^>]*>/\r&\r/g<CR>:g/^$/d<CR>gg=G
 nnoremap <C-f> :Ag 
 vnoremap <C-f> :<C-u>Ag<CR>
+vnoremap <C-p> "0p
+nnoremap <M-u> :call UpByIndent()<CR>
 
 "" hooks {{{1
 " if ctrl-v + alt-x shows ^[x, remap alt keymaps
@@ -836,7 +865,3 @@ vnoremap <C-f> :<C-u>Ag<CR>
   " exec "map \e".c." <M-".c.">"
   " exec "map! \e".c." <M-".c.">"
 " endfor
-
-if filereadable('~/.vimrc.local')
-  source ~/.vimrc.local
-endif

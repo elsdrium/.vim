@@ -42,6 +42,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'wellle/targets.vim'
 Plug 'ryvnf/readline.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'neovim/nvim-lspconfig'
@@ -377,6 +378,7 @@ let g:ycm_filetype_blacklist = {
       \}
 let g:ycm_clangd_uses_ycmd_caching = 0
 let g:ycm_clangd_binary_path = exepath('clangd')
+let g:ycm_confirm_extra_conf = 1
 
 " Go to Definition variable
 nnoremap <Leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>

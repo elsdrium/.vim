@@ -346,6 +346,13 @@ let g:tmux_navigator_disable_when_zoomed = 1
 lua << EOF
 require'lspconfig'.clangd.setup{}
 EOF
+if !exists(":Errors") && has('nvim')
+  if has('nvim-0.6')
+    command! Errors silent! :lua vim.diagnostic.setloclist()<CR>
+  else
+    command! Errors silent! :lua vim.lsp.diagnostic.set_loclist()<CR>
+  end
+end
 
 """ YouCompleteMe {{{1
 "check syntax with other plugins instead
@@ -803,10 +810,10 @@ function! Conditional(cond, if, else)
   endif
 endfunction
 nnoremap <silent> <F3> :call Conditional(&spell, 'set nospell', 'set spell')<CR>
-nnoremap <silent> <C-p> :call Conditional(&diff, 'normal! [c', 'cprevious')<CR>
-nnoremap <silent> <M-p> :call Conditional(&diff, 'normal! [c', 'cprevious')<CR>
-nnoremap <silent> <C-n> :call Conditional(&diff, 'normal! ]c', 'cnext')<CR>
-nnoremap <silent> <M-n> :call Conditional(&diff, 'normal! ]c', 'cnext')<CR>
+nnoremap <silent> <C-p> :call Conditional(&diff, 'normal! [c', len(getqflist()) ? 'cprevious' : 'lprevious')<CR>
+nnoremap <silent> <M-p> :call Conditional(&diff, 'normal! [c', len(getqflist()) ? 'cprevious' : 'lprevious')<CR>
+nnoremap <silent> <C-n> :call Conditional(&diff, 'normal! ]c', len(getqflist()) ? 'cnext' : 'lnext')<CR>
+nnoremap <silent> <M-n> :call Conditional(&diff, 'normal! ]c', len(getqflist()) ? 'cnext' : 'lnext')<CR>
 noremap <silent> <M-PageDown> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabnext', &list ? 'bnext' : '')<CR>
 noremap <silent> <M-PageUp> <Esc>:call Conditional(tabpagenr('$') > 1, 'tabprevious', &list ? 'bprevious' : '')<CR>
 

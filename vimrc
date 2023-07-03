@@ -45,7 +45,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'wellle/targets.vim'
 Plug 'ryvnf/readline.vim'
 Plug 'rhysd/vim-clang-format'
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
 
 if v:version > 704 || (v:version == 704 && has('patch1578'))
   Plug 'elsdrium/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
@@ -343,9 +343,9 @@ nmap ga <Plug>(EasyAlign)
 let g:tmux_navigator_disable_when_zoomed = 1
 
 """ nvim-lspconfig
-lua << EOF
-require'lspconfig'.clangd.setup{}
-EOF
+" lua << EOF
+" require'lspconfig'.clangd.setup{}
+" EOF
 if !exists(":Errors") && has('nvim')
   if has('nvim-0.6')
     command! Errors silent! :lua vim.diagnostic.setloclist()<CR>
@@ -400,7 +400,7 @@ let g:ale_linters = {
       \   'python': ['flake8'],
       \   'javascript': ['eslint'],
       \}
-let g:ale_cpp_clang_options = '-std=c++14 -Wall'
+let g:ale_cpp_clang_options = '-std=c++20 -Wall'
 
 """ deoplete.nvim {{{1
 let g:deoplete#enable_at_startup = 1
@@ -443,11 +443,11 @@ let g:gutentags_modules = []
 if executable('ctags')
   let g:gutentags_modules += ['ctags']
 endif
-if executable('gtags-cscope') && executable('gtags')
-  let g:gutentags_modules += ['gtags_cscope']
-  " Use gtags-cscope instead of classic cscope, if possible
-  silent! set cscopeprg=gtags-cscope
-endif
+" if executable('gtags-cscope') && executable('gtags')
+  " let g:gutentags_modules += ['gtags_cscope']
+  " " Use gtags-cscope instead of classic cscope, if possible
+  " silent! set cscopeprg=gtags-cscope
+" endif
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q', '--c++-kinds=+px', '--c-kinds=+px']
 " for universal ctags
 let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
